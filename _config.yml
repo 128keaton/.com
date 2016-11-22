@@ -23,7 +23,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-
+staticmanUrl: https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments
 # Build settings
 markdown: kramdown
 theme: minima
