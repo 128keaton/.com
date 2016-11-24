@@ -6,20 +6,9 @@ layout: default
 
 <main id="main" role="main" class="main">
   <article class="post post--full">
-    <div class="constrain">
 
-    
-    </div>
+      {{ content }}
 
-    <div class="post__body body-text">
-      {% if page.preface %}
-        <div class="preface">
-          {{ page.preface | markdownify }}
-        </div>
-      {% endif %}
-
-      {{ content | replace: '<!--tomb-->', ' &#8718;'}}
-    </div>
 
     {% include partials/post-comments.html %}
   </article>
