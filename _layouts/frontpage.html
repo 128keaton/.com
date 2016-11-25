@@ -5,24 +5,24 @@
 
 <body>
 	<div class="wrapper">
-	<div class="slant-container">
-     <div class="skew">
-         <div class="header-inner">
-					 {{content}}
-        </div>
-     </div>
-   </div>
-	<div class="front-site-links">
-		{% assign pages = site.pages | sort:"title"  %}
+		<div class="slant-container">
+			<div class="skew">
+				<div class="header-inner">
+					{{content}}
+				</div>
+			</div>
+		</div>
 
-			 {% for my_page in pages %}
-				 {% if my_page.title %}
-				 <p>hello</p>
-				{% endif %}
-			 {% endfor %}
-			 </ul>
+		<div class="front-site-links">
+
+			{% for page in site.pages %} {% if page.title %}
+			<a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a> {% endif %} {% endfor %}
+			<div class="clear"></div>
+		</div>
+
+		{% include footer.html %}
 	</div>
-</div>
+
 </body>
 
 </html>

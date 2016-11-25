@@ -1,6 +1,6 @@
 ---
-title: About
-permalink: /about/
-weight: 8
---
+layout: default
+title:  "Blog"
+permalink: /blog/
+---
 Hello world!!
