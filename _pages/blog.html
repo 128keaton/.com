@@ -1,0 +1,26 @@
+---
+layout: default
+title:  "Blog"
+permalink: /blog/
+weight: 2
+---
+<style>
+    body {
+        background-color: white;
+    }
+</style>
+<div class="social">
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml " | relative_url }}">via RSS</a></p>
+</div>
+<ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+        <div class="meta">
+            <span class="post-meta">{{ post.date | date: "%b %d" }}</span>
+        </div>
+        <span>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </span>
+    </li>
+    {% endfor %}
+</ul>

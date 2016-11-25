@@ -4,7 +4,7 @@
 {% include head.html %}
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="home">
 		<div class="slant-container">
 			<div class="skew">
 				<div class="header-inner">
@@ -15,12 +15,13 @@
 
 		<div class="front-site-links">
 
-			{% for page in site.pages %} {% if page.title %}
+			{% for page in site.pages | sort: "weight" %} {% if page.weight %}
 			<a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a> {% endif %} {% endfor %}
 			<div class="clear"></div>
 		</div>
 
 		{% include footer.html %}
+
 	</div>
 
 </body>
