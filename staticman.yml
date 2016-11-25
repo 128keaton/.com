@@ -1,5 +1,6 @@
 comments:
   allowedFields: ["name", "email", "url", "message"]
+  allowedOrigins: ["128keaton.com", "github.io", "128keaton.github.io"]
   branch: "gh-pages"
   filename: "entry{@timestamp}"
   format: "yaml"
@@ -8,21 +9,8 @@ comments:
       type: date
       options:
         format: "timestamp-seconds"
-  moderation: true
+  moderation: false
   name: "128keaton.com"
-  notifications:
-    # Enable notifications
-    enabled: false
-
-    # (!) ENCRYPTED
-    #
-    # Mailgun API key
-    apiKey: "1q2w3e4r"
-
-    # (!) ENCRYPTED
-    #
-    # Mailgun domain (encrypted)
-    domain: "4r3e2w1q"
   path: "_data/comments/{options.slug}"
   requiredFields: ["name", "email", "message"]
   transforms:
