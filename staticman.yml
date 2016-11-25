@@ -1,5 +1,6 @@
 comments:
   allowedFields: ["name", "email", "url", "message"]
+  allowedOrigins: ["128keaton.com", "github.io"]
   branch: "gh-pages"
   filename: "entry{@timestamp}"
   format: "yaml"
