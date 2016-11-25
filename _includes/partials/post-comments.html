@@ -4,7 +4,6 @@
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
 			<h2 class="comments__heading heading-2">Comments</h2>
-			<p>{{ post_slug }}</p>
 			{% if site.data.comments[post_slug] %}
 				{% assign comments = site.data.comments[post_slug] | sort %}
 
