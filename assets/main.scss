@@ -48,5 +48,26 @@ body {
   padding: 0;
   margin: 0;
 }
+.wrapper{
+  height: 100%;
+}
+.wrapper:after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
 
+}
+html, body {
+
+height: 100%;
+
+padding: 0;
+
+margin: 0;
+
+}
+a{
+  display: inline-block;
+}
 @import "_page.scss";

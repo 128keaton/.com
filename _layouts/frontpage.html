@@ -1,12 +1,28 @@
 <!DOCTYPE html>
+<!-- Keaton wuz here!-->
 <html>
-	{% include head.html %}
-	{% include header.html %}
-	{% include test.html %}
-	<body>
+{% include head.html %}
 
+<body>
+	<div class="wrapper">
+	<div class="slant-container">
+     <div class="skew">
+         <div class="header-inner">
+					 {{content}}
+        </div>
+     </div>
+   </div>
+	<div class="front-site-links">
+		{% assign pages = site.pages | sort:"title"  %}
 
-		{{ content }}
+			 {% for my_page in pages %}
+				 {% if my_page.title %}
+				 <p>hello</p>
+				{% endif %}
+			 {% endfor %}
+			 </ul>
+	</div>
+</div>
+</body>
 
-	</body>
 </html>

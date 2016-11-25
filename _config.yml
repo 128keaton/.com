@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-include: ['_pages']
-title: Your awesome title
+include: ["_pages"]
+title: Keaton Burleson
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -28,6 +28,7 @@ staticmanUrl: https://api.staticman.net/v2/entry/128keaton/personal-site/gh-page
 # Build settings
 markdown: kramdown
 theme: minima
+pages_path: /_pages
 gems:
   - jekyll-feed
 exclude:
