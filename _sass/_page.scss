@@ -145,6 +145,51 @@
     color: black;
     text-align: center;
 }
+// ###-Portfolio-###
+
+.portfolio {
+    width: 80%;
+    margin: 100px auto 0;
+}
+
+.project {
+    width: 100%;
+    clear: both;
+    margin-bottom: 100px;
+}
+.project a{
+  color: $background-color;
+  text-decoration: none;
+}
+.project-title{
+  font-size: 15px;
+}
+.project-description{
+  font-weight: 300;
+}
+.project-icon {
+    padding: 25px;
+    float: left;
+    width: 150px;
+}
+
+.project-meta {
+    display: inline-block;
+    position: relative;
+    /* margin-top: 10px; */
+    width: 400px;
+    padding: 25px;
+}
+// ###-Blog page-###
+
+.rss-subscribe {
+    color: white;
+    font-weight: 300;
+}
+
+.rss-subscribe a {
+    color: white;
+}
 
 .post-list {
     width: 50%;
@@ -154,8 +199,7 @@
 
 .post-list li {
     padding-bottom: 10px;
-    border-left: 2px solid #cd4a2d;
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 .post-link {
@@ -174,14 +218,25 @@
     float: left;
 }
 
+.post-word-count {
+    color: #b8b8b8;
+    margin-left: 20px;
+    font-weight: 300;
+}
+
 .post-meta {
-    color: black;
+    color: white;
     padding: 0 10px;
     margin-right: 10px;
     font-size: 15px;
     font-weight: bold;
     border-radius: 17px;
 }
+
+.post-tag {
+    font-weight: 300;
+}
+// ###-Colored Styles-###
 
 #main {
     padding-top: 100px;

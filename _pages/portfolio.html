@@ -1,0 +1,28 @@
+---
+layout: default
+title:  "Portfolio"
+permalink: /portfolio/
+weight: 1
+---
+<div class="portfolio">
+<h2 class="post-title">Portfolio</h2>
+<h3 class="post-tag">French for free and open-source</h3>
+
+<div class="projects">
+
+    {% assign projects = site.data.portfolio | sort %}
+
+    {% for project in projects %}
+    <div class="project" id="{{ project[1].title }}">
+      <a href="{{ project[1].project-url }}"><img class="project-icon" src="{{ project[1].icon }}"></a>
+      <div class="project-meta">
+      <a href="{{ project[1].project-url }}"><h3 class="project-title">{{ project[1].title }}</h3></a>
+      <a href="{{ project[1].project-url }}"><p class="project-description">{{ project[1].description }}</p></a>
+    </div>
+    </div>
+
+
+    {% endfor %}
+
+</div>
+</div>

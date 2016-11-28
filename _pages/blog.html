@@ -1,14 +1,9 @@
 ---
-layout: default
+layout: non-standard
 title:  "Blog"
 permalink: /blog/
 weight: 2
 ---
-<style>
-    body {
-        background-color: white;
-    }
-</style>
 <div class="social">
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml " | relative_url }}">via RSS</a></p>
 </div>
@@ -20,6 +15,7 @@ weight: 2
         </div>
         <span>
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <span class="post-word-count">{{ post.content | number_of_words }} words</span>
       </span>
     </li>
     {% endfor %}
