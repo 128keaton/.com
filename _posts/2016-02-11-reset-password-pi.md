@@ -23,6 +23,6 @@ Wait for a success message, then type:
 {% highlight bash %}
 passwd pi
 {% endhighlight %}
-substituting `pi` for your username. 
+substituting `pi` for your username.
 
 It will ask you to enter the new password twice. If all goes well, unplug the Pi, open the `cmdline.txt` file on your machine, remove the final line

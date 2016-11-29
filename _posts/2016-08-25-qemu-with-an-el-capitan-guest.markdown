@@ -4,7 +4,16 @@ title: "QEMU with an El Capitan Guest"
 date: "2016-08-25 16:26:08 -0500"
 ---
 
-*Note: this guide is largely based off https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2, but adapted for a newer Clover, QEMU, etc*
+{% capture credit %}
+#### Note:
+This guide is largely based off <https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2>, but adapted for a newer Clover, QEMU, etc.
+{% endcapture %}
+
+<div class="notice--info">
+  {{ credit | markdownify }}
+</div>
+
+
 
 ## Setup:
 
@@ -24,7 +33,11 @@ date: "2016-08-25 16:26:08 -0500"
 
 With your OS X installer app in /Applications/, run:
 
- `/Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath "/Applications/Install OS X El Capitan.app"`, substituting `/Volumes/Untitled` for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.
+ ``` bash
+/Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath "/Applications/Install OS X El Capitan.app"
+ ```
+
+Make sure you substitute `/Volumes/Untitled` for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.
 
 
 ## Step 2, installing Clover:
@@ -33,16 +46,29 @@ With your OS X installer app in /Applications/, run:
 After downloading the Clover package, open it, and slowly click through until you see the 'Customize/Change Install Location' screen. Change the install location to the flash drive we just created, then click 'Continue', and then 'Customize'. You should have a list presented. Check the box beside 'Install for UEFI Booting Only', and open the triangle next to 'Driver64UEFI'. Check the boxes for `OsxAptioFixDrv-64` and `DataHubDxe-64`, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download [this](https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi) file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:
 
 
-`cp ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/`
+ ``` bash
+ cp ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
+ ```
 
 
-**If you want to have verbose boot (recommended), add `-v` to the BootFlags line in the `/Volumes/ESP/EFI/CLOVER/config.plist` file**
+
+
+{% capture verbose %}
+#### Note:
+ If you want to have verbose boot (recommended), add `-v` to the BootFlags line in the `/Volumes/ESP/EFI/CLOVER/config.plist` file
+{% endcapture %}
+
+ <div class="notice--info">
+   {{ verbose | markdownify }}
+ </div>
+
+
 
 
 ## Step 3, getting the OSK value:
 
 
-Please see https://gist.github.com/gordonturner/c33bcc935e32f9fa6695 to get the OSK value (must be run from an actual Apple computer). Save this string and keep it safe for later.
+Please see [https://gist.github.com/gordonturner/c33bcc935e32f9fa6695](https://gist.github.com/gordonturner/c33bcc935e32f9fa6695) to get the OSK value (must be run from an actual Apple computer). Save this string and keep it safe for later.
 
 
 ## Step 4, writing the flash drive to an image:
@@ -50,7 +76,10 @@ Please see https://gist.github.com/gordonturner/c33bcc935e32f9fa6695 to get the 
 
 Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type `diskutil list`, find your install drive. (Should have two partitions: `EFI` and `Install OS X El Capitan`).  Record the disk number (e.g. `/dev/disk8`). `cd` into a comfortable folder `~/Desktop`, and run:
 
-`sudo dd if=/dev/rdiskX of=clover-usb-disk.dd`, substituting `X` for your disk number.
+ ``` bash
+ sudo dd if=/dev/rdiskX of=clover-usb-disk.dd
+ ```
+Making sure you substitute `X` for your disk number.
 
 After a bit of waiting, you should have a large file on your desktop named `clover-usb-disk.dd`, using your own methods, move this file into the root of your vm folder on your server.
 
@@ -61,12 +90,17 @@ After a bit of waiting, you should have a large file on your desktop named `clov
 Now, we absolutely have to be on the Linux machine. Either SSH in, or gain physical access.
 At the command line, use this command in your root VM folder:
 
-`sudo qemu-img create -f qcow2 osx-disk0.qcow2 200G`, substitute `200G` for how many gigs you want, for 500Gb use `500G`.
+ ``` bash
+ sudo qemu-img create -f qcow2 osx-disk0.qcow2 200G
+ ```
+Substitute `200G` for how many gigs you want, for 500Gb use `500G`.
 
 Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:
 
-`sudo su -
-echo 1 > /sys/module/kvm/parameters/ignore_msrs`
+ ``` bash
+sudo su -
+echo 1 > /sys/module/kvm/parameters/ignore_msrs
+```
 
 I didn't do much research into why, but it is important to run that. It is reset every reboot, so putting `echo 1 > /sys/module/kvm/parameters/ignore_msrs` into your `/etc/rc.local` file might not be a bad idea.
 
@@ -75,8 +109,8 @@ I didn't do much research into why, but it is important to run that. It is reset
 
 
 Ok, brace yourself, this is my command to start my VM:
-
-`sudo qemu-system-x86_64 \
+ ``` bash
+ sudo qemu-system-x86_64 \
 -m 8192 \
 -enable-kvm \
 -cpu core2duo,vendor=GenuineIntel \
@@ -99,11 +133,20 @@ Ok, brace yourself, this is my command to start my VM:
 -full-screen \
 -vnc :1 \
 -netdev bridge,id=br0,br=br0 \
--device virtio-net,netdev=br0,vectors=0,mac=00:00:00:00:00:00`
+-device virtio-net,netdev=br0,vectors=0,mac=00:00:00:00:00:00
+```
 
 Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the `$OSK$` with your OSK string you saved earlier. Second, change the `$VMROOT$` occurrences to whatever your VM root is.
+{% capture networking %}
+#### Note:
+ networking is a bit of a beast, but I know you can get it working. I won't be covering it, but the [virtio-net](https://github.com/pmj/virtio-net-osx) driver will help.
+{% endcapture %}
 
-*Note: networking is a bit of a beast, but I know you can get it working. I won't be covering it, but the [virtio-net](https://github.com/pmj/virtio-net-osx) driver will help.*
+ <div class="notice--info">
+   {{ networking | markdownify }}
+ </div>
+
+
 
 After those edits, put it into the command line, and cross your fingers.
 
@@ -113,7 +156,16 @@ After those edits, put it into the command line, and cross your fingers.
 
 Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use *Chicken of the VNC*, because the Screen Sharing app doesn't work with the server. Connect to your IP, and port `5901`. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.
 
-*Note: screen/mouse mapping is broken over the QEMU VNC, you can get through the installer using Tab, Space, and Enter. The same person who wrote the network driver is working on a fix [here](https://github.com/pmj/QemuUSBTablet-OSX)*
+{% capture vnc %}
+#### Note:
+screen/mouse mapping is broken over the QEMU VNC, you can get through the installer using Tab, Space, and Enter. The same person who wrote the network driver is working on a fix [here](https://github.com/pmj/QemuUSBTablet-OSX)
+
+{% endcapture %}
+
+ <div class="notice--info">
+   {{ vnc | markdownify }}
+ </div>
+
 
 Use Disk Utility in the installer to format the QEMU HDD, and then run through the installer as normal.
 
@@ -123,4 +175,4 @@ Done!
 
 If you want to access the Clover drive to make some changes, follow [this](https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2#efi-disk-image-manipulation) guide to do that.
 
-If you are having issues, you can email me at [hello@128keaton.com](mailto:hello@128keaton.com).
+If you are having issues, feel free to comment below:

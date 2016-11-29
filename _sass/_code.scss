@@ -1,0 +1,36 @@
+$terminal-text-color: #00FF00;
+$terminal-background-color: black;
+
+code {
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    line-height: 2.0em;
+    display: inline-block;
+    background-color: rgb(217, 213, 212);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 7px;
+}
+/* Bash */
+.language-bash code::before,
+.language-shell code::before {
+    content: "$ ";
+}
+
+.language-bash code,
+.language-shell code {
+    background-color: $terminal-background-color;
+    color: $terminal-text-color;
+    border-top: 25px solid #e3e4e6;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
