@@ -157,16 +157,20 @@
     clear: both;
     margin-bottom: 100px;
 }
-.project a{
-  color: $background-color;
-  text-decoration: none;
+
+.project a {
+    color: $background-color;
+    text-decoration: none;
 }
-.project-title{
-  font-size: 15px;
+
+.project-title {
+    font-size: 15px;
 }
-.project-description{
-  font-weight: 300;
+
+.project-description {
+    font-weight: 300;
 }
+
 .project-icon {
     padding: 25px;
     float: left;
@@ -217,10 +221,12 @@
     width: 100px;
     float: left;
 }
-.post-title{
-  font-size: 2.5em;
-font-weight: 300;
+
+.post-title {
+    font-size: 2.5em;
+    font-weight: 300;
 }
+
 .post-word-count {
     color: #b8b8b8;
     margin-left: 20px;
@@ -238,6 +244,9 @@ font-weight: 300;
 
 .post-tag {
     font-weight: 300;
+}
+.social .post-title{
+  color: white;
 }
 // ###-Colored Styles-###
 

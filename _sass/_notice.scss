@@ -4,6 +4,14 @@
     border-left: 10px solid black;
     padding: 10px;
 }
+
 .notice--info a {
-  color: #7d707e;
+    color: #7d707e;
+}
+
+.notice--update {
+    padding: 10px;
+    background-color: #daf5ff;
+    border-left: solid rgb(117, 202, 255) 10px;
+    font-size: 18px;
 }
