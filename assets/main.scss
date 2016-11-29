@@ -66,6 +66,7 @@ body {
 html, body{
   height: 100%;
 }
+@import "_header.scss";
 @import "_post.scss";
 @import "_page.scss";
 @import "_code.scss";

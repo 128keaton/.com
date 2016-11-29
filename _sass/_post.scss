@@ -4,8 +4,135 @@
     max-width: 75%;
     max-height: 600px;
 }
-.post-head-image{
-  object-fit: cover;
-  width: 100%;
-  max-height: 400px;
+
+.post-head-image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+}
+/* Blog page */
+/* Mobile Styling */
+@media screen and (max-width: $on-palm) {
+    .post-list {
+        width: 95%!important;
+        padding: 0;
+        margin: 0 auto;
+        white-space: normal!important;
+        /* CSS3 */
+        white-space: -moz-pre-wrap;
+        /* Firefox */
+        white-space: -pre-wrap;
+        /* Opera <7 */
+        white-space: -o-pre-wrap;
+        /* Opera 7 */
+        word-wrap: normal!important;
+    }
+
+    .post-word-count {
+        display: none;
+    }
+
+    .meta {
+        display: none;
+    }
+
+    .post-link {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 100%;
+        font-size: 0.9em!important;
+    }
+
+    .post-stuff {
+        clear: both;
+        display: block;
+        max-width: 80%;
+        position: relative;
+    }
+    .post-title{
+      font-size: 2.0em!important;
+    }
+    #main{
+      width: 95%!important;
+      font-size: 0.9em;
+    }
+    .post ul, .post p{
+
+      white-space: pre-wrap;
+      /* CSS3 */
+      white-space: -moz-pre-wrap;
+      /* Firefox */
+      white-space: -pre-wrap;
+      /* Opera <7 */
+      white-space: -o-pre-wrap;
+      /* Opera 7 */
+      word-wrap: break-word;
+    }
+}
+
+.rss-subscribe {
+    color: white;
+    font-weight: 300;
+}
+
+.rss-subscribe a {
+    color: white;
+}
+
+.post-list {
+    width: 50%;
+    list-style: none;
+    margin: 25px auto 0;
+}
+
+.post-list li {
+    padding-bottom: 10px;
+    margin: 25px 0;
+}
+
+.post-link {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-left: 5px;
+    padding: 10px;
+    color: white;
+    background-color: #cd4a2d;
+}
+
+.meta {
+    width: 100px;
+    float: left;
+}
+
+.post-title {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.post-word-count {
+    color: #b8b8b8;
+    margin-left: 20px;
+    font-weight: 300;
+}
+
+.post-meta {
+    color: white;
+    padding: 0 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 17px;
+}
+
+.post-tag {
+    font-weight: 300;
+}
+
+.social .post-title {
+    color: white;
 }

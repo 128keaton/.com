@@ -56,62 +56,6 @@
     padding: 25px;
 }
 
-.header-container {
-    z-index: 1;
-    width: 100%;
-    position: relative;
-}
-
-.header-container .header:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -60px;
-    overflow: visible;
-    width: 100%;
-    height: 300px;
-    background: #ebdd3a;
-    z-index: -1;
-    -webkit-transform: skewY(4deg);
-    -moz-transform: skewY(4deg);
-    -ms-transform: skewY(4deg);
-    -o-transform: skewY(4deg);
-    transform: skewY(4deg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: initial;
-}
-
-.header-container .header .header-container -inner {
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.header-inner {
-    color: black;
-    width: 100%;
-}
-
-.site-title {
-    text-align: left;
-    margin-left: 20px;
-    font-size: 20px;
-}
-
-.site-links {
-    text-align: right;
-    padding-right: 25px;
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-.page-link {
-    color: black;
-    text-transform: lowercase;
-    text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
 .applications {
     margin: 0 auto;
@@ -138,6 +82,26 @@
 
 .app {
     flex: 1;
+}
+
+@media screen and (max-width: $on-palm) {
+
+  .applications {
+
+      display: block!important;
+
+  }
+
+  .app {
+      height: 500px!important;
+  }
+
+
+  .comments{
+    width: 95%!important;
+    margin: 0 auto!important;
+    padding: 0!important;
+  }
 }
 
 .social {
@@ -184,77 +148,19 @@
     width: 400px;
     padding: 25px;
 }
-// ###-Blog page-###
 
-.rss-subscribe {
-    color: white;
-    font-weight: 300;
-}
 
-.rss-subscribe a {
-    color: white;
-}
-
-.post-list {
-    width: 50%;
-    list-style: none;
-    margin: 25px auto 0;
-}
-
-.post-list li {
-    padding-bottom: 10px;
-    margin: 25px 0;
-}
-
-.post-link {
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 7px;
-    text-decoration: none;
-    margin-left: 5px;
-    padding: 10px;
-    color: white;
-    background-color: #cd4a2d;
-}
-
-.meta {
-    width: 100px;
-    float: left;
-}
-
-.post-title {
-    font-size: 2.5em;
-    font-weight: 300;
-}
-
-.post-word-count {
-    color: #b8b8b8;
-    margin-left: 20px;
-    font-weight: 300;
-}
-
-.post-meta {
-    color: white;
-    padding: 0 10px;
-    margin-right: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 17px;
-}
-
-.post-tag {
-    font-weight: 300;
-}
-.social .post-title{
-  color: white;
-}
 // ###-Colored Styles-###
 
 #main {
+    padding: 1em;
+    box-sizing: border-box;
     padding-top: 100px;
     width: 80%;
     margin: 0 auto;
     background-color: white;
+    box-sizing: border-box;
+
 }
 
 #white {

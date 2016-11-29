@@ -34,3 +34,26 @@ code {
     margin-bottom: 20px;
     padding: 10px;
 }
+@media screen and (max-width: $on-palm) {
+    code {
+        width: 92%!important;
+    }
+    code.highlighter-rouge{
+      font-size: 12px;
+      width: auto!important;
+      max-width: 100%;
+      padding: 2px!important;
+      line-height: 1.2em;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      white-space: pre-wrap;
+      /* CSS3 */
+      white-space: -moz-pre-wrap;
+      /* Firefox */
+      white-space: -pre-wrap;
+      /* Opera <7 */
+      white-space: -o-pre-wrap;
+      /* Opera 7 */
+      word-wrap: break-word;
+    }
+}
