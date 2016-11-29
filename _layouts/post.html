@@ -1,12 +1,24 @@
----
-layout: default
----
-<main id="main" role="main" class="main">
-  <article class="post post--full">
-    <h2 class="post-title">{{ page.title }} </h2>
-      {{ content }}
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+{% include header.html %}
 
 
-    {% include partials/post-comments.html %}
-  </article>
-</main>
+<body style="background-color: white;">
+  {% if page.head-image %}
+  <img class="post-head-image" src="{{ page.head-image }}">
+  {% endif %}
+    <div class="wrapper" id="white">
+
+        <main id="main" role="main" class="main">
+            <article class="post post--full">
+                <h2 class="post-title">{{ page.title }} </h2>
+                {{ content }}
+                {% include partials/post-comments.html %}
+            </article>
+        </main>
+        {% include footer.html %}
+    </div>
+</body>
+
+</html>

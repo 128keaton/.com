@@ -3,7 +3,7 @@ layout: post
 title: "Cheap-Oh No: A 12V HDD Power Supply"
 date: "2016-05-02 21:08:47 -0500"
 style: workbench
-head-image: /images/2016/05/IMG_1658.JPG
+head-image: https://i.sli.mg/haHZRU.jpg
 ---
 
 
@@ -17,7 +17,7 @@ Oh. Darn. No Servilceable components inside, too bad I am servicing instead.
 
 Lets unscrew the case.
 
-![Well, ok](/images/2016/05/IMG_1659.JPG)
+![Well, ok](https://i.sli.mg/vR5UaV.jpg)
 
 Except, there aren't any. Yup, this new, user-friendly design allows you to just *pull* the case apart, exposing the electrifying innards. Neat!
 
@@ -25,11 +25,11 @@ Except, there aren't any. Yup, this new, user-friendly design allows you to just
 
 
 
-![](/images/2016/05/IMG_1660.JPG)
+![](https://i.sli.mg/XvnWmz.jpg)
 
 Now, lets look at the soldering. Looks like it was thrown together like a monkey on crack, which would explain the working conditions of the rest of the factory. The board, however, looks nicely laid out, from below.
 
-![Missing?](/images/2016/05/IMG_1661.JPG)
+![Missing?](https://i.sli.mg/CONQ1P.jpg)
 
 Notice what is missing? Freaking *fuses*. Have fun with this one, kiddos, it is sure to be a *wild* ride.
 
