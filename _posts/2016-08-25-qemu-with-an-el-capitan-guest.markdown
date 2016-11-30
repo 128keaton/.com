@@ -20,7 +20,7 @@ This guide is largely based off <https://gist.github.com/gordonturner/2a2e5ecde5
 * An Ubuntu Server running 16.04 LTS
   * KVM Capabilities
   * QEMU compiled/installed
-  * OVMF compiled (https://gist.github.com/gordonturner/85dcc321d2099d610e67) and `/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd` put in the base folder of your VM (`bios.bin`)
+  * OVMF compiled (<https://gist.github.com/gordonturner/85dcc321d2099d610e67>) and `/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd` put in the base folder of your VM (`bios.bin`)
 * A supported Mac that can download 10.11.6 from the Mac App Store
 * A 8GB USB Drive
 * Clover EFI Bootloader
