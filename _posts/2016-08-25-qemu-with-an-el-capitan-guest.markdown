@@ -20,7 +20,7 @@ This guide is largely based off <https://gist.github.com/gordonturner/2a2e5ecde5
 * An Ubuntu Server running 16.04 LTS
   * KVM Capabilities
   * QEMU compiled/installed
-  * OVMF compiled (https://gist.github.com/gordonturner/85dcc321d2099d610e67) and `/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd` put in the base folder of your VM (`bios.bin`)
+  * OVMF compiled (<https://gist.github.com/gordonturner/85dcc321d2099d610e67>) and `/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd` put in the base folder of your VM (`bios.bin`)
 * A supported Mac that can download 10.11.6 from the Mac App Store
 * A 8GB USB Drive
 * Clover EFI Bootloader
@@ -33,9 +33,9 @@ This guide is largely based off <https://gist.github.com/gordonturner/2a2e5ecde5
 
 With your OS X installer app in /Applications/, run:
 
- ``` bash
+ {% highlight bash %}
 /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath "/Applications/Install OS X El Capitan.app"
- ```
+ {% endhighlight %}
 
 Make sure you substitute `/Volumes/Untitled` for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.
 
@@ -46,9 +46,9 @@ Make sure you substitute `/Volumes/Untitled` for your thumb drive (must be forma
 After downloading the Clover package, open it, and slowly click through until you see the 'Customize/Change Install Location' screen. Change the install location to the flash drive we just created, then click 'Continue', and then 'Customize'. You should have a list presented. Check the box beside 'Install for UEFI Booting Only', and open the triangle next to 'Driver64UEFI'. Check the boxes for `OsxAptioFixDrv-64` and `DataHubDxe-64`, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download [this](https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi) file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:
 
 
- ``` bash
+ {% highlight bash %}
  cp ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
- ```
+ {% endhighlight %}
 
 
 
@@ -76,9 +76,9 @@ Please see [https://gist.github.com/gordonturner/c33bcc935e32f9fa6695](https://g
 
 Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type `diskutil list`, find your install drive. (Should have two partitions: `EFI` and `Install OS X El Capitan`).  Record the disk number (e.g. `/dev/disk8`). `cd` into a comfortable folder `~/Desktop`, and run:
 
- ``` bash
+ {% highlight bash %}
  sudo dd if=/dev/rdiskX of=clover-usb-disk.dd
- ```
+ {% endhighlight %}
 Making sure you substitute `X` for your disk number.
 
 After a bit of waiting, you should have a large file on your desktop named `clover-usb-disk.dd`, using your own methods, move this file into the root of your vm folder on your server.
@@ -90,17 +90,19 @@ After a bit of waiting, you should have a large file on your desktop named `clov
 Now, we absolutely have to be on the Linux machine. Either SSH in, or gain physical access.
 At the command line, use this command in your root VM folder:
 
- ``` bash
+ {% highlight bash %}
  sudo qemu-img create -f qcow2 osx-disk0.qcow2 200G
- ```
+ {% endhighlight %}
 Substitute `200G` for how many gigs you want, for 500Gb use `500G`.
 
 Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:
 
- ``` bash
+ {% highlight bash %}
 sudo su -
 echo 1 > /sys/module/kvm/parameters/ignore_msrs
-```
+
+
+{% endhighlight %}
 
 I didn't do much research into why, but it is important to run that. It is reset every reboot, so putting `echo 1 > /sys/module/kvm/parameters/ignore_msrs` into your `/etc/rc.local` file might not be a bad idea.
 
@@ -109,7 +111,7 @@ I didn't do much research into why, but it is important to run that. It is reset
 
 
 Ok, brace yourself, this is my command to start my VM:
- ``` bash
+ {% highlight bash %}
  sudo qemu-system-x86_64 \
 -m 8192 \
 -enable-kvm \
@@ -134,7 +136,7 @@ Ok, brace yourself, this is my command to start my VM:
 -vnc :1 \
 -netdev bridge,id=br0,br=br0 \
 -device virtio-net,netdev=br0,vectors=0,mac=00:00:00:00:00:00
-```
+{% endhighlight %}
 
 Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the `$OSK$` with your OSK string you saved earlier. Second, change the `$VMROOT$` occurrences to whatever your VM root is.
 {% capture networking %}

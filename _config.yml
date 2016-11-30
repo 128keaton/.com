@@ -30,7 +30,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-highlighter: rouge
+kramdown:
+  input: GFM
 staticman:
   allowedFields: ["name", "email", "url", "message"]
   branch: "gh-pages"
