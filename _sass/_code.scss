@@ -19,25 +19,31 @@ code {
     border-radius: 7px;
 }
 /* Bash */
-.language-bash code::before,
-.language-shell code::before {
+code.language-bash::before,
+code.language-bash::before {
     content: "$ ";
 }
-.language-bash code,
-.language-shell code {
+code.language-bash,
+code.language-shell {
     background-color: $terminal-background-color;
     color: $terminal-text-color;
-    border-top: 25px solid #e3e4e6;
-    border-radius: 10px;
+    border-radius: 0px!important;
     width: 100%;
     margin-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     padding: 10px;
+    padding-top: 25px;
+}
+.highlight {
+    margin-left: 0;
+    margin-right: 0;
 }
 @media screen and (max-width: $on-palm) {
     code {
         width: 92%!important;
     }
-    code.highlighter-rouge {
+    .highlight {
         font-size: 12px;
         width: auto!important;
         max-width: 100%;
