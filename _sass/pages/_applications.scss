@@ -25,6 +25,13 @@
 
 .app {
     flex: 1;
+     transition: all .2s ease-in-out;
+}
+.app:hover{
+  flex-grow: 1.03;
+   transition: all .2s ease-in-out;
+
+
 }
 @media screen and (max-width: $on-palm) {
     .applications {
