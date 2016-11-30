@@ -28,7 +28,7 @@
 
 #home p.copyright {
     color: white;
-    font-size: 10px;
+    font-size: 20px;
 }
 /* Footer */
 .footer {
@@ -38,17 +38,25 @@
     text-align: center;
     top: 40%;
     transform: translateY(-40%);
-}
+    -webkit-font-smoothing: antialiased;
 
+
+}
+.footer .copyright{
+  -webkit-transform: translateZ(0px);
+}
 .footer a {
     color: white;
     text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+
 }
-.fa{
+#dribbblewrap{
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  display: inline-block
 }
-.fa:hover {
+#dribbblewrap:hover {
   transform: rotate(1080deg);
 }
 @media screen and (max-width: $on-laptop) {
