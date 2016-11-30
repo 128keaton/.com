@@ -2,6 +2,7 @@
 @import "pages/_home.scss";
 @import "pages/_applications.scss";
 
+
 .social {
     margin-top: 100px;
     color: black;
@@ -20,6 +21,8 @@
 
 #white {
     background-color: #fff;
+    padding-top: 10px;
+    margin-top: -10px;
 }
 
 #white p.copyright {
