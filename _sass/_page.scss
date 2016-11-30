@@ -1,157 +1,13 @@
-.slant-container {
-    z-index: 1;
-    width: 100%;
-    position: relative;
-}
-
-.slant-container .skew:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: visible;
-    width: 100%;
-    height: 400px;
-    background: #ebdd3a;
-    z-index: -1;
-    -webkit-transform: skewY(4deg);
-    -moz-transform: skewY(4deg);
-    -ms-transform: skewY(4deg);
-    -o-transform: skewY(4deg);
-    transform: skewY(4deg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: initial;
-}
-
-.slant-container .skew .slant-container -inner {
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.introduction {
-    text-align: center;
-    font-weight: 100;
-    padding-top: 100px;
-    color: black;
-    text-transform: lowercase;
-    font-weight: bold;
-    padding-bottom: 120px;
-}
-
-.front-site-links {
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    top: 20%;
-    transform: translateY(-20%);
-    text-align: center;
-}
-
-.front-site-links .page-link {
-    font-size: 25px;
-    text-decoration: none;
-    color: white;
-    font-weight: 100;
-    padding: 25px;
-}
-
-
-.applications {
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.app-link {
-    text-decoration: none;
-    font-size: 25px;
-    padding: 25px;
-}
-
-.inner-app {
-    transform: translateY(50%);
-}
-
-.app-icon {
-    border-radius: 20%;
-    padding: 25px;
-}
-
-.app {
-    flex: 1;
-}
-
-@media screen and (max-width: $on-palm) {
-
-  .applications {
-
-      display: block!important;
-
-  }
-
-  .app {
-      height: 500px!important;
-  }
-
-
-  .comments{
-    width: 95%!important;
-    margin: 0 auto!important;
-    padding: 0!important;
-  }
-}
+@import "pages/_portfolio.scss";
+@import "pages/_home.scss";
+@import "pages/_applications.scss";
 
 .social {
     margin-top: 100px;
     color: black;
     text-align: center;
 }
-// ###-Portfolio-###
-
-.portfolio {
-    width: 80%;
-    margin: 100px auto 0;
-}
-
-.project {
-    width: 100%;
-    clear: both;
-    margin-bottom: 100px;
-}
-
-.project a {
-    color: $background-color;
-    text-decoration: none;
-}
-
-.project-title {
-    font-size: 15px;
-}
-
-.project-description {
-    font-weight: 300;
-}
-
-.project-icon {
-    padding: 25px;
-    float: left;
-    width: 150px;
-}
-
-.project-meta {
-    display: inline-block;
-    position: relative;
-    /* margin-top: 10px; */
-    width: 400px;
-    padding: 25px;
-}
-
-
-// ###-Colored Styles-###
-
+/* Page-specific colors */
 #main {
     padding: 1em;
     box-sizing: border-box;
@@ -160,7 +16,6 @@
     margin: 0 auto;
     background-color: white;
     box-sizing: border-box;
-
 }
 
 #white {
@@ -175,67 +30,7 @@
     color: white;
     font-size: 10px;
 }
-// ###-COMMENTS-###
-
-.comments {
-    width: 40%;
-}
-
-.text-field {
-    width: 100%;
-    border: 1px solid black;
-    padding: 10px;
-    margin-bottom: 12px;
-}
-
-h2.comments__heading.heading-2 {
-    font-weight: 300;
-}
-
-.cta {
-    border: 0 solid black;
-    background-color: #ebdd3a;
-    text-transform: lowercase;
-}
-
-.comment {
-    position: relative;
-    margin-bottom: 75px;
-}
-
-.comment__content-wrapper {
-    padding-left: 120px;
-}
-
-.comment__author {
-    font-style: italic;
-    font-weight: 300;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.comment__date {
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-}
-
-.comment a {
-    text-decoration: none;
-    color: black;
-}
-
-.comment__avatar-wrapper {
-    border-radius: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    overflow: hidden;
-}
-// ###-FOOTER-###
-
+/* Footer */
 .footer {
     margin: 0 auto;
     width: 100%;
@@ -243,4 +38,34 @@ h2.comments__heading.heading-2 {
     text-align: center;
     top: 40%;
     transform: translateY(-40%);
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.fa{
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.fa:hover {
+  transform: rotate(1080deg);
+}
+@media screen and (max-width: $on-laptop) {
+    #home p.copyright,
+    .footer {
+        font-size: 0.8em!important;
+        top: 27%;
+        transform: translateY(-27%);
+    }
+}
+@media screen and (max-width: $on-palm) {
+
+
+    #home p.copyright,
+    .footer {
+        font-size: 1.5em!important;
+        top: 10%!important;
+        transform: translateY(-10%) !important;
+    }
 }
