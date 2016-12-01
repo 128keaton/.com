@@ -26,13 +26,14 @@ a.help {
 .app-title {
     font-size: 100px;
     text-align: center;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 10px;
     padding-bottom: 0;
 }
 .app-description {
     font-size: 35px;
     font-weight: 300;
+    text-align: center;
 }
 .app-icon {
     width: 80px;
@@ -59,8 +60,7 @@ a.help {
   margin: 0;
 }
 .app-features-title {
-    font-style: italic;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 55px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -70,7 +70,7 @@ a.help {
     font-size: 23px;
 }
 .app-download {
-    width: 100%;
+    width: 300%;
     float: left;
     display: block;
     height: 50px;
