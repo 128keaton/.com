@@ -154,7 +154,7 @@
     box-sizing : border-box;
     -webkit-appearance: none;
     border-radius: 0;
-    -webkit-border-radius:0; 
+    -webkit-border-radius:0;
 }
 
 h2.comments__heading.heading-2 {
@@ -202,4 +202,13 @@ h2.comments__heading.heading-2 {
     left: 0;
     width: 100px;
     overflow: hidden;
+}
+.return-blog{
+  text-decoration: none;
+  color: black;
+  float: left;
+  margin-top: 145px;
+  width: 100px;
+  text-align: center;
+  display: inline-block;
 }
