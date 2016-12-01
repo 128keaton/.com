@@ -1,24 +1,31 @@
 ---
-layout: dark
-title:  "Blog"
+layout: default
+title: "Blog"
 permalink: /blog/
 weight: 2
 ---
-
 <div class="social">
-  <h2 class="post-title">Blâg</h2>
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml " | relative_url }}">via RSS</a></p>
+    <h2 class="post-title">Blâg</h2>
+    <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | relative_url }}">via RSS</a></p>
 </div>
 <ul class="post-list">
     {% for post in site.posts %}
     <li>
-        <div class="meta">
-            <span class="post-meta">{{ post.date | date: "%b %d" }}</span>
+        <div class="post-preview">
+
+            <div class="post-stuff">
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+
+            </div>
+            <div class="meta">
+                <span class="post-meta">{{ post.date | date: "%b %d" }}</span>
+                <span class="post-word-count">{{ post.content | number_of_words }} words</span>
+            </div>
+            <div class="post-text">
+                {% if post.description %} {{ post.description }} {% else %} {{ post.content | strip_html | truncatewords: 55 }} {% endif %}
+            </div>
+
         </div>
-        <span class="post-stuff">
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        <span class="post-word-count">{{ post.content | number_of_words }} words</span>
-      </span>
     </li>
     {% endfor %}
 </ul>

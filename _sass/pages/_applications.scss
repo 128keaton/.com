@@ -1,5 +1,4 @@
 /* Applications */
-
 .applications {
     margin: 0 auto;
     height: 100%;
@@ -18,20 +17,19 @@
     transform: translateY(50%);
 }
 
-.app-icon {
+.app-icon2 {
     border-radius: 20%;
     padding: 25px;
 }
 
 .app {
     flex: 1;
-     transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
-.app:hover{
-  flex-grow: 1.03;
-   transition: all .2s ease-in-out;
 
-
+.app:hover {
+    flex-grow: 1.03;
+    transition: all 0.2s ease-in-out;
 }
 @media screen and (max-width: $on-palm) {
     .applications {
