@@ -3,7 +3,6 @@
     background-color: #c4ebc6;
     border-left: 10px solid black;
     padding: 10px;
-    white-space: pre-wrap;
     /* CSS3 */
     white-space: -moz-pre-wrap;
     /* Firefox */
@@ -12,6 +11,7 @@
     white-space: -o-pre-wrap;
     /* Opera 7 */
     word-wrap: break-word;
+    width: 100%;
 }
 
 .notice--info a {

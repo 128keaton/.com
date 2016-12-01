@@ -1,10 +1,5 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-
-@charset "utf-8";
+--- # Only the main Sass file needs front matter (the dashes are enough) --- @charset  "utf-8";
 @import "main.css";
-
 a.home {
     padding: 20px;
     display: block;
@@ -55,9 +50,9 @@ a.help {
     float: left;
     width: 50%;
 }
-.app-features-list{
-  font-size: 25px;
-  margin: 0;
+.app-features-list {
+    font-size: 25px;
+    margin: 0;
 }
 .app-features-title {
     font-weight: 300;
@@ -85,31 +80,32 @@ a.help {
     text-decoration: none;
 }
 @media only screen and (max-width : 768px) {
-.app-container {
-  width: 100%;
-}
-.app-description{
-  width: 95%;
-text-align: center;
-  margin: 0 auto;
-}
-.app-video{
-  text-align: center;
-  float: none;
-  margin: 0 auto;
-}
-.app-info{
-  width: 95%!important;
-  margin: 0 auto;
-  float: none;
-}
-.app-download{
-  font-size: 20px;
-}
-#large{
-  height: auto;
-  margin: 0 auto;
-  float: none;
-  padding: 0px;
-}
+    .app-container {
+        width: 100%;
+    }
+    .app-description {
+        width: 95%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .app-video {
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+    }
+    .app-info {
+        width: 95%!important;
+        margin: 0 auto;
+        float: none;
+    }
+    .app-download {
+        font-size: 20px;
+        width: auto!important;
+    }
+    #large {
+        height: auto;
+        margin: 0 auto;
+        float: none;
+        padding: 0;
+    }
 }
