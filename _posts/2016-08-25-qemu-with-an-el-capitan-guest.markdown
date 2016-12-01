@@ -2,6 +2,7 @@
 layout: post
 title: "QEMU with an El Capitan Guest"
 date: "2016-08-25 16:26:08 -0500"
+description: "Hacking OS X into a virtual machine, for science"
 ---
 
 {% capture credit %}

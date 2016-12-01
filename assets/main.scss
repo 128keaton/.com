@@ -67,9 +67,10 @@ body {
 html, body{
   height: 100%;
 }
-@import "_app-styles.scss";
+
 @import "_header.scss";
 @import "_post.scss";
+@import "_app-styles.scss";
 @import "_page.scss";
 @import "_code.scss";
 @import "_notice.scss";
