@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Blog"
+title: "Blog"
 permalink: /blog/
 weight: 2
 ---
@@ -22,7 +22,7 @@ weight: 2
                 <span class="post-word-count">{{ post.content | number_of_words }} words</span>
             </div>
             <div class="post-text">
-                <p>{{ post.content | strip_html | truncatewords:25}}</p>
+                {% if post.description %} {{ post.description }} {% else %} {{ post.content | strip_html | truncatewords: 55 }} {% endif %}
             </div>
 
         </div>
