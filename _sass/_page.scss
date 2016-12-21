@@ -87,9 +87,10 @@
 .fourohfour::after {
     clear: both;
 }
-.fourohfour p{
+.fourohfour a{
   text-align: center;
-  color: black;
+  color: white;
+  font-size: 26px;
 }
 @media screen and (max-width: $on-laptop) {
     #frontpage-footer,
