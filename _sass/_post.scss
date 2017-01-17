@@ -60,6 +60,9 @@
     font-size: 2.5em;
     font-weight: 300;
 }
+.mobile-back{
+  display: none;
+}
 
 .post-stuff {
 
@@ -102,8 +105,8 @@
 }
 @media screen and (max-width: $on-palm) {
     .post-list {
-        width: 95%!important;
-        padding: 0;
+        width: 100%!important;
+        padding: 50px;
         margin: 0 auto;
     }
 
@@ -132,6 +135,9 @@
         text-align: center;
         font-size: 0.9em!important;
     }
+    .return-blog{
+      display: none!important;
+    }
 
     .post-stuff {
         clear: both;
@@ -143,10 +149,11 @@
 
     .post-title {
         font-size: 2.0em!important;
+        font-weight: bolder;
     }
 
     #main {
-        width: 95%!important;
+        width: 100%!important;
         font-size: 0.9em;
     }
 
@@ -158,6 +165,14 @@
         margin: 0 auto !important;
         padding: 0 !important;
     }
+    .mobile-back{
+      margin-right: 12px;
+      display: inline!important;
+      text-decoration: none;
+      color: black;
+    }
+
+
 }
 /* Comments */
 .comments {
