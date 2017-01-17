@@ -25,3 +25,10 @@
     border-left: solid rgb(117, 202, 255) 10px;
     font-size: 18px;
 }
+
+@media screen and (max-width: $on-palm) {
+.notice--info{
+  margin-left: -20px;
+  padding-right: 20px;
+}
+}

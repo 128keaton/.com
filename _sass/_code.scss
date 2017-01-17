@@ -1,5 +1,6 @@
 $terminal-text-color: #00FF00;
 $terminal-background-color: black;
+
 code {
     white-space: pre-wrap;
     /* css-3 */
@@ -23,6 +24,7 @@ code.language-bash::before,
 code.language-bash::before {
     content: "$ ";
 }
+
 code.language-bash,
 code.language-shell {
     background-color: $terminal-background-color;
@@ -30,19 +32,25 @@ code.language-shell {
     border-radius: 0px!important;
     width: 100%;
     margin-bottom: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding: 10px;
-    padding-top: 25px;
+    padding: 25px 10px 10px;
 }
+
 .highlight {
     margin-left: 0;
     margin-right: 0;
 }
 @media screen and (max-width: $on-palm) {
     code {
-        width: 92%!important;
+        width: 100%!important;
     }
+
+    code.language-bash,
+    code.language-shell {
+        padding-right:35px;
+        overflow-x: hidden;
+        margin-left: -25px !important;
+    }
+
     .highlight {
         font-size: 12px;
         width: auto!important;

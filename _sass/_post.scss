@@ -33,13 +33,14 @@
     width: 80%;
     list-style: none;
     margin: 25px auto 0;
-    -webkit-margin-before: 0em !important;
--webkit-padding-start: 0px;
+    -webkit-margin-before: 0 !important;
+    -webkit-padding-start: 0;
 }
 
-.post-list li {
+.blog-post {
     padding-bottom: 10px;
     margin: 25px 0;
+    word-wrap: break-word;
 }
 
 .post-preview {
@@ -60,12 +61,12 @@
     font-size: 2.5em;
     font-weight: 300;
 }
-.mobile-back{
-  display: none;
+
+.mobile-back {
+    display: none;
 }
 
 .post-stuff {
-
     width: 100%;
 }
 
@@ -89,11 +90,14 @@
     margin-top: 58px;
     font-size: 14px;
 }
-.post-text a, .post-text a:visited{
-  color: #ff4b33;
+
+.post-text a,
+.post-text a:visited {
+    color: #ff4b33;
 }
-.post-text img{
-  max-width: 100%;
+
+.post-text img {
+    max-width: 100%;
 }
 
 .post-tag {
@@ -106,37 +110,39 @@
 @media screen and (max-width: $on-palm) {
     .post-list {
         width: 100%!important;
-        padding: 50px;
         margin: 0 auto;
     }
 
+    .blog-post {
+        background-color: #f7f7f7;
+        border: 2px solid rgb(233, 233, 233);
+    }
+
     .post-preview {
-        width: 80%;
+        width: 90%;
         padding: 0 !important;
         margin: 0 auto;
         height: auto;
         min-height: 50px;
     }
 
-    .post-text {
-        display: none;
-    }
-
     .meta {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .post-link {
-        white-space: nowrap;
-        overflow: hidden;
         width: 100%;
         margin: 0 auto;
-        text-align: center;
-        font-size: 0.9em!important;
+        font-size: 2.9em!important;
     }
-    .return-blog{
-      display: none!important;
+
+    .return-blog {
+        display: none!important;
+    }
+
+    .post-word-count {
+        display: none;
     }
 
     .post-stuff {
@@ -144,7 +150,7 @@
         display: block;
         width: 100%;
         position: relative;
-        text-align: center;
+        text-align: left;
     }
 
     .post-title {
@@ -165,14 +171,13 @@
         margin: 0 auto !important;
         padding: 0 !important;
     }
-    .mobile-back{
-      margin-right: 12px;
-      display: inline!important;
-      text-decoration: none;
-      color: black;
+
+    .mobile-back {
+        margin-right: 12px;
+        display: inline!important;
+        text-decoration: none;
+        color: black;
     }
-
-
 }
 /* Comments */
 .comments {

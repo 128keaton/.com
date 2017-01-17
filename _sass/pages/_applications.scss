@@ -27,6 +27,8 @@
 .app {
     flex: 1;
     transition: all 0.2s ease-in-out;
+    min-height: 100%;
+
 }
 
 .app:hover {
@@ -40,5 +42,8 @@
 
     .app {
         height: 500px!important;
+    }
+    #full{
+      height: auto!important;
     }
 }
