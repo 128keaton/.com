@@ -1,8 +1,9 @@
 /* For notices, warnings, etc */
 .notice--info {
-    background-color: #c4ebc6;
+    background: linear-gradient(#ff4b33, #ff335e);
     border-left: 10px solid black;
     padding: 10px;
+    color: white;
     /* CSS3 */
     white-space: -moz-pre-wrap;
     /* Firefox */
@@ -15,7 +16,7 @@
 }
 
 .notice--info a {
-    color: #7d707e;
+    color: white;
 }
 
 .notice--update {
