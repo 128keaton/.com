@@ -11,13 +11,19 @@
 
 body{
   background: linear-gradient(#161124, #343e4f)!important;
+  overflow:auto;
 }
-
+.wrapper{
+  overflow: auto;
+  overflow-x: hidden;
+}
 .slant-container {
     z-index: 1;
     width: 100%;
     position: relative;
     outline: 1px solid transparent;
+
+
 }
 
 .slant-container .skew:before {
@@ -39,6 +45,7 @@ body{
     outline: 1px solid transparent;
     transition: transform 1s;
     border: 1px solid rgba(0, 0, 0, 0.1);
+      overflow:hidden;
 }
 
 .slant-container:hover .skew:before {
