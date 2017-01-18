@@ -15,7 +15,7 @@ weight: 2
         <div class="post-preview">
 
             <div class="post-stuff">
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                <a class="post-link" href="{% if post.reference-url %}{{ post.reference-url }}{% else %}{{ post.url | relative_url }}{% endif %}">{{ post.title | escape }}</a>
 
             </div>
             <div class="meta">
