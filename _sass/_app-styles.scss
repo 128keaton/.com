@@ -1,4 +1,4 @@
---- # Only the main Sass file needs front matter (the dashes are enough) --- @charset  "utf-8";
+@charset  "utf-8";
 @import "main.css";
 a.home {
     padding: 20px;
@@ -21,13 +21,14 @@ a.help {
 .app-title {
     font-size: 100px;
     text-align: center;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 10px;
     padding-bottom: 0;
 }
 .app-description {
     font-size: 35px;
     font-weight: 300;
+    text-align: center;
 }
 .app-icon {
     width: 80px;
@@ -54,8 +55,7 @@ a.help {
     margin: 0;
 }
 .app-features-title {
-    font-style: italic;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 55px;
     margin-top: 5px;
     margin-bottom: 10px;
