@@ -25,10 +25,14 @@
 
 }
 
+
 #white p.copyright {
     color: black;
 }
 
+#post .social-buttons a{
+  color: white!important;
+}
 #home p.copyright {
     color: white;
     font-size: 20px;
@@ -58,8 +62,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-#default-footer a,
-#post-footer a {
+#default-footer a{
     color: black;
 }
 
