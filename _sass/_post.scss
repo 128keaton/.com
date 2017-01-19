@@ -10,7 +10,6 @@
     word-wrap: break-word;
 }
 
-
 .post-head-image {
     object-fit: cover;
     width: 100%;
@@ -52,11 +51,11 @@
 }
 
 .post-link {
-  font-weight: 900;
-letter-spacing: 0.01em;
-text-decoration: none;
-color: black;
-font-size: 4.06rem;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    color: black;
+    font-size: 4.06rem;
 }
 
 .post-title {
@@ -108,6 +107,18 @@ font-size: 4.06rem;
 
 .social .post-title {
     color: white;
+}
+@media screen and (max-width: 1200px) {
+    .post-list {
+        width: 80%!important;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    .post-list {
+        width: 100%!important;
+        margin: 0 auto;
+    }
 }
 @media screen and (max-width: $on-palm) {
     .post-list {
@@ -246,7 +257,7 @@ h2.comments__heading.heading-2 {
 
 .return-blog {
     text-decoration: none;
-    color: rgb(255, 44, 71);
+    color: black;
     float: left;
     margin-top: 145px;
     width: 100px;
