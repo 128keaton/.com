@@ -1,3 +1,6 @@
 [submodule "_posts"]
 	path = _posts
 	url = https://github.com/128keaton/blog-posts
+[submodule "_images"]
+	path = _images
+	url = https://github.com/128keaton/site_images
