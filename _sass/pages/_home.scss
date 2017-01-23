@@ -10,8 +10,8 @@
 }
 
 body{
-  background: linear-gradient(#161124, #343e4f)!important;
-
+  background-color: rgb(13, 21, 40);
+  height: 100vh;
 }
 .wrapper{
   overflow-x: hidden;
@@ -53,7 +53,7 @@ body{
     -ms-transform: skewY(3deg);
     -o-transform: skewY(3deg);
     transform: skewY(3deg);
-    outline: 1px solid transparent;
+    outline: 2px solid black;
 }
 
 .slant-container .skew .slant-container-inner {
@@ -65,8 +65,9 @@ body{
 h1.introduction {
     text-align: center;
     padding-top: 100px;
+
     color: white;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-weight: 900;
     -webkit-transform: translateZ(0);
 }
@@ -74,7 +75,7 @@ h1.introduction {
 p.introduction {
     text-align: center;
     padding-bottom: 120px;
-    font-weight: 100;
+    font-weight: 400;
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
