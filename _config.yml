@@ -1,50 +1,55 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-include: ["_pages", "_data", "assets/apps.scss", "_images"]
+---
 title: Keaton Burleson
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+include:
+- _pages
+- _data
+- assets/apps.scss
+- _images
 email: keaton.burleson@me.com
 username: 128keaton
-description: > # this means to ignore newlines until "baseurl:"
-  This is Keaton Burleson's website
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: 'This is Keaton Burleson''s website
+
+'
+baseurl: ''
+url: ''
 staticmanUrl: https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments
-# Build settings
 markdown: kramdown
 encoding: utf-8
 gems:
-  - jekyll-feed
+- jekyll-feed
 exclude:
-  - Gemfile
-  - Gemfile.lock
+- Gemfile
+- Gemfile.lock
 kramdown:
   input: GFM
 staticman:
-  allowedFields: ["name", "email", "url", "message"]
-  branch: "gh-pages"
-  filename: "entry{@timestamp}"
-  format: "yaml"
+  allowedFields:
+  - name
+  - email
+  - url
+  - message
+  branch: gh-pages
+  filename: entry{@timestamp}
+  format: yaml
   generatedFields:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: timestamp-seconds
   moderation: true
-  name: "128keaton.com"
-  path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "message"]
+  name: 128keaton.com
+  path: _data/comments/{options.slug}
+  requiredFields:
+  - name
+  - email
+  - message
   transforms:
     email: md5
