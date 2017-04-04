@@ -18,8 +18,7 @@ pagination:
         <div class="post-preview">
 
             <div class="post-stuff">
-                <a class="post-link" href="{% if post.reference-url %}{{ post.reference-url }}{% else %}{{ post.url | relative_url }}{% endif %}">{{ post.title | escape }}</a>
-
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>{% if post.reference-url %}<a class="internal-post-link" href="{{ post.reference-url }}">Reference</a>{% endif %}
             </div>
             <div class="meta">
                 <span class="post-meta">Posted {{ post.date | date: "%b %d" }}</span>
