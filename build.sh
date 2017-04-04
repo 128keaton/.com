@@ -27,6 +27,7 @@ cp -R _site/* ../site
 # commit and push generated content to `master' branch
 # since repository was cloned in write mode with token auth - we can push there
 cd ../site
+
 git config user.email "keaton.burleson@me.com"
 git config user.name "Keaton Burleson"
 git add -A .

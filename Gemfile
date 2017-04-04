@@ -19,6 +19,7 @@ ruby RUBY_VERSION
 gem "bundler"
 gem "jekyll", "3.4.3"
 gem "kramdown"
+gem "rake"
 gem "jekyll-paginate-v2"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
