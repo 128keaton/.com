@@ -30,6 +30,13 @@ gems:
 exclude:
 - Gemfile
 - Gemfile.lock
+- vendor
+- README.md
+- Rakefile
+- changelog.md
+- "*.Rmd"
+- vendor
+- .travis.yml
 kramdown:
   input: GFM
 
