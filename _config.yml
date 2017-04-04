@@ -1,4 +1,4 @@
-include: ["_pages", "_data", "assets/apps.scss", "_images"]
+---
 title: Keaton Burleson
 timezone: UTC
 collections:
@@ -15,7 +15,7 @@ include:
 - _images
 email: keaton.burleson@me.com
 username: 128keaton
-description: "This is Keaton Burleson's website"
+description: This is Keaton Burleson's website
 baseurl: ''
 url: ''
 staticmanUrl: https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments
