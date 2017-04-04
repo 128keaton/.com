@@ -1,0 +1,82 @@
+---
+layout: post
+title: "iOS 6 in 2016"
+date: "2017-01-19 22:32:31 -0600"
+head-image: "/_images/iphone_ios_6/IMG_1064.JPG"
+---
+First let me preface this 'review' by stating that I actually didn't use iOS 6 for the duration of this test because I *couldn't*. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual texts and phone calls.
+
+Now, lets delve into the review.
+
+## The Review Unit
+
+**iPhone 5, 16GB, black**
+
+*back in black!! not that slate crap*
+
+![](http://images.128keaton.com/_images/iphone_ios_6/IMG_1068.JPG#stylized)
+
+The iPhone 7 'matte black' before it was cool! Ladies and gentleman, feast your eyes on what $98 netted me on the Ebay. Before I continue, I wanna say that this is my THIRD phone to have purchased. The first one, even though it was told that I'd receive the photos EXACTLY how the pictures depicted it, and was even assured that it would not be updated, it was, to fateful iOS 10. The second unit was pretty good, it was kinda junky, but it *worked*, until it didn't 😞. Long story short, both were refunded, and I finally said 'enough', and bought one on iOS 6.1.4. Some might not like the pateña look on their iPhone, but the slate just *damages* so well.
+
+John Gruber, on the black iPhone 5:
+
+<div class="notice--quote">
+The “slate” anodization did show wear and tear as the year went by, but I liked the effect. Like a good pair of jeans or a leather watch strap.
+</div>
+
+![](http://images.128keaton.com/_images/iphone_ios_6/IMG_1069.JPG#stylized-small)
+![](http://images.128keaton.com/_images/iphone_ios_6/IMG_1070.JPG#stylized-small)
+![](http://images.128keaton.com/_images/iphone_ios_6/IMG_1071.JPG#stylized-small)
+
+😍😍😍😍
+
+I just love it. Now, I do like the feel of the phone, but I really enjoy the size and shape of the 7+ better. Plus, the camera is stellar (though the 5's is nothing to hock a loogie at). So  a SE isn't for me, plus the 5 has something that the SE never will: iOS 6.
+
+### oh, these? just images from my 5:
+
+![](http://images.128keaton.com/_images/iphone_ios_6/IMG_0013.JPG#stylized-small)
+![](http://images.128keaton.com/_images/iphone_ios_6/IMG_0014.JPG#stylized-small)
+![](http://images.128keaton.com/_images/iphone_ios_6/IMG_0015.JPG#stylized-small)
+
+Not bad, eh?
+
+## iOS 6: Applications
+
+Now, I am a simple man, I don't do much outside of basic stuff.
+
+Here is a table of applications that I use enough to consider 'essential' (outside of system apps):
+
+| Application | Status |
+|-------------|--------|
+| Snapchat    | 😵     |
+| Mactracker  | 😁     |
+| Hangouts    | 😁     |
+| BofA        | 😵     |
+| Ebay        | 😁     |
+| Netflix     | 😁     |
+
+See, I'm simple! Even me losing Snapchat is no biggie! No nudes for me!
+
+Hangouts works fine, I can talk with my co-workers who don't wanna use Slack. Another good app with iOS 6 support is Telegram. Netflix is a web wrapper (which explains ALOT, y'all, nativity is fine!). Even a couple of games worked without having to downgrade.
+
+## iOS 6: Speed.
+
+Now, it may be placebo (placky-bow), but holy lingonberries, iOS 6 is *fast*.
+
+The animations in iOS 10 surely slow it down, but the content just feels snappier, plus having a UI designed to mimic [real-world](https://dribbble.com/shots/995953-Bus-Schedule-App) objects is just **tasty**.
+
+Boot-up time is slower than my 7+, and Cydia doesn't have multitasking support in iOS 6, but typing never lags, the multitasking switcher is instant, plus I've yet to see a frame drop. It is also interesting to think that this has 1GB of RAM, while the flagship Apple iDevice (the non `+` variant, at least) has 2GB. Hmm. Real-world 'speed' is also pretty decent, clocking in at 721 on the 'Single Core' Geekbench, as you can see [here](http://browser.primatelabs.com/geekbench3/8221245), coming very close to a late 2008 MacBook Pro 15" and a Google Indexing Server (well, just look, bleh), and beating an IBM Thinkpad X51, which is quite cool, considering the power in your pocket beats the power on your lap and in your office from seven years ago.
+
+Part of me thinks that mobile OS and web designers have gotten lazy, the amount of RAM and processing power has increased so that we can easily *be* lazy, but thats just personal opinion.
+
+## Wrapping it up.
+
+Overall, I think using an iPhone 5 in iOS 6 is still an easy task, and it can be enjoyable if you really think that iOS 6 is beautiful like I do. The hardware is solid, a perfect mix of utilitarianism and industrial simplicity. Especially the black, really, its gorgeous. It is a cool throwback, though, a time when Steve Jobs had some say in the design, no doubt on his deathbed he was hem-ing and haw-ing over little details. This is pre-Yosemite, or pre-San Francisco, a world of Helvetica-Neue washes over the entirety. Bringing this phone into this age with iOS 10 is near-criminal, kinda like having the good ol' farm dog pull the family carriage into town.
+
+That is the iPhone 5 today, the kinda scruffy, yet extremely lovable dog.
+
+If you use the dog for what it was designed for, like keeping it on iOS 6, it works! It just does!  iOS 6 is smooth, fluid, and has features to sate the average, and daresay, power user!
+
+I just think it was a waste of design, moving to iOS 7 so abruptly.
+
+If you disagree, leave a comment below and we'll talk.

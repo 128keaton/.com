@@ -1,0 +1,22 @@
+---
+layout: "post"
+title: "Man, I Miss 2010"
+date: "2016-05-05 10:07"
+comments: true
+head-image: https://i.sli.mg/fRQZlG.jpg
+head-credit: "Apple Store, circa 2010, photos I took of the iPhone 4"
+---
+2010, was the year of iOS 4. 2010 was when the iPhone 4 was a flagship phone, a beautiful slab of technology. It was regarded as 'thin' and 'lightweight'. Sound weird? It should.
+
+How far we have fallen.
+
+
+In 2010, we had a readily available jailbreak for the current iOS. Heck, we had a jailbreak for iOS4 Beta 1, here we are, waiting on a jailbreak for 9.2/9.3.x. Relying on Chinese coder teams to find a single, glorious chink in Apple's armor.
+
+Here is a good reminder of why we used to jailbreak:
+
+![](https://i.sli.mg/Koyhnm.jpg)
+
+That, was an iPhone 3G, running iOS 4, with the `homescreen-wallpaper: true` line set in `N82AP.plist`.
+
+What a miracle.
