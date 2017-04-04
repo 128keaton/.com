@@ -69,12 +69,4 @@ Time Machine also had a few surprises, it had the option to store hourly snapsho
 
 Oh, I should probably update that :)
 
-That about wraps it up. I did upload all of my pics for your viewing pleasure, check them out below:
-
-
-<div class="gallery">
-{% loopdir path:"gallery/lion-beta" match:"*.md" sort:"ordering" %}
-    <a href="/{{ item.fullname }}.html">
-        <img alt="Photo: {{ item.title }}" height="96" src="/{{ item.fullname }}~96x96.jpg" title="{{ item.title }}" width="96" />
-    </a>
-{% endloopdir %}
+That about wraps it up. 
