@@ -267,8 +267,7 @@ html, body {
 .break {
   border: 1px solid black;
   width: 20%;
-  margin: 0 auto;
-  margin-bottom: 20px; }
+  margin: 0 auto 20px; }
 
 /* Comments */
 .comments {
@@ -344,6 +343,19 @@ img[src$='#stylized-small'] {
   display: inline-block;
   padding: 0;
   margin: 0 auto; }
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 25px; }
+
+.pagination a {
+  color: gray;
+  text-decoration: none;
+  font-size: 30px; }
 
 a.home {
   padding: 20px;
