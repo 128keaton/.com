@@ -1,5 +1,6 @@
 language: ruby
 script: "./build.sh"
+cache: bundler
 branches:
   only:
   - pre-publish
