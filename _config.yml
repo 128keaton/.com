@@ -1,0 +1,68 @@
+---
+title: Keaton Burleson
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+include:
+- _pages
+- _data
+- assets/apps.scss
+- _images
+email: keaton.burleson@me.com
+username: 128keaton
+description: This is Keaton Burleson's website
+baseurl: ''
+url: ''
+staticmanUrl: https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments
+markdown: kramdown
+encoding: utf-8
+gems:
+- jekyll-feed
+- jekyll-paginate-v2
+exclude:
+- Gemfile
+- Gemfile.lock
+kramdown:
+  input: GFM
+staticman:
+  allowedFields:
+  - name
+  - email
+  - url
+  - message
+  branch: gh-pages
+  filename: entry{@timestamp}
+  format: yaml
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: timestamp-seconds
+  moderation: true
+  name: 128keaton.com
+  path: _data/comments/{options.slug}
+  requiredFields:
+  - name
+  - email
+  - message
+  transforms:
+    email: md5
+pagination:
+  enabled: true
+  debug: false
+  collection: posts
+  per_page: 5
+  permalink: "/page/:num/"
+  title: ":title - page :num"
+  limit: 0
+  sort_field: date
+  sort_reverse: true
+  category: posts
+  trail:
+    before: 2
+    after: 2
