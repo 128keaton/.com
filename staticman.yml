@@ -8,7 +8,7 @@ comments:
       type: date
       options:
         format: "timestamp-seconds"
-  moderation: true
+  moderation: false
   name: "128keaton.com"
   path: "_data/comments/{options.slug}"
   requiredFields: ["name", "email", "message"]
