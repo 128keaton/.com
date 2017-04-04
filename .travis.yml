@@ -2,6 +2,8 @@ language: ruby
 install:
 - bundle install
 script: bundle exec rake site:deploy --quiet
+rvm:
+- 2.1.2
 env:
   global:
   - secure: c+lhs6eANGkd3wPcUXWywaJyr7Aw4uWob3MhgVCqoF2p1QrI1DypNLDHn4fhQw/9lba84HTdgUnxzM2ymO5EtHupl3HaKFbkHxDtgj470U7J/+JRcbJIfRK31cvmLkhpWBXyU4HddAV1ch+eY5Z+HX325KjSLt8v1NBNIqmVsVMNMw/C9R/ydmLJeQ/qJtmE5EXsbLiJESabg+Ya61V9mQU6gURbymf/mBYZvk3oKQkpTSy/RtI0tNlFX9ZtJagvX/u2Uq4V8FigNG0kMrANb6EJYvZA/ykkJcVJk51sEccVlAQEMHvzwpj7MF8kOdWlTfplxW0y5weL2vsumr1NFTc9iEFm9CC3warWbuXRMnVFb+keyWj/CVrIWTq08xpaOoyIYZym8vdzOc19Rg3ZCG8x9zatWIcgL34/DCIFleCHdDLNaClpIf2JHhEQ/18WgqMNVAKz40bx3sDNurFtkZCjiZCFPRb1WQ+Usk1X0jcwr3lajU3iGQ0sEmVY1cfclEbxZSwoc25rEEvwtu0hO0q2+oi27DDt61332ToPndyR7TsnR2nE5tF0gg+101jBKvCIcSru2rgGhlACFIabpZ66NVf4bk2sjWzouvqXrcGhxQo8369tyQOLpZ2VK69zw7OfWRTWlwmAcnPXogb3RSZMkF/ctI4QIA5IjQf/J+o=
