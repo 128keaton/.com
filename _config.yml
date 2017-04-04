@@ -18,6 +18,9 @@ username: 128keaton
 description: This is Keaton Burleson's website
 baseurl: ''
 url: ''
+repo: 128keaton.com
+branch: pre-publish
+destination: ../site/
 staticmanUrl: https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments
 markdown: kramdown
 encoding: utf-8
