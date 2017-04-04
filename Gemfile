@@ -18,6 +18,7 @@ ruby RUBY_VERSION
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 gem "jekyll"
 gem "kramdown"
+gem "jekyll-paginate-v2"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"

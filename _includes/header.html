@@ -3,7 +3,8 @@
     <div class="header-inner">
         <div class="site-links">
             <a class="page-link" href="/">Home</a>
-      {% for page in site.pages | sort: "weight" %} {% if page.weight %}
+      {% for page in site.pages | sort: "weight" %}
+      {% if page.weight != nil and page.autogen == nil %}
       <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a> {% endif %} {% endfor %}
         </div>
     </div>
