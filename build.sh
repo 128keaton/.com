@@ -12,7 +12,7 @@ set -e
 # build site with jekyll, by default to `_site' folder
 git pull && git submodule init && git submodule update && git submodule status
 
-jekyll build
+ bundle exec jekyll build
 
 # cleanup
 rm -rf ..site
