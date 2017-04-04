@@ -15,8 +15,9 @@ include:
 - _images
 email: keaton.burleson@me.com
 username: 128keaton
-repo: https://github.com/128keaton/128keaton.com
+repo: 128keaton.com
 branch: pre-publish
+destination: ../site/
 description: This is Keaton Burleson's website
 baseurl: ''
 url: ''
