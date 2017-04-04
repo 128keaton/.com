@@ -32,19 +32,20 @@ namespace :site do
         puts 'Grabbing submodules'
         sh 'git pull && git submodule init && git submodule update && git submodule status'
     end
+    task :correct_posts do
+      puts 'Correcting blog posts'
+      Dir.entries(__dir__ + '/_posts/').each do |file_name|
+          next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
+          text = File.read(__dir__ + '/_posts/' + file_name)
+          fixed = text.gsub('![](/', '![](http://images.128keaton.com/')
+          File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
+      end
+      puts "Uploading blog posts.."
+      sh "cd " + __dir__ + "/_posts/ && git add --all ."
+      sh "cd " + __dir__ + "/_posts/ && git commit -m 'Updating blog posts.'"
+      sh "cd " + __dir__ + "/_posts/ && git push origin HEAD:master --quiet && cd ../"
+    end
     task :upload_images do
-        puts 'Correcting blog posts'
-        Dir.entries(__dir__ + '/_posts/').each do |file_name|
-            next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
-            text = File.read(__dir__ + '/_posts/' + file_name)
-            fixed = text.gsub('![](/', '![](http://images.128keaton.com/')
-            File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
-        end
-        puts "Uploading blog posts.."
-        sh "cd " + __dir__ + "/_posts/"
-        sh "git add --all ."
-        sh "git commit -m 'Updating blog posts.'"
-        sh "git push --quiet && cd ../"
         puts 'Uploading images..'
         options = { recursive: true, password: SSH_PASSWORD }
         Net::SCP.upload!(SSH_HOST, SSH_USERNAME, __dir__ + '/images/', '/home/12/128keaton.com/html/', options)
