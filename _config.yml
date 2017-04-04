@@ -2,9 +2,6 @@ include: ["_pages", "_data", "assets/apps.scss", "_images"]
 title: Keaton Burleson
 timezone: UTC
 collections:
-  _posts:
-    title: Posts
-    output: true
   posts:
     title: Posts
     output: true
