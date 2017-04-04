@@ -104,9 +104,14 @@ html, body {
   max-width: 75%;
   max-height: 600px; }
 
+.post--full {
+  width: 50%;
+  margin: 0 auto; }
+
 .post p,
 .post ul {
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  font-size: 14px; }
 
 .post-head-image {
   object-fit: cover;
@@ -354,8 +359,7 @@ img[src$='#stylized-small'] {
   justify-content: space-between;
   align-items: center;
   max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 25px; }
+  margin: 0 auto 25px; }
 
 .pagination a {
   color: gray;
