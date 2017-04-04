@@ -42,7 +42,7 @@ kramdown:
 
 pagination:
   enabled: true
-  debug: true
+  debug: false
   collection: posts
   per_page: 5
   permalink: "/page/:num/"
