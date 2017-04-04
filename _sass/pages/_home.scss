@@ -47,8 +47,6 @@ body {
     overflow: hidden;
 }
 
-
-
 .slant-container .skew .slant-container-inner {
     padding: 20px;
     margin-left: auto;
@@ -63,11 +61,12 @@ h1.introduction {
     font-weight: 900;
     -webkit-transform: translateZ(0);
 }
-img.introduction{
-  width: 200px;
-margin: 0 auto;
-display: block;
-border-radius: 100%;
+
+img.introduction {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 100%;
 }
 
 p.introduction {
@@ -100,18 +99,22 @@ p.introduction {
 .front-site-links .page-link:nth-child(3) {
     border: none!important;
 }
-.build-status{
-  text-align: center;
+
+.build-status {
+    text-align: center;
 }
 @media screen and (max-width: $on-palm) {
     .front-site-links .page-link {
         padding: 10px !important;
         font-weight: 300!important;
     }
-    .build-status{
-    display: none;
-    }
 
+    .build-status {
+        display: none;
+    }
+    .front-site-links .page-link {
+        border: none!important;
+    }
     .front-site-links {
         top: 5%!important;
         transform: translateY(-5%)!important;
