@@ -2,7 +2,6 @@
 layout: "post"
 title: "PATA SSDs for PowerPC on the Cheap"
 date: "2016-05-08 22:26"
-head-image: https://i.sli.mg/FUaCkO.jpg
 ---
 
 When dealing with older equipment, one might have to do a hard drive replacement. It is becoming more and more common, as hard drives fail and cease to become writable, or worse-case scenario: readable. The entire PowerBook and iBook line uses a PATA connector to interface with physical storage devices, and then uses an ATA66 or ATA100 bus to manage data transfer.
@@ -13,8 +12,8 @@ I found this: [the 'hot adaptor'](http://www.ebay.com/itm/361098025243?_trksid=p
 
 My paper 'caddy':
 
-![see the paper?](https://i.sli.mg/FUaCkO.jpg)
+![see the paper?](http://images.128keaton.com/2016/05/IMG_1763.jpg)
 
 The SSD, plus adapter.
 
-![the SSD](https://i.sli.mg/9xSbus.jpg)
+![the SSD](http://images.128keaton.com/2016/05/IMG_1764.jpg)
