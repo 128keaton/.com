@@ -6,13 +6,14 @@ if [ $TRAVIS_PULL_REQUEST == "true" ]; then
   exit 0
 fi
 
+if [[ `git status --porcelain` ]]; then
 # enable error reporting to the console
 set -e
 
 # build site with jekyll, by default to `_site' folder
 git pull && git submodule init && git submodule update && git submodule status
 
-jekyll build
+ bundle exec jekyll build
 
 # cleanup
 rm -rf ..site
@@ -31,3 +32,7 @@ git config user.name "Keaton Burleson"
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
 git push --quiet origin gh-pages > /dev/null 2>&1
+else
+  echo "no changes"
+  exit 0
+fi
