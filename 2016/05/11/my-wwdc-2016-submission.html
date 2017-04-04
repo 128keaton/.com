@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My WWDC 2016 Submission / Keaton Burleson</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2016/05/11/my-wwdc-2016-submission.html">
+  <link rel="alternate" type="application/rss+xml" title="Keaton Burleson" href="/feed.xml">
+
+  
+</head>
+ <div class="header-container">
+  <div class="header">
+    <div class="header-inner">
+        <div class="site-links">
+            <a class="page-link" href="/">Home</a>
+      
+       
+       
+      
+      <a class="page-link" href="/apps/">Applications</a>  
+       
+       
+       
+       
+      
+      <a class="page-link" href="/portfolio/">Projects</a>  
+       
+       
+       
+      
+      <a class="page-link" href="/blog/index.html">Blog</a>  
+       
+       
+       
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<body style="background-color: white!important; background: none;">
+    
+    <a href="/blog/"><h2 class="return-blog"><i class="fa fa-arrow-left" aria-hidden="false"></i></h2></a>
+    <div class="wrapper" id="white post">
+
+        <main id="main" role="main" class="main">
+            <article class="post post--full">
+
+                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>My WWDC 2016 Submission </h2> <iframe width="854" height="480" src="https://www.youtube.com/embed/HQM8DY31G6Y" frameborder="0" allowfullscreen=""></iframe>
+
+<h3 id="background-info">Background Info:</h3>
+<p>When I was diagnosed as diabetic, I struggled to find a diabetes application that fit my criteria. I needed it to sync with HealthKit, calculate my meals, and allow me to share my data with my doctor.</p>
+
+<p>There is one other application that comes close, but it requires a subscription, and quite frankly, it was terribly designed.</p>
+
+<h3 id="apistechnologies">APIs/Technologies:</h3>
+<p>I chose HealthKit because of its seamless integration into iOS. I really wanted something that, if in the future, I had to use an application for an insulin pump, I could also use my application. The only thing I would add to HealthKit is insulin units. I could’ve stored all of my information inside of HealthKit, but I had to make an external data source (NSMutableDictionary inside of an [NSMutableDictionary]). Last minute, I chose to make an Apple Watch companion. The documentation made it really easy to add that feature, along with the Today Extension.</p>
+
+<h3 id="issues">Issues:</h3>
+<p>This is my first ‘real’ Swift application, and I have to say, I’m glad I learned the language. Objective-C is almost archaic in comparison. I did encounter a few bugs while working with dictionary and arrays (array[row][key] would crash the compiler and WYSIWYG editor), but a restart of Xcode usually fixed it temporarily. My biggest issue was keeping the data synced up properly. NSUserDefaults was a good idea, but I probably should have used CoreData in the end.</p>
+
+<h3 id="what-i-would-change">What I would change:</h3>
+<p>When I first  started this project, I didn’t for-see it becoming this large (over 2000 lines of code). If I had more time, I’d definitely migrate to CoreData and implement an iCloud syncing metric. I’d also make the Apple Watch companion more in-depth as well. There is definitely room for UI changes, I feel that some aspects of the dashboard could be improved upon, but for how much data I made fit into the main screen, I think I did a good job.</p>
+
+<div class="notice--update">
+  
+<p>Update: I was not chosen to visit WWDC 2016. Go ahead and have a glimpse at the winners. I am sad, for sure, that they picked a multi-year student over a first-time applicant. I am, however, moving to get Test Strip in the app store.</p>
+
+</div>
+ 
+
+<section class="comments">
+	<div class="constrain--body">
+		<div class="comments__existing js-comments">
+			<h2 class="comments__heading heading-2">Comments</h2>
+			
+		</div>
+
+		<h2 class="comments__heading heading-2">Leave a comment</h2>
+		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments" method="post">
+    <input type="hidden" name="options[slug]" value="2016-05-11-my-wwdc-2016-submission">
+    <input type="hidden" name="options[parent]" value="2016-05-11-my-wwdc-2016-submission">
+    <input type="hidden" name="options[origin]" value="/2016/05/11/my-wwdc-2016-submission.html">
+    <input name="options[redirect]" type="hidden" value="/2016/05/11/my-wwdc-2016-submission.html">
+
+    <input type="text" name="company" class="text-field" style="display: none">
+    <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required/>
+    <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (will not be public)" required/>
+    <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
+    <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
+    <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
+    <input class="cta" type="submit" value="Send" />
+</form>
+
+	</div>
+</section>
+
+            </article>
+        </main>
+        <footer class="footer" id="post-footer">
+        <div class="social-buttons">
+    <a href="https://twitter.com/128keaton">
+        <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://github.com/128keaton">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://instagram.com/128keaton">
+        <i class="fa fa-instagram"></i>
+    </a>
+
+    <div id='dribbblewrap'>
+        <a href="https://dribbble.com/128keaton">
+            <i class="fa fa-dribbble"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
+    </div>
+</body>
+
+</html>

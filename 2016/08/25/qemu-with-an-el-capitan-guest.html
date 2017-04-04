@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>QEMU with an El Capitan Guest / Keaton Burleson</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2016/08/25/qemu-with-an-el-capitan-guest.html">
+  <link rel="alternate" type="application/rss+xml" title="Keaton Burleson" href="/feed.xml">
+
+  
+</head>
+ <div class="header-container">
+  <div class="header">
+    <div class="header-inner">
+        <div class="site-links">
+            <a class="page-link" href="/">Home</a>
+      
+       
+       
+      
+      <a class="page-link" href="/apps/">Applications</a>  
+       
+       
+       
+       
+      
+      <a class="page-link" href="/portfolio/">Projects</a>  
+       
+       
+       
+      
+      <a class="page-link" href="/blog/index.html">Blog</a>  
+       
+       
+       
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<body style="background-color: white!important; background: none;">
+    
+    <a href="/blog/"><h2 class="return-blog"><i class="fa fa-arrow-left" aria-hidden="false"></i></h2></a>
+    <div class="wrapper" id="white post">
+
+        <main id="main" role="main" class="main">
+            <article class="post post--full">
+
+                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>QEMU with an El Capitan Guest </h2> 
+<div class="notice--info">
+  
+<h4 id="note">Note:</h4>
+<p>This guide is largely based off <a href="https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2">https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2</a>, but adapted for a newer Clover, QEMU, etc.</p>
+
+</div>
+
+<h2 id="setup">Setup:</h2>
+
+<ul>
+  <li>An Ubuntu Server running 16.04 LTS
+    <ul>
+      <li>KVM Capabilities</li>
+      <li>QEMU compiled/installed</li>
+      <li>OVMF compiled (<a href="https://gist.github.com/gordonturner/85dcc321d2099d610e67">https://gist.github.com/gordonturner/85dcc321d2099d610e67</a>) and <code class="highlighter-rouge">/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd</code> put in the base folder of your VM (<code class="highlighter-rouge">bios.bin</code>)</li>
+    </ul>
+  </li>
+  <li>A supported Mac that can download 10.11.6 from the Mac App Store</li>
+  <li>A 8GB USB Drive</li>
+  <li>Clover EFI Bootloader</li>
+</ul>
+
+<h2 id="step-1-creating-the-install-drive">Step 1, creating the install drive:</h2>
+
+<p>With your OS X installer app in /Applications/, run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>El<span class="se">\ </span>Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath <span class="s2">"/Applications/Install OS X El Capitan.app"</span>
+ </code></pre></figure>
+
+<p>Make sure you substitute <code class="highlighter-rouge">/Volumes/Untitled</code> for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.</p>
+
+<h2 id="step-2-installing-clover">Step 2, installing Clover:</h2>
+
+<p>After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for <code class="highlighter-rouge">OsxAptioFixDrv-64</code> and <code class="highlighter-rouge">DataHubDxe-64</code>, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download <a href="https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi">this</a> file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> cp ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
+ </code></pre></figure>
+
+<div class="notice--info">
+   
+<h4 id="note">Note:</h4>
+<p>If you want to have verbose boot (recommended), add <code class="highlighter-rouge">-v</code> to the BootFlags line in the <code class="highlighter-rouge">/Volumes/ESP/EFI/CLOVER/config.plist</code> file</p>
+
+ </div>
+
+<h2 id="step-3-getting-the-osk-value">Step 3, getting the OSK value:</h2>
+
+<p>Please see <a href="https://gist.github.com/gordonturner/c33bcc935e32f9fa6695">https://gist.github.com/gordonturner/c33bcc935e32f9fa6695</a> to get the OSK value (must be run from an actual Apple computer). Save this string and keep it safe for later.</p>
+
+<h2 id="step-4-writing-the-flash-drive-to-an-image">Step 4, writing the flash drive to an image:</h2>
+
+<p>Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type <code class="highlighter-rouge">diskutil list</code>, find your install drive. (Should have two partitions: <code class="highlighter-rouge">EFI</code> and <code class="highlighter-rouge">Install OS X El Capitan</code>).  Record the disk number (e.g. <code class="highlighter-rouge">/dev/disk8</code>). <code class="highlighter-rouge">cd</code> into a comfortable folder <code class="highlighter-rouge">~/Desktop</code>, and run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> sudo dd <span class="k">if</span><span class="o">=</span>/dev/rdiskX <span class="nv">of</span><span class="o">=</span>clover-usb-disk.dd
+ </code></pre></figure>
+
+<p>Making sure you substitute <code class="highlighter-rouge">X</code> for your disk number.</p>
+
+<p>After a bit of waiting, you should have a large file on your desktop named <code class="highlighter-rouge">clover-usb-disk.dd</code>, using your own methods, move this file into the root of your vm folder on your server.</p>
+
+<h2 id="step-5-final-setup">Step 5, final setup:</h2>
+
+<p>Now, we absolutely have to be on the Linux machine. Either SSH in, or gain physical access.
+At the command line, use this command in your root VM folder:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> sudo qemu-img create -f qcow2 osx-disk0.qcow2 200G
+ </code></pre></figure>
+
+<p>Substitute <code class="highlighter-rouge">200G</code> for how many gigs you want, for 500Gb use <code class="highlighter-rouge">500G</code>.</p>
+
+<p>Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo su -
+<span class="nb">echo </span>1 &gt; /sys/module/kvm/parameters/ignore_msrs</code></pre></figure>
+
+<p>I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting <code class="highlighter-rouge">echo 1 &gt; /sys/module/kvm/parameters/ignore_msrs</code> into your <code class="highlighter-rouge">/etc/rc.local</code> file might not be a bad idea.</p>
+
+<h2 id="step-6-first-boot">Step 6, first boot:</h2>
+
+<p>Ok, brace yourself, this is my command to start my VM:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> sudo qemu-system-x86_64 <span class="se">\</span>
+-m 8192 <span class="se">\</span>
+-enable-kvm <span class="se">\</span>
+-cpu core2duo,vendor<span class="o">=</span>GenuineIntel <span class="se">\</span>
+-rtc <span class="nv">base</span><span class="o">=</span>localtime <span class="se">\</span>
+-smbios <span class="nb">type</span><span class="o">=</span>2 <span class="se">\</span>
+-machine q35,accel<span class="o">=</span>kvm,usb<span class="o">=</span>off,vmport<span class="o">=</span>off <span class="se">\</span>
+-bios <span class="nv">$VMROOT$/</span>bios.bin <span class="se">\</span>
+-smp 4,sockets<span class="o">=</span>1,cores<span class="o">=</span>2,threads<span class="o">=</span>2 <span class="se">\</span>
+-device isa-applesmc,osk<span class="o">=</span><span class="s2">"</span><span class="nv">$OSK</span><span class="s2">$"</span> <span class="se">\</span>
+-device i82801b11-bridge,id<span class="o">=</span>pci.1,bus<span class="o">=</span>pcie.0,addr<span class="o">=</span>0x1e <span class="se">\</span>
+-device pci-bridge,chassis_nr<span class="o">=</span>2,id<span class="o">=</span>pci.2,bus<span class="o">=</span>pci.1,addr<span class="o">=</span>0x1 <span class="se">\</span>
+-device ahci,id<span class="o">=</span>sata0,bus<span class="o">=</span>pci.2,addr<span class="o">=</span>0x5 <span class="se">\</span>
+-drive <span class="nv">file</span><span class="o">=</span><span class="nv">$VMROOT$/</span>clover-usb-disk.dd,if<span class="o">=</span>none,id<span class="o">=</span>drive-sata0-0-2,format<span class="o">=</span>raw <span class="se">\</span>
+-device ide-hd,bus<span class="o">=</span>ide.2,drive<span class="o">=</span>drive-sata0-0-2,id<span class="o">=</span>sata0-0-2,bootindex<span class="o">=</span>1 <span class="se">\</span>
+-drive <span class="nv">file</span><span class="o">=</span><span class="nv">$VMROOT$/</span>osx-disk0.qcow2,if<span class="o">=</span>none,media<span class="o">=</span>disk,id<span class="o">=</span>drive-sata0-0-0,format<span class="o">=</span>qcow2 <span class="se">\</span>
+-device ide-hd,bus<span class="o">=</span>sata0.0,drive<span class="o">=</span>drive-sata0-0-0,id<span class="o">=</span>sata0-0-0 <span class="se">\</span>
+-usb <span class="se">\</span>
+-device usb-mouse <span class="se">\</span>
+-device usb-kbd <span class="se">\</span>
+-full-screen <span class="se">\</span>
+-vnc :1 <span class="se">\</span>
+-netdev bridge,id<span class="o">=</span>br0,br<span class="o">=</span>br0 <span class="se">\</span>
+-device virtio-net,netdev<span class="o">=</span>br0,vectors<span class="o">=</span>0,mac<span class="o">=</span>00:00:00:00:00:00</code></pre></figure>
+
+<p>Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the <code class="highlighter-rouge">$OSK$</code> with your OSK string you saved earlier. Second, change the <code class="highlighter-rouge">$VMROOT$</code> occurrences to whatever your VM root is.</p>
+
+<div class="notice--info">
+   
+<h4 id="note">Note:</h4>
+<p>networking is a bit of a beast, but I know you can get it working. I won’t be covering it, but the <a href="https://github.com/pmj/virtio-net-osx">virtio-net</a> driver will help.</p>
+
+ </div>
+
+<p>After those edits, put it into the command line, and cross your fingers.</p>
+
+<h2 id="step-7-connecting-and-installing">Step 7, connecting and installing:</h2>
+
+<p>Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use <em>Chicken of the VNC</em>, because the Screen Sharing app doesn’t work with the server. Connect to your IP, and port <code class="highlighter-rouge">5901</code>. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.</p>
+
+<div class="notice--info">
+   
+<h4 id="note">Note:</h4>
+<p>screen/mouse mapping is broken over the QEMU VNC, you can get through the installer using Tab, Space, and Enter. The same person who wrote the network driver is working on a fix <a href="https://github.com/pmj/QemuUSBTablet-OSX">here</a></p>
+
+
+ </div>
+
+<p>Use Disk Utility in the installer to format the QEMU HDD, and then run through the installer as normal.</p>
+
+<p>Done!</p>
+
+<h3 id="other">Other:</h3>
+
+<p>If you want to access the Clover drive to make some changes, follow <a href="https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2#efi-disk-image-manipulation">this</a> guide to do that.</p>
+
+<p>If you are having issues, feel free to comment below:</p>
+ 
+
+<section class="comments">
+	<div class="constrain--body">
+		<div class="comments__existing js-comments">
+			<h2 class="comments__heading heading-2">Comments</h2>
+			
+		</div>
+
+		<h2 class="comments__heading heading-2">Leave a comment</h2>
+		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments" method="post">
+    <input type="hidden" name="options[slug]" value="2016-08-25-qemu-with-an-el-capitan-guest">
+    <input type="hidden" name="options[parent]" value="2016-08-25-qemu-with-an-el-capitan-guest">
+    <input type="hidden" name="options[origin]" value="/2016/08/25/qemu-with-an-el-capitan-guest.html">
+    <input name="options[redirect]" type="hidden" value="/2016/08/25/qemu-with-an-el-capitan-guest.html">
+
+    <input type="text" name="company" class="text-field" style="display: none">
+    <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required/>
+    <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (will not be public)" required/>
+    <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
+    <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
+    <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
+    <input class="cta" type="submit" value="Send" />
+</form>
+
+	</div>
+</section>
+
+            </article>
+        </main>
+        <footer class="footer" id="post-footer">
+        <div class="social-buttons">
+    <a href="https://twitter.com/128keaton">
+        <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://github.com/128keaton">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://instagram.com/128keaton">
+        <i class="fa fa-instagram"></i>
+    </a>
+
+    <div id='dribbblewrap'>
+        <a href="https://dribbble.com/128keaton">
+            <i class="fa fa-dribbble"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
+    </div>
+</body>
+
+</html>

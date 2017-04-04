@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Modding a Shuttle PC: The GPU / Keaton Burleson</title>
+  <meta name="description" content="Today I received a ShuttleX PC. It is a small form-factor machine, with a custom board. Smaller than an ITX board, the custom motherboard inside of the Shutt...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2016/05/14/modding-a-shuttle-pc-the-gpu.html">
+  <link rel="alternate" type="application/rss+xml" title="Keaton Burleson" href="/feed.xml">
+
+  
+</head>
+ <div class="header-container">
+  <div class="header">
+    <div class="header-inner">
+        <div class="site-links">
+            <a class="page-link" href="/">Home</a>
+      
+       
+       
+      
+      <a class="page-link" href="/apps/">Applications</a>  
+       
+       
+       
+       
+      
+      <a class="page-link" href="/portfolio/">Projects</a>  
+       
+       
+       
+      
+      <a class="page-link" href="/blog/index.html">Blog</a>  
+       
+       
+       
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<body style="background-color: white!important; background: none;">
+    
+    <img class="post-head-image" src="https://i.sli.mg/rY9ujt.jpg"> 
+    <a href="/blog/"><h2 class="return-blog"><i class="fa fa-arrow-left" aria-hidden="false"></i></h2></a>
+    <div class="wrapper" id="white post">
+
+        <main id="main" role="main" class="main">
+            <article class="post post--full">
+
+                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Modding a Shuttle PC: The GPU </h2> <p>Today I received a ShuttleX PC. It is a small form-factor machine, with a custom board. Smaller than an ITX board, the custom motherboard inside of the ShuttleX features a PCI and AGP slot, 2xDDR2 RAM slots, and a Pentium 4 CPU. Although, not too powerful, it is still a very cool machine. However, it has been a long-time dream of mine to have a PC that is easily carried around. This one fits in my backpack.</p>
+
+<p>Anyway, onto the modification. A penalty of doing an ITX mod is that you lose a PCI-E slot. Not on your board, but on the outside of the case. The custom motherboard is designed in such a way, that there are two slots, but it is one slot too close. Instead of brutally hacking at the case until something happens, I decided to make the GPU of choice a ‘low profile’ card.</p>
+
+<p>Speaking of the GPU choice, I have a spare GTX650 I am going to use.</p>
+
+<p>It is an EVGA ‘SuperClocked’ card, and it is pretty snappy for most games. CS-GO doesn’t need much, you guys.</p>
+
+<h2 id="disassembly">Disassembly:</h2>
+
+<p>First, taking the card apart:</p>
+
+<p>There are four screws ‘under’ the fan blades, and one ‘holding’ the PCIE cover on. Remove those and the case.</p>
+
+<p>Now, finding a card that has a similar port layout.</p>
+
+<p><img src="https://i.sli.mg/g8bvW9.jpg" alt="Comparing ports" /></p>
+
+<p>I found something that worked, well with enough work. I do not know what/where it came from, but it was one of those OEM Dell cards with the multi-monitor port.</p>
+
+<p>I removed the bracket from the GTX 650 as well, so I could trace the ports and cut to spec, not hard in theory.</p>
+
+<p><img src="https://i.sli.mg/eesZ44.jpg" alt="The bracket" /></p>
+
+<h2 id="modding">Modding:</h2>
+
+<p>Here is the card in its ‘pre surgical’ state. The black marks are simply permanent marker marks.</p>
+
+<p><img src="https://i.sli.mg/JMmM7i.jpg" alt="All marked up" /></p>
+
+<p>And its ‘post surgical state’. She isn’t pretty yet. I just used a drill bit to remove the majority of the metal, and I’ll file/cut finer with a Dremel.</p>
+
+<p><img src="https://i.sli.mg/WGNawf.jpg" alt="After some drilling and, well, not filling" /></p>
+
+<p>For some reason, I didn’t get a between photo, but I just used a Dremel cutting wheel and polishing wedge to get the job done. The port was shaped decently so.</p>
+ 
+
+<section class="comments">
+	<div class="constrain--body">
+		<div class="comments__existing js-comments">
+			<h2 class="comments__heading heading-2">Comments</h2>
+			
+		</div>
+
+		<h2 class="comments__heading heading-2">Leave a comment</h2>
+		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments" method="post">
+    <input type="hidden" name="options[slug]" value="2016-05-14-modding-a-shuttle-pc-the-gpu">
+    <input type="hidden" name="options[parent]" value="2016-05-14-modding-a-shuttle-pc-the-gpu">
+    <input type="hidden" name="options[origin]" value="/2016/05/14/modding-a-shuttle-pc-the-gpu.html">
+    <input name="options[redirect]" type="hidden" value="/2016/05/14/modding-a-shuttle-pc-the-gpu.html">
+
+    <input type="text" name="company" class="text-field" style="display: none">
+    <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required/>
+    <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (will not be public)" required/>
+    <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
+    <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
+    <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
+    <input class="cta" type="submit" value="Send" />
+</form>
+
+	</div>
+</section>
+
+            </article>
+        </main>
+        <footer class="footer" id="post-footer">
+        <div class="social-buttons">
+    <a href="https://twitter.com/128keaton">
+        <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://github.com/128keaton">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://instagram.com/128keaton">
+        <i class="fa fa-instagram"></i>
+    </a>
+
+    <div id='dribbblewrap'>
+        <a href="https://dribbble.com/128keaton">
+            <i class="fa fa-dribbble"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
+    </div>
+</body>
+
+</html>

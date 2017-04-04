@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Upgrading the Power Macintosh 8500 / Keaton Burleson</title>
+  <meta name="description" content="Originally introduced in 1995, the Power Macintosh 8500 was a working class man’s machine. For $4,000, you could buy mini-tower machine with a 120MHz CPU wit...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2016/05/03/upgrading-the-power-macintosh-8500.html">
+  <link rel="alternate" type="application/rss+xml" title="Keaton Burleson" href="/feed.xml">
+
+  
+</head>
+ <div class="header-container">
+  <div class="header">
+    <div class="header-inner">
+        <div class="site-links">
+            <a class="page-link" href="/">Home</a>
+      
+       
+       
+      
+      <a class="page-link" href="/apps/">Applications</a>  
+       
+       
+       
+       
+      
+      <a class="page-link" href="/portfolio/">Projects</a>  
+       
+       
+       
+      
+      <a class="page-link" href="/blog/index.html">Blog</a>  
+       
+       
+       
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<body style="background-color: white!important; background: none;">
+    
+    <a href="/blog/"><h2 class="return-blog"><i class="fa fa-arrow-left" aria-hidden="false"></i></h2></a>
+    <div class="wrapper" id="white post">
+
+        <main id="main" role="main" class="main">
+            <article class="post post--full">
+
+                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Upgrading the Power Macintosh 8500 </h2> <p>Originally introduced in 1995, the Power Macintosh 8500 was a working class man’s machine. For $4,000, you could buy mini-tower machine with a 120MHz CPU with a FPU. It also had some really nice A/V features, so you could import little Timmy’s birthday from your S-Video camera. All-in-all, not a bad machine. The average going rate for these on eBay are about $39. I picked up two in poor condition for $20, good price. I built up one out of parts of both, but I didn’t really get around to playing with it, until now.</p>
+
+<p>First things first, I opened it up again. No hard drives or caddies. Shame, since is an older SCSI format. No IDE on this old boy. I went to eBay, in search of a decent, and cheap card, and I couldn’t really find a suitable one, until A friend directed me to a generic card, that was advertised as working. I ordered it from China and waited. And waited. However, a week before I got the card, I found something really cool at work.</p>
+
+<p><img src="https://i.sli.mg/C3NYIv.jpg" alt="" /></p>
+
+<p>An Adaptec HotConnect 8945, not only for PCs, but it was Macintosh compatible as well.</p>
+
+<p>Sweet!</p>
+
+<p>Lets open that box!</p>
+
+<p><img src="https://i.sli.mg/Ow1eIZ.jpg" alt="" /></p>
+
+<p>Look at all of those goodies.</p>
+
+<p>We have (from bottom to top, left to right):</p>
+
+<ul>
+  <li>Registration/readme card.</li>
+  <li>User Manual (with a ton of tips and other good information)</li>
+  <li>A (new?)SCSI to (older?) SCSI adaptor.</li>
+  <li>A FireWire to DV cable.</li>
+  <li>The bundled software CD.</li>
+  <li>A Windows NT/95 install floppy.</li>
+  <li>Molex to bus power.</li>
+  <li>Long, gray FireWire cable.</li>
+  <li>External SCSI cable.</li>
+  <li>Portable SCSI-&gt;Large SCSI Adaptor.</li>
+  <li>The card itself (one internal SCSI, one external, 1 internal FireWire, 2 external FireWire).</li>
+  <li>One, very long, SCSI cable with a terminator on the end.</li>
+</ul>
+
+<p>A very sweet package!</p>
+
+<p>Here is a close shot of the card:</p>
+
+<p><img src="https://i.sli.mg/me5vmB.jpg" alt="" /></p>
+
+<p>Doesn’t really look used at all.</p>
+
+<p>Anyway, onto the upgrading.</p>
+
+<p>First, after trial-and-error, both of my Apple SCSI CD-ROM drives didn’t want to read anything. Wouldn’t spin up worth a darn. From a recommendation, I tried using an IDE CD ROM, with my fancy ATA card, and it worked. I did not believe it. Next, since I was all out of IDE cables long enough, I decided to use the SCSI card too. Hey, its cool, right? I paired it up with a 10,000 RPM (!!!) Jaguar drive that came in a QuickSilver, long broken. I was able to reassemble the case, just fine, and booted the installer. After about five minutes, OS 9.1 was rocking on the 8500.</p>
+
+<p><img src="https://i.sli.mg/d8HuPU.jpg" alt="" /></p>
+
+<p>Final specs:</p>
+
+<ul>
+  <li>ATA100 card, with CD-RW drive.</li>
+  <li>SCSI card, with 10,000 RPM drive.</li>
+  <li>46MB of RAM.</li>
+  <li>150MHz CPU, not the lowly 120MHz.</li>
+</ul>
+
+<p>Not too shabby.</p>
+
+<p>Maybe sometime soon, I’ll put Tiger on it, along side some more RAM.</p>
+
+<p>Oh, I was also able to solve the Kanga Conundrum. The ATA card I purchased featured an Onboard PATA connector, so I booted into 9.1 and blessed the new drive. Problem solved.</p>
+
+<p><img src="https://i.sli.mg/KqKluz.jpg" alt="" /></p>
+ 
+
+<section class="comments">
+	<div class="constrain--body">
+		<div class="comments__existing js-comments">
+			<h2 class="comments__heading heading-2">Comments</h2>
+			
+		</div>
+
+		<h2 class="comments__heading heading-2">Leave a comment</h2>
+		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments" method="post">
+    <input type="hidden" name="options[slug]" value="2016-05-03-upgrading-the-power-macintosh-8500">
+    <input type="hidden" name="options[parent]" value="2016-05-03-upgrading-the-power-macintosh-8500">
+    <input type="hidden" name="options[origin]" value="/2016/05/03/upgrading-the-power-macintosh-8500.html">
+    <input name="options[redirect]" type="hidden" value="/2016/05/03/upgrading-the-power-macintosh-8500.html">
+
+    <input type="text" name="company" class="text-field" style="display: none">
+    <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required/>
+    <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (will not be public)" required/>
+    <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
+    <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
+    <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
+    <input class="cta" type="submit" value="Send" />
+</form>
+
+	</div>
+</section>
+
+            </article>
+        </main>
+        <footer class="footer" id="post-footer">
+        <div class="social-buttons">
+    <a href="https://twitter.com/128keaton">
+        <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://github.com/128keaton">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://instagram.com/128keaton">
+        <i class="fa fa-instagram"></i>
+    </a>
+
+    <div id='dribbblewrap'>
+        <a href="https://dribbble.com/128keaton">
+            <i class="fa fa-dribbble"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
+    </div>
+</body>
+
+</html>
