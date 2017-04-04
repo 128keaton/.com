@@ -149,6 +149,11 @@ html, body {
   color: black;
   font-size: 4.06rem; }
 
+.internal-post-link {
+  text-decoration: none;
+  color: gray;
+  padding: 12px; }
+
 .post-title {
   font-weight: 900;
   letter-spacing: 0.01em;
