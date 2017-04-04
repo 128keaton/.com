@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -14,37 +15,63 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 include: ["_pages", "_data", "assets/toyota.scss", "_images"]
+=======
+---
+>>>>>>> 3a2e42ef2401cad5f7a6c2539a73c5c8bef08391
 title: Keaton Burleson
+timezone: UTC
+collections:
+  _posts:
+    title: Posts
+    output: true
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+include:
+- _pages
+- _data
+- assets/apps.scss
+- _images
 email: keaton.burleson@me.com
 username: 128keaton
-description: > # this means to ignore newlines until "baseurl:"
-  This is Keaton Burleson's website
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: 'This is Keaton Burleson''s website
+
+'
+baseurl: ''
+url: ''
 staticmanUrl: https://api.staticman.net/v2/entry/128keaton/personal-site/gh-pages/comments
-# Build settings
 markdown: kramdown
 encoding: utf-8
 gems:
-  - jekyll-feed
+- jekyll-feed
 exclude:
-  - Gemfile
-  - Gemfile.lock
+- Gemfile
+- Gemfile.lock
 kramdown:
   input: GFM
 staticman:
-  allowedFields: ["name", "email", "url", "message"]
-  branch: "gh-pages"
-  filename: "entry{@timestamp}"
-  format: "yaml"
+  allowedFields:
+  - name
+  - email
+  - url
+  - message
+  branch: gh-pages
+  filename: entry{@timestamp}
+  format: yaml
   generatedFields:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: timestamp-seconds
   moderation: true
-  name: "128keaton.com"
-  path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "message"]
+  name: 128keaton.com
+  path: _data/comments/{options.slug}
+  requiredFields:
+  - name
+  - email
+  - message
   transforms:
     email: md5
