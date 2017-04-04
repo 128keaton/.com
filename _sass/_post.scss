@@ -5,9 +5,15 @@
     max-height: 600px;
 }
 
+.post--full {
+    width: 50%;
+    margin: 0 auto;
+}
+
 .post p,
 .post ul {
     word-wrap: break-word;
+    font-size: 14px;
 }
 
 .post-head-image {
@@ -57,10 +63,11 @@
     color: black;
     font-size: 4.06rem;
 }
-.internal-post-link{
-  text-decoration: none;
-  color: gray;
-  padding: 12px;
+
+.internal-post-link {
+    text-decoration: none;
+    color: gray;
+    padding: 12px;
 }
 
 .post-title {
@@ -315,11 +322,11 @@ img[src$='#stylized-small'] {
     justify-content: space-between;
     align-items: center;
     max-width: 500px;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
 }
-.pagination a{
-  color: gray;
-  text-decoration: none;
-  font-size: 30px;
+
+.pagination a {
+    color: gray;
+    text-decoration: none;
+    font-size: 30px;
 }
