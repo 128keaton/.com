@@ -2,7 +2,7 @@
 layout: "post"
 title: "Baking a 2007 MacBook Pro's Logic Board"
 date: "2016-05-30 22:47"
-#head-image: https://i.sli.mg/BRHoZU.jpg
+comments: false
 ---
 It is not everyday you see someone putting an expensive piece of technology inside of a conventional household oven. But then again, its is not everyday you have to reflow a component.
 *rock intro*
@@ -27,21 +27,21 @@ But I didn't, and thankfully, it turned out ok.
 
 Before baking:
 
-![](https://i.sli.mg/p7cFgz.jpg)
+![](http://images.128keaton.com/2016/05/Slack for iOS Upload-5.jpg)
 
 After:
 
-![](https://i.sli.mg/ARtTLf.jpg)
+![](http://images.128keaton.com/2016/05/Now just waiting to cool.jpg)
 
 As you can see, there is a bit of board flex. Whoops. Make sure you put a piece of foil under that corner.
 
 Success:
 
 
-![](https://i.sli.mg/vvqOXN.png)
+![](http://images.128keaton.com/2016/05/screen_shot_2016-05-27_at_9.16.21_am.png)
 
 Hope this helps someone!
 
 Edit: friend's response to this post:
 
-![](https://i.sli.mg/fAW2nq.png)
+![](http://images.128keaton.com/2016/06/hahahjon.png)
