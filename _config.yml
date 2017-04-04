@@ -52,18 +52,17 @@ staticman:
   - message
   transforms:
     email: md5
-
 pagination:
   enabled: true
   debug: false
-  collection: 'posts'
+  collection: posts
   per_page: 5
-  permalink: '/page/:num/' # Pages are index.html inside this folder (default)
-  title: ':title - page :num'
+  permalink: "/page/:num/"
+  title: ":title - page :num"
   limit: 0
-  sort_field: 'date'
+  sort_field: date
   sort_reverse: true
-  category: 'posts'
+  category: posts
   trail:
     before: 2
     after: 2
