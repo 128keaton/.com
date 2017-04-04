@@ -1,6 +1,6 @@
 comments:
   allowedFields: ["name", "email", "url", "message"]
-  branch: "gh-pages"
+  branch: "pre-publish"
   filename: "entry{@timestamp}"
   format: "yaml"
   generatedFields:
