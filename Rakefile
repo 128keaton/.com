@@ -29,13 +29,19 @@ end
 
 namespace :site do
     task :correct_posts do
-      puts 'Correcting blog posts'
-      Dir.entries(__dir__ + '/_posts/').each do |file_name|
-          next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
-          text = File.read(__dir__ + '/_posts/' + file_name)
-          fixed = text.gsub('![](/', '![](http://images.128keaton.com/')
-          File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
-      end
+        puts 'Correcting blog posts'
+        Dir.entries(__dir__ + '/_posts/').each do |file_name|
+            next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
+            text = File.read(__dir__ + '/_posts/' + file_name)
+            fixed = text.gsub('![](/', '![](http://images.128keaton.com/')
+            fixed = fixed.gsub('_images/', '')
+            File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
+        end
+        sha = `git log`.match(/[a-z0-9]{40}/)[0]
+        sh 'git add --all .'
+        sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
+        sh "git push --quiet origin #{SOURCE_BRANCH}"
+        puts "Pushed updated branch #{SOURCE_BRANCH} to GitHub Pages"
     end
     task :upload_images do
         puts 'Uploading images..'
