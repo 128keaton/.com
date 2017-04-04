@@ -9,20 +9,20 @@
     }
 }
 
-body{
-  background-color: rgb(13, 21, 40);
-  height: 100vh;
+body {
+    background-color: rgb(13, 21, 40);
+    height: 100vh;
 }
-.wrapper{
-  overflow-x: hidden;
+
+.wrapper {
+    overflow-x: hidden;
 }
+
 .slant-container {
     z-index: 1;
     width: 100%;
     position: relative;
     outline: 1px solid transparent;
-
-
 }
 
 .slant-container .skew:before {
@@ -36,25 +36,18 @@ body{
     height: 402px;
     background: linear-gradient(#ff4b33, #ff335e);
     z-index: -1;
-    -webkit-transform: skewY(4deg);
-    -moz-transform: skewY(4deg);
-    -ms-transform: skewY(4deg);
-    -o-transform: skewY(4deg);
-    transform: skewY(4deg);
-    outline: 1px solid transparent;
-    transition: transform 1s;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-      overflow:hidden;
-}
-
-.slant-container:hover .skew:before {
     -webkit-transform: skewY(3deg);
     -moz-transform: skewY(3deg);
     -ms-transform: skewY(3deg);
     -o-transform: skewY(3deg);
     transform: skewY(3deg);
-    outline: 2px solid black;
+    outline: 1px solid transparent;
+    transition: transform 1s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
+
+
 
 .slant-container .skew .slant-container-inner {
     padding: 20px;
@@ -65,16 +58,21 @@ body{
 h1.introduction {
     text-align: center;
     padding-top: 100px;
-
     color: white;
     text-transform: lowercase;
     font-weight: 900;
     -webkit-transform: translateZ(0);
 }
+img.introduction{
+  width: 200px;
+margin: 0 auto;
+display: block;
+border-radius: 100%;
+}
 
 p.introduction {
     text-align: center;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
     font-weight: 400;
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -96,6 +94,11 @@ p.introduction {
     color: white;
     font-weight: 100;
     padding: 25px;
+    border-right: 1px solid white;
+}
+
+.front-site-links .page-link:nth-child(3) {
+    border: none!important;
 }
 @media screen and (max-width: $on-palm) {
     .front-site-links .page-link {
