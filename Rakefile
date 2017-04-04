@@ -16,7 +16,7 @@ REPO = CONFIG['repo']
 SSH_PASSWORD = ENV['SSH_PASSWORD'] || 'hunter2'
 SSH_USERNAME = '128keaton.com'.freeze
 SSH_HOST = '128keaton.com.customers.tigertech.net'.freeze
-IMAGES_DIR = __dir__ + "/images/"
+IMAGES_DIR = __dir__ + '/images/'
 
 SOURCE_BRANCH = 'pre-publish'.freeze
 DESTINATION_BRANCH = 'gh-pages'.freeze
@@ -28,18 +28,28 @@ def check_destination
 end
 
 namespace :site do
+    task :get_posts do
+        puts 'Grabbing submodules'
+        sh 'git pull && git submodule init && git submodule update && git submodule status'
+    end
     task :upload_images do
+        puts 'Correcting blog posts'
         Dir.entries(__dir__ + '/_posts/').each do |file_name|
-          if File.extname(file_name) == ".md" || File.extname(file_name) == ".markdown"
+            next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
             text = File.read(__dir__ + '/_posts/' + file_name)
             fixed = text.gsub('![](/', '![](http://images.128keaton.com/')
             File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
-          end
         end
+        puts "Uploading blog posts.."
+        sh "cd " + __dir__ + "/_posts/"
+        sh "git add --all ."
+        sh "git commit -m 'Updating blog posts.'"
+        sh "git push --quiet && cd ../"
+        puts 'Uploading images..'
         options = { recursive: true, password: SSH_PASSWORD }
         Net::SCP.upload!(SSH_HOST, SSH_USERNAME, __dir__ + '/images/', '/home/12/128keaton.com/html/', options)
-        puts "All images have been upload and removed in " + IMAGES_DIR 
-        FileUtils.rm_rf(Dir.glob(IMAGES_DIR + "*"))
+        puts 'All images have been upload and removed in ' + IMAGES_DIR
+        FileUtils.rm_rf(Dir.glob(IMAGES_DIR + '*'))
     end
     desc 'Generate the site and push changes to remote origin'
     task :deploy do
