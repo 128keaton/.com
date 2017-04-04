@@ -16,9 +16,9 @@ ruby RUBY_VERSION
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "bundler"
-gem "jekyll", "3.4.3"
+gem "jekyll"
 gem "kramdown"
+gem "net-scp"
 gem "rake"
 gem "jekyll-paginate-v2"
 # If you have any plugins, put them here!
