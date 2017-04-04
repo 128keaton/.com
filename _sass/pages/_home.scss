@@ -100,6 +100,9 @@ p.introduction {
 .front-site-links .page-link:nth-child(3) {
     border: none!important;
 }
+.build-status{
+  text-align: center;
+}
 @media screen and (max-width: $on-palm) {
     .front-site-links .page-link {
         padding: 10px !important;
