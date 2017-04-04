@@ -28,10 +28,6 @@ def check_destination
 end
 
 namespace :site do
-    task :get_posts do
-        puts 'Grabbing submodules'
-        sh 'git pull && git submodule init && git submodule update && git submodule status'
-    end
     task :correct_posts do
       puts 'Correcting blog posts'
       Dir.entries(__dir__ + '/_posts/').each do |file_name|
@@ -40,10 +36,6 @@ namespace :site do
           fixed = text.gsub('![](/', '![](http://images.128keaton.com/')
           File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
       end
-      puts "Uploading blog posts.."
-      sh "cd " + __dir__ + "/_posts/ && git add --all ."
-      sh "cd " + __dir__ + "/_posts/ && git commit -m 'Updating blog posts.'"
-      sh "cd " + __dir__ + "/_posts/ && git push origin HEAD:master --quiet && cd ../"
     end
     task :upload_images do
         puts 'Uploading images..'
