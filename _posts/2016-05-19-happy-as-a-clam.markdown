@@ -21,9 +21,3 @@ Back to the story. I ended up shipping the TiBook, and two days later receiving 
 
 I was at work, and a package came in for me. I figured it would be a PoE switch for resetting Cisco phones. Nope! A bright orange Clamshell met my eyes. A mutual friend, inside of the company, spotted this at his location, and shipped it to me. What a surprise! Said co-worker was throughly thanked!
 Within a month, I got two clamshells, one of the most desired vintage laptop, to date.
-
-## Pics:
-
-Hey, it wouldn't be a post on my website if I wasn't uploading a ton of images, right?
-
-{% include gallery_list.html gallery='clamshell' %}
