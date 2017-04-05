@@ -4,7 +4,7 @@ layout: custom
 permalink: "/honduras/"
 ---
 # Friends and Family,
-This year, I am pleased to announce that I will be traveling with Fellowship Memphis to Tegucigalpa, Honduras to serve with Point of Impact ministries. In the past, my sister has gone, and if you helped her last year, then I thank you for your support. Her time and effort there has inspired my effort to go and join her for one week this summer, June 9th through the 16th. I am so excited to serve alongside the people who really do make a difference in sharing the Gospel to the many without light in their lives. From previous years I know that there will be plenty of work to be done, such as helping with vacation Bible schools, or delivering life essentials to those without.
+This year, I am pleased to announce that I will be traveling with Fellowship Memphis to Tegucigalpa, Honduras to serve with Point of Impact ministries. In the past, my sister has gone, and if you helped her last year, then I thank you for your support. Her time and effort there has inspired my effort to go and join her for one week this summer, June 9th through the 16th. I am so excited to serve alongside the people who really do make a difference in sharing the Gospel to the many without light in their lives. From previous years I know that there will be plenty of work to do, such as helping with vacation Bible schools, or delivering life essentials to those without.
 
 ## Where?
 ### Tegucigalpa, Honduras
