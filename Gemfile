@@ -20,6 +20,7 @@ gem "jekyll"
 gem "kramdown"
 gem "net-scp"
 gem "rake"
+gem "rouge"
 gem "jekyll-paginate-v2"
 # If you have any plugins, put them here!
 group :jekyll_plugins do

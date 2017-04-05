@@ -23,6 +23,7 @@ branch: pre-publish
 destination: ../site/
 staticmanUrl: https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments
 markdown: kramdown
+highlighter: rouge
 encoding: utf-8
 gems:
 - jekyll-feed
