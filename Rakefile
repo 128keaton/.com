@@ -28,6 +28,15 @@ def check_destination
 end
 
 namespace :site do
+  task :upload do
+      puts 'Uploading site'
+      sha = `git log`.match(/[a-z0-9]{40}/)[0]
+      sh 'git add --all .'
+      sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
+      sh "git push --quiet origin #{SOURCE_BRANCH}"
+      puts "Pushed updated branch #{SOURCE_BRANCH} to GitHub Pages"
+  end
+
     task :correct_posts do
         puts 'Correcting blog posts'
         Dir.entries(__dir__ + '/_posts/').each do |file_name|
@@ -37,11 +46,7 @@ namespace :site do
             fixed = fixed.gsub('_images/', '')
             File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
         end
-        sha = `git log`.match(/[a-z0-9]{40}/)[0]
-        sh 'git add --all .'
-        sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
-        sh "git push --quiet origin #{SOURCE_BRANCH}"
-        puts "Pushed updated branch #{SOURCE_BRANCH} to GitHub Pages"
+        Rake::Task["site:upload"].execute
     end
     task :upload_images do
         puts 'Uploading images..'
