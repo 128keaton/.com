@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Keaton&#39;s Blog</title>
+  <meta name="description" content="This is Keaton Burleson&#39;s website">
+  <meta property="og:title" content="Keaton's Page" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/blog/page/5.html">
+  <link rel="alternate" type="application/rss+xml" title="Keaton Burleson" href="/feed.xml">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple_icon.png">
+  
+</head>
+
+	<div class="header-container">
+  <div class="header">
+    <div class="header-inner">
+        <div class="site-links">
+            <a class="page-link" href="/">Home</a>
+      
+       
+      
+      <a class="page-link" href="/apps/">Applications</a>  
+       
+       
+       
+       
+      
+      <a class="page-link" href="/portfolio/">Projects</a>  
+       
+       
+       
+      
+      <a class="page-link" href="/blog/index.html">Blog</a>  
+       
+       
+       
+       
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+	<body>
+		<div class="wrapper" id="white">
+
+		<div class="social">
+    <h2 class="post-title">Bloggo</h2>
+    <p class="rss-subscribe">subscribe <a href="/%20/feed.xml">via RSS</a></p>
+</div>
+<ul class="post-list">
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
+                <a class="post-link" href="/2016/02/11/compiling-qemu-on-os-x-el-capitan.html">Compiling QEMU on OS X El Capitan</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted Feb 11</span>
+                <span class="post-word-count">and has roughly 75 words</span>
+            </div>
+            <div class="post-text">
+                 <h2 id="prerequisites">Prerequisites:</h2>
+
+<ul>
+  <li>Xcode</li>
+  <li>Xcode Command Line Utilities</li>
+  <li>Homebrew</li>
+  <li>wget</li>
+</ul>
+
+<h3 id="step-1">Step 1:</h3>
+
+<p>Install glib (a QEMU requirement) and pixman (since the QEMU variant is borked):</p>
+
+<p><code class="highlighter-rouge">brew install glib pixman</code></p>
+
+<h3 id="step-2">Step 2:</h3>
+
+<p>Fetch QEMU from their repository:</p>
+
+<p><code class="highlighter-rouge">wget http://wiki.qemu-project.org/download/qemu-2.5.0.tar.bz2</code></p>
+
+<p>and unzip:</p>
+
+<p><code class="highlighter-rouge">tar xvjf qemu-2.5.0.tar.bz2 &amp;&amp; cd qemu-2.5.0</code></p>
+
+<p>then remove the broken pixman library:</p>
+
+<p><code class="highlighter-rouge">rm -r pixman</code></p>
+
+<h3 id="step-3">Step 3:</h3>
+
+<p>Build!</p>
+
+<p><code class="highlighter-rouge">./configure &amp;&amp; make &amp;&amp; sudo make install</code></p>
+
+<p>Done!</p>
+
+
+            </div>
+
+        </div>
+    </li>
+    
+
+</ul>
+    <div class="pagination">
+
+  
+    <a href="/blog/page/4">Newer</a>
+  
+  
+
+</div>
+
+		<footer class="footer" id="default-footer">
+        <div class="social-buttons">
+    <a href="https://twitter.com/128keaton">
+        <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://github.com/128keaton">
+        <i class="fa fa-github"></i>
+    </a>
+    <a href="https://instagram.com/128keaton">
+        <i class="fa fa-instagram"></i>
+    </a>
+
+    <div id='dribbblewrap'>
+        <a href="https://dribbble.com/128keaton">
+            <i class="fa fa-dribbble"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
+	</div>
+	</body>
+</html>

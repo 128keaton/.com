@@ -40,6 +40,7 @@
        
        
        
+       
         </div>
     </div>
   </div>
@@ -55,6 +56,86 @@
     <p class="rss-subscribe">subscribe <a href="/%20/feed.xml">via RSS</a></p>
 </div>
 <ul class="post-list">
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
+                <a class="post-link" href="/2016/05/03/upgrading-the-power-macintosh-8500.html">Upgrading the Power Macintosh 8500</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted May 03</span>
+                <span class="post-word-count">and has roughly 512 words</span>
+            </div>
+            <div class="post-text">
+                 <p>Originally introduced in 1995, the Power Macintosh 8500 was a working class man’s machine. For $4,000, you could buy mini-tower machine with a 120MHz CPU with a FPU. It also had some really nice A/V features, so you could import little Timmy’s birthday from your S-Video camera. All-in-all, not a bad machine. The average going rate for these on eBay are about $39. I picked up two in poor condition for $20, good price. I built up one out of parts of both, but I didn’t really get around to playing with it, until now.</p>
+
+<p>First things first, I opened it up again. No hard drives or caddies. Shame, since is an older SCSI format. No IDE on this old boy. I went to eBay, in search of a decent, and cheap card, and I couldn’t really find a suitable one, until A friend directed me to a generic card, that was advertised as working. I ordered it from China and waited. And waited. However, a week before I got the card, I found something really cool at work.</p>
+
+<p><img src="http://images.128keaton.com/2016/05/IMG_1625.JPG" alt="" /></p>
+
+<p>An Adaptec HotConnect 8945, not only for PCs, but it was Macintosh compatible as well.</p>
+
+<p>Sweet!</p>
+
+<p>Lets open that box!</p>
+
+<p><img src="http://images.128keaton.com/2016/05/IMG_1669.JPG" alt="" /></p>
+
+<p>Look at all of those goodies.</p>
+
+<p>We have (from bottom to top, left to right):</p>
+
+<ul>
+  <li>Registration/readme card.</li>
+  <li>User Manual (with a ton of tips and other good information)</li>
+  <li>A (new?)SCSI to (older?) SCSI adaptor.</li>
+  <li>A FireWire to DV cable.</li>
+  <li>The bundled software CD.</li>
+  <li>A Windows NT/95 install floppy.</li>
+  <li>Molex to bus power.</li>
+  <li>Long, gray FireWire cable.</li>
+  <li>External SCSI cable.</li>
+  <li>Portable SCSI-&gt;Large SCSI Adaptor.</li>
+  <li>The card itself (one internal SCSI, one external, 1 internal FireWire, 2 external FireWire).</li>
+  <li>One, very long, SCSI cable with a terminator on the end.</li>
+</ul>
+
+<p>A very sweet package!</p>
+
+<p>Here is a close shot of the card:</p>
+
+<p><img src="http://images.128keaton.com/2016/05/IMG_1672.JPG" alt="" /></p>
+
+<p>Doesn’t really look used at all.</p>
+
+<p>Anyway, onto the upgrading.</p>
+
+<p>First, after trial-and-error, both of my Apple SCSI CD-ROM drives didn’t want to read anything. Wouldn’t spin up worth a darn. From a recommendation, I tried using an IDE CD ROM, with my fancy ATA card, and it worked. I did not believe it. Next, since I was all out of IDE cables long enough, I decided to use the SCSI card too. Hey, its cool, right? I paired it up with a 10,000 RPM (!!!) Jaguar drive that came in a QuickSilver, long broken. I was able to reassemble the case, just fine, and booted the installer. After about five minutes, OS 9.1 was rocking on the 8500.</p>
+
+<p><img src="http://images.128keaton.com/2016/05/IMG_1679.JPG" alt="" /></p>
+
+<p>Final specs:</p>
+
+<ul>
+  <li>ATA100 card, with CD-RW drive.</li>
+  <li>SCSI card, with 10,000 RPM drive.</li>
+  <li>46MB of RAM.</li>
+  <li>150MHz CPU, not the lowly 120MHz.</li>
+</ul>
+
+<p>Not too shabby.</p>
+
+<p>Maybe sometime soon, I’ll put Tiger on it, along side some more RAM.</p>
+
+<p>Oh, I was also able to solve the Kanga Conundrum. The ATA card I purchased featured an Onboard PATA connector, so I booted into 9.1 and blessed the new drive. Problem solved.</p>
+
+<p><img src="http://images.128keaton.com/2016/05/IMG_1678.JPG" alt="" /></p>
+
+            </div>
+
+        </div>
+    </li>
     
     <li class="blog-post">
         <div class="post-preview">
@@ -77,17 +158,17 @@
 
 <p>Lets unscrew the case.</p>
 
-<p><img src="https://i.sli.mg/vR5UaV.jpg" alt="Well, ok" /></p>
+<p><img src="http://images.128keaton.com/2016/05/IMG_1659.JPG" alt="Well, ok" /></p>
 
 <p>Except, there aren’t any. Yup, this new, user-friendly design allows you to just <em>pull</em> the case apart, exposing the electrifying innards. Neat!</p>
 
 <p><strong>Case 2/10</strong></p>
 
-<p><img src="https://i.sli.mg/XvnWmz.jpg" alt="" /></p>
+<p><img src="http://images.128keaton.com/2016/05/IMG_1660.JPG" alt="" /></p>
 
 <p>Now, lets look at the soldering. Looks like it was thrown together like a monkey on crack, which would explain the working conditions of the rest of the factory. The board, however, looks nicely laid out, from below.</p>
 
-<p><img src="https://i.sli.mg/CONQ1P.jpg" alt="Missing?" /></p>
+<p><img src="http://images.128keaton.com/2016/05/IMG_1661.JPG" alt="Missing?" /></p>
 
 <p>Notice what is missing? Freaking <em>fuses</em>. Have fun with this one, kiddos, it is sure to be a <em>wild</em> ride.</p>
 
@@ -233,60 +314,6 @@
         </div>
     </li>
     
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2016/02/11/compiling-qemu-on-os-x-el-capitan.html">Compiling QEMU on OS X El Capitan</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Feb 11</span>
-                <span class="post-word-count">and has roughly 75 words</span>
-            </div>
-            <div class="post-text">
-                 <h2 id="prerequisites">Prerequisites:</h2>
-
-<ul>
-  <li>Xcode</li>
-  <li>Xcode Command Line Utilities</li>
-  <li>Homebrew</li>
-  <li>wget</li>
-</ul>
-
-<h3 id="step-1">Step 1:</h3>
-
-<p>Install glib (a QEMU requirement) and pixman (since the QEMU variant is borked):</p>
-
-<p><code class="highlighter-rouge">brew install glib pixman</code></p>
-
-<h3 id="step-2">Step 2:</h3>
-
-<p>Fetch QEMU from their repository:</p>
-
-<p><code class="highlighter-rouge">wget http://wiki.qemu-project.org/download/qemu-2.5.0.tar.bz2</code></p>
-
-<p>and unzip:</p>
-
-<p><code class="highlighter-rouge">tar xvjf qemu-2.5.0.tar.bz2 &amp;&amp; cd qemu-2.5.0</code></p>
-
-<p>then remove the broken pixman library:</p>
-
-<p><code class="highlighter-rouge">rm -r pixman</code></p>
-
-<h3 id="step-3">Step 3:</h3>
-
-<p>Build!</p>
-
-<p><code class="highlighter-rouge">./configure &amp;&amp; make &amp;&amp; sudo make install</code></p>
-
-<p>Done!</p>
-
-
-            </div>
-
-        </div>
-    </li>
-    
 
 </ul>
     <div class="pagination">
@@ -294,6 +321,8 @@
   
     <a href="/blog/page/3">Newer</a>
   
+  
+    <a href="/blog/page/5">Older</a>
   
 
 </div>
