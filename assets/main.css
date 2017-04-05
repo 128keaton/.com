@@ -783,37 +783,229 @@ p.introduction {
     font-size: 1.5em !important;
     top: 10% !important;
     transform: translateY(-10%) !important; } }
-code {
-  white-space: pre-wrap;
-  /* css-3 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  line-height: 1.7em;
+.highlight {
+  background: #29292e;
+  border-radius: 2px;
+  overflow-x: auto;
+  color: #eff0f9;
+  line-height: 1.42em;
+  padding-left: 3.5%;
+  padding-right: 7%;
   font-size: 12px;
-  display: inline-block;
-  background-color: #d9d5d4;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 7px; }
+  width: 96%;
+  margin-left: -2%;
+  padding-top: 6%;
+  padding-bottom: 6%; }
 
+/*code {
+    white-space: pre-wrap;
+
+    white-space: -moz-pre-wrap;
+
+    white-space: -pre-wrap;
+
+    white-space: -o-pre-wrap;
+
+    word-wrap: break-word;
+    line-height: 1.7em;
+    font-size: 12px;
+    display: inline-block;
+    background-color: rgb(217, 213, 212);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 7px;
+}*/
 /* Bash */
 code.language-bash::before,
 code.language-bash::before {
   content: "$ "; }
 
-code.language-bash,
-code.language-shell {
-  background-color: black;
-  color: #00FF00;
-  border-radius: 0px !important;
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 25px 10px 10px; }
+.hll {
+  background-color: #49483e; }
+
+.c {
+  color: #75715e; }
+
+.err {
+  color: #960050;
+  background-color: #1e0010; }
+
+.k {
+  color: #66d9ef; }
+
+.l {
+  color: #ae81ff; }
+
+.n {
+  color: #f8f8f2; }
+
+.o {
+  color: #f92672; }
+
+.p {
+  color: #f8f8f2; }
+
+.cm {
+  color: #75715e; }
+
+.cp {
+  color: #75715e; }
+
+.c1 {
+  color: #75715e; }
+
+.cs {
+  color: #75715e; }
+
+.gd {
+  color: #f92672; }
+
+.ge {
+  font-style: italic; }
+
+.gi {
+  color: #a6e22e; }
+
+.gs {
+  font-weight: bold; }
+
+.gu {
+  color: #75715e; }
+
+.kc {
+  color: #66d9ef; }
+
+.kd {
+  color: #66d9ef; }
+
+.kn {
+  color: #f92672; }
+
+.kp {
+  color: #66d9ef; }
+
+.kr {
+  color: #66d9ef; }
+
+.kt {
+  color: #66d9ef; }
+
+.ld {
+  color: #e6db74; }
+
+.m {
+  color: #ae81ff; }
+
+.s {
+  color: #e6db74; }
+
+.na {
+  color: #a6e22e; }
+
+.nb {
+  color: #f8f8f2; }
+
+.nc {
+  color: #a6e22e; }
+
+.no {
+  color: #66d9ef; }
+
+.nd {
+  color: #a6e22e; }
+
+.ni {
+  color: #f8f8f2; }
+
+.ne {
+  color: #a6e22e; }
+
+.nf {
+  color: #a6e22e; }
+
+.nl {
+  color: #f8f8f2; }
+
+.nn {
+  color: #f8f8f2; }
+
+.nx {
+  color: #a6e22e; }
+
+.py {
+  color: #f8f8f2; }
+
+.nt {
+  color: #f92672; }
+
+.nv {
+  color: #f8f8f2; }
+
+.ow {
+  color: #f92672; }
+
+.w {
+  color: #f8f8f2; }
+
+.mb {
+  color: #ae81ff; }
+
+.mf {
+  color: #ae81ff; }
+
+.mh {
+  color: #ae81ff; }
+
+.mi {
+  color: #ae81ff; }
+
+.mo {
+  color: #ae81ff; }
+
+.sb {
+  color: #e6db74; }
+
+.sc {
+  color: #e6db74; }
+
+.sd {
+  color: #e6db74; }
+
+.s2 {
+  color: #e6db74; }
+
+.se {
+  color: #ae81ff; }
+
+.sh {
+  color: #e6db74; }
+
+.si {
+  color: #e6db74; }
+
+.sx {
+  color: #e6db74; }
+
+.sr {
+  color: #e6db74; }
+
+.s1 {
+  color: #e6db74; }
+
+.ss {
+  color: #e6db74; }
+
+.bp {
+  color: #f8f8f2; }
+
+.vc {
+  color: #f8f8f2; }
+
+.vg {
+  color: #f8f8f2; }
+
+.vi {
+  color: #f8f8f2; }
 
 .highlight {
   margin-left: 0;
@@ -821,31 +1013,7 @@ code.language-shell {
 
 @media screen and (max-width: 600px) {
   code {
-    width: 100% !important; }
-
-  code.language-bash,
-  code.language-shell {
-    padding-right: 35px;
-    overflow-x: hidden;
-    margin-left: -25px !important; }
-
-  .highlight {
-    font-size: 12px;
-    width: auto !important;
-    max-width: 100%;
-    padding: 2px !important;
-    line-height: 1.2em;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    white-space: pre-wrap;
-    /* CSS3 */
-    white-space: -moz-pre-wrap;
-    /* Firefox */
-    white-space: -pre-wrap;
-    /* Opera <7 */
-    white-space: -o-pre-wrap;
-    /* Opera 7 */
-    word-wrap: break-word; } }
+    width: 100% !important; } }
 /* For notices, warnings, etc */
 .notice--info {
   background: linear-gradient(#ff4b33, #ff335e);
