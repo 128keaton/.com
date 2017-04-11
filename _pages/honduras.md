@@ -16,7 +16,7 @@ This trip will be my first out of the country, and into a country so very differ
 
 ## How?
 
-That is where you come in. My projected costs for this trip are over $1500, and I know with support from others, I can reach that goal. If you are willing to donate, there are a couple ways you can do so. You can donate [here](fellowshipmemphis.org/outreach/honduras/) and select an amount, or send a check to:
+That is where you come in. My projected costs for this trip are over $1500, and I know with support from others, I can reach that goal. If you are willing to donate, there are a couple ways you can do so. You can donate [here](http://fellowshipmemphis.org/outreach/honduras/) and select an amount, or send a check to:
 <div class="check">
 Fellowship Memphis
 <br>
