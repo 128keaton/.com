@@ -3,7 +3,7 @@ layout: post
 title: "How I got 3.1.2 on a 3G[s] fROM 2011"
 date: "2017-04-11 19:56:57 -0500"
 ---
-![](http://images.128keaton.com/iphone3gs3.1.2.jpg)
+![](http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized-small)
 
 See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a *new boot ROM* 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?
 
