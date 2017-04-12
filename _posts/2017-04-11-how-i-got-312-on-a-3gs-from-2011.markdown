@@ -189,7 +189,7 @@ If you are having issues running this command, check out [Troubleshooting](#trou
 I had some friends try running the guide themselves, and they ran into some issues not covered.
 
 ### Operation timed out
-![](http://images.128keaton.com/uhoh.jpg).
+![](http://images.128keaton.com/uhoh.jpg#stylized).
 
 My friend on Slack ran into this. Not sure if it is an environment issue, as I did not have Python installed via Homebrew. I just had OS X's default install. If you're wondering if you are using Homebrew Python, run this command:
 ``` bash
