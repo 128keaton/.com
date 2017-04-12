@@ -98,6 +98,9 @@ unzip -p iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu > 
 You should be all set to run ipwndfu here pretty soon.
 
 ## Step 5:
+
+**Note: if you installed all the pip dependancies with the Homebrew version, you must prepend `python` to the commands like I have done below**
+
 Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use `idevicerestore` to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17" PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I'm writing this from the perspective of me restoring it with iTunes.
 
 I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened, raring to go.
