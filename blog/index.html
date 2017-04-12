@@ -66,7 +66,7 @@
             </div>
             <div class="meta">
                 <span class="post-meta">Posted Apr 12</span>
-                <span class="post-word-count">and has roughly 1307 words</span>
+                <span class="post-word-count">and has roughly 1549 words</span>
             </div>
             <div class="post-text">
                  <p><img src="http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized" alt="" /></p>
@@ -83,10 +83,11 @@
 
 <h2 id="step-1">Step 1:</h2>
 
-<p>Time to install all the dependancies.
+<p><strong>(updated 4-12-2017)</strong>
+Time to install all the dependancies.
 Open Terminal, then install pip/Python from Homebrew like this:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install python
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install python --with-brewed-openssl
 </code></pre>
 </div>
 
@@ -290,6 +291,56 @@ If screen is not red, NOR was flashed successfully and device will reboot.
 </ul>
 
 <p>Hopefully your phone should be booting whatever iOS you chose! Comment below if something bad happens or you discover another way to restore!</p>
+
+<p>If you are having issues running this command, check out <a href="#troubleshooting">Troubleshooting</a> below.</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>(added 4-12-2017)</p>
+
+<p>I had some friends try running the guide themselves, and they ran into some issues not covered.</p>
+
+<h3 id="operation-timed-out">Operation timed out</h3>
+<p><img src="http://images.128keaton.com/uhoh.jpg" alt="" />.</p>
+
+<p>My friend on Slack ran into this. Not sure if it is an environment issue, as I did not have Python installed via Homebrew. I just had OS X’s default install. If you’re wondering if you are using Homebrew Python, run this command:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>which python
+</code></pre>
+</div>
+
+<p>I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew update
+brew rm python
+brew install python --with-brewed-openssl
+</code></pre>
+</div>
+
+<p>Thanks to <a href="https://github.com/Homebrew/legacy-homebrew/issues/14497">this</a> GitHub issue.</p>
+
+<p>However, if you don’t want to really mess with Homebrew, or the proposed fix doesn’t work for you, here is another way.</p>
+
+<p>First, remove the Homebrew Python install.</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew rm python
+</code></pre>
+</div>
+<p>Then, close Terminal and reopen.</p>
+
+<p>In Terminal, navigate somewhere safe, like <code class="highlighter-rouge">cd ~/Desktop</code>, and run:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>curl -O https://bootstrap.pypa.io/get-pip.py
+</code></pre>
+</div>
+
+<p>Next, run:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo python get-pip.py
+</code></pre>
+</div>
+<p>Make sure you’ve installed libusb, and then install pyusb like this:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install pyusb
+</code></pre>
+</div>
+
+<p>Hopefully that should get you running again.</p>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-12T13:50:21+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">How I got 3.1.2 on a 3G[s] from 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] from 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-12T17:03:14+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">How I got 3.1.2 on a 3G[s] from 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] from 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a &lt;em&gt;new boot ROM&lt;/em&gt; 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?&lt;/p&gt;
 
@@ -12,10 +12,11 @@
 
 &lt;h2 id=&quot;step-1&quot;&gt;Step 1:&lt;/h2&gt;
 
-&lt;p&gt;Time to install all the dependancies.
+&lt;p&gt;&lt;strong&gt;(updated 4-12-2017)&lt;/strong&gt;
+Time to install all the dependancies.
 Open Terminal, then install pip/Python from Homebrew like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install python
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install python --with-brewed-openssl
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -219,6 +220,56 @@ If screen is not red, NOR was flashed successfully and device will reboot.
 &lt;/ul&gt;
 
 &lt;p&gt;Hopefully your phone should be booting whatever iOS you chose! Comment below if something bad happens or you discover another way to restore!&lt;/p&gt;
+
+&lt;p&gt;If you are having issues running this command, check out &lt;a href=&quot;#troubleshooting&quot;&gt;Troubleshooting&lt;/a&gt; below.&lt;/p&gt;
+
+&lt;h2 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h2&gt;
+&lt;p&gt;(added 4-12-2017)&lt;/p&gt;
+
+&lt;p&gt;I had some friends try running the guide themselves, and they ran into some issues not covered.&lt;/p&gt;
+
+&lt;h3 id=&quot;operation-timed-out&quot;&gt;Operation timed out&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/uhoh.jpg&quot; alt=&quot;&quot; /&gt;.&lt;/p&gt;
+
+&lt;p&gt;My friend on Slack ran into this. Not sure if it is an environment issue, as I did not have Python installed via Homebrew. I just had OS X’s default install. If you’re wondering if you are using Homebrew Python, run this command:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew update
+brew rm python
+brew install python --with-brewed-openssl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Homebrew/legacy-homebrew/issues/14497&quot;&gt;this&lt;/a&gt; GitHub issue.&lt;/p&gt;
+
+&lt;p&gt;However, if you don’t want to really mess with Homebrew, or the proposed fix doesn’t work for you, here is another way.&lt;/p&gt;
+
+&lt;p&gt;First, remove the Homebrew Python install.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew rm python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Then, close Terminal and reopen.&lt;/p&gt;
+
+&lt;p&gt;In Terminal, navigate somewhere safe, like &lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -O https://bootstrap.pypa.io/get-pip.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next, run:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo python get-pip.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Make sure you’ve installed libusb, and then install pyusb like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyusb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hopefully that should get you running again.&lt;/p&gt;
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 
