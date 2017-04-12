@@ -7,7 +7,7 @@ date: "2017-04-11 19:56:57 -0500"
 
 See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a *new boot ROM* 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?
 
-Just recently, a [dude](https://twitter.com/axi0mX) on Twitter released the [alloc8](https://github.com/axi0mX/alloc8) boot ROM exploit affecting the new and old boot ROM 3G[s], though he recommends that the 24k exploit still be used on old boot ROM devices due to a [slow down](https://github.com/axi0mX/ipwndfu/blob/master/JAILBREAK-GUIDE.md#3-second-delays-when-using-a-phone-jailbroken-with-alloc8) that the alloc8 exploit introduces. Thankfully, this exploit is relatively easy to use, if you have the right tools
+Just recently, a [person](https://twitter.com/axi0mX) on Twitter called 'axi0mX' released the [alloc8](https://github.com/axi0mX/alloc8) boot ROM exploit affecting the new and old boot ROM 3G[s], though he recommends that the 24k exploit still be used on old boot ROM devices due to a [slow down](https://github.com/axi0mX/ipwndfu/blob/master/JAILBREAK-GUIDE.md#3-second-delays-when-using-a-phone-jailbroken-with-alloc8) that the alloc8 exploit introduces. Thankfully, this exploit is relatively easy to use, if you have the right tools
 
 ## Tools:
 * Xcode Command Line tools (`xcode-select --install`)
