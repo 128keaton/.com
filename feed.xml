@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-12T03:55:42+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">How I got 3.1.2 on a 3G[s] fROM 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] fROM 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;&amp;quot;/images/iphone3gs3.1.2.jpg&amp;quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-12T04:06:07+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">How I got 3.1.2 on a 3G[s] fROM 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] fROM 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone3gs3.1.2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a &lt;em&gt;new boot ROM&lt;/em&gt; 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?&lt;/p&gt;
 
@@ -160,7 +160,7 @@ A:  No [You must answer No to create a 24Kpwn IPSW using redsn0w]
 &lt;p&gt;It should output something like this:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu -p
 &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt; based on limera1n exploit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;heap overflow&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; by geohot &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt;
-Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:000003F4E9135DAE SRTG:[iBoot-359.3.2]
+Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;pwned DFU Mode.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -180,7 +180,7 @@ Device is now &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;pwned DFU Mode.
 &lt;p&gt;It should output something like this:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu -p
 &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt; based on limera1n exploit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;heap overflow&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; by geohot &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt;
-Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:000003F4E9135DAE SRTG:[iBoot-359.3.2]
+Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;pwned DFU Mode.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -201,7 +201,7 @@ Dumping NOR, part 5/8.
 Dumping NOR, part 6/8.
 Dumping NOR, part 7/8.
 Dumping NOR, part 8/8.
-NOR backed up to file: nor-backups/nor-000003F4E9135DAE-20170411-193959.dump
+NOR backed up to file: nor-backups/nor-xxxxxxxxx-20170411-193959.dump
 Sending iBSS.
 Waiting &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;iBSS to enter Recovery Mode.
 Sending iBSS payload to flash NOR.
