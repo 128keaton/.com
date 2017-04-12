@@ -62,6 +62,73 @@
         <div class="post-preview">
 
             <div class="post-stuff">
+                <a class="post-link" href="/2016/12/29/coolbooter-icloud-lock.html">iCloud Locked Downgrading</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted Dec 29</span>
+                <span class="post-word-count">and has roughly 420 words</span>
+            </div>
+            <div class="post-text">
+                 <p>Thanks to <a href="https://twitter.com/coolbooter">Coolbooter</a>, we can now downgrade to any capable versions that our 32-bit iDevices can run (iPad 2-4, iPhone 4-5c), but what if you have an iPhone that is iCloud locked?</p>
+
+<div class="notice--info">
+  
+<h4 id="note">Note:</h4>
+<p>Now, this isn’t a ‘work-around’ per-se, just a way to get to the homescreen. Activation and whatnot is NOT guaranteed with this method, and you need to have the phone already jailbroken and you need to have homescreen access, i.e. no passcode. Coolbooter is in beta. BETA! It might break your phone.</p>
+
+<p>Also, this has only been tested on iOS 6. ymmv.</p>
+
+</div>
+
+<h2 id="step-1---installing-coolbooter">Step 1 - Installing Coolbooter.</h2>
+
+<p>If you haven’t already, add the Coolbooter repo to Cydia (https://coolbooter.com) and install the Coolbooter Beta package. It’s pretty straightforward.</p>
+
+<h2 id="step-2---d-d-d-downgrading">Step 2 - D-d-d-downgrading.</h2>
+
+<p>Select the version you want to install (once again, only tested on iOS 6) and install. Coolbooter takes a decent amount of time to download, parition and move everything into place. Then tap ‘Boot’ and boot into iOS 6. Run through the setup to verify that you can’t log in to the locked account.</p>
+
+<h2 id="step-3---installing-openssh-because-if-you-didnt-you-are-doing-it-wrong">Step 3 - Installing OpenSSH (because if you didn’t you are doing it wrong).</h2>
+
+<p>Boot back into your main OS (just shut down and turn back on) and install ‘OpenSSH’ in Cydia. If you don’t know how to SSH into your own device, then stop right here and contemplate your life choices and return at a later date.</p>
+
+<h3 id="note-change-your-openssh-root-password-using-passwd">Note: change your OpenSSH root password using <code class="highlighter-rouge">passwd</code></h3>
+
+<div id="stahp">
+
+## Step 3a - Contemplating your life choices.
+
+Are you one of those people who post on /r/jailbreak like its your personal Google? Stop it. You are bad. Do you reply to @qwertyuiop's tweets asking 'eta wen' or other begging crap? Stop it. You are bad.
+
+</div>
+
+<h2 id="step-4---mounting-the-secondary-partition">Step 4 - Mounting the secondary partition.</h2>
+
+<p>First, list your devices or partitions in your SSH session with <code class="highlighter-rouge">ls /dev/</code>, I’d bet some serious money your iOS 6 partition is something like <code class="highlighter-rouge">/dev/disk0s1s3</code>. If a mounting point (e.g. <code class="highlighter-rouge">/mnt</code>) doesn’t exist, make one with <code class="highlighter-rouge">mkdir /mnt</code>. Finally, run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> mount -t hfs /dev/disk0s1s3 /mnt</code></pre></figure>
+
+<p>Substitute <code class="highlighter-rouge">/dev/disk0s1s3</code> for your device.</p>
+
+<h2 id="step-5---removing-the-setup-app">Step 5 - Removing the setup app.</h2>
+
+<p>We’re almost DUNNN. Just run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt/Applications <span class="o">&amp;&amp;</span> rm -rf Setup.app</code></pre></figure>
+
+<p>Boot back into your secondary OS and you should see a lockscreen instead of a setup screen</p>
+
+<p>If you broke some stuff, sorry, your fault</p>
+
+            </div>
+
+        </div>
+    </li>
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
                 <a class="post-link" href="/2016/11/30/refurbishing-kindles.html">Refurbishing Kindles</a>
             </div>
             <div class="meta">
@@ -308,65 +375,6 @@ Here is how my setup works:</p>
 <p><strong>Q: Well, why?</strong></p>
 
 <p>A: Why not? It was a lot of fun, and quite a challenge.</p>
-
-            </div>
-
-        </div>
-    </li>
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2016/05/30/baking-a-2007-macbook-pro-s-logic-board.html">Baking a 2007 MacBook Pro&#39;s Logic Board</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted May 30</span>
-                <span class="post-word-count">and has roughly 328 words</span>
-            </div>
-            <div class="post-text">
-                 <p>It is not everyday you see someone putting an expensive piece of technology inside of a conventional household oven. But then again, its is not everyday you have to reflow a component.
-<em>rock intro</em></p>
-
-<p>Anyway, I received a 2007 MacBook Pro 17” with a bad GPU. Sleep light comes on, no chime, etc. A somewhat common problem among the early MacBook Pro 3,1/4,1 and, the MacBook Pro 8,2, the GPU would desolder itself from the board. No, the GPU wouldn’t physically plop out. Enough solder joints (thanks lead-free) would weaken and disconnect to cause the issue.</p>
-
-<p><img src="http://www.playbackups.com/photos/bga-side-diagram.jpg" alt="" /></p>
-
-<p>The photo above is a simple diagram explaining basic BGA soldering. Those balls are what we are remelting (inside of the oven) to allow a firm connection to be made.</p>
-
-<p>Anyway, I disassembled the MacBook Pro using iFixit’s Logic Board Replacement guide, and began the process of baking. I wouldn’t consider this too outlandish, just because it does work,
-but it isn’t permanent. An <del>idiotic</del> butthurt friend did this and still plays video games on it (Battlefield, and other taxing games) and it happened again relatively quick.
- If you keep it from becoming stupid hot, you’ll be fine. Mine idles at 28 degrees Celsius. Anyway, back to baking. I put my board on a tray, on four tin foil balls. 400 degrees Fahrenheit for 10 minutes.</p>
-
-<p>What I should’ve done (from a friend):</p>
-<ul>
-  <li>Placed a sheet of foil underneath</li>
-  <li>Cleaned the tray</li>
-  <li>Removed the thermal paste from the board.</li>
-  <li>Placed one more foil ball underneath a corner.</li>
-</ul>
-
-<p>But I didn’t, and thankfully, it turned out ok.</p>
-
-<p>Before baking:</p>
-
-<p><img src="http://images.128keaton.com/2016/05/Slack for iOS Upload-5.jpg" alt="" /></p>
-
-<p>After:</p>
-
-<p><img src="http://images.128keaton.com/2016/05/Now just waiting to cool.jpg" alt="" /></p>
-
-<p>As you can see, there is a bit of board flex. Whoops. Make sure you put a piece of foil under that corner.</p>
-
-<p>Success:</p>
-
-<p><img src="http://images.128keaton.com/2016/05/screen_shot_2016-05-27_at_9.16.21_am.png" alt="" /></p>
-
-<p>Hope this helps someone!</p>
-
-<p>Edit: friend’s response to this post:</p>
-
-<p><img src="http://images.128keaton.com/2016/06/hahahjon.png" alt="" /></p>
 
             </div>
 

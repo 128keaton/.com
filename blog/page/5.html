@@ -62,6 +62,44 @@
         <div class="post-preview">
 
             <div class="post-stuff">
+                <a class="post-link" href="/2016/02/11/reset-password-pi.html">Resetting the Password on a Raspberry Pi</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted Feb 11</span>
+                <span class="post-word-count">and has roughly 155 words</span>
+            </div>
+            <div class="post-text">
+                 <p>Today I was working on a project I had been recruited to do about three weeks ago. I was given a Raspberry Pi preloaded with the project, but I couldn’t remember the password they’d set.</p>
+
+<p>Using Google-fu, I have compiled the complete tutorial to resetting the password on the <code class="highlighter-rouge">pi</code> user.</p>
+
+<p>First, unplug the pi and grab the SD card.</p>
+
+<p>Plug it into your machine (if you have a Micro-SD, get an adaptor).</p>
+
+<p>Then, go to the <code class="highlighter-rouge">boot</code> partition and edit a file named <code class="highlighter-rouge">cmdline.txt</code> and add <code class="highlighter-rouge">init=/bin/sh</code>.</p>
+
+<p>Next, boot the Pi. At the command line, type:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mount -o remount,rw /</code></pre></figure>
+
+<p>Wait for a success message, then type:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">passwd pi</code></pre></figure>
+
+<p>substituting <code class="highlighter-rouge">pi</code> for your username.</p>
+
+<p>It will ask you to enter the new password twice. If all goes well, unplug the Pi, open the <code class="highlighter-rouge">cmdline.txt</code> file on your machine, remove the final line</p>
+
+            </div>
+
+        </div>
+    </li>
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
                 <a class="post-link" href="/2016/02/11/compiling-qemu-on-os-x-el-capitan.html">Compiling QEMU on OS X El Capitan</a>
             </div>
             <div class="meta">

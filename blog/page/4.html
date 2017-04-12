@@ -62,6 +62,36 @@
         <div class="post-preview">
 
             <div class="post-stuff">
+                <a class="post-link" href="/2016/05/08/pata-ssds-for-powerpc-on-the-cheap.html">PATA SSDs for PowerPC on the Cheap</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted May 08</span>
+                <span class="post-word-count">and has roughly 304 words</span>
+            </div>
+            <div class="post-text">
+                 <p>When dealing with older equipment, one might have to do a hard drive replacement. It is becoming more and more common, as hard drives fail and cease to become writable, or worse-case scenario: readable. The entire PowerBook and iBook line uses a PATA connector to interface with physical storage devices, and then uses an ATA66 or ATA100 bus to manage data transfer.</p>
+
+<p>Unfortunately, PATA drives are becoming more and more scarce, and are usually much slower than modern drives. Enter the SSD. Now, SSDs aren’t exactly new technology. Flash storage. has been around for quite a while, but its gaining speed and popularity. Only one problem: most SSDs are SATA. Sure, you could get a PATA SSD, but you would be shelling out major bucks for a small amount of space, and it is nowhere near as fast as modern SSDs. For a while, the typical solution would be to buy an mSATA SSD (or mPCIE) and buy the appropriate adaptor. However, you run into one problem: most mSATA SSDs aren’t backed by quality names, they can be slower, and dodgy. Plus, they are usually a bit pricier than a regular SSD.</p>
+
+<p>I found this: <a href="http://www.ebay.com/itm/361098025243?_trksid=p2057872.m2749.l2649&amp;ssPageName=STRK%3AMEBIDX%3AIT">the ‘hot adaptor’</a>, and bought it, thinking if it didn’t work, I’d just use in in an X41. The not-so-average reader may have noticed this, but this will make the drive too long. However, in some modern SSDs, the board with the flash storage interface, doesn’t span the whole space available inside of the casing. Simply remove the case, and you are off to the races. I can only attest that this works in an 867MHz TiBook, but I imagine you could easily get this working on other Apple portables.</p>
+
+<p>My paper ‘caddy’:</p>
+
+<p><img src="http://images.128keaton.com/2016/05/IMG_1763.jpg" alt="see the paper?" /></p>
+
+<p>The SSD, plus adapter.</p>
+
+<p><img src="http://images.128keaton.com/2016/05/IMG_1764.jpg" alt="the SSD" /></p>
+
+            </div>
+
+        </div>
+    </li>
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
                 <a class="post-link" href="/2016/05/05/why-i-miss-2010.html">Man, I Miss 2010</a>
             </div>
             <div class="meta">
@@ -270,44 +300,6 @@
 <p>Unless you are buying the adaptor for the cord (its super easy to desolder, thanks to the kid who soldered it together), don’t bother.</p>
 
 <p><img src="http://i.imgur.com/zHNGlKH.jpg" alt="" /></p>
-
-            </div>
-
-        </div>
-    </li>
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2016/02/11/reset-password-pi.html">Resetting the Password on a Raspberry Pi</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Feb 11</span>
-                <span class="post-word-count">and has roughly 155 words</span>
-            </div>
-            <div class="post-text">
-                 <p>Today I was working on a project I had been recruited to do about three weeks ago. I was given a Raspberry Pi preloaded with the project, but I couldn’t remember the password they’d set.</p>
-
-<p>Using Google-fu, I have compiled the complete tutorial to resetting the password on the <code class="highlighter-rouge">pi</code> user.</p>
-
-<p>First, unplug the pi and grab the SD card.</p>
-
-<p>Plug it into your machine (if you have a Micro-SD, get an adaptor).</p>
-
-<p>Then, go to the <code class="highlighter-rouge">boot</code> partition and edit a file named <code class="highlighter-rouge">cmdline.txt</code> and add <code class="highlighter-rouge">init=/bin/sh</code>.</p>
-
-<p>Next, boot the Pi. At the command line, type:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mount -o remount,rw /</code></pre></figure>
-
-<p>Wait for a success message, then type:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">passwd pi</code></pre></figure>
-
-<p>substituting <code class="highlighter-rouge">pi</code> for your username.</p>
-
-<p>It will ask you to enter the new password twice. If all goes well, unplug the Pi, open the <code class="highlighter-rouge">cmdline.txt</code> file on your machine, remove the final line</p>
 
             </div>
 

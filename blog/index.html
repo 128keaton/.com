@@ -62,6 +62,252 @@
         <div class="post-preview">
 
             <div class="post-stuff">
+                <a class="post-link" href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">How I got 3.1.2 on a 3G[s] fROM 2011</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted Apr 12</span>
+                <span class="post-word-count">and has roughly 1290 words</span>
+            </div>
+            <div class="post-text">
+                 <p><img src="&quot;/images/iphone3gs3.1.2.jpg&quot;" alt="" /></p>
+
+<p>See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a <em>new boot ROM</em> 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?</p>
+
+<p>Just recently, a <a href="https://twitter.com/axi0mX">dude</a> on Twitter released the <a href="https://github.com/axi0mX/alloc8">alloc8</a> boot ROM exploit affecting the new and old boot ROM 3G[s], though he recommends that the 24k exploit still be used on old boot ROM devices due to a <a href="https://github.com/axi0mX/ipwndfu/blob/master/JAILBREAK-GUIDE.md#3-second-delays-when-using-a-phone-jailbroken-with-alloc8">slow down</a> that the alloc8 exploit introduces. Thankfully, this exploit is relatively easy to use, if you have the right tools</p>
+
+<h2 id="tools">Tools:</h2>
+<ul>
+  <li>Xcode Command Line tools (<code class="highlighter-rouge">xcode-select --install</code>)</li>
+  <li><a href="https://brew.sh/">Homebrew</a></li>
+</ul>
+
+<h2 id="step-1">Step 1:</h2>
+
+<p>Time to install all the dependancies.
+Open Terminal, then install pip/Python from Homebrew like this:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install python
+</code></pre>
+</div>
+
+<p>Next, install libusb, similar to how you installed Python, using Homebrew:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install libusb
+</code></pre>
+</div>
+
+<p>Quit Terminal and then reopen Terminal.</p>
+
+<p>Lastly, run this last command:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install pyusb
+</code></pre>
+</div>
+
+<h2 id="step-2">Step 2:</h2>
+
+<p>Navigate to a nice and safe directory in Terminal, e.g. <code class="highlighter-rouge">cd ~/Desktop</code>. There, clone the ipwndfu repository:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/axi0mX/ipwndfu <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ipwndfu
+</code></pre>
+</div>
+
+<h2 id="step-3">Step 3:</h2>
+
+<p>Thanks to some oddities in libusb for El Capitan and Sierra, it is necessary to patch the binary we use. Thankfully, axi0mX has made it pretty easy for us.
+Verify that the version installed on your computer is the same one the patch is made for (1.0.21) by running this command:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
+</code></pre>
+</div>
+
+<p>If the little string of numbers and letters (the hash) matches <code class="highlighter-rouge">02da61201c8f67b723bca5fb44b35797d1021625</code> then you should be fine.</p>
+
+<p>Now, its time to patch. inside the ipwndfu directory, run</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
+</code></pre>
+</div>
+
+<p>Now, just to make sure that the patch was applied successfully, rerun this command:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
+</code></pre>
+</div>
+
+<p>The hash should be: <code class="highlighter-rouge">f356ee6052cd520b46ca50333b937ff2efe4477b</code></p>
+
+<p>All good?</p>
+
+<h2 id="step-4">Step 4:</h2>
+
+<p>Now, it is time to generate a custom IPSW for your 3G[s]. Below is a table which breaks down the versions and tools to accomplish this.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Tool</th>
+      <th>Success</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS 3.1</td>
+      <td><a href="https://github.com/axi0mX/PwnageTool-mirror/raw/master/PwnageTool_3.1.3.dmg">PwnageTool 3.1.3</a></td>
+      <td>😀</td>
+    </tr>
+    <tr>
+      <td>iOS 3.1.2/3</td>
+      <td><a href="https://github.com/axi0mX/PwnageTool-mirror/raw/master/PwnageTool_3.1.5.dmg">PwnageTool 3.1.5</a></td>
+      <td>😀</td>
+    </tr>
+    <tr>
+      <td>iOS 4.0</td>
+      <td><a href="https://github.com/axi0mX/PwnageTool-mirror/raw/master/PwnageTool_4.01.dmg">PwnageTool 4.01</a></td>
+      <td>😀</td>
+    </tr>
+    <tr>
+      <td>iOS 4.3.3</td>
+      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
+      <td>😫</td>
+    </tr>
+    <tr>
+      <td>iOS 5.0</td>
+      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
+      <td>😀</td>
+    </tr>
+    <tr>
+      <td>iOS 5.0.1</td>
+      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
+      <td>😀</td>
+    </tr>
+    <tr>
+      <td>iOS 5.1</td>
+      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
+      <td>😀</td>
+    </tr>
+    <tr>
+      <td>iOS 5.1.1</td>
+      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
+      <td>😀</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Note from developer:</em></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Q: 'Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?'
+
+A:  No [You must answer No to create a 24Kpwn IPSW using redsn0w]
+</code></pre>
+</div>
+
+<p>All the tools above will walk you through the IPSW creation, just don’t stray too far from the default options and you should be fine. I opted for 3.1.2, but thats my personal choice. I also downloaded my firmware file from <a href="http://ipsw.me">ipsw.me</a>. Also, since we’re on the topic of downloading firmwares, you also need to download the 4.3.5 IPSW for your 3G[s] <strong>and place it in your ipwndfu folder</strong></p>
+
+<p>From there (again in your ipwndfu folder) run:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>unzip -p iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu &gt; n88ap-iBSS-4.3.5.img3
+</code></pre>
+</div>
+
+<p>You should be all set to run ipwndfu here pretty soon.</p>
+
+<h2 id="step-5">Step 5:</h2>
+<p>Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use <code class="highlighter-rouge">idevicerestore</code> to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.</p>
+
+<p>I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened in case.</p>
+
+<p>Now, plug the iPhone into the machine with the ipwndfu tools. Put the iPhone into DFU mode, which goes as follows:</p>
+
+<ol>
+  <li>Turn the phone off.</li>
+  <li>Hold the power button for <strong>3</strong> seconds.</li>
+  <li>Hold the home and power button for <strong>10</strong> seconds.</li>
+  <li>Release the power button, but continue to hold the home button without releasing for <strong>15</strong> more seconds.</li>
+</ol>
+
+<p>Now, iTunes should popup complaining about a device in recovery.</p>
+
+<p>Go back to Terminal, and inside of the ipwndfu tools directory, run:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -p
+</code></pre>
+</div>
+
+<p>It should output something like this:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -p
+<span class="k">***</span> based on limera1n exploit <span class="o">(</span>heap overflow<span class="o">)</span> by geohot <span class="k">***</span>
+Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:000003F4E9135DAE SRTG:[iBoot-359.3.2]
+Device is now <span class="k">in </span>pwned DFU Mode.
+</code></pre>
+</div>
+
+<p>Great!</p>
+
+<p>Unplug the device, and quickly move it to the machine with iTunes &lt;11.1, in my case, my PowerBook. iTunes should once again popup about a device in recovery. Now we’re rolling. Okay, deep breath. I’m assuming your iPhone is backed up if you care. Now we need to browse to our custom firmware. Hold down Shift (for Windows) or Alt/option (for Mac) and a file dialog should come up. Browse and select our custom firmware. The restoration process should begin. I had to do this process twice, not sure why, but when I finished, it showed no errors.</p>
+
+<h2 id="step-6">Step 6:</h2>
+
+<p>After your restore is complete, you should be at a black screen. Move the phone to the machine with the tools once again. Next, we’re running the same command as earlier to get it into a pwned DFU state:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -p
+</code></pre>
+</div>
+
+<p>It should output something like this:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -p
+<span class="k">***</span> based on limera1n exploit <span class="o">(</span>heap overflow<span class="o">)</span> by geohot <span class="k">***</span>
+Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:000003F4E9135DAE SRTG:[iBoot-359.3.2]
+Device is now <span class="k">in </span>pwned DFU Mode.
+</code></pre>
+</div>
+
+<p>Now, run this:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -x
+</code></pre>
+</div>
+
+<p>Which, in turn, should provide an output like this:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -x
+Installing alloc8 exploit to NOR.
+Dumping NOR, part 1/8.
+Dumping NOR, part 2/8.
+Dumping NOR, part 3/8.
+Dumping NOR, part 4/8.
+Dumping NOR, part 5/8.
+Dumping NOR, part 6/8.
+Dumping NOR, part 7/8.
+Dumping NOR, part 8/8.
+NOR backed up to file: nor-backups/nor-000003F4E9135DAE-20170411-193959.dump
+Sending iBSS.
+Waiting <span class="k">for </span>iBSS to enter Recovery Mode.
+Sending iBSS payload to flash NOR.
+Sending run command.
+If screen is not red, NOR was flashed successfully and device will reboot.
+</code></pre>
+</div>
+<p>The whole process should take about 10 minutes, and your screen on your iPhone should be green for a considerable amount of time.</p>
+
+<p>Thankfully, the developer provided some nice troubleshooting tips:</p>
+
+<ul>
+  <li>
+    <p>If there are any errors before the screen turned green, it is safe to try again.</p>
+  </li>
+  <li>
+    <p>If the screen turns red, something went wrong while your phone was being flashed. Trying again probably won’t help.</p>
+  </li>
+</ul>
+
+<p>Hopefully your phone should be booting whatever iOS you chose! Comment below if something bad happens or you discover another way to restore!</p>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>I’d like to give a major thanks to the developer for writing really good documentation in the first place, and another thanks for <em>creating</em> this awesome open source jailbreak and boot ROM exploit for a device almost 9 years old.</p>
+
+            </div>
+
+        </div>
+    </li>
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
                 <a class="post-link" href="/2017/04/05/travis-ci-and-jekyll.html">Travis CI and Jekyll</a>
             </div>
             <div class="meta">
@@ -190,8 +436,8 @@ and then:
         <span class="no">Dir</span><span class="p">.</span><span class="nf">entries</span><span class="p">(</span><span class="n">__dir__</span> <span class="o">+</span> <span class="s1">'/_posts/'</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">file_name</span><span class="o">|</span>
             <span class="k">next</span> <span class="k">unless</span> <span class="no">File</span><span class="p">.</span><span class="nf">extname</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'.md'</span> <span class="o">||</span> <span class="no">File</span><span class="p">.</span><span class="nf">extname</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'.markdown'</span>
             <span class="n">text</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">__dir__</span> <span class="o">+</span> <span class="s1">'/_posts/'</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>
-            <span class="n">fixed</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">'](/images/'</span><span class="p">,</span> <span class="s1">'](http://images.128keaton.com/'</span><span class="p">)</span>
-            <span class="n">fixed</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">'_images/'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+            <span class="n">fixed</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">'](http://images.128keaton.com/'</span><span class="p">,</span> <span class="s1">'](http://images.128keaton.com/'</span><span class="p">)</span>
+            <span class="n">fixed</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
             <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">__dir__</span> <span class="o">+</span> <span class="s1">'/_posts/'</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="n">file</span><span class="p">.</span><span class="nf">puts</span> <span class="n">fixed</span> <span class="p">}</span>
         <span class="k">end</span>
         <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="p">[</span><span class="s2">"site:upload"</span><span class="p">].</span><span class="nf">execute</span>
@@ -465,73 +711,6 @@ The “slate” anodization did show wear and tear as the year went by, but I li
 </div>
 
 <p>The only problem with that is no one they want to use their browser will understand this, plus Firefox hasn’t gotten better for a long time.</p>
-
-            </div>
-
-        </div>
-    </li>
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2016/12/29/coolbooter-icloud-lock.html">iCloud Locked Downgrading</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Dec 29</span>
-                <span class="post-word-count">and has roughly 420 words</span>
-            </div>
-            <div class="post-text">
-                 <p>Thanks to <a href="https://twitter.com/coolbooter">Coolbooter</a>, we can now downgrade to any capable versions that our 32-bit iDevices can run (iPad 2-4, iPhone 4-5c), but what if you have an iPhone that is iCloud locked?</p>
-
-<div class="notice--info">
-  
-<h4 id="note">Note:</h4>
-<p>Now, this isn’t a ‘work-around’ per-se, just a way to get to the homescreen. Activation and whatnot is NOT guaranteed with this method, and you need to have the phone already jailbroken and you need to have homescreen access, i.e. no passcode. Coolbooter is in beta. BETA! It might break your phone.</p>
-
-<p>Also, this has only been tested on iOS 6. ymmv.</p>
-
-</div>
-
-<h2 id="step-1---installing-coolbooter">Step 1 - Installing Coolbooter.</h2>
-
-<p>If you haven’t already, add the Coolbooter repo to Cydia (https://coolbooter.com) and install the Coolbooter Beta package. It’s pretty straightforward.</p>
-
-<h2 id="step-2---d-d-d-downgrading">Step 2 - D-d-d-downgrading.</h2>
-
-<p>Select the version you want to install (once again, only tested on iOS 6) and install. Coolbooter takes a decent amount of time to download, parition and move everything into place. Then tap ‘Boot’ and boot into iOS 6. Run through the setup to verify that you can’t log in to the locked account.</p>
-
-<h2 id="step-3---installing-openssh-because-if-you-didnt-you-are-doing-it-wrong">Step 3 - Installing OpenSSH (because if you didn’t you are doing it wrong).</h2>
-
-<p>Boot back into your main OS (just shut down and turn back on) and install ‘OpenSSH’ in Cydia. If you don’t know how to SSH into your own device, then stop right here and contemplate your life choices and return at a later date.</p>
-
-<h3 id="note-change-your-openssh-root-password-using-passwd">Note: change your OpenSSH root password using <code class="highlighter-rouge">passwd</code></h3>
-
-<div id="stahp">
-
-## Step 3a - Contemplating your life choices.
-
-Are you one of those people who post on /r/jailbreak like its your personal Google? Stop it. You are bad. Do you reply to @qwertyuiop's tweets asking 'eta wen' or other begging crap? Stop it. You are bad.
-
-</div>
-
-<h2 id="step-4---mounting-the-secondary-partition">Step 4 - Mounting the secondary partition.</h2>
-
-<p>First, list your devices or partitions in your SSH session with <code class="highlighter-rouge">ls /dev/</code>, I’d bet some serious money your iOS 6 partition is something like <code class="highlighter-rouge">/dev/disk0s1s3</code>. If a mounting point (e.g. <code class="highlighter-rouge">/mnt</code>) doesn’t exist, make one with <code class="highlighter-rouge">mkdir /mnt</code>. Finally, run:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> mount -t hfs /dev/disk0s1s3 /mnt</code></pre></figure>
-
-<p>Substitute <code class="highlighter-rouge">/dev/disk0s1s3</code> for your device.</p>
-
-<h2 id="step-5---removing-the-setup-app">Step 5 - Removing the setup app.</h2>
-
-<p>We’re almost DUNNN. Just run:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt/Applications <span class="o">&amp;&amp;</span> rm -rf Setup.app</code></pre></figure>
-
-<p>Boot back into your secondary OS and you should see a lockscreen instead of a setup screen</p>
-
-<p>If you broke some stuff, sorry, your fault</p>
 
             </div>
 
