@@ -128,8 +128,8 @@ In my Rakefile, I have two helper tasks:
         Dir.entries(__dir__ + '/_posts/').each do |file_name|
             next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
             text = File.read(__dir__ + '/_posts/' + file_name)
-            fixed = text.gsub('](/images/', '](http://images.128keaton.com/')
-            fixed = fixed.gsub('_images/', '')
+            fixed = text.gsub('](http://images.128keaton.com/', '](http://images.128keaton.com/')
+            fixed = fixed.gsub('', '')
             File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
         end
         Rake::Task["site:upload"].execute
