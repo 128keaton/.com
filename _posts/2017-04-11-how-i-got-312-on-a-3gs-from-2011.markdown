@@ -82,13 +82,10 @@ Now, it is time to generate a custom IPSW for your 3G[s]. Below is a table which
 | iOS 5.1     | [redsn0w 0.9.15 beta 3](http://www.iphonehacks.com/download-redsn0w)                            | 😀      |
 | iOS 5.1.1   | [redsn0w 0.9.15 beta 3](http://www.iphonehacks.com/download-redsn0w)                            | 😀      |
 
-*Note from developer:*
+*Notes on using redsn0w:*
 
-```
-Q: 'Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?'
+During the process, redsn0w will ask you something along the lines of 'Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?'. You must answer 'no' to create an IPSW laced with the 24Kpwn exploit, which is essential for alloc8.
 
-A:  No [You must answer No to create a 24Kpwn IPSW using redsn0w]
-```
 
 All the tools above will walk you through the IPSW creation, just don't stray too far from the default options and you should be fine. I opted for 3.1.2, but thats my personal choice. I also downloaded my firmware file from [ipsw.me](http://ipsw.me). Also, since we're on the topic of downloading firmwares, you also need to download the 4.3.5 IPSW for your 3G[s] **and place it in your ipwndfu folder**
 
