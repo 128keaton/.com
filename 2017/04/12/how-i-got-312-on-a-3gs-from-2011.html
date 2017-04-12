@@ -177,13 +177,9 @@ Verify that the version installed on your computer is the same one the patch is 
   </tbody>
 </table>
 
-<p><em>Note from developer:</em></p>
+<p><em>Notes on using redsn0w:</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Q: 'Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?'
-
-A:  No [You must answer No to create a 24Kpwn IPSW using redsn0w]
-</code></pre>
-</div>
+<p>During the process, redsn0w will ask you something along the lines of ‘Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?’. You must answer ‘no’ to create an IPSW laced with the 24Kpwn exploit, which is essential for alloc8.</p>
 
 <p>All the tools above will walk you through the IPSW creation, just don’t stray too far from the default options and you should be fine. I opted for 3.1.2, but thats my personal choice. I also downloaded my firmware file from <a href="http://ipsw.me">ipsw.me</a>. Also, since we’re on the topic of downloading firmwares, you also need to download the 4.3.5 IPSW for your 3G[s] <strong>and place it in your ipwndfu folder</strong></p>
 
@@ -197,7 +193,7 @@ A:  No [You must answer No to create a 24Kpwn IPSW using redsn0w]
 <h2 id="step-5">Step 5:</h2>
 <p>Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use <code class="highlighter-rouge">idevicerestore</code> to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.</p>
 
-<p>I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened in case.</p>
+<p>I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened, raring to go.</p>
 
 <p>Now, plug the iPhone into the machine with the ipwndfu tools. Put the iPhone into DFU mode, which goes as follows:</p>
 
@@ -267,7 +263,7 @@ Sending run command.
 If screen is not red, NOR was flashed successfully and device will reboot.
 </code></pre>
 </div>
-<p>The whole process should take about 10 seconds, and your screen on your iPhone should be green for a considerable amount of time.</p>
+<p>The whole process should take about 10 seconds, and your screen on your iPhone should be green for a considerable amount of that time.</p>
 
 <p>Thankfully, the developer provided some nice troubleshooting tips:</p>
 

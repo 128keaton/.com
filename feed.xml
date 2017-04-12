@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-12T13:17:32+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">How I got 3.1.2 on a 3G[s] fROM 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] fROM 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized-small&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-12T13:20:00+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">How I got 3.1.2 on a 3G[s] fROM 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] fROM 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized-small&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a &lt;em&gt;new boot ROM&lt;/em&gt; 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?&lt;/p&gt;
 
@@ -119,13 +119,9 @@ Verify that the version installed on your computer is the same one the patch is 
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;em&gt;Note from developer:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Notes on using redsn0w:&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Q: 'Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?'
-
-A:  No [You must answer No to create a 24Kpwn IPSW using redsn0w]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;During the process, redsn0w will ask you something along the lines of ‘Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?’. You must answer ‘no’ to create an IPSW laced with the 24Kpwn exploit, which is essential for alloc8.&lt;/p&gt;
 
 &lt;p&gt;All the tools above will walk you through the IPSW creation, just don’t stray too far from the default options and you should be fine. I opted for 3.1.2, but thats my personal choice. I also downloaded my firmware file from &lt;a href=&quot;http://ipsw.me&quot;&gt;ipsw.me&lt;/a&gt;. Also, since we’re on the topic of downloading firmwares, you also need to download the 4.3.5 IPSW for your 3G[s] &lt;strong&gt;and place it in your ipwndfu folder&lt;/strong&gt;&lt;/p&gt;
 
@@ -139,7 +135,7 @@ A:  No [You must answer No to create a 24Kpwn IPSW using redsn0w]
 &lt;h2 id=&quot;step-5&quot;&gt;Step 5:&lt;/h2&gt;
 &lt;p&gt;Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use &lt;code class=&quot;highlighter-rouge&quot;&gt;idevicerestore&lt;/code&gt; to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.&lt;/p&gt;
 
-&lt;p&gt;I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened in case.&lt;/p&gt;
+&lt;p&gt;I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened, raring to go.&lt;/p&gt;
 
 &lt;p&gt;Now, plug the iPhone into the machine with the ipwndfu tools. Put the iPhone into DFU mode, which goes as follows:&lt;/p&gt;
 
@@ -209,7 +205,7 @@ Sending run command.
 If screen is not red, NOR was flashed successfully and device will reboot.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;The whole process should take about 10 seconds, and your screen on your iPhone should be green for a considerable amount of time.&lt;/p&gt;
+&lt;p&gt;The whole process should take about 10 seconds, and your screen on your iPhone should be green for a considerable amount of that time.&lt;/p&gt;
 
 &lt;p&gt;Thankfully, the developer provided some nice troubleshooting tips:&lt;/p&gt;
 
