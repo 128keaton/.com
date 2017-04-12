@@ -3,7 +3,7 @@ layout: post
 title: "How I got 3.1.2 on a 3G[s] fROM 2011"
 date: "2017-04-11 19:56:57 -0500"
 ---
-![]("/images/iphone3gs3.1.2.jpg")
+![](http://images.128keaton.com/iphone3gs3.1.2.jpg)
 
 See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a *new boot ROM* 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?
 
@@ -122,7 +122,7 @@ It should output something like this:
 ``` bash
 Yerba-Buena:ipwndfu keatonburleson$ python ./ipwndfu -p
 *** based on limera1n exploit (heap overflow) by geohot ***
-Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:000003F4E9135DAE SRTG:[iBoot-359.3.2]
+Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now in pwned DFU Mode.
 ```
 
@@ -142,7 +142,7 @@ It should output something like this:
 ``` bash
 Yerba-Buena:ipwndfu keatonburleson$ python ./ipwndfu -p
 *** based on limera1n exploit (heap overflow) by geohot ***
-Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:000003F4E9135DAE SRTG:[iBoot-359.3.2]
+Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now in pwned DFU Mode.
 ```
 
@@ -164,7 +164,7 @@ Dumping NOR, part 5/8.
 Dumping NOR, part 6/8.
 Dumping NOR, part 7/8.
 Dumping NOR, part 8/8.
-NOR backed up to file: nor-backups/nor-000003F4E9135DAE-20170411-193959.dump
+NOR backed up to file: nor-backups/nor-xxxxxxxxx-20170411-193959.dump
 Sending iBSS.
 Waiting for iBSS to enter Recovery Mode.
 Sending iBSS payload to flash NOR.
