@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I got 3.1.2 on a 3G[s] fROM 2011"
+title: "How I got 3.1.2 on a 3G[s] from 2011"
 date: "2017-04-11 19:56:57 -0500"
 ---
 ![](http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized-small)
