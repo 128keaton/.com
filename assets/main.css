@@ -131,7 +131,7 @@ footer#post-footer a.notice, footer#post-footer .social-buttons a {
   color: black; }
 
 .social .post-title {
-  color: #343e4f !important; }
+  color: black !important; }
 
 .post-list {
   width: 70%;
@@ -146,7 +146,7 @@ footer#post-footer a.notice, footer#post-footer .social-buttons a {
   word-wrap: break-word; }
 
 .post-preview {
-  border-bottom: 1px solid #343e4f;
+  border-bottom: 1px solid #fff;
   width: 100%;
   padding: 10px;
   box-sizing: border-box; }
@@ -182,7 +182,7 @@ footer#post-footer a.notice, footer#post-footer .social-buttons a {
   font-weight: 300; }
 
 .post-meta {
-  color: #343e4f;
+  color: black;
   font-size: 15px;
   font-weight: 300;
   border-radius: 17px; }
@@ -495,7 +495,7 @@ a.help {
   margin-bottom: 100px; }
 
 .project a {
-  color: #343e4f;
+  color: #000;
   text-decoration: none; }
 
 .project-title {
@@ -539,8 +539,9 @@ a.help {
     -o-transform: skewY(3deg);
     transform: skewY(3deg); } }
 body {
-  background-color: #0d1528;
-  height: 100%; }
+  background-color: #fff;
+  height: 100%;
+  color: #000; }
 
 .wrapper {
   overflow-x: hidden; }
@@ -581,8 +582,6 @@ body {
 h1.introduction {
   text-align: center;
   padding-top: 100px;
-  color: white;
-  text-transform: lowercase;
   font-weight: 900;
   -webkit-transform: translateZ(0); }
 
@@ -610,17 +609,17 @@ p.introduction {
 .front-site-links .page-link {
   font-size: 25px;
   text-decoration: none;
-  color: white;
   font-weight: 100;
+  color: #000;
   padding: 25px;
-  border-right: 1px solid white; }
+  border-right: 1px solid #000; }
 
 .front-site-links .page-link:nth-child(3) {
   border: none !important; }
 
 .notice {
   font-size: 15px;
-  color: white;
+  color: #000;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -630,9 +629,6 @@ p.introduction {
   margin: 22px auto 0;
   border-radius: 12px;
   margin-bottom: 25px; }
-
-#white footer#post-footer.footer {
-  color: black !important; }
 
 .build-status {
   text-align: center;
@@ -655,32 +651,54 @@ p.introduction {
 /* Applications */
 .applications {
   margin: 0 auto;
-  height: 100%;
   display: flex;
   text-align: center;
   justify-content: space-between;
-  overflow: hidden; }
+  min-height: 800px;
+  list-style: none;
+  align-items: center; }
 
-.app-link {
-  text-decoration: none;
-  font-size: 25px;
-  padding: 25px; }
-
-.inner-app {
-  transform: translateY(50%); }
-
-.app-icon2 {
-  border-radius: 20%;
-  padding: 25px; }
-
-.app {
+#application {
   flex: 1;
-  transition: all 0.2s ease-in-out;
-  min-height: 100%; }
-
-.app:hover {
-  flex-grow: 1.03;
   transition: all 0.2s ease-in-out; }
+
+#application a {
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  color: transparent;
+  text-indent: -9999px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 42px;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out; }
+
+#application a:hover {
+  -webkit-background-size: 236px 236px;
+  background-size: 236px 236px;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out; }
+
+#application h2 {
+  font-weight: 100; }
+
+a.elemnt {
+  background-image: url("http://images.128keaton.com/icons/elemnt-icon.png");
+  background-size: 200px 200px;
+  -webkit-background-size: 200px 200px; }
+
+a.payup {
+  background-image: url("http://images.128keaton.com/icons/payup-icon.png");
+  background-size: 200px 200px;
+  -webkit-background-size: 200px 200px; }
+
+a.test-strip {
+  background-image: url("http://images.128keaton.com/icons/test-strip-icon.png");
+  background-size: 200px 200px;
+  -webkit-background-size: 200px 200px; }
 
 @media screen and (max-width: 600px) {
   .applications {
@@ -738,7 +756,6 @@ p.introduction {
   -webkit-transform: translateZ(0px); }
 
 .footer a {
-  color: white;
   text-decoration: none;
   -webkit-font-smoothing: antialiased; }
 
