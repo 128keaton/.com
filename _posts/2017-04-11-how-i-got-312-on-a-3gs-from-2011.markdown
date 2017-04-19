@@ -16,11 +16,12 @@ Just recently, a [person](https://twitter.com/axi0mX) on Twitter called 'axi0mX'
 
 ## Step 1:
 
+**(updated 4-12-2017)**
 Time to install all the dependancies.
 Open Terminal, then install pip/Python from Homebrew like this:
 
 ``` bash
-brew install python
+brew install python --with-brewed-openssl
 ```
 
 Next, install libusb, similar to how you installed Python, using Homebrew:
@@ -97,6 +98,9 @@ unzip -p iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu > 
 You should be all set to run ipwndfu here pretty soon.
 
 ## Step 5:
+
+**Note: if you installed all the pip dependancies with the Homebrew version, you must prepend `python` to the commands like I have done below**
+
 Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use `idevicerestore` to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17" PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I'm writing this from the perspective of me restoring it with iTunes.
 
 I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened, raring to go.
@@ -149,6 +153,8 @@ Now, run this:
 python ./ipwndfu -x
 ```
 
+
+
 Which, in turn, should provide an output like this:
 ``` bash
 Yerba-Buena:ipwndfu keatonburleson$ python ./ipwndfu -x
@@ -177,6 +183,56 @@ Thankfully, the developer provided some nice troubleshooting tips:
 * If the screen turns red, something went wrong while your phone was being flashed. Trying again probably won't help.
 
 Hopefully your phone should be booting whatever iOS you chose! Comment below if something bad happens or you discover another way to restore!
+
+If you are having issues running this command, check out [Troubleshooting](#troubleshooting) below.
+
+## Troubleshooting
+(added 4-12-2017)
+
+I had some friends try running the guide themselves, and they ran into some issues not covered.
+
+### Operation timed out
+![](http://images.128keaton.com/uhoh.jpg#stylized).
+
+My friend on Slack ran into this. Not sure if it is an environment issue, as I did not have Python installed via Homebrew. I just had OS X's default install. If you're wondering if you are using Homebrew Python, run this command:
+``` bash
+which python
+```
+
+I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:
+
+``` bash
+brew update
+brew rm python
+brew install python --with-brewed-openssl
+```
+
+Thanks to [this](https://github.com/Homebrew/legacy-homebrew/issues/14497) GitHub issue.
+
+However, if you don't want to really mess with Homebrew, or the proposed fix doesn't work for you, here is another way.
+
+First, remove the Homebrew Python install.
+``` bash
+brew rm python
+```
+Then, close Terminal and reopen.
+
+In Terminal, navigate somewhere safe, like `cd ~/Desktop`, and run:
+``` bash
+curl -O https://bootstrap.pypa.io/get-pip.py
+```
+
+Next, run:
+``` bash
+sudo python get-pip.py
+```
+Make sure you've installed libusb, and then install pyusb like this:
+
+``` bash
+pip install pyusb
+```
+
+Hopefully that should get you running again.
 
 ## Final Thoughts
 

@@ -1,4 +1,7 @@
 /* Blog posts */
+footer#post-footer a.notice, footer#post-footer .social-buttons a{
+  color: #000!important;
+}
 .post img {
     width: auto;
     max-width: 75%;
@@ -156,6 +159,9 @@
         margin: 0 auto;
     }
 
+    .post img{
+      text-align: center;
+    }
     .blog-post {
         background-color: #f7f7f7;
         border: 2px solid rgb(233, 233, 233);
