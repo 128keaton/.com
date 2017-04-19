@@ -11,7 +11,7 @@
 
 body {
     background-color: rgb(13, 21, 40);
-    height: 100vh;
+    height: 100%;
 }
 
 .wrapper {
@@ -23,6 +23,8 @@ body {
     width: 100%;
     position: relative;
     outline: 1px solid transparent;
+    margin-bottom: 50px;
+    margin-top: 100px;
 }
 
 .slant-container .skew:before {
@@ -33,7 +35,7 @@ body {
     bottom: 0;
     overflow: visible;
     width: 100%;
-    height: 462px;
+    height: 400px;
     background: linear-gradient(#ff4b33, #ff335e);
     z-index: -1;
     -webkit-transform: skewY(3deg);
@@ -81,8 +83,7 @@ p.introduction {
     margin: 0 auto;
     width: 100%;
     position: relative;
-    top: 20%;
-    transform: translateY(-20%);
+    height: 200px;
     text-align: center;
 }
 

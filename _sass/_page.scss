@@ -96,6 +96,10 @@
   color: white;
   font-size: 26px;
 }
+.svg{
+  max-width: 30px;
+  padding: 10px;
+}
 @media screen and (max-width: $on-laptop) {
     #frontpage-footer,
     #home p.copyright {

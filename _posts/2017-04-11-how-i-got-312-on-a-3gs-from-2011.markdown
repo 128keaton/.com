@@ -45,7 +45,7 @@ git clone https://github.com/axi0mX/ipwndfu && cd ipwndfu
 
 ## Step 3:
 
-Thanks to some oddities in libusb for El Capitan and Sierra, it is necessary to patch the binary we use. Thankfully, axi0mX has made it pretty easy for us.
+Thanks to some oddities in libusb for El Capitan and Sierra, it is necessary to patch the binary we use. **Only do this on El Capitan and Sierra**. Thankfully, axi0mX has made it pretty easy for us.
 Verify that the version installed on your computer is the same one the patch is made for (1.0.21) by running this command:
 ``` bash
 openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
