@@ -9,7 +9,6 @@ require 'rake'
 require 'date'
 require 'yaml'
 require 'net/scp'
-require 'RMagick'
 
 CONFIG = YAML.safe_load(File.read('_config.yml'))
 USERNAME = CONFIG['username'] || ENV['GIT_NAME']
@@ -49,29 +48,10 @@ namespace :site do
         end
         Rake::Task["site:upload"].execute
     end
-    task :compress_images do
-      puts 'Compressing images'
-        Dir.entries(__dir__ + '/images/').each do |file_name|
-          next unless File.extname(file_name) == '.png' || File.extname(file_name) == '.jpeg' || File.extname(file_name) == '.jpg'
-          sh 'mkdir ' + __dir__ + '/images/resized/'
-          sh 'mkdir ' + __dir__ + '/images/compressed/'
-          puts 'Resizing ' + file_name
-          img = Magick::Image.read(file_name).first
-          resized = img.resize_to_fit(1024)
-          resized_path = __dir__ + '/resized/' + file_name
-          resized.write(resized_path) do
-              self.quality = 100
-          end
-
-          img.destroy!
-          resized.destroy!
-          puts 'Compressing ' + file_name
-          sh 'guetzli ' + __dir__ + '/resized/' + file_name.gsub(' ', '\ ') + ' ./compressed/' + file_name.gsub(' ', '\ ') + ''
-    end
     task :upload_images do
         puts 'Uploading images..'
         options = { recursive: true, password: SSH_PASSWORD }
-        Net::SCP.upload!(SSH_HOST, SSH_USERNAME, __dir__ + '/images/compressed/', '/home/12/128keaton.com/html/', options)
+        Net::SCP.upload!(SSH_HOST, SSH_USERNAME, __dir__ + '/images/', '/home/12/128keaton.com/html/', options)
         puts 'All images have been upload and removed in ' + IMAGES_DIR
         FileUtils.rm_rf(Dir.glob(IMAGES_DIR + '*'))
     end
