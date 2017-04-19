@@ -1,20 +1,17 @@
 ---
 title: Apps
 permalink: "/apps/"
-layout: non-standard
+layout: default
 html-title: Keaton's Apps
 weight: 0
 ---
-
-<div class="applications">
-{% for page in site.pages %} {% if page.icon %}
-<div style="background-color: #{{ page.accent }}" class="app">
-  <div class="inner-app">
-  <a href="{{ page.permalink }}"><img class="app-icon2" src="{{ page.icon }}"</a><br>
-        <a style="color: {{ page.page-text-color }};" class="app-link" href="{{ page.permalink }}">{{ page.title }}</a>
-
-</div>
-</div>
-
-{% endif %} {% endfor %}
-</div>
+<ul class ="applications">
+    {% for page in site.pages %}
+    {% if page.icon %}
+    <li id="application">
+        <a class="{{ page.class }}" href="{{ page.permalink }}">{{ page.title }}</a>
+        <h2>{{ page.title }}</h2>
+    </li>
+    {% endif %}
+     {% endfor %}
+</ul>
