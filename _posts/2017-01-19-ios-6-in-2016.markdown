@@ -2,7 +2,7 @@
 layout: post
 title: "iOS 6 in 2016"
 date: "2017-01-19 22:32:31 -0600"
-head-image: "/iphone_ios_6/IMG_1064.JPG"
+head-image: "http://images.128keaton.com/iphone_ios_6/IMG_1064.JPG"
 ---
 First let me preface this 'review' by stating that I actually didn't use iOS 6 for the duration of this test because I *couldn't*. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual texts and phone calls.
 
