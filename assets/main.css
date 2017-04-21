@@ -97,7 +97,8 @@ html, body {
     padding: 0 !important;
     margin-top: 30px !important; } }
 /* Blog posts */
-footer#post-footer a.notice, footer#post-footer .social-buttons a {
+footer#post-footer .social-buttons a,
+footer#post-footer a.notice {
   color: #000 !important; }
 
 .post img {
@@ -342,6 +343,10 @@ h2.comments__heading.heading-2 {
   width: 100px;
   height: 100px;
   overflow: hidden; }
+
+.comment__avatar {
+  width: 100px;
+  height: 100px; }
 
 .return-blog {
   text-decoration: none;
