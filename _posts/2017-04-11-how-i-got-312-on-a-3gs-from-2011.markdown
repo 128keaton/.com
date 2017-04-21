@@ -12,7 +12,7 @@ Just recently, a [person](https://twitter.com/axi0mX) on Twitter called 'axi0mX'
 ## Tools:
 * Xcode Command Line tools (`xcode-select --install`)
 * [Homebrew](https://brew.sh/)
-* **(updated 4-20-2017)** A Mac running Mavericks or newer<sup>1</sup>
+* **(updated 4-20-2017)** A Mac running Mavericks or newer<sup><a href="#1">1</a></sup>
 
 
 ## Step 1:
@@ -239,4 +239,4 @@ Hopefully that should get you running again.
 
 I'd like to give a major thanks to the developer for writing really good documentation in the first place, and another thanks for *creating* this awesome open source jailbreak and boot ROM exploit for a device almost 9 years old.
 
-<span class="small"><sup>1</sup> there is a bug that the author hasn't made progress fixing in versions older than OS X 10.9</span>
+<span id="1" class="small"><sup>1</sup> there is a bug that the author hasn't made progress fixing in versions older than OS X 10.9</span>
