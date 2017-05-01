@@ -1,0 +1,85 @@
+/* Toyotaaaaaaaa */
+
+.intro {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.inner-intro{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background:  url("http://images.128keaton.com/toyota/side.png")!important;
+
+    background-position: left 1800px bottom 10px;
+
+    color: white;
+}
+.intro-one{
+    display: flex;
+    flex-direction: column;
+}
+.intro img{
+    max-width: 400px;
+}
+.intro .quote {
+    text-align: center;
+    font-style: italic;
+}
+
+.intro .quote::before,
+.intro .quote::after {
+    content: "\"";
+}
+.specs{
+    text-align: left;
+}
+.specs ul {
+    list-style: none;
+}
+.specs li{
+    margin-top: 20px;
+}
+
+.parts {
+    margin-top: 120px;
+}
+
+.part-image img {
+    max-width: 100px;
+    border: 2px solid gray;
+    text-align: right;
+}
+
+.part-image {
+    text-align: right;
+}
+
+tr {
+    border-bottom: 2px solid gray!important;
+    height: 120px;
+}
+
+th:first-child {
+    text-align: left;
+}
+
+th:nth-child(2) {
+    text-align: left;
+}
+
+th:nth-child(3) {
+    text-align: right;
+}
+
+.parts {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.parts-counter {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}

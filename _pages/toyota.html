@@ -1,0 +1,63 @@
+---
+title: 4Runner
+permalink: "/yoter/"
+layout: default
+weight: 5
+---
+<style>
+    body{
+        font-family: Arial, serif;
+    }
+.header-container .header:before{
+    background: url("http://images.128keaton.com/toyota/header.jpg")!important;
+}
+.page-link{
+     color: #bb071a!important;
+     background-color: black;
+}
+    </style>
+<div class="intro">
+    <h2 class="post-title">Toyota 4Runner</h2>
+            <p class="quote">The '4' in 4Runner doesn't mean four doors or four wheel drive. It can only carry four people</p>
+    <div class="inner-intro">
+    <div class="intro-one">
+   
+    <img src="http://images.128keaton.com/toyota/4runnertitle.jpg">
+
+    <img src="http://images.128keaton.com/toyota/runner.JPG">
+      </div>
+    <div class="intro-two">
+
+    <div class="specs">
+        <ul>
+            {% assign items = site.data.toyota.4runner.specs %} {% for item in items %}
+                <li> {{ item }} </li>
+            {% endfor %}
+        </ul>
+    </div>
+      </div>
+        
+      </div>
+
+</div>
+<div id="parts" class="parts">
+    <h2 class="section-title">Part Numbers</h2>
+<h4>Parts that I found useful</h4>
+    <table class="parts-counter">
+        {% assign parts = site.data.toyota.4runner.parts %}
+        <tr>
+            <th>Part Name</th>
+            <th>Part Number</th>
+            <th>Part Image</th>
+        </tr>
+        {% for part in parts %}
+        <tr>
+            <td class="part-label">{{ part["label"] }}</td>
+            <td class="part-number">{{ part["part_number"]}} </td>
+            <td class="part-image">
+                <a class="part-image-link" href='{{ part["image"]}}'><img src='{{ part["image"]}}'></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
