@@ -24,6 +24,7 @@
             <a class="page-link" href="/">Home</a>
       
        
+       
       
       <a class="page-link" href="/apps/">Apps</a>  
        
@@ -34,6 +35,8 @@
       
       <a class="page-link" href="/portfolio/">Projects</a>  
        
+      
+      <a class="page-link" href="/yoter/">4Runner</a>  
        
       
       <a class="page-link" href="/blog/index.html">Blog</a>  
@@ -56,6 +59,49 @@
     <p class="rss-subscribe">Subscribe <a href="/%20/feed.xml">via RSS</a></p>
 </div>
 <ul class="post-list">
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
+                <a class="post-link" href="/2017/01/18/new-mozilla.html">Mozilla&#39;s New Look</a><a class="internal-post-link" href="https://news.ycombinator.com/item?id=13425380">Reference</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted Jan 18</span>
+                <span class="post-word-count">and has roughly 279 words</span>
+            </div>
+            <div class="post-text">
+                 
+<div class="notice--quote">
+
+<p>I’m a bit disappointed. Mozilla makes a couple of great things (Firefox, Rust, MDN, …). But in contrast to their products, I have a quite bad impression of their Foundation and/or Corporation. I don’t know if it is warranted or not, but I have the impression that they mostly exist to burn through the millions they get from Google for setting them as default search engine.</p>
+
+</div>
+
+<p>This is exactly why they are trying to rebrand themselves, to move away from preconceived notions, similar to yours. Not that I’m advocating for the Mozilla Foundation, but that is exactly right</p>
+
+<div class="notice--quote">
+
+
+<p>This new branding doesn’t help at all with my perception of Mozilla. If anything, it emphasizes the perception that Mozilla is a bloated entity disconnected from the products I care about. That they put a nerdy “://” in there to appeal technical means to me that they are even aware of this.</p>
+
+</div>
+
+<p>And that is where they steered themselves wrong. Most college-age students, people that they seem to be gunning for with the horror-show of meme images, use Chrome, and Chromebooks, or Safari. I personally use Firefox, but they just keep falling short of my expectations. Now, I love this next bit</p>
+
+<div class="notice--quote">
+
+
+<p>What I would have done is to go back to the early 2000s unapologetically retro dinosaur. This was from a time when Mozilla was the underdog, when it was the Free alternative, when it was getting better and better, and when Firefox was invented.</p>
+
+</div>
+
+<p>The only problem with that is no one they want to use their browser will understand this, plus Firefox hasn’t gotten better for a long time.</p>
+
+            </div>
+
+        </div>
+    </li>
     
     <li class="blog-post">
         <div class="post-preview">
@@ -341,45 +387,6 @@ At the command line, use this command in your root VM folder:</p>
         </div>
     </li>
     
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2016/06/07/power-macintosh-8500-web-server.html">Power Macintosh 8500 Web Server</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Jun 07</span>
-                <span class="post-word-count">and has roughly 236 words</span>
-            </div>
-            <div class="post-text">
-                 <p>Well, I went and did it. I made my Power Macintosh 8500 into a Debian web server.
-Installing Debian was a bit harder than expected, but thanks to the BootX software, it was eventually installed. The biggest issue was just getting all of the kernels in place.
-Here is how my setup works:</p>
-
-<ul>
-  <li>SCSI drive has a Mac OS 9.1 install, with the BootX app inside of the System Folder.</li>
-  <li>ATA card, for my CD drive, and my ATA drive containing the Debian install.</li>
-  <li>96MB of RAM in the machine, which is 6MB from the bare minimum for installing/booting Debian.
-*</li>
-</ul>
-
-<p>I basically just booted the install CD, installed Debian to the ATA drive, shut down the machine, grabbed the kernels off the ATA drive, put them into the folder for BootX, and rebooted into the ATA drive. Also, Debian wouldn’t detect my ethernet port, so I just installed a PCI-X Gigabit card with dual NICs. BootX is great, it really makes this install easier. I couldn’t get the extension to work without the ‘unexpected trap’ error. I can just boot fully into OS 9, then into Debian. You can visit the web server’s homepage here: <a href="http://play.128keaton.com:82/about/">http://play.128keaton.com:82/about/</a>.</p>
-
-<h2 id="q--a">Q &amp; A:</h2>
-
-<p><strong>Q: What about security?</strong></p>
-
-<p>A: This is literally running the latest version of Debian and Apache2.</p>
-
-<p><strong>Q: Well, why?</strong></p>
-
-<p>A: Why not? It was a lot of fun, and quite a challenge.</p>
-
-            </div>
-
-        </div>
-    </li>
-    
 
 </ul>
     <div class="pagination">
@@ -394,7 +401,6 @@ Here is how my setup works:</p>
 </div>
 
 		<footer class="footer" id="default-footer">
-  <a class="notice" href="/honduras">Help me go to Honduras!</a>
         <div class="social-buttons">
     <a href="https://twitter.com/128keaton">
         <img class="svg" src="/assets/svg/twitter.svg" >

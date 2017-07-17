@@ -24,6 +24,7 @@
             <a class="page-link" href="/">Home</a>
       
        
+       
       
       <a class="page-link" href="/apps/">Apps</a>  
        
@@ -34,6 +35,8 @@
       
       <a class="page-link" href="/portfolio/">Projects</a>  
        
+      
+      <a class="page-link" href="/yoter/">4Runner</a>  
        
       
       <a class="page-link" href="/blog/index.html">Blog</a>  
@@ -56,6 +59,44 @@
     <p class="rss-subscribe">Subscribe <a href="/%20/feed.xml">via RSS</a></p>
 </div>
 <ul class="post-list">
+    
+    <li class="blog-post">
+        <div class="post-preview">
+
+            <div class="post-stuff">
+                <a class="post-link" href="/2016/05/11/my-wwdc-2016-submission.html">My WWDC 2016 Submission</a>
+            </div>
+            <div class="meta">
+                <span class="post-meta">Posted May 11</span>
+                <span class="post-word-count">and has roughly 379 words</span>
+            </div>
+            <div class="post-text">
+                 <iframe width="854" height="480" src="https://www.youtube.com/embed/HQM8DY31G6Y" frameborder="0" allowfullscreen=""></iframe>
+
+<h3 id="background-info">Background Info:</h3>
+<p>When I was diagnosed as diabetic, I struggled to find a diabetes application that fit my criteria. I needed it to sync with HealthKit, calculate my meals, and allow me to share my data with my doctor.</p>
+
+<p>There is one other application that comes close, but it requires a subscription, and quite frankly, it was terribly designed.</p>
+
+<h3 id="apistechnologies">APIs/Technologies:</h3>
+<p>I chose HealthKit because of its seamless integration into iOS. I really wanted something that, if in the future, I had to use an application for an insulin pump, I could also use my application. The only thing I would add to HealthKit is insulin units. I could’ve stored all of my information inside of HealthKit, but I had to make an external data source (NSMutableDictionary inside of an [NSMutableDictionary]). Last minute, I chose to make an Apple Watch companion. The documentation made it really easy to add that feature, along with the Today Extension.</p>
+
+<h3 id="issues">Issues:</h3>
+<p>This is my first ‘real’ Swift application, and I have to say, I’m glad I learned the language. Objective-C is almost archaic in comparison. I did encounter a few bugs while working with dictionary and arrays (array[row][key] would crash the compiler and WYSIWYG editor), but a restart of Xcode usually fixed it temporarily. My biggest issue was keeping the data synced up properly. NSUserDefaults was a good idea, but I probably should have used CoreData in the end.</p>
+
+<h3 id="what-i-would-change">What I would change:</h3>
+<p>When I first  started this project, I didn’t for-see it becoming this large (over 2000 lines of code). If I had more time, I’d definitely migrate to CoreData and implement an iCloud syncing metric. I’d also make the Apple Watch companion more in-depth as well. There is definitely room for UI changes, I feel that some aspects of the dashboard could be improved upon, but for how much data I made fit into the main screen, I think I did a good job.</p>
+
+<div class="notice--update">
+  
+<p>Update: I was not chosen to visit WWDC 2016. Go ahead and have a glimpse at the winners. I am sad, for sure, that they picked a multi-year student over a first-time applicant. I am, however, moving to get Test Strip in the app store.</p>
+
+</div>
+
+            </div>
+
+        </div>
+    </li>
     
     <li class="blog-post">
         <div class="post-preview">
@@ -243,68 +284,6 @@
         </div>
     </li>
     
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2016/02/17/cheap-oh-no-nintendo-dsi-charger-9-amazon.html">Cheap-Oh-no: Nintendo DSi Charger</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Feb 17</span>
-                <span class="post-word-count">and has roughly 198 words</span>
-            </div>
-            <div class="post-text">
-                 <p>Oh no! I lost my DSi charger. Well, I guess the $9 one on Amazon is just like the delicious, Japanese, OEM adapter, right? Wrong!</p>
-
-<p><img src="http://i.imgur.com/56tItYz.jpg" alt="" /></p>
-
-<p>The DSi charger on the table. Lets take a closer look at the outer casing.</p>
-
-<p><img src="http://i.imgur.com/56tItYz.jpg" alt="" /></p>
-
-<p><img src="http://i.imgur.com/Y4xD9HM.jpg" alt="" /></p>
-
-<p><img src="http://i.imgur.com/uVMI2mM.jpg" alt="" /></p>
-
-<p>Wow! No spelling errors or major red flags. It ‘says’ it outputs at 4.8v, but does it really(nope, 5v give or take)?</p>
-
-<p>Sadly, I have to dock points due to the absolute thinness of the case. Feels like painted cardboard.</p>
-
-<p><strong>8/10 - Casing</strong></p>
-
-<p>Lets tear into the adaptor using our trusty iFixit bit driver.</p>
-
-<p><img src="http://i.imgur.com/t1PvWxq.jpg" alt="" /></p>
-
-<p>Screws out, aaaand:</p>
-
-<p><img src="http://i.imgur.com/uVMI2mM.jpg" alt="" /></p>
-
-<p>Poop. I mean, wow, look at that. Don’t do China, kids.</p>
-
-<p>The soldering job is a bit horrendous, and slightly terrible:</p>
-
-<p><img src="http://i.imgur.com/u4ZnlSx.jpg" alt="" /></p>
-
-<p>The Adaptor just wouldn’t be complete without bargain bin, factory reject capacitors:</p>
-
-<p><img src="http://i.imgur.com/534Spal.jpg" alt="" /></p>
-
-<p><img src="http://i.imgur.com/mMnJ1Uq.jpg" alt="" /></p>
-
-<p><strong>Components: 2/10</strong></p>
-
-<p><strong>Overall: 12/20</strong></p>
-
-<p>Unless you are buying the adaptor for the cord (its super easy to desolder, thanks to the kid who soldered it together), don’t bother.</p>
-
-<p><img src="http://i.imgur.com/zHNGlKH.jpg" alt="" /></p>
-
-            </div>
-
-        </div>
-    </li>
-    
 
 </ul>
     <div class="pagination">
@@ -319,7 +298,6 @@
 </div>
 
 		<footer class="footer" id="default-footer">
-  <a class="notice" href="/honduras">Help me go to Honduras!</a>
         <div class="social-buttons">
     <a href="https://twitter.com/128keaton">
         <img class="svg" src="/assets/svg/twitter.svg" >
