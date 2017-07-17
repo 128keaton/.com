@@ -4,25 +4,31 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-
+    background: url("http://images.128keaton.com/toyota/side.png")!important;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-position: left 1800px bottom 10px;
 }
-.inner-intro{
+
+.inner-intro {
     display: flex;
     align-items: flex-end;
-    justify-content: center;
-    background:  url("http://images.128keaton.com/toyota/side.png")!important;
-
-    background-position: left 1800px bottom 10px;
-
+    justify-content: flex-start;
+    margin-bottom: 55px;
     color: white;
+    margin-left: 20px;
 }
-.intro-one{
+
+.intro-one {
     display: flex;
     flex-direction: column;
 }
-.intro img{
+
+.intro img {
     max-width: 400px;
+    display: block;
 }
+
 .intro .quote {
     text-align: center;
     font-style: italic;
@@ -32,13 +38,16 @@
 .intro .quote::after {
     content: "\"";
 }
-.specs{
+
+.specs {
     text-align: left;
 }
+
 .specs ul {
     list-style: none;
 }
-.specs li{
+
+.specs li {
     margin-top: 20px;
 }
 
@@ -58,7 +67,8 @@
 
 tr {
     border-bottom: 2px solid gray!important;
-    height: 120px;
+    height: 50px;
+    font-size: 12px;
 }
 
 th:first-child {
@@ -72,10 +82,34 @@ th:nth-child(2) {
 th:nth-child(3) {
     text-align: right;
 }
+th{
+    background-color: black;
+    color: #bb071a;
+    text-transform: uppercase;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 25px;
+}
 
 .parts {
     width: 80%;
     margin: 0 auto;
+}
+.section-title-left{
+   text-align: left;
+   width: 25%;
+   text-transform: uppercase;
+   color: #bb071a;
+}
+.section-title-right{
+    text-align: right;
+    width: 25%;
+    text-transform: uppercase;
+     color: #bb071a;
+}
+.part-header-wrapper{
+    display: flex;
+    justify-content: center;
 }
 
 .parts-counter {

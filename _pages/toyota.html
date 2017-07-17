@@ -6,10 +6,16 @@ weight: 5
 ---
 <style>
     body{
-        font-family: Arial, serif;
+        font-weight: 500;
+        font-family: "Helvetica-Neue", Helvetica, sans-serif!important;
     }
 .header-container .header:before{
     background: url("http://images.128keaton.com/toyota/header.jpg")!important;
+    border-bottom: 5px solid #bb071a;
+}
+#white{
+    margin-top: -50px;
+    padding: 0;
 }
 .page-link{
      color: #bb071a!important;
@@ -17,12 +23,10 @@ weight: 5
 }
     </style>
 <div class="intro">
-    <h2 class="post-title">Toyota 4Runner</h2>
-            <p class="quote">The '4' in 4Runner doesn't mean four doors or four wheel drive. It can only carry four people</p>
+        <img src="http://images.128keaton.com/toyota/4runnertitle.jpg">
     <div class="inner-intro">
     <div class="intro-one">
    
-    <img src="http://images.128keaton.com/toyota/4runnertitle.jpg">
 
     <img src="http://images.128keaton.com/toyota/runner.JPG">
       </div>
@@ -41,8 +45,9 @@ weight: 5
 
 </div>
 <div id="parts" class="parts">
-    <h2 class="section-title">Part Numbers</h2>
-<h4>Parts that I found useful</h4>
+    <div class="part-header-wrapper">
+   <h2 class="section-title-left">Part</h2> <h2 class="section-title-right">Numbers</h2>
+   </div>
     <table class="parts-counter">
         {% assign parts = site.data.toyota.4runner.parts %}
         <tr>
@@ -55,7 +60,7 @@ weight: 5
             <td class="part-label">{{ part["label"] }}</td>
             <td class="part-number">{{ part["part_number"]}} </td>
             <td class="part-image">
-                <a class="part-image-link" href='{{ part["image"]}}'><img src='{{ part["image"]}}'></a>
+                {% if part["image"] %}<a class="part-image-link" href='{{ part["image"]}}'>Link</a>{% endif %} 
             </td>
         </tr>
         {% endfor %}
