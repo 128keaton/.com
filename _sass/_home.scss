@@ -10,6 +10,10 @@
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   color: #ffffff;
+
+  .mobile {
+    display: none;
+  }
   h1 {
     margin: 0;
     font-size: 65px;
@@ -43,12 +47,35 @@
       content: "";
     }
   }
+  @media screen and (max-width: $on-palm) {
+    padding: 8px;
+    padding-bottom: 55px;
+    .mobile {
+      display: table-cell;
+      .pic {
+        display: block;
+        img {
+          margin-left: 0;
+        }
+      }
+    }
+    .pic {
+      display: none;
+    }
+    .content {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    table {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .resume {
-  -webkit-clip-path: polygon(45% 0.5%, 95% 0.5%, 100% 0, 100% 100%, 80% 100%, 50% 98%, 20% 100%, 0 100%, 0 0, 20% 0%);
-  clip-path: polygon(45% 0.5%, 95% 0.5%, 100% 0, 100% 100%, 80% 100%, 50% 100%, 20% 100%, 0 100%, 0 0, 20% 0%);
-
   width: 65%;
   margin: 0 auto;
   background-color: #ffffff;
@@ -84,6 +111,42 @@
       font-weight: 100;
     }
   }
+  @media screen and (max-width: $on-palm) {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    h1 {
+      font-size: 35px;
+    }
+    td {
+      display: block;
+
+    }
+    tr {
+      display: block;
+      border-bottom: 2px solid #000000;
+      td:nth-child(1) {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+    tr:last-child {
+      border: none;
+    }
+    width: 95%;
+    .header {
+      td:nth-child(2) {
+        display: none;
+      }
+      padding: 0;
+      margin: 0;
+    }
+    tr:nth-child(2) {
+      display: none;
+    }
+  }
 }
 
 .apps-wrapper {
@@ -115,6 +178,21 @@
     }
     td {
       cursor: hand;
+    }
+  }
+  @media screen and (max-width: $on-palm) {
+    width: 100%;
+
+    h1 {
+      font-size: 35px;
+      margin-left: 10px;
+    }
+    .marvel-device.ipad.landscape {
+      width: 100%;
+      padding: 0;
+    }
+    td {
+      vertical-align: top;
     }
   }
 }
@@ -177,6 +255,22 @@
       margin-right: 12px;
     }
   }
+  @media screen and (max-width: $on-palm) {
+    width: 100%;
+    .projects {
+      width: 100%;
+    }
+    .project {
+      display: block;
+    }
+    td.project:nth-child(odd) {
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 35px;
+      margin-left: 10px;
+    }
+  }
 }
 
 .thoughts-wrapper {
@@ -230,5 +324,25 @@
       margin: 0;
     }
   }
+  @media screen and (max-width: $on-palm) {
+    width: 100%;
+    h1 {
+      margin-bottom: 55px;
+      font-size: 35px;
+      margin-left: 10px;
+    }
+    .thought:last-child {
+      height: 100px;
+    }
+  }
+  .thought {
+    width: 95%;
+    text-align: center;
+
+    p {
+      display: none;
+    }
+  }
 
 }
+
