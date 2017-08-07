@@ -4,3 +4,4 @@ _site
 *.lock
 *.lock
 .DS_Store
+.sass-cache

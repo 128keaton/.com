@@ -1,0 +1,20 @@
+<div id="blog" class="thoughts-wrapper">
+    <h1>Blog</h1>
+    {% for post in site.posts limit:5 %}
+    <table class="thought">
+        <tr class="header">
+            <td>
+                <h2 class="title"><a href="{{ post.url }}/" class="js-pjax">{{ post.title }}</a></h2>
+            </td>
+            <td>
+                <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="description"> {{ post.content | strip_html | truncatewords:75}}</div>
+            </td>
+        </tr>
+    </table>
+    {% endfor %}
+</div>

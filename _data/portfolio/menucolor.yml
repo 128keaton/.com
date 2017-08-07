@@ -1,8 +1,4 @@
-layout: page
 title: MenuColor
-permalink: /projects/menucolor
-project: yup
-icon: https://github.com/128keaton/MenuColor/blob/master/MenuColor/Assets.xcassets/AppIcon.appiconset/256.png?raw=true
 description: A color picker for Swift programmers!
-project-url: https://github.com/128keaton/MenuColor
-weight: 0
+url: https://github.com/128keaton/MenuColor
+technologies: Swift

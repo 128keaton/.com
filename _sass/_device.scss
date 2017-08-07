@@ -1,0 +1,130 @@
+.marvel-device {
+    display: block;
+    position: relative;
+    box-sizing: content-box !important;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.marvel-device .screen {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    color: white;
+    z-index: 2;
+    background: url('http://images.128keaton.com/ipad-bg.jpg') no-repeat center center fixed;
+    background-color: #000;
+    text-align: center;
+    display: block;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 0 0 3px #111;
+    box-shadow: 0 0 0 3px #111
+}
+
+.marvel-device .top-bar,
+.marvel-device .bottom-bar {
+    height: 3px;
+    background: black;
+    width: 100%;
+    display: block
+}
+
+.marvel-device .middle-bar {
+    width: 3px;
+    height: 4px;
+    top: 0px;
+    left: 90px;
+    background: black;
+    position: absolute
+}
+
+.marvel-device.ipad {
+    width: 576px;
+    height: 768px;
+    padding: 90px 25px;
+    background: #242324;
+    -webkit-border-radius: 44px;
+    border-radius: 44px
+}
+
+.marvel-device.ipad:before {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    position: absolute;
+    content: '';
+    display: block;
+    top: 4px;
+    left: 4px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    background: #1e1e1e
+}
+
+.marvel-device.ipad .camera {
+    background: #3c3d3d;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 44px;
+    left: 50%;
+    margin-left: -5px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%
+}
+
+.marvel-device.ipad .top-bar,
+.marvel-device.ipad .bottom-bar {
+    display: none
+}
+
+.marvel-device.ipad .home {
+    background: #242324;
+    -webkit-border-radius: 36px;
+    border-radius: 36px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 22px
+}
+
+
+.marvel-device.ipad.landscape {
+    height: 576px;
+    width: 768px;
+    padding: 25px 90px
+}
+
+.marvel-device.ipad.landscape .camera {
+    left: calc(100% - 44px);
+    top: 50%;
+    margin-left: 0;
+    margin-top: -5px
+}
+
+.marvel-device.ipad.landscape .home {
+    top: 50%;
+    left: 22px;
+    margin-left: 0;
+    margin-top: -25px
+}
+
+.marvel-device.ipad.silver {
+    background: #bcbcbc
+}
+
+.marvel-device.ipad.silver:before {
+    background: #fcfcfc
+}
+
+.marvel-device.ipad.silver .home {
+    background: #fcfcfc;
+    -webkit-box-shadow: inset 0 0 0 4px #e7e7e7;
+    box-shadow: inset 0 0 0 4px #e7e7e7;
+}
+
+.marvel-device.ipad.silver .home:after {
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}

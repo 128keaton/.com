@@ -1,0 +1,23 @@
+<div id="apps" class="apps-wrapper">
+    <h1>Apps</h1>
+    <div class="marvel-device ipad silver landscape">
+        <div class="camera"></div>
+        <div class="screen">
+            <table class="apps">
+                <tr>
+                    {% assign apps = site.data.apps  %}
+                    {% for app in apps  %}
+                    <td onclick="location.href='{{app[1].permalink}}'">
+                        <img src="{{ app[1].icon }}">
+                        <h1>{{ app[1].title }}</h1>
+                        <p>
+                            {{ app[1].description }}
+                        </p>
+                    </td>
+                    {% endfor %}
+                </tr>
+            </table>
+        </div>
+        <div class="home"></div>
+    </div>
+</div>

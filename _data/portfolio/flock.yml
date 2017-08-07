@@ -1,9 +1,5 @@
-layout: page
 title: Flock
-permalink: https://flockunited.com
-project: yup
-icon: https://flockunited.com/images/FLOCK.svg
 description: A site for a startup ride sharing service
-technologies: ["Jekyll", "CSS", "HTML5", "JavaScript"]
-project-url: https://flockunited.com
-weight: 2
+technologies: "Jekyll"
+url: https://flockunited.com
+
