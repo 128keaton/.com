@@ -267,40 +267,27 @@ body {
   .thoughts-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
-  .thoughts-wrapper .thought {
-    z-index: 10;
+  .thoughts-wrapper .thoughts {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 95%;
     margin: 0 auto;
     padding: 12px;
-    width: 70%;
-    height: 140px;
-    margin-top: -42px;
-    -webkit-box-shadow: 0px -2px 9px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px -2px 9px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -2px 9px -4px rgba(0, 0, 0, 0.75);
-    background-color: #B89E97;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px; }
-    .thoughts-wrapper .thought .header td {
-      margin-top: -12px;
-      margin: 0;
-      padding-bottom: 42px; }
-    .thoughts-wrapper .thought .header .date {
-      min-width: 100px;
-      text-align: right; }
-    .thoughts-wrapper .thought .header .title a {
-      color: #000000;
-      background-color: #fff;
-      padding: 6px;
-      text-decoration: none; }
-    .thoughts-wrapper .thought .header p {
-      font-style: italic;
-      text-align: right;
-      padding-right: 12px; }
-    .thoughts-wrapper .thought .description {
-      display: none; }
+    border: 4px double #d7deff; }
+    .thoughts-wrapper .thoughts td {
+      padding: 10px; }
+  .thoughts-wrapper .thought:nth-child(even) {
+    background-color: #d7deff; }
+  .thoughts-wrapper .thought {
+    padding: 22px; }
     .thoughts-wrapper .thought h2 {
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      font-weight: 100;
+      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif; }
+  .thoughts-wrapper a {
+    color: black;
+    text-decoration: none; }
   @media screen and (max-width: 600px) {
     .thoughts-wrapper {
       width: 100%; }
@@ -645,40 +632,27 @@ body {
   .thoughts-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
-  .thoughts-wrapper .thought {
-    z-index: 10;
+  .thoughts-wrapper .thoughts {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 95%;
     margin: 0 auto;
     padding: 12px;
-    width: 70%;
-    height: 140px;
-    margin-top: -42px;
-    -webkit-box-shadow: 0px -2px 9px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px -2px 9px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -2px 9px -4px rgba(0, 0, 0, 0.75);
-    background-color: #B89E97;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px; }
-    .thoughts-wrapper .thought .header td {
-      margin-top: -12px;
-      margin: 0;
-      padding-bottom: 42px; }
-    .thoughts-wrapper .thought .header .date {
-      min-width: 100px;
-      text-align: right; }
-    .thoughts-wrapper .thought .header .title a {
-      color: #000000;
-      background-color: #fff;
-      padding: 6px;
-      text-decoration: none; }
-    .thoughts-wrapper .thought .header p {
-      font-style: italic;
-      text-align: right;
-      padding-right: 12px; }
-    .thoughts-wrapper .thought .description {
-      display: none; }
+    border: 4px double #d7deff; }
+    .thoughts-wrapper .thoughts td {
+      padding: 10px; }
+  .thoughts-wrapper .thought:nth-child(even) {
+    background-color: #d7deff; }
+  .thoughts-wrapper .thought {
+    padding: 22px; }
     .thoughts-wrapper .thought h2 {
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      font-weight: 100;
+      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif; }
+  .thoughts-wrapper a {
+    color: black;
+    text-decoration: none; }
   @media screen and (max-width: 600px) {
     .thoughts-wrapper {
       width: 100%; }
