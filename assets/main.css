@@ -66,12 +66,14 @@ body {
   padding: 20px;
   margin: 0 auto;
   height: 300px;
-  width: 65%;
-  margin-top: 25px;
+  width: 100%;
+  margin-top: 0px;
+  padding-bottom: 55px;
   background-color: #000000;
   background: linear-gradient(#ff4b33, #ff335e);
-  color: #ffffff;
-  transform: rotatez(1deg); }
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
+  color: #ffffff; }
   .business-card h1 {
     margin: 0;
     font-size: 65px;
@@ -365,12 +367,14 @@ body {
   padding: 20px;
   margin: 0 auto;
   height: 300px;
-  width: 65%;
-  margin-top: 25px;
+  width: 100%;
+  margin-top: 0px;
+  padding-bottom: 55px;
   background-color: #000000;
   background: linear-gradient(#ff4b33, #ff335e);
-  color: #ffffff;
-  transform: rotatez(1deg); }
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
+  color: #ffffff; }
   .business-card h1 {
     margin: 0;
     font-size: 65px;
