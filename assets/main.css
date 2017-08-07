@@ -309,12 +309,12 @@ body {
         font-size: 35px;
         margin-left: 10px; }
       .thoughts-wrapper .thought:last-child {
-        height: 100px; } }
-  .thoughts-wrapper .thought {
-    width: 95%;
-    text-align: center; }
-    .thoughts-wrapper .thought p {
-      display: none; }
+        height: 100px; }
+      .thoughts-wrapper .thought {
+        width: 95%;
+        text-align: center; }
+        .thoughts-wrapper .thought p {
+          display: none; } }
 
 .marvel-device {
   display: block;
@@ -687,12 +687,12 @@ body {
         font-size: 35px;
         margin-left: 10px; }
       .thoughts-wrapper .thought:last-child {
-        height: 100px; } }
-  .thoughts-wrapper .thought {
-    width: 95%;
-    text-align: center; }
-    .thoughts-wrapper .thought p {
-      display: none; }
+        height: 100px; }
+      .thoughts-wrapper .thought {
+        width: 95%;
+        text-align: center; }
+        .thoughts-wrapper .thought p {
+          display: none; } }
 
 /* Page-specific colors */
 #main {
