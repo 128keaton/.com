@@ -20,42 +20,321 @@
 
 
 <body>
-	<div class="wrapper" id="home">
-		<div class="slant-container">
-			<div class="skew">
-				<div class="header-inner">
-					<h1 class="introduction">Keaton Burleson</h1>
-<img class="introduction" src="http://images.128keaton.com/me.jpg">
-<p class="introduction">A student who creates apps and tinkers with the web.</p>
+	<!-- Business Card -->
+	<table class="business-card">
+    <tr>
+        <td class="pic">
+            <img src="http://images.128keaton.com/me.jpg">
+        </td>
+        <td class="content">
+            <h1>Keaton Burleson</h1>
+            <p>Web developer, app creator, fun instigator</p>
+            <p>I love Swift, Ruby, and CSS. Never at the same time.</p>
+            <table class="links">
+                <tr>
+                    <td>
+                        <a href="#resume">Experience</a>
+                    </td>
+                    <td>
+                        <a href="#apps">Apps</a>
+                    </td>
+                    <td>
+                        <a href="#projects">Projects</a>
+                    </td>
+                    <td>
+                        <a href="#blog">Blog</a>
+                    </td>
+            </table>
+            <table class="social">
+                <tr>
+                    <td>
+                        <a href="http://twitter.com/128keaton">Twitter</a>
+                    </td>
+                    <td>
+                        <a href="http://dribbble.com/128keaton">Dribbble</a>
+                    </td>
+                    <td>
+                        <a href="http://github.com/128keaton">GitHub</a>
+                    </td>
+            </table>
+        </td>
+        </tr>
+</table>
 
-				</div>
-			</div>
-		</div>
+	<!-- Resume -->
+	<table id="resume" class="resume">
+    <tr class="header">
+        <td>
+            <h1>Resumè</h1>
+        </td>
+        <td>
+                        <span>Keaton A. Burleson</span>
+        </td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Job
+        </th>
+        <th>
+            Experience
+        </th>
+        <th>
+            Date
+        </th>
+    </tr>
+    
+    
+    <tr>
+        <td>
+            <h4>ER2 - Developer</h4>
+        </td>
+        <td>
+            <p>Ruby on Rails, CSS, HTML, PHP, Symfony</p>
+        </td>
+        <td>
+            2017 - Present
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <h4>ER2 - Technitian</h4>
+        </td>
+        <td>
+            <p>Basic Cisco, Basic Networking, macOS with DeployStudio, General Linux and Docker.</p>
+        </td>
+        <td>
+            2015 - 2017
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <h4>Fellowship Memphis - I.T. Assistant</h4>
+        </td>
+        <td>
+            <p>Mac OS X Server.</p>
+        </td>
+        <td>
+            2015 - 2016
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <h4>New Hope - I.T. Assistant</h4>
+        </td>
+        <td>
+            <p>Chromebooks and Windows Deployment</p>
+        </td>
+        <td>
+            Summer of 2016 <br> Summer of 2015
+        </td>
+    </tr>
+    
 
-		<div class="front-site-links">
+</table>
 
-			     
-			<a class="page-link" href="/apps/">Apps </a>             
-			<a class="page-link" href="/portfolio/">Projects </a>       
-			<a class="page-link" href="/blog/index.html">Blog </a>          
-		</div>
-		<footer class="footer" id="frontpage-footer">
-        <div class="social-buttons">
-    <a href="https://twitter.com/128keaton">
-        <img class="svg" src="/assets/svg/twitter.svg" >
-    </a>
-    <a href="https://github.com/128keaton">
-        <img class="svg" src="/assets/svg/octocat.svg" >
-    </a>
-    <a href="https://instagram.com/128keaton">
-        <img class="svg" src="/assets/svg/instagram.svg" >
-    </a>
-
+	<!-- Apps -->
+	<div id="apps" class="apps-wrapper">
+    <h1>Apps</h1>
+    <div class="marvel-device ipad silver landscape">
+        <div class="camera"></div>
+        <div class="screen">
+            <table class="apps">
+                <tr>
+                    
+                    
+                    <td onclick="location.href='/apps/elemnt/'">
+                        <img src="http://is4.mzstatic.com/image/thumb/Purple71/v4/b8/cb/ca/b8cbca67-6c94-a311-8267-3260aa6cd461/source/1024x1024bb.jpg">
+                        <h1>Elemnt</h1>
+                        <p>
+                            A gorgeous display of the Earth's elements, <b>ready in your pocket.</b>
+                        </p>
+                    </td>
+                    
+                    <td onclick="location.href='/apps/test-strip/'">
+                        <img src="http://a2.mzstatic.com/us/r30/Purple20/v4/f8/4b/f2/f84bf2aa-eadf-24a4-e942-b4e652993107/icon1024x1024.png">
+                        <h1>Test Strip</h1>
+                        <p>
+                            Calculate meals, export glucose data. Graph insulin, and share it with your doctor. <b class="app-highlight">Make diabetes conform to you!</b>
+                        </p>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        <div class="home"></div>
+    </div>
 </div>
 
+	<!-- Projects -->
+	<div class="projects-wrapper">
+    <h1>Projects</h1>
+    <table id="projects" class="projects">
+        <tr>
+            <td>
+                <h2>
+                    Pinned
+                </h2>
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            
+            <td class="project">
+                <div class="header">
+                    <a href="https://github.com/128keaton/barcodeWebChrome">
+                        <h2 class="title">barcodeWebChrome</h2>
+                    </a>
+                </div>
+                <p class="description">A Chrome extension designed for barcodeWeb</p>
+                <p class="technologies"><span class="language-color javascript"></span>
+                    JavaScript
+                </p>
+            </td>
+            
+            <td class="project">
+                <div class="header">
+                    <a href="https://flockunited.com">
+                        <h2 class="title">Flock</h2>
+                    </a>
+                </div>
+                <p class="description">A site for a startup ride sharing service</p>
+                <p class="technologies"><span class="language-color jekyll"></span>
+                    Jekyll
+                </p>
+            </td>
+            
+        <tr>
+            
+        
+        <tr>
+            
+            <td class="project">
+                <div class="header">
+                    <a href="https://github.com/128keaton/MenuColor">
+                        <h2 class="title">MenuColor</h2>
+                    </a>
+                </div>
+                <p class="description">A color picker for Swift programmers!</p>
+                <p class="technologies"><span class="language-color swift"></span>
+                    Swift
+                </p>
+            </td>
+            
+            <td class="project">
+                <div class="header">
+                    <a href="https://github.com/128keaton/Woosh">
+                        <h2 class="title">Woosh</h2>
+                    </a>
+                </div>
+                <p class="description">Simple app for drone fliers to see if an airport is close</p>
+                <p class="technologies"><span class="language-color swift"></span>
+                    Swift
+                </p>
+            </td>
+            
+        <tr>
+            
+    </table>
+</div>
+
+	<!-- Thoughts -->
+	<div id="blog" class="thoughts-wrapper">
+    <h1>Blog</h1>
+    
+    <table class="thought">
+        <tr class="header">
+            <td>
+                <h2 class="title"><a href="/2017/07/16/state-of-the-union.html/" class="js-pjax">State of the Union</a></h2>
+            </td>
+            <td>
+                <p class="date">Jul 16, 2017</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="description"> Hello. I cannot believe that it has been three months since I last updated my blog. So much has changed since then. I graduated high school, moved out, and broke up with my girlfriend, all in that order. High School I was really thrilled to walk the stage. Honestly it makes me sad that I don’t have a way to keep myself concurrently connected to the friends I casually had. Sure I have social media,...</div>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="thought">
+        <tr class="header">
+            <td>
+                <h2 class="title"><a href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html/" class="js-pjax">How I got 3.1.2 on a 3G[s] from 2011</a></h2>
+            </td>
+            <td>
+                <p class="date">Apr 12, 2017</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="description"> See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a new boot ROM 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it? Just recently, a person on Twitter called ‘axi0mX’ released the alloc8 boot ROM exploit affecting the new and old boot ROM 3G[s], though he recommends that the 24k exploit still...</div>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="thought">
+        <tr class="header">
+            <td>
+                <h2 class="title"><a href="/2017/04/05/travis-ci-and-jekyll.html/" class="js-pjax">Travis CI and Jekyll</a></h2>
+            </td>
+            <td>
+                <p class="date">Apr 05, 2017</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="description"> Preface: When I first started blogging with Jekyll, my setup was a wreck. I didn’t quite understand Liquid Templating, so there wasn’t a lot a reuse, tons of unnecessary CSS, and plenty of plain ol’ HTML kludges. I still really liked Jekyll. It was fast, hosting for it was cheap, and free if you used GitHub Pages, which I didn’t at the time. The two things I didn’t like about Jekyll was the lack of...</div>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="thought">
+        <tr class="header">
+            <td>
+                <h2 class="title"><a href="/2017/04/04/new-mac-pros.html/" class="js-pjax">New Mac Pros</a></h2>
+            </td>
+            <td>
+                <p class="date">Apr 04, 2017</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="description"> This was really interesting to wake up and see. Seems like Apple has finally realized something. Their Pro market is a bit unhappy. It is very interesting that they “conceited defeat” by admitting that the industry went a different way than they were expecting. The biggest reason they took such a jump to a smaller, and enclosed enclosure was because of a hopeful future in parallel GPU technology. However, it never really happened that way....</div>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="thought">
+        <tr class="header">
+            <td>
+                <h2 class="title"><a href="/2017/01/20/ios-6-in-2016.html/" class="js-pjax">iOS 6 in 2016</a></h2>
+            </td>
+            <td>
+                <p class="date">Jan 20, 2017</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="description"> First let me preface this ‘review’ by stating that I actually didn’t use iOS 6 for the duration of this test because I couldn’t. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&amp;T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual...</div>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
+	<!-- Footer -->
+	<footer class="footer" id="frontpage-footer">
+        &copy Keaton Burleson
 </footer>
 
-	</div>
 </body>
 
 </html>
