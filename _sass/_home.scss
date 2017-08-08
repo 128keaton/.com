@@ -173,7 +173,7 @@
             font-weight: 100;
         }
         td {
-            cursor: hand;
+            cursor: pointer;
         }
     }
     @media screen and (max-width: $on-palm) {
@@ -276,18 +276,22 @@
         font-size: 80px;
         font-weight: bolder;
     }
+    .white-background {
+        background-color: #fff;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     .thoughts {
-        border-collapse: collapse;
         border-spacing: 0;
         width: 95%;
         margin: 0 auto;
         padding: 12px;
         border: 4px double rgb(215, 222, 255);
-        td{
+        td {
             padding: 10px;
         }
     }
-    .thought:nth-child(even) {
+    tr:nth-child(even) {
         background-color: rgb(215, 222, 255);
     }
     .thought {
@@ -297,7 +301,17 @@
             margin: 0;
             font-weight: 100;
             font-family: $base-font-family;
+            float: left;
+            vertical-align: baseline;
+            margin-top: 10px;
         }
+        p{
+            float: right;
+        }
+    }
+    .more{
+        text-align: center;
+        cursor: pointer;
     }
     a {
         color: black;

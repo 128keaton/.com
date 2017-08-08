@@ -1,15 +1,20 @@
 <div id="blog" class="thoughts-wrapper">
     <h1>Blog</h1>
-    <table class="thoughts">
-        {% for post in site.posts limit:5 %}
-        <tr class="thought">
-            <td>
-                <h2 class="title"><a href="{{ post.url }}" class="js-pjax">{{ post.title }}</a></h2>
-            </td>
-            <td>
-                <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
+    <div class="white-background">
+        <table class="thoughts">
+            {% for post in site.posts limit:5 %}
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="{{ post.url }}" class="js-pjax">{{ post.title }}</a></h2>
+                    <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr class="more" onclick="location.href='/blog'">
+                <td>
+                    <h2>More</h2>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>

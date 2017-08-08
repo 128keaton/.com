@@ -3,43 +3,20 @@ title: Blog
 permalink: "/blog/"
 layout: default
 html-title: Keaton's Blog
-weight: 2
-pagination:
-  enabled: true
 ---
 
-<div class="social">
-
-    <p class="rss-subscribe">Subscribe <a href="{{ " /feed.xml " | relative_url }}">via RSS</a></p>
-</div>
-<ul class="post-list">
-    {% for post in paginator.posts %}
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>{% if post.reference-url %}<a class="internal-post-link" href="{{ post.reference-url }}">Reference</a>{% endif %}
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted {{ post.date | date: "%b %d" }}</span>
-                <span class="post-word-count">and has roughly {{ post.content | number_of_words }} words</span>
-            </div>
-            <div class="post-text">
-                 {{ post.content  }}
-            </div>
-
-        </div>
-    </li>
-    {% endfor %}
-
-</ul>
-    <div class="pagination">
-{% if paginator.total_pages > 1 %}
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% endif %}
-{% endif %}
+<div id="blog" class="thoughts-wrapper">
+    <h1>Blog</h1>
+    <div class="white-background">
+        <table class="thoughts">
+            {% for post in site.posts %}
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="{{ post.url }}" class="js-pjax">{{ post.title }}</a></h2>
+                    <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </div>
