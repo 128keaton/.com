@@ -33,730 +33,174 @@
 	<body>
 		<div class="wrapper" id="white">
 
-		<div class="social">
-
-    <p class="rss-subscribe">Subscribe <a href="/%20/feed.xml">via RSS</a></p>
-</div>
-<ul class="post-list">
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2017/07/16/state-of-the-union.html">State of the Union</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Jul 16</span>
-                <span class="post-word-count">and has roughly 547 words</span>
-            </div>
-            <div class="post-text">
-                 <p>Hello.</p>
-
-<p>I <em>cannot</em> believe that it has been three months since I last updated my blog. So much has changed since then. I graduated high school, moved out, and broke up with my girlfriend, all in that order.</p>
-
-<h2 id="high-school">High School</h2>
-
-<p>I was really thrilled to walk the stage. Honestly it makes me sad that I don’t have a way to keep myself concurrently connected to the friends I casually had. Sure I have social media, but I don’t have a common destination. Oh well. I wish I could replay it, sitting there in a stupid gown surrounded by people I knew. My friend had a great Saludictorian speech, and I throughougly commend him for it. Great job bud.</p>
-
-<h2 id="moving-out">Moving Out</h2>
-
-<p>I’ve wanted my own place for a while. Since I felt like I compromised by going to a local school (University of Memphis, ugh), I was pretty set on being broke still, so I found some roommates and we moved into a 2.1/3rd bedroom house real close to campus. So far, its great having a house. We’ll see what thats like in a few months.</p>
-
-<h2 id="breaking-up">Breaking Up</h2>
-
-<p>This had been coming for a while. The past few months had an ‘out-of-sync’ feeling that I can’t just describe. Katherine was a great girl, she was stunning and is smart as hell, and I’m happy to remain friends with her, but we were too similar for it to work out. It all can’t be like <strong>Scrubs</strong>, thanks J.D.</p>
-
-<h3 id="final-word">Final word</h3>
-
-<p>I’m really excited for the next chapter of my life, I feel adiquately prepared for it. I have some small projects up in the air, namely an update to Test Strip. Its very alpha and built in Swift 4, but already the usability changes have made my usage of the app skyrocket. Recently, I was unfortunately driven out of a group chat that I helped forge in the fires of iMessage with some fellow friends. Also, unfortunately, the chat has devolved into a place where I didn’t feel like home. My memory isn’t the best, so I’d mis-speak about something I said earlier or something I owned and I’d get harrased if it wasn’t corrected. There was also some ‘no-no’s when it came to stuff to talk about. If someone was buying something, or receiving something related to the interests of the chat, it wasn’t discussed. There was also alot of downright ridiculous demands, and on top of that, the chat was filled with obnoxiousness. There were three people perpetuating the situation. Too much drama and stupidity and I am <em>overjoyed</em> to have those three ‘people’ out of my life. From complaining to over-bragging, it was frustrating being in the chat day-to-day. The feeling of friends hanging out was gone. The final straw was “hey Keatons in a bad mood watch out”. I wasn’t, I was just being poked for no reason. Long story short, I am very sorry if you encounter these people. They are terrible people. Leeches on society.</p>
-
-<p>On a lighter note, I am working on my car more, and I think I can make it tons better! I am happy that I am back online and functioning again, and I hope that I can write more.
-Signing off for now,
-Keaton.</p>
-
-            </div>
-
-        </div>
-    </li>
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">How I got 3.1.2 on a 3G[s] from 2011</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Apr 12</span>
-                <span class="post-word-count">and has roughly 1612 words</span>
-            </div>
-            <div class="post-text">
-                 <p><img src="http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized" alt="" /></p>
-
-<p>See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a <em>new boot ROM</em> 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?</p>
-
-<p>Just recently, a <a href="https://twitter.com/axi0mX">person</a> on Twitter called ‘axi0mX’ released the <a href="https://github.com/axi0mX/alloc8">alloc8</a> boot ROM exploit affecting the new and old boot ROM 3G[s], though he recommends that the 24k exploit still be used on old boot ROM devices due to a <a href="https://github.com/axi0mX/ipwndfu/blob/master/JAILBREAK-GUIDE.md#3-second-delays-when-using-a-phone-jailbroken-with-alloc8">slow down</a> that the alloc8 exploit introduces. Thankfully, this exploit is relatively easy to use, if you have the right tools</p>
-
-<h2 id="tools">Tools:</h2>
-<ul>
-  <li>Xcode Command Line tools (<code class="highlighter-rouge">xcode-select --install</code>)</li>
-  <li><a href="https://brew.sh/">Homebrew</a></li>
-  <li><strong>(updated 4-20-2017)</strong> A Mac running Mavericks or newer<sup><a href="#1">1</a></sup></li>
-</ul>
-
-<h2 id="step-1">Step 1:</h2>
-
-<p><strong>(updated 4-12-2017)</strong>
-Time to install all the dependancies.
-Open Terminal, then install pip/Python from Homebrew like this:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install python --with-brewed-openssl
-</code></pre>
-</div>
-
-<p>Next, install libusb, similar to how you installed Python, using Homebrew:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install libusb
-</code></pre>
-</div>
-
-<p>Quit Terminal and then reopen Terminal.</p>
-
-<p>Lastly, run this last command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install pyusb
-</code></pre>
-</div>
-
-<h2 id="step-2">Step 2:</h2>
-
-<p>Navigate to a nice and safe directory in Terminal, e.g. <code class="highlighter-rouge">cd ~/Desktop</code>. There, clone the ipwndfu repository:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/axi0mX/ipwndfu <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ipwndfu
-</code></pre>
-</div>
-
-<h2 id="step-3">Step 3:</h2>
-
-<p>Thanks to some oddities in libusb for El Capitan and Sierra, it is necessary to patch the binary we use. <strong>Only do this on El Capitan and Sierra</strong>. Thankfully, axi0mX has made it pretty easy for us.
-Verify that the version installed on your computer is the same one the patch is made for (1.0.21) by running this command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
-</code></pre>
-</div>
-
-<p>If the little string of numbers and letters (the hash) matches <code class="highlighter-rouge">02da61201c8f67b723bca5fb44b35797d1021625</code> then you should be fine.</p>
-
-<p>Now, its time to patch. inside the ipwndfu directory, run</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
-</code></pre>
-</div>
-
-<p>Now, just to make sure that the patch was applied successfully, rerun this command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
-</code></pre>
-</div>
-
-<p>The hash should be: <code class="highlighter-rouge">f356ee6052cd520b46ca50333b937ff2efe4477b</code></p>
-
-<p>All good?</p>
-
-<h2 id="step-4">Step 4:</h2>
-
-<p>Now, it is time to generate a custom IPSW for your 3G[s]. Below is a table which breaks down the versions and tools to accomplish this.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Version</th>
-      <th>Tool</th>
-      <th>Success</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>iOS 3.1</td>
-      <td><a href="https://github.com/axi0mX/PwnageTool-mirror/raw/master/PwnageTool_3.1.3.dmg">PwnageTool 3.1.3</a></td>
-      <td>😀</td>
-    </tr>
-    <tr>
-      <td>iOS 3.1.2/3</td>
-      <td><a href="https://github.com/axi0mX/PwnageTool-mirror/raw/master/PwnageTool_3.1.5.dmg">PwnageTool 3.1.5</a></td>
-      <td>😀</td>
-    </tr>
-    <tr>
-      <td>iOS 4.0</td>
-      <td><a href="https://github.com/axi0mX/PwnageTool-mirror/raw/master/PwnageTool_4.01.dmg">PwnageTool 4.01</a></td>
-      <td>😀</td>
-    </tr>
-    <tr>
-      <td>iOS 4.3.3</td>
-      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
-      <td>😫</td>
-    </tr>
-    <tr>
-      <td>iOS 5.0</td>
-      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
-      <td>😀</td>
-    </tr>
-    <tr>
-      <td>iOS 5.0.1</td>
-      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
-      <td>😀</td>
-    </tr>
-    <tr>
-      <td>iOS 5.1</td>
-      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
-      <td>😀</td>
-    </tr>
-    <tr>
-      <td>iOS 5.1.1</td>
-      <td><a href="http://www.iphonehacks.com/download-redsn0w">redsn0w 0.9.15 beta 3</a></td>
-      <td>😀</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><em>Notes on using redsn0w:</em></p>
-
-<p>During the process, redsn0w will ask you something along the lines of ‘Will this custom IPSW be used on a newer (fixed) version of the iPhone3GS?’. You must answer ‘no’ to create an IPSW laced with the 24Kpwn exploit, which is essential for alloc8.</p>
-
-<p>All the tools above will walk you through the IPSW creation, just don’t stray too far from the default options and you should be fine. I opted for 3.1.2, but thats my personal choice. I also downloaded my firmware file from <a href="http://ipsw.me">ipsw.me</a>. Also, since we’re on the topic of downloading firmwares, you also need to download the 4.3.5 IPSW for your 3G[s] <strong>and place it in your ipwndfu folder</strong></p>
-
-<p>From there (again in your ipwndfu folder) run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>unzip -p iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu &gt; n88ap-iBSS-4.3.5.img3
-</code></pre>
-</div>
-
-<p>You should be all set to run ipwndfu here pretty soon.</p>
-
-<h2 id="step-5">Step 5:</h2>
-
-<p><strong>Note: if you installed all the pip dependancies with the Homebrew version, you must prepend <code class="highlighter-rouge">python</code> to the commands like I have done below</strong></p>
-
-<p>Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use <code class="highlighter-rouge">idevicerestore</code> to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.</p>
-
-<p>I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened, raring to go.</p>
-
-<p>Now, plug the iPhone into the machine with the ipwndfu tools. Put the iPhone into DFU mode, which goes as follows:</p>
-
-<ol>
-  <li>Turn the phone off.</li>
-  <li>Hold the power button for <strong>3</strong> seconds.</li>
-  <li>Hold the home and power button for <strong>10</strong> seconds.</li>
-  <li>Release the power button, but continue to hold the home button without releasing for <strong>15</strong> more seconds.</li>
-</ol>
-
-<p>Now, iTunes should popup complaining about a device in recovery.</p>
-
-<p>Go back to Terminal, and inside of the ipwndfu tools directory, run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -p
-</code></pre>
-</div>
-
-<p>It should output something like this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -p
-<span class="k">***</span> based on limera1n exploit <span class="o">(</span>heap overflow<span class="o">)</span> by geohot <span class="k">***</span>
-Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
-Device is now <span class="k">in </span>pwned DFU Mode.
-</code></pre>
-</div>
-
-<p>Great!</p>
-
-<p>Unplug the device, and quickly move it to the machine with iTunes &lt;11.1, in my case, my PowerBook. iTunes should once again popup about a device in recovery. Now we’re rolling. Okay, deep breath. I’m assuming your iPhone is backed up if you care. Now we need to browse to our custom firmware. Hold down Shift (for Windows) or Alt/option (for Mac) and a file dialog should come up. Browse and select our custom firmware. The restoration process should begin. I had to do this process twice, not sure why, but when I finished, it showed no errors.</p>
-
-<h2 id="step-6">Step 6:</h2>
-
-<p>After your restore is complete, you should be at a black screen. Move the phone to the machine with the tools once again. Next, we’re running the same command as earlier to get it into a pwned DFU state:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -p
-</code></pre>
-</div>
-
-<p>It should output something like this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -p
-<span class="k">***</span> based on limera1n exploit <span class="o">(</span>heap overflow<span class="o">)</span> by geohot <span class="k">***</span>
-Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
-Device is now <span class="k">in </span>pwned DFU Mode.
-</code></pre>
-</div>
-
-<p>Now, run this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -x
-</code></pre>
-</div>
-
-<p>Which, in turn, should provide an output like this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -x
-Installing alloc8 exploit to NOR.
-Dumping NOR, part 1/8.
-Dumping NOR, part 2/8.
-Dumping NOR, part 3/8.
-Dumping NOR, part 4/8.
-Dumping NOR, part 5/8.
-Dumping NOR, part 6/8.
-Dumping NOR, part 7/8.
-Dumping NOR, part 8/8.
-NOR backed up to file: nor-backups/nor-xxxxxxxxx-20170411-193959.dump
-Sending iBSS.
-Waiting <span class="k">for </span>iBSS to enter Recovery Mode.
-Sending iBSS payload to flash NOR.
-Sending run command.
-If screen is not red, NOR was flashed successfully and device will reboot.
-</code></pre>
-</div>
-<p>The whole process should take about 10 seconds, and your screen on your iPhone should be green for a considerable amount of that time.</p>
-
-<p>Thankfully, the developer provided some nice troubleshooting tips:</p>
-
-<ul>
-  <li>
-    <p>If there are any errors before the screen turned green, it is safe to try again.</p>
-  </li>
-  <li>
-    <p>If the screen turns red, something went wrong while your phone was being flashed. Trying again probably won’t help.</p>
-  </li>
-</ul>
-
-<p>Hopefully your phone should be booting whatever iOS you chose! Comment below if something bad happens or you discover another way to restore!</p>
-
-<p>If you are having issues running this command, check out <a href="#troubleshooting">Troubleshooting</a> below.</p>
-
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>(added 4-12-2017)</p>
-
-<p>I had some friends try running the guide themselves, and they ran into some issues not covered.</p>
-
-<h3 id="operation-timed-out">Operation timed out</h3>
-<p><img src="http://images.128keaton.com/uhoh.jpg#stylized" alt="" />.</p>
-
-<p>My friend on Slack ran into this. Not sure if it is an environment issue, as I did not have Python installed via Homebrew. I just had OS X’s default install. If you’re wondering if you are using Homebrew Python, run this command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>which python
-</code></pre>
-</div>
-
-<p>I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew update
-brew rm python
-brew install python --with-brewed-openssl
-</code></pre>
-</div>
-
-<p>Thanks to <a href="https://github.com/Homebrew/legacy-homebrew/issues/14497">this</a> GitHub issue.</p>
-
-<p>However, if you don’t want to really mess with Homebrew, or the proposed fix doesn’t work for you, here is another way.</p>
-
-<p>First, remove the Homebrew Python install.</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew rm python
-</code></pre>
-</div>
-<p>Then, close Terminal and reopen.</p>
-
-<p>In Terminal, navigate somewhere safe, like <code class="highlighter-rouge">cd ~/Desktop</code>, and run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>curl -O https://bootstrap.pypa.io/get-pip.py
-</code></pre>
-</div>
-
-<p>Next, run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo python get-pip.py
-</code></pre>
-</div>
-<p>Make sure you’ve installed libusb, and then install pyusb like this:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install pyusb
-</code></pre>
-</div>
-
-<p>Hopefully that should get you running again.</p>
-
-<h2 id="final-thoughts">Final Thoughts</h2>
-
-<p>I’d like to give a major thanks to the developer for writing really good documentation in the first place, and another thanks for <em>creating</em> this awesome open source jailbreak and boot ROM exploit for a device almost 9 years old.</p>
-
-<p><span id="1" class="small"><sup>1</sup> there is a bug that the author hasn’t made progress fixing in versions older than OS X 10.9</span></p>
-
-            </div>
-
-        </div>
-    </li>
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2017/04/05/travis-ci-and-jekyll.html">Travis CI and Jekyll</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Apr 05</span>
-                <span class="post-word-count">and has roughly 1567 words</span>
-            </div>
-            <div class="post-text">
-                 <h2 id="preface">Preface:</h2>
-<p>When I first started blogging with Jekyll, my setup was a <em>wreck</em>. I didn’t quite understand Liquid Templating, so there wasn’t a lot a reuse, tons of unnecessary CSS, and plenty of plain ol’ HTML kludges. I still really liked Jekyll. It was fast, hosting for it was cheap, and free if you used GitHub Pages, which I didn’t at the time. The two things I didn’t like about Jekyll was the lack of portability, and of easy publishing.</p>
-
-<p>Easy publishing is really two things. One, I didn’t like having to clone my repo, run <code class="highlighter-rouge">bundle install</code> and make sure everything carried over properly (side-note: as tempting as it may be, do not use submodules for any directory) and then building and publishing. Then, as I stated above, I wasn’t using GitHub Pages, so I basically compiled the site and uploaded the whole thing to my website. Terrible, right?</p>
-
-<p>And then, there is the problem of images. I like having some images in my posts, in fact, a decent amount of my posts revolve around images. If you roll your own hosting with Jekyll, its easy to take care of, but with GitHub pages, its a nightmare for portability, even with submodules. If you don’t have all your images when you build–why would Jekyll carry the images over into your site!</p>
-
-<p>Those two tidbits will be important in a minute after I explain the next part.</p>
-
-<p>Fast-forward to my blog, 2.0, I decided to ditch self hosting and migrate to GitHub for the simple ease of doing “git commit -m blah &amp;&amp; git push” and having GitHub do the dirty work. And this worked, pretty well. Remember my image heavy pages? Night. Mare. As it stands right now, my images directory on my web server is 119MB. 119MB I’d throw around on GitHub. Bleh, not fun for mobile blogging.</p>
-
-<p>Recently, I’d had enough blog posts that scrolling through them all was a pain. I decided a simple pagination plugin for Jekyll would suffice–until I learned that it wasn’t supported on GitHub Pages. “No” I howled in rage. I did a quick bit of googling and learned that with a bit of Ruby, I could ~abuse~ use Travis to help with the heavier lifting, by-passing the building service of GitHub, and just taking advantage of that sweet, sweet hosting.</p>
-
-<p>Before I begin the how to part, I’d like to say I still use my web hosting for the images. In fact, that is a key part. I’d like to think that my script can be adapted to be used with another service, other than your own.</p>
-
-<h2 id="how-to">How-to:</h2>
-
-<h3 id="prerequisites">Prerequisites:</h3>
-<ul>
-  <li>An image host that you can use with an API</li>
-  <li>Jekyll</li>
-  <li>Two branches on your public GitHub repo (gh-pages and a source repo)</li>
-  <li>Eyes</li>
-  <li>A personal access token</li>
-  <li>Travis access to your public GitHub repo</li>
-</ul>
-
-<p>See where this is going?</p>
-
-<p>Basically, whenever you push your source branch to GitHub, Travis builds the site, and then pushes it to your gh-pages repo, precompiled. This opens up the door for so many more possibilities, like testing!</p>
-
-<p>Sure, the build times are a bit slower, but it works so much better!</p>
-
-<p>Here is an example of my .travis.yml file:</p>
-
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">ruby</span>
-<span class="s">cache</span><span class="pi">:</span> <span class="s">bundler</span>
-<span class="s">install</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="s">bundle install</span>
-<span class="s">script</span><span class="pi">:</span> <span class="s">bundle exec rake site:deploy --quiet</span>
-<span class="s">rvm</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="s">2.1.2</span>
-<span class="s">env</span><span class="pi">:</span>
-  <span class="s">global</span><span class="pi">:</span>
-    <span class="s">secure</span><span class="pi">:</span> <span class="s">/* remove this line */</span>
-</code></pre>
-</div>
-
-<p>For that <code class="highlighter-rouge">secure</code> bit, remove that whole line, and run this command:
-<code class="highlighter-rouge">gem install travis</code>
-and then:
- <code class="highlighter-rouge">travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'</code></p>
-
-<p>Make sure you replace the appropriate variables.</p>
-
-<p>Now, for an exerpt from the Rakefile:</p>
-
-<div class="language-rb highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span>
-    <span class="n">task</span> <span class="ss">:deploy</span> <span class="k">do</span>
-        <span class="c1"># Detect pull request</span>
-        <span class="k">if</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'TRAVIS_PULL_REQUEST'</span><span class="p">].</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">to_i</span> <span class="o">&gt;</span> <span class="mi">0</span>
-            <span class="nb">puts</span> <span class="s1">'Pull request detected. Not proceeding with deploy.'</span>
-            <span class="nb">exit</span>
-        <span class="k">end</span>
-
-        <span class="c1"># Configure git if this is run in Travis CI</span>
-        <span class="k">if</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'TRAVIS'</span><span class="p">]</span>
-            <span class="n">sh</span> <span class="s2">"git config --global user.name '</span><span class="si">#{</span><span class="no">ENV</span><span class="p">[</span><span class="s1">'GIT_NAME'</span><span class="p">]</span><span class="si">}</span><span class="s2">'"</span>
-            <span class="n">sh</span> <span class="s2">"git config --global user.email '</span><span class="si">#{</span><span class="no">ENV</span><span class="p">[</span><span class="s1">'GIT_EMAIL'</span><span class="p">]</span><span class="si">}</span><span class="s2">'"</span>
-            <span class="n">sh</span> <span class="s1">'git config --global push.default simple'</span>
-        <span class="k">end</span>
-
-        <span class="c1"># Make sure destination folder exists as git repo</span>
-        <span class="n">check_destination</span>
-
-        <span class="n">sh</span> <span class="s2">"git checkout </span><span class="si">#{</span><span class="no">SOURCE_BRANCH</span><span class="si">}</span><span class="s2">"</span>
-        <span class="no">Dir</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="no">CONFIG</span><span class="p">[</span><span class="s1">'destination'</span><span class="p">])</span> <span class="p">{</span> <span class="n">sh</span> <span class="s2">"git checkout </span><span class="si">#{</span><span class="no">DESTINATION_BRANCH</span><span class="si">}</span><span class="s2">"</span> <span class="p">}</span>
-
-        <span class="c1"># Generate the site</span>
-        <span class="n">sh</span> <span class="s1">'bundle exec jekyll build'</span>
-
-        <span class="c1"># Commit and push to github</span>
-        <span class="n">sha</span> <span class="o">=</span> <span class="sb">`git log`</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="sr">/[a-z0-9]{40}/</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="no">Dir</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="no">CONFIG</span><span class="p">[</span><span class="s1">'destination'</span><span class="p">])</span> <span class="k">do</span>
-            <span class="n">sh</span> <span class="s1">'git add --all .'</span>
-            <span class="n">sh</span> <span class="s2">"git commit -m 'Updating to </span><span class="si">#{</span><span class="no">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="no">REPO</span><span class="si">}</span><span class="s2">@</span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="s2">.'"</span>
-            <span class="n">sh</span> <span class="s2">"git push --quiet origin </span><span class="si">#{</span><span class="no">DESTINATION_BRANCH</span><span class="si">}</span><span class="s2">"</span>
-            <span class="nb">puts</span> <span class="s2">"Pushed updated branch </span><span class="si">#{</span><span class="no">DESTINATION_BRANCH</span><span class="si">}</span><span class="s2"> to GitHub Pages"</span>
-        <span class="k">end</span>
-    <span class="k">end</span>
-<span class="p">.</span><span class="nf">.</span><span class="p">.</span><span class="nf">.</span>
-</code></pre>
-</div>
-
-<p>(the whole file is available <a href="https://gist.github.com/128keaton/c7a2bb21ca225fe24b7b1beb4836ff4b">here</a>)</p>
-
-<p>That there is a big-honkin mess.</p>
-
-<p>Basically, when Travis runs <code class="highlighter-rouge">bundle exec rake site:deploy</code>, it checks if its a PR, sets up git, makes sure the destination folder exists, pulls the site, checks out the source branch, builds the site, then commits and finally pushes the site. Phew!</p>
-
-<p>Here are the appropriate config.yml lines you’ll need to add:</p>
-
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">username</span><span class="pi">:</span> <span class="s">your-github-username</span>
-<span class="s">repo</span><span class="pi">:</span> <span class="s">repo-name</span>
-<span class="s">branch</span><span class="pi">:</span> <span class="s">source-branch</span>
-<span class="s">destination</span><span class="pi">:</span> <span class="s">../site/</span>
-</code></pre>
-</div>
-
-<p>If you set this up correctly, pushing to GitHub should result in a successful Travis build and deploy.</p>
-
-<p>Now, onto the fun part: Images!</p>
-
-<p>In my Rakefile, I have two helper tasks:</p>
-
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nf">.</span><span class="p">.</span>
-    <span class="nf">task</span> <span class="ss">:correct_posts</span> <span class="k">do</span>
-        <span class="nb">puts</span> <span class="s1">'Correcting blog posts'</span>
-        <span class="no">Dir</span><span class="p">.</span><span class="nf">entries</span><span class="p">(</span><span class="n">__dir__</span> <span class="o">+</span> <span class="s1">'/_posts/'</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">file_name</span><span class="o">|</span>
-            <span class="k">next</span> <span class="k">unless</span> <span class="no">File</span><span class="p">.</span><span class="nf">extname</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'.md'</span> <span class="o">||</span> <span class="no">File</span><span class="p">.</span><span class="nf">extname</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'.markdown'</span>
-            <span class="n">text</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">__dir__</span> <span class="o">+</span> <span class="s1">'/_posts/'</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>
-            <span class="n">fixed</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">'](http://images.128keaton.com/'</span><span class="p">,</span> <span class="s1">'](http://images.128keaton.com/'</span><span class="p">)</span>
-            <span class="n">fixed</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
-            <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">__dir__</span> <span class="o">+</span> <span class="s1">'/_posts/'</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="n">file</span><span class="p">.</span><span class="nf">puts</span> <span class="n">fixed</span> <span class="p">}</span>
-        <span class="k">end</span>
-        <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="p">[</span><span class="s2">"site:upload"</span><span class="p">].</span><span class="nf">execute</span>
-    <span class="k">end</span>
-    <span class="n">task</span> <span class="ss">:upload_images</span> <span class="k">do</span>
-        <span class="nb">puts</span> <span class="s1">'Uploading images..'</span>
-        <span class="n">options</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">recursive: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">password: </span><span class="no">SSH_PASSWORD</span> <span class="p">}</span>
-        <span class="no">Net</span><span class="o">::</span><span class="no">SCP</span><span class="p">.</span><span class="nf">upload!</span><span class="p">(</span><span class="no">SSH_HOST</span><span class="p">,</span> <span class="no">SSH_USERNAME</span><span class="p">,</span> <span class="n">__dir__</span> <span class="o">+</span> <span class="s1">'/images/'</span><span class="p">,</span> <span class="s1">'/home/12/128keaton.com/html/'</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
-        <span class="nb">puts</span> <span class="s1">'All images have been upload and removed in '</span> <span class="o">+</span> <span class="no">IMAGES_DIR</span>
-        <span class="no">FileUtils</span><span class="p">.</span><span class="nf">rm_rf</span><span class="p">(</span><span class="no">Dir</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="no">IMAGES_DIR</span> <span class="o">+</span> <span class="s1">'*'</span><span class="p">))</span>
-    <span class="k">end</span>
-<span class="p">.</span><span class="nf">.</span><span class="o">.</span>
-</code></pre>
-</div>
-
-<p>The first task checks all of my posts for any ‘stale’ image links, ones that were from olden blog times, or ones without my ‘CDN’ before them. It simply prepends them and moves on. My second task actually uploads my images and deletes them from the repo so they aren’t sucked up by git. It simply uses Net::SCP to SCP them to my remote server. Not bad, huh?  I imagine anyone with time and some experience can rework that task to support anything they want, I just use my own hosting since its easy!</p>
-
-<h2 id="final-thoughts">Final thoughts</h2>
-
-<p>Although I don’t have a fully portable Jekyll setup as I’d like, I still think this is a really robust way to keep your site built how you want it (with logs!) and keep your images where you want them. A fun thing I can do is SSH into my home machine (or mount the site folder with SSHFS) on the go, write a post, and run another helper method <code class="highlighter-rouge">bundle exec rake site:upload</code>, which is like this:</p>
-
-<div class="language-rb highlighter-rouge"><pre class="highlight"><code>  <span class="n">task</span> <span class="ss">:upload</span> <span class="k">do</span>
-      <span class="nb">puts</span> <span class="s1">'Uploading site'</span>
-      <span class="n">sha</span> <span class="o">=</span> <span class="sb">`git log`</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="sr">/[a-z0-9]{40}/</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-      <span class="n">sh</span> <span class="s1">'git add --all .'</span>
-      <span class="n">sh</span> <span class="s2">"git commit -m 'Updating to </span><span class="si">#{</span><span class="no">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="no">REPO</span><span class="si">}</span><span class="s2">@</span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="s2">.'"</span>
-      <span class="n">sh</span> <span class="s2">"git push --quiet origin </span><span class="si">#{</span><span class="no">SOURCE_BRANCH</span><span class="si">}</span><span class="s2">"</span>
-      <span class="nb">puts</span> <span class="s2">"Pushed updated branch </span><span class="si">#{</span><span class="no">SOURCE_BRANCH</span><span class="si">}</span><span class="s2"> to GitHub Pages"</span>
-  <span class="k">end</span>
-</code></pre>
-</div>
-
-<p>Couple this with some Atom Jekyll plugins, and it makes working with Jekyll a lot more enjoyable day-to-day.</p>
-
-<h2 id="credits">Credits:</h2>
-
-<ul>
-  <li><a href="https://github.com/mfenner/jekyll-travis">Original repo that pointed me in the right direction</a></li>
-  <li><a href="https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db">Medium post that helped conjure up the thought</a></li>
-</ul>
-
-            </div>
-
-        </div>
-    </li>
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2017/04/04/new-mac-pros.html">New Mac Pros</a><a class="internal-post-link" href="http://daringfireball.net/2017/04/the_mac_pro_lives">Reference</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Apr 04</span>
-                <span class="post-word-count">and has roughly 850 words</span>
-            </div>
-            <div class="post-text">
-                 <p>This was really interesting to wake up and see.</p>
-
-<p>Seems like Apple has finally realized something. Their Pro market is a bit unhappy. It is very interesting that they “conceited defeat” by admitting that the industry went a different way than they were expecting.
-The biggest reason they took such a jump to a smaller, and enclosed enclosure was because of a hopeful future in parallel GPU technology. However, it never really happened that way. For a video editing professional, a single upgraded (and probably flashed) GPU is enough, provided they have a Mac Pro with upgradable internals.</p>
-
-<div class="break"></div>
-
-<p>When it comes to timeline, it isn’t quite clear <em>when</em> Apple will release, other than its planned for next year, alongside a new display. I will say this, even if both are a flop, I am still extremely excited for the coming years at Apple. They have realized their mistake, but it wasn’t a mistake they made knowingly until recently. Apple has recognized their own issue and is <strong>currently fixing it</strong>. Apple <strong>admitted fault</strong> and <strong>conceited defeat</strong> themselves. Impressive. Especially after seeing the very strange array of <a href="http://appleinsider.com/articles/17/02/02/reports-of-lg-ultrafine-5k-display-problems-persist-may-relate-to-thunderbolt-cables">issues</a> with the recent LG 5K displays. Apple has learned, from that hilariously bad decision, if they want it done right, Apple should do it themselves. Now, after years of sliding, I am really excited for Apple again. I’m excited since I own the last upgradable Mac Pro, I own the 2nd to last upgradable MacBook Pro (2011), and I’m ready for something that isn’t on the market yet.</p>
-
-<div class="break"></div>
-
-<p>As an iOS and macOS developer, I use Apple’s tools, because you really can’t use anything else properly. I’d like to say Xcode is this smart, sleek piece of IDE that works incredibly well. That would be a lie. I’d like to say it uses a proportionate amount of RAM, doesn’t bug out sometimes causing lack-luster performance, and mysterious issues only solved with a relaunch. I’d really love to. But Xcode isn’t that piece of software. It is fat, bloated, and very frustrating sometimes. I’m using Apple software on an Apple machine running Apple’s operating system and I’m having a hard time. Without my machines being upgradable, I doubt I’d be able to run Xcode and develop for iOS/macOS.</p>
-
-<div class="break"></div>
-
-<div class="notice--quote">
-
-<p>We think it’s really important to create something great for our pro customers who want a Mac Pro modular system…</p>
-
-</div>
-<p>Though we don’t know much about the form-factor, it is guaranteed to be modular in some way, shape, or form. If you’ve worked on an HP server recently, you’ll know that their CPU, GPU, and RAM modularity is fantastic. My personal favorite is the HP ProLiant DL580 G6. Front-facing removable RAM and CPU tray. No screws hold the heatsink, its all levers. The RAM slides out in modular boxes ready to be filled and slotted back. The PCIe lanes are basic, but it works very well. No screws either, just another big blue lever. Now, I don’t want a Mac Pro as <em>large</em> as a DL580, but I don’t want it small either.</p>
-
-<p>My logic is this, larger Mac Pro, more upgradability, better airflow.</p>
-
-<p>And it needs to be beautiful.</p>
-
-<p>I’m not worried about that last bit, as I know, Apple being Apple, some piece will have a more form over function approach to it, hopefully something trivial.</p>
-
-<div class="break"></div>
-
-<p>Another nice tid-bit is the speed bump the existing Mac Pros are getting, and now we have hope for a new Mac Mini, which brings me more hope. The Mac Mini was the cheap Mac. I’d recommend it to anyone who needed a small server for their macOS powered camp, or for people uncertain about the Apple eco-system and in dire need of replacing their Windows box. This makes me so excited and looking forward to whatever shoots out of Apple next. When I was last in the Apple store, I was waiting for a 2012 retina repair to be finished. While I did, a lady, who introduced herself as a teacher, walked in, grabbed the nearest blue-shirt and pointed to the new MacBook Pro (with Touch Bar), and said: “I want that one, in gray”. The blue-shirt turned around and walked to the back. The lady sat there excitedly rocking back and forth on her heels. I asked her,</p>
-
-<p>“Is this your first MacBook?”</p>
-
-<p>“Yes! Now that the new ones are out, I can finally buy one.”</p>
-
-<p>The blue-shirt returned with a white box, and a bag.</p>
-
-<p>“Is this all we can help you with today?”</p>
-
-<p>I think Apple will see a very decent uptick of purchases from non-Pro users too, just people who want the most future proof, or the most powerful. More or less like the gentleman who buys the most powerful Tahoe–not because it has good “highway passing power”, but because its the <em>fastest</em>.</p>
-
-<div class="break"></div>
-
-<p>I’m super excited for the Mac line, no matter what comes next, I think it’ll be great.</p>
-
-<div class="notice--quote">
-
-<p>My takeaway is that the Mac’s future is bright.</p>
-
--- John Gruber
-</div>
-
-<p><strong>Update:</strong> Check the <a href="http://www.apple.com/shop/buy-mac/mac-pro">store</a>.</p>
-
-            </div>
-
-        </div>
-    </li>
-    
-    <li class="blog-post">
-        <div class="post-preview">
-
-            <div class="post-stuff">
-                <a class="post-link" href="/2017/01/20/ios-6-in-2016.html">iOS 6 in 2016</a>
-            </div>
-            <div class="meta">
-                <span class="post-meta">Posted Jan 20</span>
-                <span class="post-word-count">and has roughly 897 words</span>
-            </div>
-            <div class="post-text">
-                 <p>First let me preface this ‘review’ by stating that I actually didn’t use iOS 6 for the duration of this test because I <em>couldn’t</em>. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&amp;T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual texts and phone calls.</p>
-
-<p>Now, lets delve into the review.</p>
-
-<h2 id="the-review-unit">The Review Unit</h2>
-
-<p><strong>iPhone 5, 16GB, black</strong></p>
-
-<p><em>back in black!! not that slate crap</em></p>
-
-<p><img src="http://images.128keaton.com/iphone_ios_6/IMG_1068.JPG#stylized" alt="" /></p>
-
-<p>The iPhone 7 ‘matte black’ before it was cool! Ladies and gentleman, feast your eyes on what $98 netted me on the Ebay. Before I continue, I wanna say that this is my THIRD phone to have purchased. The first one, even though it was told that I’d receive the photos EXACTLY how the pictures depicted it, and was even assured that it would not be updated, it was, to fateful iOS 10. The second unit was pretty good, it was kinda junky, but it <em>worked</em>, until it didn’t 😞. Long story short, both were refunded, and I finally said ‘enough’, and bought one on iOS 6.1.4. Some might not like the pateña look on their iPhone, but the slate just <em>damages</em> so well.</p>
-
-<p>John Gruber, on the black iPhone 5:</p>
-
-<div class="notice--quote">
-The “slate” anodization did show wear and tear as the year went by, but I liked the effect. Like a good pair of jeans or a leather watch strap.
-</div>
-
-<p><img src="http://images.128keaton.com/iphone_ios_6/IMG_1069.JPG#stylized-small" alt="" />
-<img src="http://images.128keaton.com/iphone_ios_6/IMG_1070.JPG#stylized-small" alt="" />
-<img src="http://images.128keaton.com/iphone_ios_6/IMG_1071.JPG#stylized-small" alt="" /></p>
-
-<p>😍😍😍😍</p>
-
-<p>I just love it. Now, I do like the feel of the phone, but I really enjoy the size and shape of the 7+ better. Plus, the camera is stellar (though the 5’s is nothing to hock a loogie at). So  a SE isn’t for me, plus the 5 has something that the SE never will: iOS 6.</p>
-
-<h3 id="oh-these-just-images-from-my-5">oh, these? just images from my 5:</h3>
-
-<p><img src="http://images.128keaton.com/iphone_ios_6/IMG_0013.JPG#stylized-small" alt="" />
-<img src="http://images.128keaton.com/iphone_ios_6/IMG_0014.JPG#stylized-small" alt="" />
-<img src="http://images.128keaton.com/iphone_ios_6/IMG_0015.JPG#stylized-small" alt="" /></p>
-
-<p>Not bad, eh?</p>
-
-<h2 id="ios-6-applications">iOS 6: Applications</h2>
-
-<p>Now, I am a simple man, I don’t do much outside of basic stuff.</p>
-
-<p>Here is a table of applications that I use enough to consider ‘essential’ (outside of system apps):</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Application</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Snapchat</td>
-      <td>😵</td>
-    </tr>
-    <tr>
-      <td>Mactracker</td>
-      <td>😁</td>
-    </tr>
-    <tr>
-      <td>Hangouts</td>
-      <td>😁</td>
-    </tr>
-    <tr>
-      <td>BofA</td>
-      <td>😵</td>
-    </tr>
-    <tr>
-      <td>Ebay</td>
-      <td>😁</td>
-    </tr>
-    <tr>
-      <td>Netflix</td>
-      <td>😁</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>See, I’m simple! Even me losing Snapchat is no biggie! No nudes for me!</p>
-
-<p>Hangouts works fine, I can talk with my co-workers who don’t wanna use Slack. Another good app with iOS 6 support is Telegram. Netflix is a web wrapper (which explains ALOT, y’all, nativity is fine!). Even a couple of games worked without having to downgrade.</p>
-
-<h2 id="ios-6-speed">iOS 6: Speed.</h2>
-
-<p>Now, it may be placebo (placky-bow), but holy lingonberries, iOS 6 is <em>fast</em>.</p>
-
-<p>The animations in iOS 10 surely slow it down, but the content just feels snappier, plus having a UI designed to mimic <a href="https://dribbble.com/shots/995953-Bus-Schedule-App">real-world</a> objects is just <strong>tasty</strong>.</p>
-
-<p>Boot-up time is slower than my 7+, and Cydia doesn’t have multitasking support in iOS 6, but typing never lags, the multitasking switcher is instant, plus I’ve yet to see a frame drop. It is also interesting to think that this has 1GB of RAM, while the flagship Apple iDevice (the non <code class="highlighter-rouge">+</code> variant, at least) has 2GB. Hmm. Real-world ‘speed’ is also pretty decent, clocking in at 721 on the ‘Single Core’ Geekbench, as you can see <a href="http://browser.primatelabs.com/geekbench3/8221245">here</a>, coming very close to a late 2008 MacBook Pro 15” and a Google Indexing Server (well, just look, bleh), and beating an IBM Thinkpad X51, which is quite cool, considering the power in your pocket beats the power on your lap and in your office from seven years ago.</p>
-
-<p>Part of me thinks that mobile OS and web designers have gotten lazy, the amount of RAM and processing power has increased so that we can easily <em>be</em> lazy, but thats just personal opinion.</p>
-
-<h2 id="wrapping-it-up">Wrapping it up.</h2>
-
-<p>Overall, I think using an iPhone 5 in iOS 6 is still an easy task, and it can be enjoyable if you really think that iOS 6 is beautiful like I do. The hardware is solid, a perfect mix of utilitarianism and industrial simplicity. Especially the black, really, its gorgeous. It is a cool throwback, though, a time when Steve Jobs had some say in the design, no doubt on his deathbed he was hem-ing and haw-ing over little details. This is pre-Yosemite, or pre-San Francisco, a world of Helvetica-Neue washes over the entirety. Bringing this phone into this age with iOS 10 is near-criminal, kinda like having the good ol’ farm dog pull the family carriage into town.</p>
-
-<p>That is the iPhone 5 today, the kinda scruffy, yet extremely lovable dog.</p>
-
-<p>If you use the dog for what it was designed for, like keeping it on iOS 6, it works! It just does!  iOS 6 is smooth, fluid, and has features to sate the average, and daresay, power user!</p>
-
-<p>I just think it was a waste of design, moving to iOS 7 so abruptly.</p>
-
-<p>If you disagree, leave a comment below and we’ll talk.</p>
-
-            </div>
-
-        </div>
-    </li>
-    
-
-</ul>
-    <div class="pagination">
-
-  
-  
-    <a href="/blog/page/2">Older</a>
-  
-
+		<div id="blog" class="thoughts-wrapper">
+    <h1>Blog</h1>
+    <div class="white-background">
+        <table class="thoughts">
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2017/07/16/state-of-the-union.html" class="js-pjax">State of the Union</a></h2>
+                    <p class="date">Jul 16, 2017</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" class="js-pjax">How I got 3.1.2 on a 3G[s] from 2011</a></h2>
+                    <p class="date">Apr 12, 2017</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2017/04/05/travis-ci-and-jekyll.html" class="js-pjax">Travis CI and Jekyll</a></h2>
+                    <p class="date">Apr 05, 2017</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2017/04/04/new-mac-pros.html" class="js-pjax">New Mac Pros</a></h2>
+                    <p class="date">Apr 04, 2017</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2017/01/20/ios-6-in-2016.html" class="js-pjax">iOS 6 in 2016</a></h2>
+                    <p class="date">Jan 20, 2017</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2017/01/18/new-mozilla.html" class="js-pjax">Mozilla's New Look</a></h2>
+                    <p class="date">Jan 18, 2017</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/12/29/coolbooter-icloud-lock.html" class="js-pjax">iCloud Locked Downgrading</a></h2>
+                    <p class="date">Dec 29, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/11/30/refurbishing-kindles.html" class="js-pjax">Refurbishing Kindles</a></h2>
+                    <p class="date">Nov 30, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/08/25/qemu-with-an-el-capitan-guest.html" class="js-pjax">QEMU with an El Capitan Guest</a></h2>
+                    <p class="date">Aug 25, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/07/11/growing-up.html" class="js-pjax">Growing Up</a></h2>
+                    <p class="date">Jul 11, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/06/07/power-macintosh-8500-web-server.html" class="js-pjax">Power Macintosh 8500 Web Server</a></h2>
+                    <p class="date">Jun 07, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/30/baking-a-2007-macbook-pro-s-logic-board.html" class="js-pjax">Baking a 2007 MacBook Pro's Logic Board</a></h2>
+                    <p class="date">May 30, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/20/happy-as-a-clam.html" class="js-pjax">Happy as a Clam</a></h2>
+                    <p class="date">May 20, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/17/a-look-at-the-os-x-107-beta.html" class="js-pjax">A look at the OS X 10.7 Beta</a></h2>
+                    <p class="date">May 17, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/14/modding-a-shuttle-pc-the-gpu.html" class="js-pjax">Modding a Shuttle PC: The GPU</a></h2>
+                    <p class="date">May 14, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/11/my-wwdc-2016-submission.html" class="js-pjax">My WWDC 2016 Submission</a></h2>
+                    <p class="date">May 11, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/08/pata-ssds-for-powerpc-on-the-cheap.html" class="js-pjax">PATA SSDs for PowerPC on the Cheap</a></h2>
+                    <p class="date">May 08, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/05/why-i-miss-2010.html" class="js-pjax">Man, I Miss 2010</a></h2>
+                    <p class="date">May 05, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/03/upgrading-the-power-macintosh-8500.html" class="js-pjax">Upgrading the Power Macintosh 8500</a></h2>
+                    <p class="date">May 03, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/05/03/cheapoh-no-a-12v-hdd-power-supply.html" class="js-pjax">Cheap-Oh No: A 12V HDD Power Supply</a></h2>
+                    <p class="date">May 03, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/02/17/cheap-oh-no-nintendo-dsi-charger-9-amazon.html" class="js-pjax">Cheap-Oh-no: Nintendo DSi Charger</a></h2>
+                    <p class="date">Feb 17, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/02/11/reset-password-pi.html" class="js-pjax">Resetting the Password on a Raspberry Pi</a></h2>
+                    <p class="date">Feb 11, 2016</p>
+                </td>
+            </tr>
+            
+            <tr class="thought">
+                <td>
+                    <h2 class="title"><a href="/2016/02/11/compiling-qemu-on-os-x-el-capitan.html" class="js-pjax">Compiling QEMU on OS X El Capitan</a></h2>
+                    <p class="date">Feb 11, 2016</p>
+                </td>
+            </tr>
+            
+        </table>
+    </div>
 </div>
 
 		<footer class="footer" id="default-footer">

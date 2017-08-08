@@ -190,7 +190,7 @@ body {
       font-size: 25px;
       font-weight: 100; }
     .apps-wrapper .apps td {
-      cursor: hand; }
+      cursor: pointer; }
   @media screen and (max-width: 600px) {
     .apps-wrapper {
       width: 100%; }
@@ -267,8 +267,11 @@ body {
   .thoughts-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
+  .thoughts-wrapper .white-background {
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px; }
   .thoughts-wrapper .thoughts {
-    border-collapse: collapse;
     border-spacing: 0;
     width: 95%;
     margin: 0 auto;
@@ -276,7 +279,7 @@ body {
     border: 4px double #d7deff; }
     .thoughts-wrapper .thoughts td {
       padding: 10px; }
-  .thoughts-wrapper .thought:nth-child(even) {
+  .thoughts-wrapper tr:nth-child(even) {
     background-color: #d7deff; }
   .thoughts-wrapper .thought {
     padding: 22px; }
@@ -284,7 +287,15 @@ body {
       padding: 0;
       margin: 0;
       font-weight: 100;
-      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif; }
+      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+      float: left;
+      vertical-align: baseline;
+      margin-top: 10px; }
+    .thoughts-wrapper .thought p {
+      float: right; }
+  .thoughts-wrapper .more {
+    text-align: center;
+    cursor: pointer; }
   .thoughts-wrapper a {
     color: black;
     text-decoration: none; }
@@ -555,7 +566,7 @@ body {
       font-size: 25px;
       font-weight: 100; }
     .apps-wrapper .apps td {
-      cursor: hand; }
+      cursor: pointer; }
   @media screen and (max-width: 600px) {
     .apps-wrapper {
       width: 100%; }
@@ -632,8 +643,11 @@ body {
   .thoughts-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
+  .thoughts-wrapper .white-background {
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px; }
   .thoughts-wrapper .thoughts {
-    border-collapse: collapse;
     border-spacing: 0;
     width: 95%;
     margin: 0 auto;
@@ -641,7 +655,7 @@ body {
     border: 4px double #d7deff; }
     .thoughts-wrapper .thoughts td {
       padding: 10px; }
-  .thoughts-wrapper .thought:nth-child(even) {
+  .thoughts-wrapper tr:nth-child(even) {
     background-color: #d7deff; }
   .thoughts-wrapper .thought {
     padding: 22px; }
@@ -649,7 +663,15 @@ body {
       padding: 0;
       margin: 0;
       font-weight: 100;
-      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif; }
+      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+      float: left;
+      vertical-align: baseline;
+      margin-top: 10px; }
+    .thoughts-wrapper .thought p {
+      float: right; }
+  .thoughts-wrapper .more {
+    text-align: center;
+    cursor: pointer; }
   .thoughts-wrapper a {
     color: black;
     text-decoration: none; }
