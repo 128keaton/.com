@@ -190,6 +190,7 @@ body {
       font-size: 25px;
       font-weight: 100; }
     .apps-wrapper .apps td {
+      vertical-align: baseline;
       cursor: pointer; }
   @media screen and (max-width: 600px) {
     .apps-wrapper {
@@ -566,6 +567,7 @@ body {
       font-size: 25px;
       font-weight: 100; }
     .apps-wrapper .apps td {
+      vertical-align: baseline;
       cursor: pointer; }
   @media screen and (max-width: 600px) {
     .apps-wrapper {
