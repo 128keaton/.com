@@ -78,8 +78,7 @@ body {
     display: none; }
   .business-card h1 {
     margin: 0;
-    font-size: 65px;
-    font-family: "lunchtype25condensed_regular"; }
+    font-size: 65px; }
   .business-card .social a {
     color: black;
     font-size: 14px; }
@@ -137,8 +136,7 @@ body {
     font-size: 30px;
     border-bottom: 2px solid gray; }
   .resume h1 {
-    font-size: 70px;
-    font-family: "lunchtype25condensed_regular"; }
+    font-size: 70px; }
   .resume td h4 {
     font-weight: 100; }
   @media screen and (max-width: 600px) {
@@ -489,8 +487,7 @@ body {
     display: none; }
   .business-card h1 {
     margin: 0;
-    font-size: 65px;
-    font-family: "lunchtype25condensed_regular"; }
+    font-size: 65px; }
   .business-card .social a {
     color: black;
     font-size: 14px; }
@@ -548,8 +545,7 @@ body {
     font-size: 30px;
     border-bottom: 2px solid gray; }
   .resume h1 {
-    font-size: 70px;
-    font-family: "lunchtype25condensed_regular"; }
+    font-size: 70px; }
   .resume td h4 {
     font-weight: 100; }
   @media screen and (max-width: 600px) {
