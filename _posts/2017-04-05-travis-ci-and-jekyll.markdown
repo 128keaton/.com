@@ -112,7 +112,7 @@ Here are the appropriate config.yml lines you'll need to add:
 username: your-github-username
 repo: repo-name
 branch: source-branch
-destination: ../site/
+destination: site/
 ```
 
 If you set this up correctly, pushing to GitHub should result in a successful Travis build and deploy.
