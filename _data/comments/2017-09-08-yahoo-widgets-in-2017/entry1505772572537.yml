@@ -1,0 +1,8 @@
+_id: 0c37eb00-9cbe-11e7-b9d9-19a672bf290b
+_parent: 2017-09-08-yahoo-widgets-in-2017
+name: Harry Whitfield
+email: 1eec576ec7c1c62aaf6b8c8241ab72b4
+url: 'http://g6auc.me.uk'
+address: ''
+message: "Most widgets will still run on Sierra, if you turn off the Yahoo! Widgets dock and avoid use of the built-in debug window.\r\nThe trick to fixing dock issues is to edit the Widget Engine's preference list\r\n(com.yahoo.widgetengine.plist) to set\r\n  <key>DockOpen</key>\r\n  <string>false</string>\r\nso the engine does not try to open the dock.\r\nThe Widget Engine icon then appears in the Mac menubar from which you can start widgets and use some\r\nof the other menu items.\r\nI have also found that the canvas\r\nctx.drawImage(img, x, y, width, height) function call does not work correctly, but very few widgets use it.\r\n\r\nI've not found it necessary to run the Engine as root, but I will have a play with that."
+date: 1505772572
