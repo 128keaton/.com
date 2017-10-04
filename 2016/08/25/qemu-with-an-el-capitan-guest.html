@@ -64,7 +64,7 @@
 
 <p>With your OS X installer app in /Applications/, run:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>El<span class="se">\ </span>Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath <span class="s2">"/Applications/Install OS X El Capitan.app"</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>El<span class="se">\ </span>Capitan.app/Contents/Resources/createinstallmedia <span class="nt">--volume</span> /Volumes/Untitled <span class="nt">--applicationpath</span> <span class="s2">"/Applications/Install OS X El Capitan.app"</span>
  </code></pre></figure>
 
 <p>Make sure you substitute <code class="highlighter-rouge">/Volumes/Untitled</code> for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.</p>
@@ -91,7 +91,7 @@
 
 <p>Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type <code class="highlighter-rouge">diskutil list</code>, find your install drive. (Should have two partitions: <code class="highlighter-rouge">EFI</code> and <code class="highlighter-rouge">Install OS X El Capitan</code>).  Record the disk number (e.g. <code class="highlighter-rouge">/dev/disk8</code>). <code class="highlighter-rouge">cd</code> into a comfortable folder <code class="highlighter-rouge">~/Desktop</code>, and run:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> sudo dd <span class="k">if</span><span class="o">=</span>/dev/rdiskX <span class="nv">of</span><span class="o">=</span>clover-usb-disk.dd
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">sudo </span>dd <span class="k">if</span><span class="o">=</span>/dev/rdiskX <span class="nv">of</span><span class="o">=</span>clover-usb-disk.dd
  </code></pre></figure>
 
 <p>Making sure you substitute <code class="highlighter-rouge">X</code> for your disk number.</p>
@@ -103,15 +103,15 @@
 <p>Now, we absolutely have to be on the Linux machine. Either SSH in, or gain physical access.
 At the command line, use this command in your root VM folder:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> sudo qemu-img create -f qcow2 osx-disk0.qcow2 200G
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">sudo </span>qemu-img create <span class="nt">-f</span> qcow2 osx-disk0.qcow2 200G
  </code></pre></figure>
 
 <p>Substitute <code class="highlighter-rouge">200G</code> for how many gigs you want, for 500Gb use <code class="highlighter-rouge">500G</code>.</p>
 
 <p>Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo su -
-<span class="nb">echo </span>1 &gt; /sys/module/kvm/parameters/ignore_msrs</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>su -
+<span class="nb">echo </span>1 <span class="o">&gt;</span> /sys/module/kvm/parameters/ignore_msrs</code></pre></figure>
 
 <p>I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting <code class="highlighter-rouge">echo 1 &gt; /sys/module/kvm/parameters/ignore_msrs</code> into your <code class="highlighter-rouge">/etc/rc.local</code> file might not be a bad idea.</p>
 
@@ -119,30 +119,30 @@ At the command line, use this command in your root VM folder:</p>
 
 <p>Ok, brace yourself, this is my command to start my VM:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> sudo qemu-system-x86_64 <span class="se">\</span>
--m 8192 <span class="se">\</span>
--enable-kvm <span class="se">\</span>
--cpu core2duo,vendor<span class="o">=</span>GenuineIntel <span class="se">\</span>
--rtc <span class="nv">base</span><span class="o">=</span>localtime <span class="se">\</span>
--smbios <span class="nb">type</span><span class="o">=</span>2 <span class="se">\</span>
--machine q35,accel<span class="o">=</span>kvm,usb<span class="o">=</span>off,vmport<span class="o">=</span>off <span class="se">\</span>
--bios <span class="nv">$VMROOT$/</span>bios.bin <span class="se">\</span>
--smp 4,sockets<span class="o">=</span>1,cores<span class="o">=</span>2,threads<span class="o">=</span>2 <span class="se">\</span>
--device isa-applesmc,osk<span class="o">=</span><span class="s2">"</span><span class="nv">$OSK</span><span class="s2">$"</span> <span class="se">\</span>
--device i82801b11-bridge,id<span class="o">=</span>pci.1,bus<span class="o">=</span>pcie.0,addr<span class="o">=</span>0x1e <span class="se">\</span>
--device pci-bridge,chassis_nr<span class="o">=</span>2,id<span class="o">=</span>pci.2,bus<span class="o">=</span>pci.1,addr<span class="o">=</span>0x1 <span class="se">\</span>
--device ahci,id<span class="o">=</span>sata0,bus<span class="o">=</span>pci.2,addr<span class="o">=</span>0x5 <span class="se">\</span>
--drive <span class="nv">file</span><span class="o">=</span><span class="nv">$VMROOT$/</span>clover-usb-disk.dd,if<span class="o">=</span>none,id<span class="o">=</span>drive-sata0-0-2,format<span class="o">=</span>raw <span class="se">\</span>
--device ide-hd,bus<span class="o">=</span>ide.2,drive<span class="o">=</span>drive-sata0-0-2,id<span class="o">=</span>sata0-0-2,bootindex<span class="o">=</span>1 <span class="se">\</span>
--drive <span class="nv">file</span><span class="o">=</span><span class="nv">$VMROOT$/</span>osx-disk0.qcow2,if<span class="o">=</span>none,media<span class="o">=</span>disk,id<span class="o">=</span>drive-sata0-0-0,format<span class="o">=</span>qcow2 <span class="se">\</span>
--device ide-hd,bus<span class="o">=</span>sata0.0,drive<span class="o">=</span>drive-sata0-0-0,id<span class="o">=</span>sata0-0-0 <span class="se">\</span>
--usb <span class="se">\</span>
--device usb-mouse <span class="se">\</span>
--device usb-kbd <span class="se">\</span>
--full-screen <span class="se">\</span>
--vnc :1 <span class="se">\</span>
--netdev bridge,id<span class="o">=</span>br0,br<span class="o">=</span>br0 <span class="se">\</span>
--device virtio-net,netdev<span class="o">=</span>br0,vectors<span class="o">=</span>0,mac<span class="o">=</span>00:00:00:00:00:00</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">sudo </span>qemu-system-x86_64 <span class="se">\</span>
+<span class="nt">-m</span> 8192 <span class="se">\</span>
+<span class="nt">-enable-kvm</span> <span class="se">\</span>
+<span class="nt">-cpu</span> core2duo,vendor<span class="o">=</span>GenuineIntel <span class="se">\</span>
+<span class="nt">-rtc</span> <span class="nv">base</span><span class="o">=</span>localtime <span class="se">\</span>
+<span class="nt">-smbios</span> <span class="nb">type</span><span class="o">=</span>2 <span class="se">\</span>
+<span class="nt">-machine</span> q35,accel<span class="o">=</span>kvm,usb<span class="o">=</span>off,vmport<span class="o">=</span>off <span class="se">\</span>
+<span class="nt">-bios</span> <span class="nv">$VMROOT$/</span>bios.bin <span class="se">\</span>
+<span class="nt">-smp</span> 4,sockets<span class="o">=</span>1,cores<span class="o">=</span>2,threads<span class="o">=</span>2 <span class="se">\</span>
+<span class="nt">-device</span> isa-applesmc,osk<span class="o">=</span><span class="s2">"</span><span class="nv">$OSK</span><span class="s2">$"</span> <span class="se">\</span>
+<span class="nt">-device</span> i82801b11-bridge,id<span class="o">=</span>pci.1,bus<span class="o">=</span>pcie.0,addr<span class="o">=</span>0x1e <span class="se">\</span>
+<span class="nt">-device</span> pci-bridge,chassis_nr<span class="o">=</span>2,id<span class="o">=</span>pci.2,bus<span class="o">=</span>pci.1,addr<span class="o">=</span>0x1 <span class="se">\</span>
+<span class="nt">-device</span> ahci,id<span class="o">=</span>sata0,bus<span class="o">=</span>pci.2,addr<span class="o">=</span>0x5 <span class="se">\</span>
+<span class="nt">-drive</span> <span class="nv">file</span><span class="o">=</span><span class="nv">$VMROOT$/</span>clover-usb-disk.dd,if<span class="o">=</span>none,id<span class="o">=</span>drive-sata0-0-2,format<span class="o">=</span>raw <span class="se">\</span>
+<span class="nt">-device</span> ide-hd,bus<span class="o">=</span>ide.2,drive<span class="o">=</span>drive-sata0-0-2,id<span class="o">=</span>sata0-0-2,bootindex<span class="o">=</span>1 <span class="se">\</span>
+<span class="nt">-drive</span> <span class="nv">file</span><span class="o">=</span><span class="nv">$VMROOT$/</span>osx-disk0.qcow2,if<span class="o">=</span>none,media<span class="o">=</span>disk,id<span class="o">=</span>drive-sata0-0-0,format<span class="o">=</span>qcow2 <span class="se">\</span>
+<span class="nt">-device</span> ide-hd,bus<span class="o">=</span>sata0.0,drive<span class="o">=</span>drive-sata0-0-0,id<span class="o">=</span>sata0-0-0 <span class="se">\</span>
+<span class="nt">-usb</span> <span class="se">\</span>
+<span class="nt">-device</span> usb-mouse <span class="se">\</span>
+<span class="nt">-device</span> usb-kbd <span class="se">\</span>
+<span class="nt">-full-screen</span> <span class="se">\</span>
+<span class="nt">-vnc</span> :1 <span class="se">\</span>
+<span class="nt">-netdev</span> bridge,id<span class="o">=</span>br0,br<span class="o">=</span>br0 <span class="se">\</span>
+<span class="nt">-device</span> virtio-net,netdev<span class="o">=</span>br0,vectors<span class="o">=</span>0,mac<span class="o">=</span>00:00:00:00:00:00</code></pre></figure>
 
 <p>Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the <code class="highlighter-rouge">$OSK$</code> with your OSK string you saved earlier. Second, change the <code class="highlighter-rouge">$VMROOT$</code> occurrences to whatever your VM root is.</p>
 

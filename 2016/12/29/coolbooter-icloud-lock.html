@@ -74,7 +74,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 <p>First, list your devices or partitions in your SSH session with <code class="highlighter-rouge">ls /dev/</code>, I’d bet some serious money your iOS 6 partition is something like <code class="highlighter-rouge">/dev/disk0s1s3</code>. If a mounting point (e.g. <code class="highlighter-rouge">/mnt</code>) doesn’t exist, make one with <code class="highlighter-rouge">mkdir /mnt</code>. Finally, run:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> mount -t hfs /dev/disk0s1s3 /mnt</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> mount <span class="nt">-t</span> hfs /dev/disk0s1s3 /mnt</code></pre></figure>
 
 <p>Substitute <code class="highlighter-rouge">/dev/disk0s1s3</code> for your device.</p>
 
@@ -82,7 +82,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 <p>We’re almost DUNNN. Just run:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt/Applications <span class="o">&amp;&amp;</span> rm -rf Setup.app</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt/Applications <span class="o">&amp;&amp;</span> rm <span class="nt">-rf</span> Setup.app</code></pre></figure>
 
 <p>Boot back into your secondary OS and you should see a lockscreen instead of a setup screen</p>
 

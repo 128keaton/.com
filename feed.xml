@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-09-18T22:10:38+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Yahoo! Widgets in 2017</title><link href="/2017/09/08/yahoo-widgets-2017.html" rel="alternate" type="text/html" title="Yahoo! Widgets in 2017" /><published>2017-09-08T16:59:00+00:00</published><updated>2017-09-08T16:59:00+00:00</updated><id>/2017/09/08/yahoo-widgets-2017</id><content type="html" xml:base="/2017/09/08/yahoo-widgets-2017.html">&lt;p&gt;&lt;strong&gt;Stupid Alert&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-10-04T16:13:46+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Yahoo! Widgets in 2017</title><link href="/2017/09/08/yahoo-widgets-2017.html" rel="alternate" type="text/html" title="Yahoo! Widgets in 2017" /><published>2017-09-08T16:59:00+00:00</published><updated>2017-09-08T16:59:00+00:00</updated><id>/2017/09/08/yahoo-widgets-2017</id><content type="html" xml:base="/2017/09/08/yahoo-widgets-2017.html">&lt;p&gt;&lt;strong&gt;Stupid Alert&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Today I had a weird memory: a bouncy ball widget on my old Thinkpad back in 2006/7. I think I heard the funny sound the Yahoo! Widgets drawer made. Whatever. Anyway, it got me thinking. What happened to Yahoo! Widgets?&lt;/p&gt;
 
@@ -79,49 +79,42 @@ Keaton.&lt;/p&gt;</content><author><name></name></author><summary type="html">He
 Time to install all the dependancies.
 Open Terminal, then install pip/Python from Homebrew like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install python --with-brewed-openssl
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Next, install libusb, similar to how you installed Python, using Homebrew:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install libusb
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install libusb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Quit Terminal and then reopen Terminal.&lt;/p&gt;
 
 &lt;p&gt;Lastly, run this last command:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyusb
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyusb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;step-2&quot;&gt;Step 2:&lt;/h2&gt;
 
 &lt;p&gt;Navigate to a nice and safe directory in Terminal, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Desktop&lt;/code&gt;. There, clone the ipwndfu repository:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/axi0mX/ipwndfu &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;ipwndfu
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/axi0mX/ipwndfu &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;ipwndfu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;step-3&quot;&gt;Step 3:&lt;/h2&gt;
 
 &lt;p&gt;Thanks to some oddities in libusb for El Capitan and Sierra, it is necessary to patch the binary we use. &lt;strong&gt;Only do this on El Capitan and Sierra&lt;/strong&gt;. Thankfully, axi0mX has made it pretty easy for us.
 Verify that the version installed on your computer is the same one the patch is made for (1.0.21) by running this command:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If the little string of numbers and letters (the hash) matches &lt;code class=&quot;highlighter-rouge&quot;&gt;02da61201c8f67b723bca5fb44b35797d1021625&lt;/code&gt; then you should be fine.&lt;/p&gt;
 
 &lt;p&gt;Now, its time to patch. inside the ipwndfu directory, run&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now, just to make sure that the patch was applied successfully, rerun this command:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The hash should be: &lt;code class=&quot;highlighter-rouge&quot;&gt;f356ee6052cd520b46ca50333b937ff2efe4477b&lt;/code&gt;&lt;/p&gt;
 
@@ -190,9 +183,8 @@ Verify that the version installed on your computer is the same one the patch is 
 &lt;p&gt;All the tools above will walk you through the IPSW creation, just don’t stray too far from the default options and you should be fine. I opted for 3.1.2, but thats my personal choice. I also downloaded my firmware file from &lt;a href=&quot;http://ipsw.me&quot;&gt;ipsw.me&lt;/a&gt;. Also, since we’re on the topic of downloading firmwares, you also need to download the 4.3.5 IPSW for your 3G[s] &lt;strong&gt;and place it in your ipwndfu folder&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;From there (again in your ipwndfu folder) run:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;unzip -p iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu &amp;gt; n88ap-iBSS-4.3.5.img3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;unzip &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; n88ap-iBSS-4.3.5.img3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You should be all set to run ipwndfu here pretty soon.&lt;/p&gt;
 
@@ -216,17 +208,15 @@ Verify that the version installed on your computer is the same one the patch is 
 &lt;p&gt;Now, iTunes should popup complaining about a device in recovery.&lt;/p&gt;
 
 &lt;p&gt;Go back to Terminal, and inside of the ipwndfu tools directory, run:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python ./ipwndfu -p
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python ./ipwndfu &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;It should output something like this:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu -p
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt; based on limera1n exploit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;heap overflow&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; by geohot &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt;
 Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;pwned DFU Mode.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Great!&lt;/p&gt;
 
@@ -236,25 +226,22 @@ Device is now &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;pwned DFU Mode.
 
 &lt;p&gt;After your restore is complete, you should be at a black screen. Move the phone to the machine with the tools once again. Next, we’re running the same command as earlier to get it into a pwned DFU state:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python ./ipwndfu -p
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python ./ipwndfu &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;It should output something like this:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu -p
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt; based on limera1n exploit &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;heap overflow&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; by geohot &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt;
 Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;pwned DFU Mode.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now, run this:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python ./ipwndfu -x
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python ./ipwndfu &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Which, in turn, should provide an output like this:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu -x
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Yerba-Buena:ipwndfu keatonburleson&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ./ipwndfu &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt;
 Installing alloc8 exploit to NOR.
 Dumping NOR, part 1/8.
 Dumping NOR, part 2/8.
@@ -270,8 +257,7 @@ Waiting &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;iBSS to enter Recovery 
 Sending iBSS payload to flash NOR.
 Sending run command.
 If screen is not red, NOR was flashed successfully and device will reboot.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;The whole process should take about 10 seconds, and your screen on your iPhone should be green for a considerable amount of that time.&lt;/p&gt;
 
 &lt;p&gt;Thankfully, the developer provided some nice troubleshooting tips:&lt;/p&gt;
@@ -298,42 +284,36 @@ If screen is not red, NOR was flashed successfully and device will reboot.
 &lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/uhoh.jpg#stylized&quot; alt=&quot;&quot; /&gt;.&lt;/p&gt;
 
 &lt;p&gt;My friend on Slack ran into this. Not sure if it is an environment issue, as I did not have Python installed via Homebrew. I just had OS X’s default install. If you’re wondering if you are using Homebrew Python, run this command:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which python
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;which python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew update
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew update
 brew rm python
-brew install python --with-brewed-openssl
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+brew install python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Homebrew/legacy-homebrew/issues/14497&quot;&gt;this&lt;/a&gt; GitHub issue.&lt;/p&gt;
 
 &lt;p&gt;However, if you don’t want to really mess with Homebrew, or the proposed fix doesn’t work for you, here is another way.&lt;/p&gt;
 
 &lt;p&gt;First, remove the Homebrew Python install.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew rm python
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew rm python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Then, close Terminal and reopen.&lt;/p&gt;
 
 &lt;p&gt;In Terminal, navigate somewhere safe, like &lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -O https://bootstrap.pypa.io/get-pip.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://bootstrap.pypa.io/get-pip.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Next, run:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo python get-pip.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;python get-pip.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Make sure you’ve installed libusb, and then install pyusb like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyusb
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyusb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Hopefully that should get you running again.&lt;/p&gt;
 
@@ -376,18 +356,17 @@ brew install python --with-brewed-openssl
 
 &lt;p&gt;Here is an example of my .travis.yml file:&lt;/p&gt;
 
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ruby&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundler&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ruby&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundler&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
 &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundle install&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundle exec rake site:deploy --quiet&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;rvm&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundle exec rake site:deploy --quiet&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;rvm&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
 &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2.1.2&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/* remove this line */&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/* remove this line */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;For that &lt;code class=&quot;highlighter-rouge&quot;&gt;secure&lt;/code&gt; bit, remove that whole line, and run this command:
 &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install travis&lt;/code&gt;
@@ -398,8 +377,8 @@ and then:
 
 &lt;p&gt;Now, for an exerpt from the Rakefile:&lt;/p&gt;
 
-&lt;div class=&quot;language-rb highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:deploy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;div class=&quot;language-rb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:deploy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;# Detect pull request&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'TRAVIS_PULL_REQUEST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
             &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Pull request detected. Not proceeding with deploy.'&lt;/span&gt;
@@ -431,9 +410,8 @@ and then:
             &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Pushed updated branch &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;DESTINATION_BRANCH&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; to GitHub Pages&quot;&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;....&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;(the whole file is available &lt;a href=&quot;https://gist.github.com/128keaton/c7a2bb21ca225fe24b7b1beb4836ff4b&quot;&gt;here&lt;/a&gt;)&lt;/p&gt;
 
@@ -443,12 +421,11 @@ and then:
 
 &lt;p&gt;Here are the appropriate config.yml lines you’ll need to add:&lt;/p&gt;
 
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-github-username&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;repo-name&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;source-branch&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;site/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;your-github-username&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;repo-name&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;source-branch&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;site/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you set this up correctly, pushing to GitHub should result in a successful Travis build and deploy.&lt;/p&gt;
 
@@ -456,8 +433,8 @@ and then:
 
 &lt;p&gt;In my Rakefile, I have two helper tasks:&lt;/p&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:correct_posts&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:correct_posts&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
         &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Correcting blog posts'&lt;/span&gt;
         &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;entries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__dir__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/_posts/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;extname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.md'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;extname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.markdown'&lt;/span&gt;
@@ -475,9 +452,8 @@ and then:
         &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'All images have been upload and removed in '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IMAGES_DIR&lt;/span&gt;
         &lt;span class=&quot;no&quot;&gt;FileUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rm_rf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;IMAGES_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The first task checks all of my posts for any ‘stale’ image links, ones that were from olden blog times, or ones without my ‘CDN’ before them. It simply prepends them and moves on. My second task actually uploads my images and deletes them from the repo so they aren’t sucked up by git. It simply uses Net::SCP to SCP them to my remote server. Not bad, huh?  I imagine anyone with time and some experience can rework that task to support anything they want, I just use my own hosting since its easy!&lt;/p&gt;
 
@@ -485,7 +461,7 @@ and then:
 
 &lt;p&gt;Although I don’t have a fully portable Jekyll setup as I’d like, I still think this is a really robust way to keep your site built how you want it (with logs!) and keep your images where you want them. A fun thing I can do is SSH into my home machine (or mount the site folder with SSHFS) on the go, write a post, and run another helper method &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake site:upload&lt;/code&gt;, which is like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-rb highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:upload&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;div class=&quot;language-rb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:upload&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
       &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Uploading site'&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;sha&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`git log`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/[a-z0-9]{40}/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'git add --all .'&lt;/span&gt;
@@ -493,8 +469,7 @@ and then:
       &lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git push --quiet origin &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SOURCE_BRANCH&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
       &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Pushed updated branch &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SOURCE_BRANCH&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; to GitHub Pages&quot;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Couple this with some Atom Jekyll plugins, and it makes working with Jekyll a lot more enjoyable day-to-day.&lt;/p&gt;
 
@@ -718,7 +693,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;First, list your devices or partitions in your SSH session with &lt;code class=&quot;highlighter-rouge&quot;&gt;ls /dev/&lt;/code&gt;, I’d bet some serious money your iOS 6 partition is something like &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk0s1s3&lt;/code&gt;. If a mounting point (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/mnt&lt;/code&gt;) doesn’t exist, make one with &lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir /mnt&lt;/code&gt;. Finally, run:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; mount -t hfs /dev/disk0s1s3 /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; mount &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; hfs /dev/disk0s1s3 /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk0s1s3&lt;/code&gt; for your device.&lt;/p&gt;
 
@@ -726,7 +701,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;We’re almost DUNNN. Just run:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/Applications &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm -rf Setup.app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/Applications &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; Setup.app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Boot back into your secondary OS and you should see a lockscreen instead of a setup screen&lt;/p&gt;
 
@@ -773,7 +748,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;With your OS X installer app in /Applications/, run:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;OS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;X&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;El&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath &lt;span class=&quot;s2&quot;&gt;&quot;/Applications/Install OS X El Capitan.app&quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;OS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;X&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;El&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Capitan.app/Contents/Resources/createinstallmedia &lt;span class=&quot;nt&quot;&gt;--volume&lt;/span&gt; /Volumes/Untitled &lt;span class=&quot;nt&quot;&gt;--applicationpath&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/Applications/Install OS X El Capitan.app&quot;&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Make sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/Untitled&lt;/code&gt; for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.&lt;/p&gt;
@@ -800,7 +775,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type &lt;code class=&quot;highlighter-rouge&quot;&gt;diskutil list&lt;/code&gt;, find your install drive. (Should have two partitions: &lt;code class=&quot;highlighter-rouge&quot;&gt;EFI&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Install OS X El Capitan&lt;/code&gt;).  Record the disk number (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk8&lt;/code&gt;). &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into a comfortable folder &lt;code class=&quot;highlighter-rouge&quot;&gt;~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; sudo dd &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/rdiskX &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clover-usb-disk.dd
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dd &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/rdiskX &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clover-usb-disk.dd
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Making sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; for your disk number.&lt;/p&gt;
@@ -812,15 +787,15 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 &lt;p&gt;Now, we absolutely have to be on the Linux machine. Either SSH in, or gain physical access.
 At the command line, use this command in your root VM folder:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; sudo qemu-img create -f qcow2 osx-disk0.qcow2 200G
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;qemu-img create &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; qcow2 osx-disk0.qcow2 200G
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;200G&lt;/code&gt; for how many gigs you want, for 500Gb use &lt;code class=&quot;highlighter-rouge&quot;&gt;500G&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo su -
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &amp;gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;su -
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting &lt;code class=&quot;highlighter-rouge&quot;&gt;echo 1 &amp;gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt; into your &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/rc.local&lt;/code&gt; file might not be a bad idea.&lt;/p&gt;
 
@@ -828,30 +803,30 @@ At the command line, use this command in your root VM folder:&lt;/p&gt;
 
 &lt;p&gt;Ok, brace yourself, this is my command to start my VM:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; sudo qemu-system-x86_64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--m 8192 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--enable-kvm &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--cpu core2duo,vendor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;GenuineIntel &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--rtc &lt;span class=&quot;nv&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;localtime &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--smbios &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--machine q35,accel&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;kvm,usb&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off,vmport&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--bios &lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;bios.bin &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--smp 4,sockets&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1,cores&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,threads&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device isa-applesmc,osk&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$OSK&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;$&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device i82801b11-bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pcie.0,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1e &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device pci-bridge,chassis_nr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device ahci,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x5 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--drive &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;clover-usb-disk.dd,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;raw &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ide.2,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-2,bootindex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--drive &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;osx-disk0.qcow2,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,media&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;disk,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;qcow2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0.0,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--usb &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device usb-mouse &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device usb-kbd &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--full-screen &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--vnc :1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--netdev bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,br&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--device virtio-net,netdev&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,vectors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,mac&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;00:00:00:00:00:00&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;qemu-system-x86_64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; 8192 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-enable-kvm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-cpu&lt;/span&gt; core2duo,vendor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;GenuineIntel &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-rtc&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;localtime &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-smbios&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-machine&lt;/span&gt; q35,accel&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;kvm,usb&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off,vmport&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-bios&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;bios.bin &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-smp&lt;/span&gt; 4,sockets&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1,cores&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,threads&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; isa-applesmc,osk&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$OSK&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;$&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; i82801b11-bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pcie.0,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1e &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; pci-bridge,chassis_nr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ahci,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x5 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-drive&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;clover-usb-disk.dd,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;raw &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ide.2,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-2,bootindex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-drive&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;osx-disk0.qcow2,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,media&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;disk,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;qcow2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0.0,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-usb&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; usb-mouse &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; usb-kbd &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-full-screen&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-vnc&lt;/span&gt; :1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-netdev&lt;/span&gt; bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,br&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; virtio-net,netdev&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,vectors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,mac&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;00:00:00:00:00:00&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$OSK$&lt;/code&gt; with your OSK string you saved earlier. Second, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$VMROOT$&lt;/code&gt; occurrences to whatever your VM root is.&lt;/p&gt;
 

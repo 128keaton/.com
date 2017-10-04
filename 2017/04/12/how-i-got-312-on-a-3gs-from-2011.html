@@ -56,49 +56,42 @@
 Time to install all the dependancies.
 Open Terminal, then install pip/Python from Homebrew like this:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install python --with-brewed-openssl
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install python <span class="nt">--with-brewed-openssl</span>
+</code></pre></div></div>
 
 <p>Next, install libusb, similar to how you installed Python, using Homebrew:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew install libusb
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install libusb
+</code></pre></div></div>
 
 <p>Quit Terminal and then reopen Terminal.</p>
 
 <p>Lastly, run this last command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install pyusb
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyusb
+</code></pre></div></div>
 
 <h2 id="step-2">Step 2:</h2>
 
 <p>Navigate to a nice and safe directory in Terminal, e.g. <code class="highlighter-rouge">cd ~/Desktop</code>. There, clone the ipwndfu repository:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/axi0mX/ipwndfu <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ipwndfu
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/axi0mX/ipwndfu <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ipwndfu
+</code></pre></div></div>
 
 <h2 id="step-3">Step 3:</h2>
 
 <p>Thanks to some oddities in libusb for El Capitan and Sierra, it is necessary to patch the binary we use. <strong>Only do this on El Capitan and Sierra</strong>. Thankfully, axi0mX has made it pretty easy for us.
 Verify that the version installed on your computer is the same one the patch is made for (1.0.21) by running this command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
+</code></pre></div></div>
 
 <p>If the little string of numbers and letters (the hash) matches <code class="highlighter-rouge">02da61201c8f67b723bca5fb44b35797d1021625</code> then you should be fine.</p>
 
 <p>Now, its time to patch. inside the ipwndfu directory, run</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
+</code></pre></div></div>
 
 <p>Now, just to make sure that the patch was applied successfully, rerun this command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
+</code></pre></div></div>
 
 <p>The hash should be: <code class="highlighter-rouge">f356ee6052cd520b46ca50333b937ff2efe4477b</code></p>
 
@@ -167,9 +160,8 @@ Verify that the version installed on your computer is the same one the patch is 
 <p>All the tools above will walk you through the IPSW creation, just don’t stray too far from the default options and you should be fine. I opted for 3.1.2, but thats my personal choice. I also downloaded my firmware file from <a href="http://ipsw.me">ipsw.me</a>. Also, since we’re on the topic of downloading firmwares, you also need to download the 4.3.5 IPSW for your 3G[s] <strong>and place it in your ipwndfu folder</strong></p>
 
 <p>From there (again in your ipwndfu folder) run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>unzip -p iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu &gt; n88ap-iBSS-4.3.5.img3
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip <span class="nt">-p</span> iPhone2,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBSS.n88ap.RELEASE.dfu <span class="o">&gt;</span> n88ap-iBSS-4.3.5.img3
+</code></pre></div></div>
 
 <p>You should be all set to run ipwndfu here pretty soon.</p>
 
@@ -193,17 +185,15 @@ Verify that the version installed on your computer is the same one the patch is 
 <p>Now, iTunes should popup complaining about a device in recovery.</p>
 
 <p>Go back to Terminal, and inside of the ipwndfu tools directory, run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -p
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python ./ipwndfu <span class="nt">-p</span>
+</code></pre></div></div>
 
 <p>It should output something like this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -p
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu <span class="nt">-p</span>
 <span class="k">***</span> based on limera1n exploit <span class="o">(</span>heap overflow<span class="o">)</span> by geohot <span class="k">***</span>
 Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now <span class="k">in </span>pwned DFU Mode.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Great!</p>
 
@@ -213,25 +203,22 @@ Device is now <span class="k">in </span>pwned DFU Mode.
 
 <p>After your restore is complete, you should be at a black screen. Move the phone to the machine with the tools once again. Next, we’re running the same command as earlier to get it into a pwned DFU state:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -p
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python ./ipwndfu <span class="nt">-p</span>
+</code></pre></div></div>
 
 <p>It should output something like this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -p
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu <span class="nt">-p</span>
 <span class="k">***</span> based on limera1n exploit <span class="o">(</span>heap overflow<span class="o">)</span> by geohot <span class="k">***</span>
 Found: CPID:8920 CPRV:15 CPFM:03 SCEP:03 BDID:00 ECID:XXXXXXXXXXXXXXXX SRTG:[iBoot-359.3.2]
 Device is now <span class="k">in </span>pwned DFU Mode.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now, run this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python ./ipwndfu -x
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python ./ipwndfu <span class="nt">-x</span>
+</code></pre></div></div>
 
 <p>Which, in turn, should provide an output like this:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu -x
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Yerba-Buena:ipwndfu keatonburleson<span class="nv">$ </span>python ./ipwndfu <span class="nt">-x</span>
 Installing alloc8 exploit to NOR.
 Dumping NOR, part 1/8.
 Dumping NOR, part 2/8.
@@ -247,8 +234,7 @@ Waiting <span class="k">for </span>iBSS to enter Recovery Mode.
 Sending iBSS payload to flash NOR.
 Sending run command.
 If screen is not red, NOR was flashed successfully and device will reboot.
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>The whole process should take about 10 seconds, and your screen on your iPhone should be green for a considerable amount of that time.</p>
 
 <p>Thankfully, the developer provided some nice troubleshooting tips:</p>
@@ -275,42 +261,36 @@ If screen is not red, NOR was flashed successfully and device will reboot.
 <p><img src="http://images.128keaton.com/uhoh.jpg#stylized" alt="" />.</p>
 
 <p>My friend on Slack ran into this. Not sure if it is an environment issue, as I did not have Python installed via Homebrew. I just had OS X’s default install. If you’re wondering if you are using Homebrew Python, run this command:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>which python
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which python
+</code></pre></div></div>
 
 <p>I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew update
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew update
 brew rm python
-brew install python --with-brewed-openssl
-</code></pre>
-</div>
+brew install python <span class="nt">--with-brewed-openssl</span>
+</code></pre></div></div>
 
 <p>Thanks to <a href="https://github.com/Homebrew/legacy-homebrew/issues/14497">this</a> GitHub issue.</p>
 
 <p>However, if you don’t want to really mess with Homebrew, or the proposed fix doesn’t work for you, here is another way.</p>
 
 <p>First, remove the Homebrew Python install.</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>brew rm python
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew rm python
+</code></pre></div></div>
 <p>Then, close Terminal and reopen.</p>
 
 <p>In Terminal, navigate somewhere safe, like <code class="highlighter-rouge">cd ~/Desktop</code>, and run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>curl -O https://bootstrap.pypa.io/get-pip.py
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-O</span> https://bootstrap.pypa.io/get-pip.py
+</code></pre></div></div>
 
 <p>Next, run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo python get-pip.py
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>python get-pip.py
+</code></pre></div></div>
 <p>Make sure you’ve installed libusb, and then install pyusb like this:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install pyusb
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyusb
+</code></pre></div></div>
 
 <p>Hopefully that should get you running again.</p>
 
