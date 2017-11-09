@@ -1,0 +1,494 @@
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>payloads</key>
+	<array>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.Activate</string>
+			<key>Name</key>
+			<string>Activate 1.0.2 - 1.1.4</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/00Activate.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/Activate102To114.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload activates iPhone firmwares 1.0.2 to 1.1.4. The lockdownd is patched (fake factory activation). This payload should work on iPhone and iPod Touch.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.DevTeamWiFiFix</string>
+			<key>Name</key>
+			<string>DevTeam Gray WiFi Fix</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.0</string>
+			<key>Script</key>
+			<string>http://iliberty.insideiphone.com/iLiberty/Payloads/00DevTeamWiFiFix.sh</string>
+			<key>Pack</key>
+			<string>http://iliberty.insideiphone.com/iLiberty/Payloads/DevTeamWiFiFix.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This WiFi fix is released by DevTeam, it's designed to solve the GRAY WIFI issue only, and your phone must be fakeblanked. Don't try this payload if your phone doesn't match the above requirements.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.EraseBB</string>
+			<key>Name</key>
+			<string>Erase baseband (BL3.9 only)</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/00EraseBL39Baseband.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/EraseBL39Baseband.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload erases the baseband of an iPhone with bootloader 3.9.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.FixBB</string>
+			<key>Name</key>
+			<string>Fix for No Signal, No Wifi, No Bluetooth</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/00FixBaseband.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/FixBaseband.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload tries to fix an iPhone with no signal, no wifi, and no bluetooth. It does this through forcing an unlock on the baseband. For bootloader 4.6, it will downgrade bootloader to 3.9FakeBlank. This payload is for baseband 04.04.05_G.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.FlashBBTo040113</string>
+			<key>Name</key>
+			<string>Reflash baseband to version 04.01.13_G (BL3.9 only)</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/01BL39BasebandTo040113.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BL39BasebandTo040113.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload reflashes baseband (from up to 04.04.05_G) to version 04.01.13_G. This payload requires bootloader 3.9.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.FlashBBTo040213</string>
+			<key>Name</key>
+			<string>Reflash baseband to version 04.02.13_G (BL3.9 only)</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/01BL39BasebandTo040213.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BL39BasebandTo040213.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload reflashes baseband (from up to 04.04.05_G) to version 04.02.13_G. This payload requires bootloader 3.9.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.FlashBBTo040313</string>
+			<key>Name</key>
+			<string>Reflash baseband to version 04.03.13_G (BL3.9 only)</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/01BL39BasebandTo040313.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BL39BasebandTo040313.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload reflashes baseband (from up to 04.04.05_G) to version 04.03.13_G. This payload requires bootloader 3.9.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.FlashBBTo040405</string>
+			<key>Name</key>
+			<string>Reflash baseband to version 04.04.05_G (BL3.9 only)</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/01BL39BasebandTo040405.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BL39BasebandTo040405.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload reflashes baseband (from up to 04.04.05_G) to version 04.04.05_G. This payload requires bootloader 3.9.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.UpgradeBL</string>
+			<key>Name</key>
+			<string>Upgrade bootloader from 3.9FB to 4.6 (stock)</string>
+			<key>Author</key>
+			<string>AViegas</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/01BL39FBTo46.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BL39FBTo46.zip</string>
+			<key>URL</key>
+			<string>http://ipluspwns.com/</string>
+			<key>Desc</key>
+			<string>This payload upgrades your bootloader from version 3.9FakeBlank (a patched 3.9 bootloader by DevTeam) to the stock 4.6 one.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.DowngradeBL</string>
+			<key>Name</key>
+			<string>Downgrade bootloader from 4.6 to 3.9FB</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/01BL46To39FB.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BL46To39FB.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload downgrades your bootloader from version 4.6 to 3.9FakeBlank (a patched 3.9 bootloader released by DevTeam).</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.Unlock</string>
+			<key>Name</key>
+			<string>Unlock 03.14.08_G - 04.04.05_G</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/02Unlock.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/AnySIM_Unlock_BL39.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload works on both bootloader 3.9 and 4.6, for bootloader 4.6 it will downgrade baseband to 04.02.13_G after unlock.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.AppSupport</string>
+			<key>Name</key>
+			<string>AppSupport Patch for 1.1.2 - 1.1.4</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/10AppSupportPatch.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/AppSupportPatch.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>AppSupport patch for firmware 1.1.2 to 1.1.4.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.IPSFScript</string>
+			<key>Name</key>
+			<string>IPSF/GeoIPSF Startup Script</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/10IPSFScript.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/IPSFScript.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>Send 'AT+CLCK="PN",0,"00000000" to baseband on every reboot. This is for IPSF/GeoIPSF only. Use it on a locked or non-IPSF unlocked iPhone will render the phone locked permanantly!</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.IL_MeCCAPatch</string>
+			<key>Name</key>
+			<string>MeCCA Patch for 1.1.1 - 1.1.2</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/10MeCCAPatch.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/MeCCAPatch.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>Allow customized ringtones, check the URL for details</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.MobileSafariPatch</string>
+			<key>Name</key>
+			<string>MobileSafari patch</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/10MobileSafariPatch.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/MobileSafariPatch.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>Enable MobileSafari to open local file. For 1.1.3/1.1.4.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.YouTubeFix</string>
+			<key>Name</key>
+			<string>YouTube Fix</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/10YouTubeFix.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/YouTubeFix.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>Fix YouTube certificate issue</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.RelocateFontsRingtones</string>
+			<key>Name</key>
+			<string>Relocate Fonts and Ringtones</string>
+			<key>Author</key>
+			<string>AViegas</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/19RelocateFontsRingtones.sh</string>
+			<key>Pack</key>
+			<string></string>
+			<key>URL</key>
+			<string>http://ipluspwns.com/</string>
+			<key>Desc</key>
+			<string>Move fonts and ringtones (iPhone only) from system partition to user partition, this will save a huge amount of space in system partition allowing for more 3rd party applications.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.InternationalSupport</string>
+			<key>Name</key>
+			<string>International Support for iPhone 1.1.4</string>
+			<key>Author</key>
+			<string>AViegas</string>
+			<key>Version</key>
+			<string>1.0</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/20International114.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/International114.zip</string>
+			<key>URL</key>
+			<string>http://ipluspwns.com/</string>
+			<key>Desc</key>
+			<string>Files needed for the iPhone to work properly in (almost) all countries where there is not support in the code. This fixes issues with the Phone (MobilePhone.app) and SMS (MobileSMS), as well as add proper CallerID to Contacts matching rules. This version is for the 1.1.4 firmware only.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.Cydia</string>
+			<key>Name</key>
+			<string>Cydia</string>
+			<key>Author</key>
+			<string>AViegas</string>
+			<key>Version</key>
+			<string>1.2</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/87Cydia.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/Cydia.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>Install the advanced Cydia BSD Subsystem to make the most of your iPhone or iPod Touch</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.Installer</string>
+			<key>Name</key>
+			<string>Installer</string>
+			<key>Author</key>
+			<string>AViegas</string>
+			<key>Version</key>
+			<string>1.2</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/88Installer.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/Installer.zip</string>
+			<key>URL</key>
+			<string>http://ipluspwns.com/</string>
+			<key>Desc</key>
+			<string>The de-facto 3rd party software installer</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.BSD_Subsystem</string>
+			<key>Name</key>
+			<string>BSD Subsystem</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/89BSD_Subsystem.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BSD_Subsystem.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>The basic Unix environment ported from BSD system. Some of the utilities may not work on iPhone.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.OpenSSH_BSD_Cydia</string>
+			<key>Name</key>
+			<string>OpenSSH</string>
+			<key>Author</key>
+			<string>AViegas</string>
+			<key>Version</key>
+			<string>1.2</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/90OpenSSH_BSD_Cydia.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/OpenSSH_BSD_Cydia.zip</string>
+			<key>URL</key>
+			<string>http://ipluspwns.com/</string>
+			<key>Desc</key>
+			<string>OpenSSH Package for BSD and Cydia.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.googlecode.mobileterminal.Term-vt100</string>
+			<key>Name</key>
+			<string>Term-vt100</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/91Term-vt100.sh</string>
+			<key>Pack</key>
+			<string>http://www.macminicolo.net/conceited/iphone/zips/Term-vt100.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>A terminal emulation utility</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.trejan.iphone.bbinfo</string>
+			<key>Name</key>
+			<string>BBInfo (Baseband Information)</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/99BBInfo.sh</string>
+			<key>Pack</key>
+			<string>http://www.trejan.com/projects/ipod/bbinfo-1.1.zip</string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>Displays baseband information (baseband version, bootloader version, etc)</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>com.zjlotto.iLiberty.PermissionFix</string>
+			<key>Name</key>
+			<string>Fix Mobile Folder Permission</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.1</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/99PermissionFix.sh</string>
+			<key>Pack</key>
+			<string></string>
+			<key>URL</key>
+			<string>http://george.insideiphone.com/</string>
+			<key>Desc</key>
+			<string>This payload fixes the folder permission for mobile account. It does this by "chown -R mobile:mobile /var/mobile".</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>org.freecoder.iphone.iCosta</string>
+			<key>Name</key>
+			<string>iCosta</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.0</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/91iCosta.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/iCosta113.zip</string>
+			<key>URL</key>
+			<string>http://www.freecoder.org/</string>
+			<key>Desc</key>
+			<string>Famous Chinese Pinyin IME for firmware 1.1.3 and 1.1.4.</string>
+		</dict>
+		<dict>
+			<key>Id</key>
+			<string>org.iphone-dev.bootneuter</string>
+			<key>Name</key>
+			<string>BootNeuter</string>
+			<key>Author</key>
+			<string>George Zhu</string>
+			<key>Version</key>
+			<string>1.0</string>
+			<key>Script</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/11BootNeuter.sh</string>
+			<key>Pack</key>
+			<string>http://iLiberty.InsideIphone.com/Payloads2/BootNeuter.zip</string>
+			<key>URL</key>
+			<string>http://www.freecoder.org/</string>
+			<key>Desc</key>
+			<string>Bootloader upgrader/downgrader</string>
+		</dict>
+	</array>
+</dict>
+</plist>
