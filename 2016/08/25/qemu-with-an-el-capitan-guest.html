@@ -73,7 +73,7 @@
 
 <p>After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for <code class="highlighter-rouge">OsxAptioFixDrv-64</code> and <code class="highlighter-rouge">DataHubDxe-64</code>, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download <a href="https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi">this</a> file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> cp ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">cp</span> ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
  </code></pre></figure>
 
 <div class="notice--info">
@@ -91,7 +91,7 @@
 
 <p>Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type <code class="highlighter-rouge">diskutil list</code>, find your install drive. (Should have two partitions: <code class="highlighter-rouge">EFI</code> and <code class="highlighter-rouge">Install OS X El Capitan</code>).  Record the disk number (e.g. <code class="highlighter-rouge">/dev/disk8</code>). <code class="highlighter-rouge">cd</code> into a comfortable folder <code class="highlighter-rouge">~/Desktop</code>, and run:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">sudo </span>dd <span class="k">if</span><span class="o">=</span>/dev/rdiskX <span class="nv">of</span><span class="o">=</span>clover-usb-disk.dd
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>/dev/rdiskX <span class="nv">of</span><span class="o">=</span>clover-usb-disk.dd
  </code></pre></figure>
 
 <p>Making sure you substitute <code class="highlighter-rouge">X</code> for your disk number.</p>

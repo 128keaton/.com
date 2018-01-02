@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-12-23T18:33:04+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Yahoo! Widgets in 2017</title><link href="/2017/09/08/yahoo-widgets-2017.html" rel="alternate" type="text/html" title="Yahoo! Widgets in 2017" /><published>2017-09-08T16:59:00+00:00</published><updated>2017-09-08T16:59:00+00:00</updated><id>/2017/09/08/yahoo-widgets-2017</id><content type="html" xml:base="/2017/09/08/yahoo-widgets-2017.html">&lt;p&gt;&lt;strong&gt;Stupid Alert&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-01-02T22:23:19+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Yahoo! Widgets in 2017</title><link href="/2017/09/08/yahoo-widgets-2017.html" rel="alternate" type="text/html" title="Yahoo! Widgets in 2017" /><published>2017-09-08T16:59:00+00:00</published><updated>2017-09-08T16:59:00+00:00</updated><id>/2017/09/08/yahoo-widgets-2017</id><content type="html" xml:base="/2017/09/08/yahoo-widgets-2017.html">&lt;p&gt;&lt;strong&gt;Stupid Alert&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Today I had a weird memory: a bouncy ball widget on my old Thinkpad back in 2006/7. I think I heard the funny sound the Yahoo! Widgets drawer made. Whatever. Anyway, it got me thinking. What happened to Yahoo! Widgets?&lt;/p&gt;
 
@@ -79,17 +79,17 @@ Keaton.&lt;/p&gt;</content><author><name></name></author><summary type="html">He
 Time to install all the dependancies.
 Open Terminal, then install pip/Python from Homebrew like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Next, install libusb, similar to how you installed Python, using Homebrew:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install libusb
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libusb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Quit Terminal and then reopen Terminal.&lt;/p&gt;
 
 &lt;p&gt;Lastly, run this last command:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyusb
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pyusb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;step-2&quot;&gt;Step 2:&lt;/h2&gt;
@@ -290,8 +290,8 @@ If screen is not red, NOR was flashed successfully and device will reboot.
 &lt;p&gt;I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew update
-brew rm python
-brew install python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/span&gt;
+brew &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;python
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Homebrew/legacy-homebrew/issues/14497&quot;&gt;this&lt;/a&gt; GitHub issue.&lt;/p&gt;
@@ -299,7 +299,7 @@ brew install python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/s
 &lt;p&gt;However, if you don’t want to really mess with Homebrew, or the proposed fix doesn’t work for you, here is another way.&lt;/p&gt;
 
 &lt;p&gt;First, remove the Homebrew Python install.&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew rm python
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;python
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Then, close Terminal and reopen.&lt;/p&gt;
 
@@ -312,7 +312,7 @@ brew install python &lt;span class=&quot;nt&quot;&gt;--with-brewed-openssl&lt;/s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Make sure you’ve installed libusb, and then install pyusb like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyusb
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pyusb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Hopefully that should get you running again.&lt;/p&gt;
@@ -701,7 +701,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;We’re almost DUNNN. Just run:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/Applications &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; Setup.app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/Applications &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; Setup.app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Boot back into your secondary OS and you should see a lockscreen instead of a setup screen&lt;/p&gt;
 
@@ -757,7 +757,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for &lt;code class=&quot;highlighter-rouge&quot;&gt;OsxAptioFixDrv-64&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DataHubDxe-64&lt;/code&gt;, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download &lt;a href=&quot;https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi&quot;&gt;this&lt;/a&gt; file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; cp ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div class=&quot;notice--info&quot;&gt;
@@ -775,7 +775,7 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type &lt;code class=&quot;highlighter-rouge&quot;&gt;diskutil list&lt;/code&gt;, find your install drive. (Should have two partitions: &lt;code class=&quot;highlighter-rouge&quot;&gt;EFI&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Install OS X El Capitan&lt;/code&gt;).  Record the disk number (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk8&lt;/code&gt;). &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into a comfortable folder &lt;code class=&quot;highlighter-rouge&quot;&gt;~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dd &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/rdiskX &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clover-usb-disk.dd
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo dd &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/rdiskX &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clover-usb-disk.dd
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Making sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; for your disk number.&lt;/p&gt;

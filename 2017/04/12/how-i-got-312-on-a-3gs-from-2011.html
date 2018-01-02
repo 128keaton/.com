@@ -56,17 +56,17 @@
 Time to install all the dependancies.
 Open Terminal, then install pip/Python from Homebrew like this:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install python <span class="nt">--with-brewed-openssl</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>python <span class="nt">--with-brewed-openssl</span>
 </code></pre></div></div>
 
 <p>Next, install libusb, similar to how you installed Python, using Homebrew:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install libusb
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>libusb
 </code></pre></div></div>
 
 <p>Quit Terminal and then reopen Terminal.</p>
 
 <p>Lastly, run this last command:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyusb
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>pyusb
 </code></pre></div></div>
 
 <h2 id="step-2">Step 2:</h2>
@@ -267,8 +267,8 @@ If screen is not red, NOR was flashed successfully and device will reboot.
 <p>I added this to the guide, but I think it has something to do with the lack of OpenSSL in the default Python package. Running this in Terminal should fix that:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew update
-brew rm python
-brew install python <span class="nt">--with-brewed-openssl</span>
+brew <span class="nb">rm </span>python
+brew <span class="nb">install </span>python <span class="nt">--with-brewed-openssl</span>
 </code></pre></div></div>
 
 <p>Thanks to <a href="https://github.com/Homebrew/legacy-homebrew/issues/14497">this</a> GitHub issue.</p>
@@ -276,7 +276,7 @@ brew install python <span class="nt">--with-brewed-openssl</span>
 <p>However, if you don’t want to really mess with Homebrew, or the proposed fix doesn’t work for you, here is another way.</p>
 
 <p>First, remove the Homebrew Python install.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew rm python
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">rm </span>python
 </code></pre></div></div>
 <p>Then, close Terminal and reopen.</p>
 
@@ -289,7 +289,7 @@ brew install python <span class="nt">--with-brewed-openssl</span>
 </code></pre></div></div>
 <p>Make sure you’ve installed libusb, and then install pyusb like this:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyusb
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>pyusb
 </code></pre></div></div>
 
 <p>Hopefully that should get you running again.</p>

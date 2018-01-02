@@ -14,11 +14,10 @@ body {
   font-kerning: normal;
   padding: 0;
   margin: 0;
-  background: #f3f3f3;
+  background: #fdfdfd;
   overflow-x: hidden !important;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
+  -webkit-overflow-scrolling: touch; }
 
 .clear {
   clear: both; }
@@ -1006,7 +1005,7 @@ footer#post-footer a.notice {
   word-wrap: break-word; }
 
 .post-preview {
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: 1px solid #fdfdfd;
   width: 100%;
   padding: 10px;
   box-sizing: border-box; }
