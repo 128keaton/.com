@@ -2,7 +2,10 @@
 @import url(main.css);
 body {
   font: 400 16px/1.5 "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
-  color: #000000;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  color: #111;
+  background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -14,10 +17,8 @@ body {
   background: #f3f3f3;
   overflow-x: hidden !important;
   overflow-y: scroll;
-  /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+}
 
 .clear {
   clear: both; }
