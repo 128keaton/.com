@@ -1,0 +1,13 @@
+---
+title: Odometer
+permalink: "/odo/"
+---
+<link href="https://fonts.googleapis.com/css?family=Overpass+Mono:600" rel="stylesheet"> 
+{% include head.html %}
+<div class="odometer">
+    <script type="text/javascript">
+        var mileage = "249010";
+        for (var i = 0; i < mileage.length; i++)
+           document.write("<span class=\"" + i + "\">" + mileage[i] + "</span>");
+     </script>
+</div>

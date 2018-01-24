@@ -1,0 +1,25 @@
+.odometer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    background: #282831;  /* fallback for old browsers */
+    span{
+        font-family: 'Overpass Mono', monospace;
+        color: rgb(240, 227, 207);
+        font-size: 35em;
+        background-color: rgb(24, 23, 23);
+        -moz-box-shadow:    inset 0 0 40px #000000;
+        -webkit-box-shadow: inset 0 0 40px #000000;
+        box-shadow:         inset 0 0 40px #000000;
+        margin: 10px;
+        text-align: center;
+        height: 1.3em;
+    }   
+     
+}
