@@ -1252,7 +1252,7 @@ img[src$='#stylized-small'] {
   .odometer span {
     font-family: 'Overpass Mono', monospace;
     color: #f0e3cf;
-    font-size: 35em;
+    font-size: 24vw;
     background-color: #181717;
     -moz-box-shadow: inset 0 0 40px #000000;
     -webkit-box-shadow: inset 0 0 40px #000000;
