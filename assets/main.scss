@@ -10,7 +10,7 @@ $small-font-size : $base-font-size * 0.875;
 $base-line-height: 1.5;
 $spacing-unit : 30px;
 $text-color : #000000;
-$background-color: #fdfdfd;
+$background-color: #f3f1f1;
 $brand-color : #ebdd3a;
 $grey-color : #828282;
 $grey-color-light: lighten($grey-color,
@@ -34,7 +34,7 @@ body {
   font-feature-settings: normal;
   font-kerning: auto;
   color: #111;
-  background-color: #fdfdfd;
+  background-color: #f3f1f1;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
