@@ -83,8 +83,6 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   color: #ffffff; }
-  .business-card .mobile {
-    display: none; }
   .business-card p.terminal {
     background-color: #092732;
     padding: 1rem;
@@ -92,6 +90,9 @@ body {
     font-family: 'Overpass Mono', monospace;
     margin: 0 auto;
     font-size: 14px; }
+    @media screen and (max-width: 600px) {
+      .business-card p.terminal {
+        width: 85%; } }
     .business-card p.terminal i.blink {
       -webkit-animation: fadingAnimation 1s infinite;
       -moz-animation: fadingAnimation 1s infinite;
@@ -116,16 +117,11 @@ body {
     .business-card {
       padding: 8px;
       padding-bottom: 55px; }
-      .business-card .mobile {
-        display: table-cell; }
-        .business-card .mobile .pic {
-          display: block; }
-          .business-card .mobile .pic img {
-            margin-left: 0; }
-      .business-card .pic {
-        display: none; }
+      .business-card .pic img {
+        width: 70%;
+        margin-left: 0; }
       .business-card .content h1 {
-        font-size: 45px;
+        font-size: 35px;
         text-align: center; }
       .business-card table a {
         font-size: 18px; } }
@@ -148,6 +144,9 @@ body {
     text-decoration: none;
     font-size: 25px;
     text-align: center; }
+    @media screen and (max-width: 600px) {
+      .links td {
+        display: inline-block; } }
   .links td:after {
     content: "/"; }
   .links td:last-child:after {
@@ -181,17 +180,20 @@ body {
     font-weight: 100; }
   @media screen and (max-width: 600px) {
     .resume {
-      padding: 0;
+      padding: 1em;
       margin: 0 auto;
       margin-top: 10px;
-      width: 95%; }
+      width: 100%; }
       .resume h1 {
         font-size: 35px; }
+      .resume h4 {
+        margin-bottom: 0; }
       .resume td {
         display: block; }
       .resume tr {
         display: block;
-        border-bottom: 2px solid #000000; }
+        border-bottom: 2px solid #000000;
+        padding: 10px; }
         .resume tr td:nth-child(1) h4 {
           font-size: 20px; }
       .resume tr:last-child {
@@ -233,6 +235,8 @@ body {
   @media screen and (max-width: 600px) {
     .apps-wrapper {
       width: 100%; }
+      .apps-wrapper .apps {
+        padding-top: 30px; }
       .apps-wrapper h1 {
         font-size: 35px;
         margin-left: 10px; }
@@ -240,7 +244,9 @@ body {
         width: 100%;
         padding: 0; }
       .apps-wrapper td {
-        vertical-align: top; } }
+        vertical-align: top;
+        display: block;
+        margin-bottom: 25px; } }
 
 .projects-wrapper {
   width: 60%;
@@ -384,10 +390,14 @@ body {
     .about-wrapper {
       width: 100%; }
       .about-wrapper .about {
-        width: 95%; }
+        width: 90%;
+        margin-top: 15px; }
+      .about-wrapper .social {
+        width: 100%;
+        text-align: center; }
       .about-wrapper h1 {
-        font-size: 35px;
-        margin-left: 10px; } }
+        font-size: 30px;
+        margin-left: 20px; } }
 
 @keyframes fadingAnimation {
   0% {
@@ -562,8 +572,6 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   color: #ffffff; }
-  .business-card .mobile {
-    display: none; }
   .business-card p.terminal {
     background-color: #092732;
     padding: 1rem;
@@ -571,6 +579,9 @@ body {
     font-family: 'Overpass Mono', monospace;
     margin: 0 auto;
     font-size: 14px; }
+    @media screen and (max-width: 600px) {
+      .business-card p.terminal {
+        width: 85%; } }
     .business-card p.terminal i.blink {
       -webkit-animation: fadingAnimation 1s infinite;
       -moz-animation: fadingAnimation 1s infinite;
@@ -595,16 +606,11 @@ body {
     .business-card {
       padding: 8px;
       padding-bottom: 55px; }
-      .business-card .mobile {
-        display: table-cell; }
-        .business-card .mobile .pic {
-          display: block; }
-          .business-card .mobile .pic img {
-            margin-left: 0; }
-      .business-card .pic {
-        display: none; }
+      .business-card .pic img {
+        width: 70%;
+        margin-left: 0; }
       .business-card .content h1 {
-        font-size: 45px;
+        font-size: 35px;
         text-align: center; }
       .business-card table a {
         font-size: 18px; } }
@@ -627,6 +633,9 @@ body {
     text-decoration: none;
     font-size: 25px;
     text-align: center; }
+    @media screen and (max-width: 600px) {
+      .links td {
+        display: inline-block; } }
   .links td:after {
     content: "/"; }
   .links td:last-child:after {
@@ -660,17 +669,20 @@ body {
     font-weight: 100; }
   @media screen and (max-width: 600px) {
     .resume {
-      padding: 0;
+      padding: 1em;
       margin: 0 auto;
       margin-top: 10px;
-      width: 95%; }
+      width: 100%; }
       .resume h1 {
         font-size: 35px; }
+      .resume h4 {
+        margin-bottom: 0; }
       .resume td {
         display: block; }
       .resume tr {
         display: block;
-        border-bottom: 2px solid #000000; }
+        border-bottom: 2px solid #000000;
+        padding: 10px; }
         .resume tr td:nth-child(1) h4 {
           font-size: 20px; }
       .resume tr:last-child {
@@ -712,6 +724,8 @@ body {
   @media screen and (max-width: 600px) {
     .apps-wrapper {
       width: 100%; }
+      .apps-wrapper .apps {
+        padding-top: 30px; }
       .apps-wrapper h1 {
         font-size: 35px;
         margin-left: 10px; }
@@ -719,7 +733,9 @@ body {
         width: 100%;
         padding: 0; }
       .apps-wrapper td {
-        vertical-align: top; } }
+        vertical-align: top;
+        display: block;
+        margin-bottom: 25px; } }
 
 .projects-wrapper {
   width: 60%;
@@ -863,10 +879,14 @@ body {
     .about-wrapper {
       width: 100%; }
       .about-wrapper .about {
-        width: 95%; }
+        width: 90%;
+        margin-top: 15px; }
+      .about-wrapper .social {
+        width: 100%;
+        text-align: center; }
       .about-wrapper h1 {
-        font-size: 35px;
-        margin-left: 10px; } }
+        font-size: 30px;
+        margin-left: 20px; } }
 
 @keyframes fadingAnimation {
   0% {
