@@ -17,17 +17,19 @@
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
   color: #ffffff;
+
   .mobile {
     display: none;
   }
-  p.terminal{
+
+  p.terminal {
     background-color: #092732;
     padding: 1rem;
     width: 35%;
     font-family: 'Overpass Mono', monospace;
     margin: 0 auto;
     font-size: 14px;
-    i.blink{
+    i.blink {
       -webkit-animation: fadingAnimation 1s infinite;
       -moz-animation: fadingAnimation 1s infinite;
       -o-animation: fadingAnimation 1s infinite;
@@ -54,6 +56,7 @@
     text-align: center;
     img {
       width: 30%;
+      max-width: 400px;
       border-radius: 100%;
     }
   }
@@ -424,22 +427,49 @@
 }
 
 @keyframes fadingAnimation {
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@-o-keyframes fadingAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
+
+@-o-keyframes fadingAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@-moz-keyframes fadingAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
+
+@-moz-keyframes fadingAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@-webkit-keyframes fadingAnimation{
-  0%   { opacity:1; }
-  50%  { opacity:0; }
-  100% { opacity:1; }
+
+@-webkit-keyframes fadingAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
