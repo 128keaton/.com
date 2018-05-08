@@ -100,6 +100,7 @@
     text-decoration: none;
     font-size: 25px;
     text-align: center;
+    text-transform: lowercase;
   }
   a {
     padding: 10px;
@@ -385,8 +386,8 @@
 }
 
 .about-wrapper {
-  background-color: #ff335e;
-  background: linear-gradient(#ff4b33, #ff335e);
+  background-color: #070826;
+
   -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 100%);
   width: 100%;
@@ -394,6 +395,9 @@
   min-height: 420px;
   color: #ffffff;
   margin: 0 auto;
+  td:nth-child(even){
+    padding: 1.2em;
+  }
   .about {
     width: 60%;
     margin: 0 auto;
@@ -410,8 +414,10 @@
   }
   .social {
     a {
-      color: #fff;
+      color: #e504f9;
       font-size: 18px;
+      text-decoration: none;
+
     }
   }
   @media screen and (max-width: $on-palm) {
