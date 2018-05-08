@@ -110,6 +110,7 @@ body {
     text-align: center; }
     .business-card .pic img {
       width: 30%;
+      max-width: 400px;
       border-radius: 100%; }
   @media screen and (max-width: 600px) {
     .business-card {
@@ -585,6 +586,7 @@ body {
     text-align: center; }
     .business-card .pic img {
       width: 30%;
+      max-width: 400px;
       border-radius: 100%; }
   @media screen and (max-width: 600px) {
     .business-card {
