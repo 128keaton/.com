@@ -84,6 +84,7 @@ footer#post-footer a.notice {
   letter-spacing: 0.01em;
   text-decoration: none;
   color: black;
+  line-height: 1;
   font-size: 4.06rem;
 }
 
@@ -117,9 +118,6 @@ footer#post-footer a.notice {
   padding-top: 0;
 }
 
-.wrapper {
-  margin-top: -25px;
-}
 
 .post-text {
   display: block;
@@ -131,7 +129,7 @@ footer#post-footer a.notice {
 
 .post-text a,
 .post-text a:visited {
-  color: #ff4b33;
+  color: #4320f2;
 }
 
 .post-text img {
@@ -156,11 +154,23 @@ footer#post-footer a.notice {
     width: 100%!important;
     margin: 0 auto;
   }
+  .wrapper{
+    margin-top: 25px;
+  }
 }
 @media screen and (max-width: $on-palm) {
   .post-list {
     width: 100%!important;
     margin: 0 auto;
+  }
+
+  .post--full {
+    width: 95%;
+    margin: 0 auto;
+    p{
+      width: 95%;
+      margin: 0 auto;
+    }
   }
 
   .post img {
@@ -210,6 +220,8 @@ footer#post-footer a.notice {
   .post-title {
     font-size: 2.0em!important;
     font-weight: bolder;
+    width: 95%;
+    margin: 25px auto;
   }
 
   #main {
@@ -227,10 +239,11 @@ footer#post-footer a.notice {
   }
 
   .mobile-back {
-    margin-right: 12px;
-    display: inline!important;
+    width: 100%;
+    display: block!important;
     text-decoration: none;
-    color: black;
+    margin: 25px 0;
+    color: #e504f9;
   }
 }
 
@@ -256,9 +269,10 @@ h2.comments__heading.heading-2 {
 }
 
 .cta {
-  border: 0 solid black;
-  background-color: #ebdd3a;
-  text-transform: lowercase;
+  border: none!important;;
+  background-color: #e504f9;
+  padding: 12px 24px;
+  color: white;
 }
 
 .comment {
@@ -306,7 +320,7 @@ h2.comments__heading.heading-2 {
 
 .return-blog {
   text-decoration: none;
-  color: rgb(244, 53, 65);
+  color: #e504f9;
   float: left;
   margin-top: 145px;
   width: 100px;

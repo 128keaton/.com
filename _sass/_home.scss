@@ -374,9 +374,9 @@
   @media screen and (max-width: $on-palm) {
     width: 100%;
     h1 {
-      margin-bottom: 55px;
       font-size: 35px;
-      margin-left: 10px;
+      margin: 0 auto;
+      text-align: center;
     }
     .thought:last-child {
       height: 100px;
@@ -393,16 +393,15 @@
 
 .about-wrapper {
   background-color: #070826;
-
   -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 100%);
   width: 100%;
   margin: 0 auto;
   min-height: 420px;
   color: #ffffff;
-  margin: 0 auto;
+
   td:nth-child(even) {
-    padding: 1.2em;
+    padding:  0 1.2em;
   }
   .about {
     width: 60%;
@@ -419,11 +418,15 @@
     font-weight: bolder;
   }
   .social {
+    margin: 4em 0;
     a {
       color: #e504f9;
       font-size: 18px;
       text-decoration: none;
-
+    }
+    i{
+      font-size: 18px;
+      color: #00eaea;
     }
   }
   @media screen and (max-width: $on-palm) {
@@ -435,6 +438,12 @@
     .social {
       width: 100%;
       text-align: center;
+      td:nth-child(1){
+        width: 100%;
+      }
+      td{
+        display: inline-block;
+      }
     }
     h1 {
       font-size: 30px;

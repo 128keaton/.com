@@ -1,26 +1,27 @@
---- 
---- 
+---
+---
+
 @charset "utf-8";
 @import url('fonts/stylesheet.css');
 // Our variables
-$base-font-family: 'lunchtype22regular',"Helvetica Neue",-apple-system-font,Helvetica,Roboto,Arial,sans-serif;
-$base-font-size : 16px;
+$base-font-family: 'lunchtype22regular', "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+$base-font-size: 16px;
 $base-font-weight: 400;
-$small-font-size : $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
-$spacing-unit : 30px;
-$text-color : #000000;
+$spacing-unit: 30px;
+$text-color: #000000;
 $background-color: #f3f1f1;
-$brand-color : #ebdd3a;
-$grey-color : #828282;
+$brand-color: #ebdd3a;
+$grey-color: #828282;
 $grey-color-light: lighten($grey-color,
-40%);
-$grey-color-dark : darken($grey-color,
-25%);
+        40%);
+$grey-color-dark: darken($grey-color,
+        25%);
 // Width of the content area
-$content-width : 800px;
-$on-palm : 600px;
-$on-laptop : 800px;
+$content-width: 800px;
+$on-palm: 600px;
+$on-laptop: 800px;
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -70,21 +71,31 @@ body {
   clear: both;
 }
 
-.header-container{
+.header-container {
   width: 100%;
   margin: 0 auto;
-  background-color: #16162d;
   text-align: center;
   table-layout: fixed;
-  h1{
-    color: #fff;
+  border-collapse: collapse;
+  td {
+    background-color: #16162d;
+    padding: 0;
+    margin: 0;
   }
-  a{
-    font-size:25px;
+  h1 {
+    color: #fff;
+    padding: 0 12px;
+    margin: 0;
+  }
+  a {
+    font-size: 25px;
     color: #ff4b33;
     text-decoration: none;
+    padding: 0 12px;
+    margin: 0
   }
 }
+
 html,
 body {
   width: 100%;
@@ -93,11 +104,11 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.footer{
+.footer {
   text-align: center;
   margin-bottom: -2px;
   padding: 0;
-      margin-top: 25px;
+  margin-top: 25px;
 }
 
 @import "home";

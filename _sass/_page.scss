@@ -16,8 +16,6 @@
 #white {
   background-color: #fff;
   padding-top: 10px;
-  margin-top: -10px;
-
 }
 
 
@@ -108,5 +106,8 @@
     font-size: 1.5em!important;
     top: 10%!important;
     transform: translateY(-10%) !important;
+  }
+  .header-container{
+    table-layout: unset;
   }
 }
