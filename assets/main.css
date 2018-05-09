@@ -39,15 +39,23 @@ body {
 .header-container {
   width: 100%;
   margin: 0 auto;
-  background-color: #16162d;
   text-align: center;
-  table-layout: fixed; }
+  table-layout: fixed;
+  border-collapse: collapse; }
+  .header-container td {
+    background-color: #16162d;
+    padding: 0;
+    margin: 0; }
   .header-container h1 {
-    color: #fff; }
+    color: #fff;
+    padding: 0 12px;
+    margin: 0; }
   .header-container a {
     font-size: 25px;
     color: #ff4b33;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 0 12px;
+    margin: 0; }
 
 html,
 body {
@@ -348,9 +356,9 @@ body {
     .thoughts-wrapper {
       width: 100%; }
       .thoughts-wrapper h1 {
-        margin-bottom: 55px;
         font-size: 35px;
-        margin-left: 10px; }
+        margin: 0 auto;
+        text-align: center; }
       .thoughts-wrapper .thought:last-child {
         height: 100px; }
       .thoughts-wrapper .thought {
@@ -366,10 +374,9 @@ body {
   width: 100%;
   margin: 0 auto;
   min-height: 420px;
-  color: #ffffff;
-  margin: 0 auto; }
+  color: #ffffff; }
   .about-wrapper td:nth-child(even) {
-    padding: 1.2em; }
+    padding: 0 1.2em; }
   .about-wrapper .about {
     width: 60%;
     margin: 0 auto;
@@ -382,10 +389,15 @@ body {
     padding-top: 55px;
     display: block;
     font-weight: bolder; }
-  .about-wrapper .social a {
-    color: #e504f9;
-    font-size: 18px;
-    text-decoration: none; }
+  .about-wrapper .social {
+    margin: 4em 0; }
+    .about-wrapper .social a {
+      color: #e504f9;
+      font-size: 18px;
+      text-decoration: none; }
+    .about-wrapper .social i {
+      font-size: 18px;
+      color: #00eaea; }
   @media screen and (max-width: 600px) {
     .about-wrapper {
       width: 100%; }
@@ -395,6 +407,10 @@ body {
       .about-wrapper .social {
         width: 100%;
         text-align: center; }
+        .about-wrapper .social td:nth-child(1) {
+          width: 100%; }
+        .about-wrapper .social td {
+          display: inline-block; }
       .about-wrapper h1 {
         font-size: 30px;
         margin-left: 20px; } }
@@ -837,9 +853,9 @@ body {
     .thoughts-wrapper {
       width: 100%; }
       .thoughts-wrapper h1 {
-        margin-bottom: 55px;
         font-size: 35px;
-        margin-left: 10px; }
+        margin: 0 auto;
+        text-align: center; }
       .thoughts-wrapper .thought:last-child {
         height: 100px; }
       .thoughts-wrapper .thought {
@@ -855,10 +871,9 @@ body {
   width: 100%;
   margin: 0 auto;
   min-height: 420px;
-  color: #ffffff;
-  margin: 0 auto; }
+  color: #ffffff; }
   .about-wrapper td:nth-child(even) {
-    padding: 1.2em; }
+    padding: 0 1.2em; }
   .about-wrapper .about {
     width: 60%;
     margin: 0 auto;
@@ -871,10 +886,15 @@ body {
     padding-top: 55px;
     display: block;
     font-weight: bolder; }
-  .about-wrapper .social a {
-    color: #e504f9;
-    font-size: 18px;
-    text-decoration: none; }
+  .about-wrapper .social {
+    margin: 4em 0; }
+    .about-wrapper .social a {
+      color: #e504f9;
+      font-size: 18px;
+      text-decoration: none; }
+    .about-wrapper .social i {
+      font-size: 18px;
+      color: #00eaea; }
   @media screen and (max-width: 600px) {
     .about-wrapper {
       width: 100%; }
@@ -884,6 +904,10 @@ body {
       .about-wrapper .social {
         width: 100%;
         text-align: center; }
+        .about-wrapper .social td:nth-child(1) {
+          width: 100%; }
+        .about-wrapper .social td {
+          display: inline-block; }
       .about-wrapper h1 {
         font-size: 30px;
         margin-left: 20px; } }
@@ -928,8 +952,7 @@ body {
 
 #white {
   background-color: #fff;
-  padding-top: 10px;
-  margin-top: -10px; }
+  padding-top: 10px; }
 
 #white p.copyright {
   color: black; }
@@ -1005,7 +1028,10 @@ body {
   #home p.copyright {
     font-size: 1.5em !important;
     top: 10% !important;
-    transform: translateY(-10%) !important; } }
+    transform: translateY(-10%) !important; }
+
+  .header-container {
+    table-layout: unset; } }
 a.home {
   padding: 20px;
   display: block;
@@ -1187,6 +1213,7 @@ footer#post-footer a.notice {
   letter-spacing: 0.01em;
   text-decoration: none;
   color: black;
+  line-height: 1;
   font-size: 4.06rem; }
 
 .mobile-back {
@@ -1213,9 +1240,6 @@ footer#post-footer a.notice {
   margin-top: -25px !important;
   padding-top: 0; }
 
-.wrapper {
-  margin-top: -25px; }
-
 .post-text {
   display: block;
   width: 100%;
@@ -1225,7 +1249,7 @@ footer#post-footer a.notice {
 
 .post-text a,
 .post-text a:visited {
-  color: #ff4b33; }
+  color: #4320f2; }
 
 .post-text img {
   max-width: 100%; }
@@ -1243,11 +1267,21 @@ footer#post-footer a.notice {
 @media screen and (max-width: 900px) {
   .post-list {
     width: 100% !important;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .wrapper {
+    margin-top: 25px; } }
 @media screen and (max-width: 600px) {
   .post-list {
     width: 100% !important;
     margin: 0 auto; }
+
+  .post--full {
+    width: 95%;
+    margin: 0 auto; }
+    .post--full p {
+      width: 95%;
+      margin: 0 auto; }
 
   .post img {
     text-align: center; }
@@ -1287,7 +1321,9 @@ footer#post-footer a.notice {
 
   .post-title {
     font-size: 2em !important;
-    font-weight: bolder; }
+    font-weight: bolder;
+    width: 95%;
+    margin: 25px auto; }
 
   #main {
     width: 100% !important;
@@ -1299,10 +1335,11 @@ footer#post-footer a.notice {
     padding: 0 !important; }
 
   .mobile-back {
-    margin-right: 12px;
-    display: inline !important;
+    width: 100%;
+    display: block !important;
     text-decoration: none;
-    color: black; } }
+    margin: 25px 0;
+    color: #e504f9; } }
 .break {
   border: 1px solid black;
   width: 20%;
@@ -1323,9 +1360,10 @@ h2.comments__heading.heading-2 {
   font-weight: 300; }
 
 .cta {
-  border: 0 solid black;
-  background-color: #ebdd3a;
-  text-transform: lowercase; }
+  border: none !important;
+  background-color: #e504f9;
+  padding: 12px 24px;
+  color: white; }
 
 .comment {
   position: relative;
@@ -1365,7 +1403,7 @@ h2.comments__heading.heading-2 {
 
 .return-blog {
   text-decoration: none;
-  color: #f43541;
+  color: #e504f9;
   float: left;
   margin-top: 145px;
   width: 100px;
