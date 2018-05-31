@@ -7,11 +7,12 @@
   padding: 1em;
   box-sizing: border-box;
   padding-top: 100px;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   background-color: white;
   box-sizing: border-box;
 }
+
 
 #white {
   background-color: #fff;
@@ -108,6 +109,11 @@
     transform: translateY(-10%) !important;
   }
   .header-container{
+    width: 100%;
+    margin-top: 0;
     table-layout: unset;
+    td h1, a{
+      font-size: 18px;
+    }
   }
 }

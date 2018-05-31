@@ -1,0 +1,96 @@
+#container::after, #content::after, .grid2col::after, .grid2cola::after, .grid2colb::after, .grid2colc::after, .grid2cold::after, .grid2cole::after, .grid2colf::after, .grid3col::after, .grid3cola::after, .grid4col::after, .grid5col::after, .grid6col::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#obit {
+  width: 100%;
+  min-width: 980px;
+  margin: 0 0 20px;
+  clear: both;
+  color: #76797c;
+  overflow: hidden;
+  #content {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  #billboard {
+    margin: 1em 0;
+    margin-bottom: 0px;
+    padding: 14px 0 0;
+    background: url('/assets/car.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #dedede;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    display: block;
+    position: relative;
+    min-height: 644px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -khtml-border-radius: 4px;
+  }
+  #billboard .grid2col .column.first {
+    position: absolute;
+    height: 75px;
+    width: 205px;
+    padding-left: 143px;
+    padding-top: 245px;
+    float: left;
+  }
+  #billboard .grid2col .column.last {
+    width: 706px;
+    padding-top: 0px;
+    margin-bottom: -5px;
+    float: right !important;
+  }
+
+}
+
+@media screen and (max-width: $on-palm) {
+  #obit {
+    margin: 0 auto;
+    min-width: inherit !important;
+    height: 100%;
+    #content, .content {
+      margin: 0 auto;
+      width: 100%;
+      height: 90%;
+    }
+    #billboard {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-size: contain;
+      min-height: 100%;
+      display: flex;
+      border: none;
+      justify-content: center;
+
+      align-items: flex-end;
+    }
+    #billboard .grid2col {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .column {
+      display: block !important;
+      height: auto!important;
+      width: auto!important;
+      padding: 0 !important;
+      float: none !important;
+      position: relative !important;
+    }
+  }
+}
