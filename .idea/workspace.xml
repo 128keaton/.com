@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f4bc050-e131-4b36-9052-33e8a05b77e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/_data/portfolio/podivator.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/apps/elemnt.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/portfolio/elemnt.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/apps/test-strip.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/portfolio/test-strip.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/portfolio/barcodewebchrome.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/portfolio/barcodewebchrome.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/portfolio/flock.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/portfolio/flock.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/portfolio/menucolor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/portfolio/menucolor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/portfolio/woosh.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/portfolio/woosh.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/frontpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/frontpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/main-page/business-card.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/main-page/business-card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/main-page/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/main-page/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="4f4bc050-e131-4b36-9052-33e8a05b77e5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,8 +15,8 @@
       <file leaf-file-name="_home.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_sass/_home.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state relative-caret-position="455">
+              <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -193,11 +178,10 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="63" />
-    <option name="y" value="23" />
-    <option name="width" value="1725" />
-    <option name="height" value="978" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="2560" />
+    <option name="height" value="1345" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -573,7 +557,7 @@
       <workItem from="1527130271084" duration="586000" />
       <workItem from="1527742426002" duration="3069000" />
       <workItem from="1527780667013" duration="46000" />
-      <workItem from="1532141193756" duration="3062000" />
+      <workItem from="1532141193756" duration="3846000" />
     </task>
     <task id="LOCAL-00001" summary="Updated design!">
       <created>1502119783372</created>
@@ -624,11 +608,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527745265528</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Removes apps section, redesign of projects section.">
+      <created>1532144399551</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1532144399551</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21310000" />
+    <option name="totallyTimeSpent" value="22094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1342" extended-state="6" />
@@ -644,10 +635,10 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.23076923" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32815057" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32815057" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171565" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26171565" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -688,7 +679,8 @@
     <MESSAGE value="Darker color for the footer." />
     <MESSAGE value="Now 100% more mobile compatible." />
     <MESSAGE value=":(" />
-    <option name="LAST_COMMIT_MESSAGE" value=":(" />
+    <MESSAGE value="Removes apps section, redesign of projects section." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removes apps section, redesign of projects section." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_data/resume/fellowship.yml">
@@ -950,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_home.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        <state relative-caret-position="455">
+          <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
         </state>
       </provider>
     </entry>
