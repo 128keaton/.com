@@ -139,7 +139,7 @@ body {
     text-align: center; }
     .business-card .pic img {
       width: 30%;
-      max-width: 400px;
+      max-width: 300px;
       border-radius: 100%; }
   @media screen and (max-width: 600px) {
     .business-card {
@@ -235,7 +235,7 @@ body {
         display: none; } }
 
 .apps-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto; }
   .apps-wrapper h1 {
     font-size: 80px;
@@ -277,16 +277,19 @@ body {
         margin-bottom: 25px; } }
 
 .projects-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto; }
   .projects-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
   .projects-wrapper .projects {
+    border-radius: 68px;
+    box-shadow: 0 0 2px 2px #c8cacb, 0 0 0 7px #e2e3e4;
+    border: 25px solid black;
     background-color: #fff;
     padding: 10px;
     border-spacing: 10px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 25px; }
     .projects-wrapper .projects h2 {
@@ -294,8 +297,10 @@ body {
       font-weight: normal; }
     .projects-wrapper .projects .project {
       border-radius: 3px;
-      border: 1px solid #d1d5da;
-      padding: 15px; }
+      text-align: center;
+      padding: 15px;
+      width: 50%;
+      vertical-align: middle; }
       .projects-wrapper .projects .project a {
         text-decoration: none; }
       .projects-wrapper .projects .project h2 {
@@ -303,7 +308,12 @@ body {
         font-size: 14px; }
       .projects-wrapper .projects .project p {
         color: #586069;
-        font-size: 14px; }
+        font-size: 14px;
+        max-width: 50%;
+        margin: 0 auto; }
+      .projects-wrapper .projects .project .icon {
+        max-width: 66px;
+        border-radius: 16.666px; }
       .projects-wrapper .projects .project .language-color {
         position: relative;
         top: 1px;
@@ -318,42 +328,50 @@ body {
         background-color: #e34c26; }
       .projects-wrapper .projects .project .technologies .swift {
         background-color: #ffac45; }
-    .projects-wrapper .projects .project::nth-child(odd) {
+    .projects-wrapper .projects .project:nth-child(odd) {
       margin-right: 12px; }
   @media screen and (max-width: 600px) {
     .projects-wrapper {
       width: 100%; }
       .projects-wrapper .projects {
-        width: 100%; }
+        width: 100%;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important; }
+        .projects-wrapper .projects tr:last-child .project {
+          border-bottom: none !important; }
       .projects-wrapper .project {
-        display: block; }
-      .projects-wrapper td.project:nth-child(odd) {
-        margin-bottom: 20px; }
+        display: block;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 10px !important; }
       .projects-wrapper h1 {
         font-size: 35px;
         margin-left: 10px; } }
 
 .thoughts-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   margin-bottom: 25px; }
   .thoughts-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
   .thoughts-wrapper .white-background {
-    background-color: #fff;
-    padding-top: 30px;
-    padding-bottom: 30px; }
+    background-color: #fff; }
   .thoughts-wrapper .thoughts {
     border-spacing: 0;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 12px;
+    font-weight: 100;
     border: 4px double #d7deff; }
     .thoughts-wrapper .thoughts td {
       padding: 10px; }
   .thoughts-wrapper tr:nth-child(even) {
-    background-color: #d7deff; }
+    background-color: #f5f9ff; }
   .thoughts-wrapper .thought {
     padding: 22px; }
     .thoughts-wrapper .thought h2 {
@@ -362,6 +380,7 @@ body {
       font-weight: 100;
       font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
       float: left;
+      text-align: left !important;
       vertical-align: baseline;
       margin-top: 10px; }
     .thoughts-wrapper .thought p {
@@ -636,7 +655,7 @@ body {
     text-align: center; }
     .business-card .pic img {
       width: 30%;
-      max-width: 400px;
+      max-width: 300px;
       border-radius: 100%; }
   @media screen and (max-width: 600px) {
     .business-card {
@@ -732,7 +751,7 @@ body {
         display: none; } }
 
 .apps-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto; }
   .apps-wrapper h1 {
     font-size: 80px;
@@ -774,16 +793,19 @@ body {
         margin-bottom: 25px; } }
 
 .projects-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto; }
   .projects-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
   .projects-wrapper .projects {
+    border-radius: 68px;
+    box-shadow: 0 0 2px 2px #c8cacb, 0 0 0 7px #e2e3e4;
+    border: 25px solid black;
     background-color: #fff;
     padding: 10px;
     border-spacing: 10px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 25px; }
     .projects-wrapper .projects h2 {
@@ -791,8 +813,10 @@ body {
       font-weight: normal; }
     .projects-wrapper .projects .project {
       border-radius: 3px;
-      border: 1px solid #d1d5da;
-      padding: 15px; }
+      text-align: center;
+      padding: 15px;
+      width: 50%;
+      vertical-align: middle; }
       .projects-wrapper .projects .project a {
         text-decoration: none; }
       .projects-wrapper .projects .project h2 {
@@ -800,7 +824,12 @@ body {
         font-size: 14px; }
       .projects-wrapper .projects .project p {
         color: #586069;
-        font-size: 14px; }
+        font-size: 14px;
+        max-width: 50%;
+        margin: 0 auto; }
+      .projects-wrapper .projects .project .icon {
+        max-width: 66px;
+        border-radius: 16.666px; }
       .projects-wrapper .projects .project .language-color {
         position: relative;
         top: 1px;
@@ -815,42 +844,50 @@ body {
         background-color: #e34c26; }
       .projects-wrapper .projects .project .technologies .swift {
         background-color: #ffac45; }
-    .projects-wrapper .projects .project::nth-child(odd) {
+    .projects-wrapper .projects .project:nth-child(odd) {
       margin-right: 12px; }
   @media screen and (max-width: 600px) {
     .projects-wrapper {
       width: 100%; }
       .projects-wrapper .projects {
-        width: 100%; }
+        width: 100%;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important; }
+        .projects-wrapper .projects tr:last-child .project {
+          border-bottom: none !important; }
       .projects-wrapper .project {
-        display: block; }
-      .projects-wrapper td.project:nth-child(odd) {
-        margin-bottom: 20px; }
+        display: block;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 10px !important; }
       .projects-wrapper h1 {
         font-size: 35px;
         margin-left: 10px; } }
 
 .thoughts-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   margin-bottom: 25px; }
   .thoughts-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
   .thoughts-wrapper .white-background {
-    background-color: #fff;
-    padding-top: 30px;
-    padding-bottom: 30px; }
+    background-color: #fff; }
   .thoughts-wrapper .thoughts {
     border-spacing: 0;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 12px;
+    font-weight: 100;
     border: 4px double #d7deff; }
     .thoughts-wrapper .thoughts td {
       padding: 10px; }
   .thoughts-wrapper tr:nth-child(even) {
-    background-color: #d7deff; }
+    background-color: #f5f9ff; }
   .thoughts-wrapper .thought {
     padding: 22px; }
     .thoughts-wrapper .thought h2 {
@@ -859,6 +896,7 @@ body {
       font-weight: 100;
       font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
       float: left;
+      text-align: left !important;
       vertical-align: baseline;
       margin-top: 10px; }
     .thoughts-wrapper .thought p {
