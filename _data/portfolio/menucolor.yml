@@ -1,4 +1,4 @@
 title: MenuColor
 description: A color picker for Swift programmers!
 url: https://github.com/128keaton/MenuColor
-technologies: Swift
+platform: "app-store-osx"

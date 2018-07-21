@@ -1,28 +1,35 @@
 <div class="projects-wrapper">
     <h1>Projects</h1>
     <table id="projects" class="projects">
-        <tr>
-            <td>
-                <h2>
-                    Pinned
-                </h2>
-            </td>
-        </tr>
         {% assign projects = site.data.portfolio.size | divided_by: 2.0 | ceil %}
         {% for i in (1..projects) %}
         {% assign offset = forloop.index0 | times: 2 %}
         <tr>
             {% for project in site.data.portfolio limit:2 offset:offset %}
             <td class="project">
-                <div class="header">
-                    <a href="{{ project[1].url }}">
-                        <h2 class="title">{{ project[1].title }}</h2>
-                    </a>
-                </div>
+                {% if project[1].icon %}
+                <img class="icon" id="icon-{{ project[1].platform | default 'no-platform' }}" src="{{project[1].icon}}">
+                {% else if project[1].platform %}
+                {% if project[1].platform == 'app-store-ios' %}
+                <img class="icon" id="icon-app-store-ios" src="http://stuff.128keaton.com/icons/ios-no-icon.png">
+                {% elsif project[1].platform == 'cydia-ios' %}
+                <img class="icon" id="icon-cydia-ios" src="http://stuff.128keaton.com/icons/tweak-no-icon.png">
+                {% elsif project[1].platform == 'app-store-osx' %}
+                <img class="icon" id="icon-app-store-osx" src="http://stuff.128keaton.com/icons/os-x-no-icon.png">
+                {% elsif project[1].platform == 'chrome' %}
+                <img class="icon" id="icon-chrome" src="http://stuff.128keaton.com/icons/chrome-extension-no-icon.png">
+                {% else %}
+                <img class="icon" id="icon-no-platform" src="http://stuff.128keaton.com/icons/default-no-icon.png">
+                {% endif %}
+                {% else %}}
+                <img class="icon" id="icon-no-platform" src="http://stuff.128keaton.com/icons/default-no-icon.png">
+                {% endif %}
+
+                <a href="{{ project[1].url }}">
+                    <h2 class="title">{{ project[1].title }}</h2>
+                </a>
+
                 <p class="description">{{ project[1].description }}</p>
-                <p class="technologies"><span class="language-color {{ project[1].technologies | downcase}}"></span>
-                    {{ project[1].technologies}}
-                </p>
             </td>
             {% endfor %}
         <tr>

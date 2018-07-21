@@ -55,7 +55,7 @@
     text-align: center;
     img {
       width: 30%;
-      max-width: 400px;
+      max-width: 300px;
       border-radius: 100%;
     }
   }
@@ -193,7 +193,7 @@
 }
 
 .apps-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   h1 {
     font-size: 80px;
@@ -247,17 +247,20 @@
 }
 
 .projects-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   h1 {
     font-size: 80px;
     font-weight: bolder;
   }
   .projects {
+    border-radius: 68px;
+    box-shadow: 0 0 2px 2px #c8cacb, 0 0 0 7px #e2e3e4;
+    border: 25px solid black;
     background-color: #fff;
     padding: 10px;
     border-spacing: 10px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 25px;
     h2 {
@@ -266,8 +269,10 @@
     }
     .project {
       border-radius: 3px;
-      border: 1px solid rgb(209, 213, 218);
+      text-align: center;
       padding: 15px;
+      width: 50%;
+      vertical-align: middle;
       a {
         text-decoration: none;
       }
@@ -278,7 +283,14 @@
       p {
         color: rgb(88, 96, 105);
         font-size: 14px;
+        max-width: 50%;
+        margin: 0 auto;
       }
+      .icon {
+        max-width: 66px;
+        border-radius: 16.666px;
+      }
+
       .language-color {
         position: relative;
         top: 1px;
@@ -300,7 +312,7 @@
         }
       }
     }
-    .project::nth-child(odd) {
+    .project:nth-child(odd) {
       margin-right: 12px;
     }
   }
@@ -308,12 +320,21 @@
     width: 100%;
     .projects {
       width: 100%;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      tr:last-child .project {
+        border-bottom: none !important;
+      }
     }
     .project {
       display: block;
-    }
-    td.project:nth-child(odd) {
-      margin-bottom: 20px;
+      width: 100% !important;
+      margin: 0 auto !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      border-bottom: 1px solid lightgrey;
+      padding-bottom: 10px !important;
     }
     h1 {
       font-size: 35px;
@@ -323,7 +344,7 @@
 }
 
 .thoughts-wrapper {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   margin-bottom: 25px;
   h1 {
@@ -332,21 +353,20 @@
   }
   .white-background {
     background-color: #fff;
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
   .thoughts {
     border-spacing: 0;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 12px;
+    font-weight: 100;
     border: 4px double rgb(215, 222, 255);
     td {
       padding: 10px;
     }
   }
   tr:nth-child(even) {
-    background-color: rgb(215, 222, 255);
+    background-color: #f5f9ff
   }
   .thought {
     padding: 22px;
@@ -356,6 +376,7 @@
       font-weight: 100;
       font-family: $base-font-family;
       float: left;
+      text-align: left!important;
       vertical-align: baseline;
       margin-top: 10px;
     }
@@ -401,7 +422,7 @@
   color: #ffffff;
 
   td:nth-child(even) {
-    padding:  0 1.2em;
+    padding: 0 1.2em;
   }
   .about {
     width: 60%;
@@ -424,7 +445,7 @@
       font-size: 18px;
       text-decoration: none;
     }
-    i{
+    i {
       font-size: 18px;
       color: #00eaea;
     }
@@ -438,10 +459,10 @@
     .social {
       width: 100%;
       text-align: center;
-      td:nth-child(1){
+      td:nth-child(1) {
         width: 100%;
       }
-      td{
+      td {
         display: inline-block;
       }
     }
