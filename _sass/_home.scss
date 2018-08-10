@@ -130,12 +130,15 @@
   }
   .header {
     border-bottom: solid 4px #000000;
-    td:nth-child(2) {
-      padding-left: 20px;
+    td {
+      h1{
+        margin-bottom: 0;
+      }
       span {
         font-size: 14px;
         font-family: $base-font-family;
         color: #a5a5ad;
+        margin-bottom: 12px;
       }
     }
   }
@@ -148,8 +151,11 @@
     //     font-family: "lunchtype25condensed_regular";
   }
   td {
-    h4 {
-      font-weight: 100;
+    font-family: Lora;
+    font-weight: 300;
+    h4, p {
+      font-family: Lora;
+      font-weight: 300;
     }
   }
   @media screen and (max-width: $on-palm) {
@@ -285,6 +291,7 @@
         font-size: 14px;
         max-width: 50%;
         margin: 0 auto;
+        font-family: Lora;
       }
       .icon {
         max-width: 66px;
@@ -374,7 +381,7 @@
       padding: 0;
       margin: 0;
       font-weight: 100;
-      font-family: $base-font-family;
+      font-family: Lora;
       float: left;
       text-align: left!important;
       vertical-align: baseline;
@@ -429,6 +436,9 @@
     margin: 0 auto;
     margin-top: 55px;
     padding-bottom: 25px;
+     p{
+        font-family: Lora;
+    }
   }
   h1 {
     font-size: 80px;
@@ -455,6 +465,7 @@
     .about {
       width: 90%;
       margin-top: 15px;
+
     }
     .social {
       width: 100%;

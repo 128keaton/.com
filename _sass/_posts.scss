@@ -22,7 +22,10 @@ footer#post-footer a.notice {
 .post p,
 .post ul {
   word-wrap: break-word;
-  font-size: 14px;
+  font-size: 20px;
+line-height: 1.5;
+letter-spacing: 0.01rem;
+  font-family: Lora;
 }
 
 .post-head-image {
