@@ -1,7 +1,7 @@
 @import url("fonts/stylesheet.css");
 @import url(main.css);
 body {
-  font: 400 16px/1.5 "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+  font: 400 16px/1.5 "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
   font-feature-settings: normal;
   font-kerning: auto;
   color: #111;
@@ -48,7 +48,9 @@ body {
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
   -khtml-border-radius: 4px;
-  border: 1px solid #dedede; }
+  -webkit-box-shadow: 2px 4px 18px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 18px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 4px 18px -3px rgba(0, 0, 0, 0.75); }
   .header-container td {
     background-color: #16162d;
     padding: 0;
@@ -69,9 +71,23 @@ body {
     margin: 0;
     font-size: 25px;
     font-weight: normal; }
-  .header-container a {
+  .header-container a:first-child {
     font-size: 25px;
-    color: #ff4b33;
+    color: #fc4948;
+    text-decoration: none;
+    padding: 0 12px;
+    margin: 0;
+    text-align: left; }
+  .header-container a:nth-child(2) {
+    font-size: 25px;
+    color: #feb024;
+    text-decoration: none;
+    padding: 0 12px;
+    margin: 0;
+    text-align: left; }
+  .header-container a:nth-child(3) {
+    font-size: 25px;
+    color: #28c432;
     text-decoration: none;
     padding: 0 12px;
     margin: 0;
@@ -193,19 +209,24 @@ body {
     vertical-align: baseline; }
   .resume .header {
     border-bottom: solid 4px #000000; }
-    .resume .header td:nth-child(2) {
-      padding-left: 20px; }
-      .resume .header td:nth-child(2) span {
-        font-size: 14px;
-        font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
-        color: #a5a5ad; }
+    .resume .header td h1 {
+      margin-bottom: 0; }
+    .resume .header td span {
+      font-size: 14px;
+      font-family: "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+      color: #a5a5ad;
+      margin-bottom: 12px; }
   .resume th {
     font-size: 30px;
     border-bottom: 2px solid gray; }
   .resume h1 {
     font-size: 70px; }
-  .resume td h4 {
-    font-weight: 100; }
+  .resume td {
+    font-family: Lora;
+    font-weight: 300; }
+    .resume td h4, .resume td p {
+      font-family: Lora;
+      font-weight: 300; }
   @media screen and (max-width: 600px) {
     .resume {
       padding: 1em;
@@ -310,7 +331,8 @@ body {
         color: #586069;
         font-size: 14px;
         max-width: 50%;
-        margin: 0 auto; }
+        margin: 0 auto;
+        font-family: Lora; }
       .projects-wrapper .projects .project .icon {
         max-width: 66px;
         border-radius: 16.666px; }
@@ -378,7 +400,7 @@ body {
       padding: 0;
       margin: 0;
       font-weight: 100;
-      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+      font-family: Lora;
       float: left;
       text-align: left !important;
       vertical-align: baseline;
@@ -421,6 +443,8 @@ body {
     margin: 0 auto;
     margin-top: 55px;
     padding-bottom: 25px; }
+    .about-wrapper .about p {
+      font-family: Lora; }
   .about-wrapper h1 {
     font-size: 80px;
     width: 60%;
@@ -709,19 +733,24 @@ body {
     vertical-align: baseline; }
   .resume .header {
     border-bottom: solid 4px #000000; }
-    .resume .header td:nth-child(2) {
-      padding-left: 20px; }
-      .resume .header td:nth-child(2) span {
-        font-size: 14px;
-        font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
-        color: #a5a5ad; }
+    .resume .header td h1 {
+      margin-bottom: 0; }
+    .resume .header td span {
+      font-size: 14px;
+      font-family: "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+      color: #a5a5ad;
+      margin-bottom: 12px; }
   .resume th {
     font-size: 30px;
     border-bottom: 2px solid gray; }
   .resume h1 {
     font-size: 70px; }
-  .resume td h4 {
-    font-weight: 100; }
+  .resume td {
+    font-family: Lora;
+    font-weight: 300; }
+    .resume td h4, .resume td p {
+      font-family: Lora;
+      font-weight: 300; }
   @media screen and (max-width: 600px) {
     .resume {
       padding: 1em;
@@ -826,7 +855,8 @@ body {
         color: #586069;
         font-size: 14px;
         max-width: 50%;
-        margin: 0 auto; }
+        margin: 0 auto;
+        font-family: Lora; }
       .projects-wrapper .projects .project .icon {
         max-width: 66px;
         border-radius: 16.666px; }
@@ -894,7 +924,7 @@ body {
       padding: 0;
       margin: 0;
       font-weight: 100;
-      font-family: "lunchtype22regular", "Helvetica Neue", -apple-system-font, Helvetica, Roboto, Arial, sans-serif;
+      font-family: Lora;
       float: left;
       text-align: left !important;
       vertical-align: baseline;
@@ -937,6 +967,8 @@ body {
     margin: 0 auto;
     margin-top: 55px;
     padding-bottom: 25px; }
+    .about-wrapper .about p {
+      font-family: Lora; }
   .about-wrapper h1 {
     font-size: 80px;
     width: 60%;
@@ -1222,7 +1254,10 @@ footer#post-footer a.notice {
 .post p,
 .post ul {
   word-wrap: break-word;
-  font-size: 14px; }
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
+  font-family: Lora; }
 
 .post-head-image {
   object-fit: cover;
