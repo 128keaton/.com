@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Moving forward with macOS Imaging / Keaton Burleson</title>
+  <meta name="description" content="">
+  <meta property="og:title" content="Keaton's Page" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2018/08/10/moving-forward-with-macos-imaging.html">
+  <link rel="alternate" type="application/rss+xml" title="Keaton Burleson" href="/feed.xml">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple_icon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+</head>
+ <table class="header-container">
+    <tr>
+        <td>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/#me">About</a>
+        </td>
+        <td>
+            <h1>Keaton Burleson</h1>
+        </td>
+    </tr>
+</table>
+
+
+
+<body style="background-color: white!important; background: none;">
+    
+    <div class="wrapper" id="white post">
+
+        <main id="main" role="main" class="main">
+            <article class="post post--full">
+
+                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Moving forward with macOS Imaging </h2> <p><img src="/images/Screen Shot 2018-08-10 at 3.49.39 PM.png" alt="Screen Shot 2018-08-10 at 3.49.39 PM" /></p>
+
+<p>Now that macOS Imaging is dead (and <a href="https://support.apple.com/en-us/HT202770#sections">is never coming back</a>), I had to figure out a solution to replace DeployStudio here at ER2. Currently, we use a basic combination of cocoaDialog and bash to also mark the condition of any machine booted before imaging. The system is logged in our internal testing system and a label is adhered containing the specs. Then the machine is passed on to be cleaned before sale to a customer. This is great and all, but what if the machine has underlying issues, or severely overheats under strain <em>not</em> expressed during an install? Having a customer shipped what is essentially a defective laptop is the worst case scenario, but that inherently generates a lot of <em>waste</em> (at work, we are actively encouraged to eliminate waste)</p>
+
+<p>The first idea was running a NetBoot recovery environment (similar to how Imagr or DeployStudio operates). Honestly, this is the way to do it. It boots extremely fast, only the bare minimum frameworks are loaded. For us, we get system specs using the <code class="highlighter-rouge">system_profiler</code> command, but in High Sierra’s recovery environment, you do not have access to this command. The framework is <em>not</em> included for some bizarre reason, but its Apple 🤷🏻‍♂️.</p>
+
+<p>Another caveat is that full acceleration GPU drivers are not loaded. Again, its to make the environment lighter and, I’m assuming, to allow it to boot in worse case scenarios where the GPU might be crippled, or the discrete GPU is disabled. Pure speculation on my part, however. The lack of full acceleration GPU drivers was another big problem for us. We use UNIGINE’s <a href="https://benchmark.unigine.com/heaven">Heaven</a> GPU stress-testing software to spot potential GPU/overheating problems.</p>
+
+<p>So, really, the next solution was a full bootable OS with tools built into the image. Sure, you could add GPU acceleration to the existing Recovery environment. And then you’d add the required extensions. Then, you’ve opened a can of worms. I do not know what I was doing wrong, but I couldn’t get a Recovery environment to properly boot with the added extensions that I needed. To make the base image required, I used a modified version of AutoCasperNBI. The modifications were simple–AutoCasperNBI is an AppleScript-based project. If you do not know AppleScript, I’d recommend learning it, as it can make somethings like on boarding prompts, run-once applications, and droplets MUCH simpler than tackling a full Cocoa project.</p>
+
+<p><img src="/images/Screen Shot 2018-08-12 at 12.08.25 PM.png" alt="Screen Shot 2018-08-12 at 12.08.25 PM" />
+The modifications essentially disabled the Casper part of the project while keeping everything else. I didn’t use Casper, nor did I need it. I just needed to make an NBI easily. I liked it the best (even with having to make modifications), since its easy to document for. I’d like to assume the person who will eventually replace me would appreciate a GUI-based application with screen shots to guide him/her through rebuilding an NBI.</p>
+ 
+
+<section class="comments">
+	<div class="constrain--body">
+		<div class="comments__existing js-comments">
+			<h2 class="comments__heading heading-2">Comments</h2>
+			
+		</div>
+
+		<h2 class="comments__heading heading-2">Leave a comment</h2>
+		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
+    <input type="hidden" name="options[slug]" value="2018-08-10-moving-forward-with-macos-imaging">
+    <input type="hidden" name="options[parent]" value="2018-08-10-moving-forward-with-macos-imaging">
+    <input type="hidden" name="options[origin]" value="http://128keaton.com/2018/08/10/moving-forward-with-macos-imaging.html">
+    <input name="options[redirect]" type="hidden" value="http://128keaton.com/2018/08/10/moving-forward-with-macos-imaging.html">
+
+    <input type="text" name="company" class="text-field" style="display: none">
+    <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required/>
+    <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (will not be public)" required/>
+    <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
+    <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
+    <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
+    <input class="cta" type="submit" value="Send" />
+</form>
+
+	</div>
+</section>
+
+            </article>
+        </main>
+        <footer class="footer" id="post-footer">
+        &copy Keaton Burleson
+</footer>
+
+    </div>
+</body>
+
+</html>

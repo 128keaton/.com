@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-08-10T21:25:08+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Yahoo! Widgets in 2017</title><link href="/2017/09/08/yahoo-widgets-2017.html" rel="alternate" type="text/html" title="Yahoo! Widgets in 2017" /><published>2017-09-08T16:59:00+00:00</published><updated>2017-09-08T16:59:00+00:00</updated><id>/2017/09/08/yahoo-widgets-2017</id><content type="html" xml:base="/2017/09/08/yahoo-widgets-2017.html">&lt;p&gt;&lt;strong&gt;Stupid Alert&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-08-12T17:12:14+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Moving forward with macOS Imaging</title><link href="/2018/08/10/moving-forward-with-macos-imaging.html" rel="alternate" type="text/html" title="Moving forward with macOS Imaging" /><published>2018-08-10T00:00:00+00:00</published><updated>2018-08-10T00:00:00+00:00</updated><id>/2018/08/10/moving-forward-with-macos-imaging</id><content type="html" xml:base="/2018/08/10/moving-forward-with-macos-imaging.html">&lt;p&gt;&lt;img src=&quot;/images/Screen Shot 2018-08-10 at 3.49.39 PM.png&quot; alt=&quot;Screen Shot 2018-08-10 at 3.49.39 PM&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that macOS Imaging is dead (and &lt;a href=&quot;https://support.apple.com/en-us/HT202770#sections&quot;&gt;is never coming back&lt;/a&gt;), I had to figure out a solution to replace DeployStudio here at ER2. Currently, we use a basic combination of cocoaDialog and bash to also mark the condition of any machine booted before imaging. The system is logged in our internal testing system and a label is adhered containing the specs. Then the machine is passed on to be cleaned before sale to a customer. This is great and all, but what if the machine has underlying issues, or severely overheats under strain &lt;em&gt;not&lt;/em&gt; expressed during an install? Having a customer shipped what is essentially a defective laptop is the worst case scenario, but that inherently generates a lot of &lt;em&gt;waste&lt;/em&gt; (at work, we are actively encouraged to eliminate waste)&lt;/p&gt;
+
+&lt;p&gt;The first idea was running a NetBoot recovery environment (similar to how Imagr or DeployStudio operates). Honestly, this is the way to do it. It boots extremely fast, only the bare minimum frameworks are loaded. For us, we get system specs using the &lt;code class=&quot;highlighter-rouge&quot;&gt;system_profiler&lt;/code&gt; command, but in High Sierra’s recovery environment, you do not have access to this command. The framework is &lt;em&gt;not&lt;/em&gt; included for some bizarre reason, but its Apple 🤷🏻‍♂️.&lt;/p&gt;
+
+&lt;p&gt;Another caveat is that full acceleration GPU drivers are not loaded. Again, its to make the environment lighter and, I’m assuming, to allow it to boot in worse case scenarios where the GPU might be crippled, or the discrete GPU is disabled. Pure speculation on my part, however. The lack of full acceleration GPU drivers was another big problem for us. We use UNIGINE’s &lt;a href=&quot;https://benchmark.unigine.com/heaven&quot;&gt;Heaven&lt;/a&gt; GPU stress-testing software to spot potential GPU/overheating problems.&lt;/p&gt;
+
+&lt;p&gt;So, really, the next solution was a full bootable OS with tools built into the image. Sure, you could add GPU acceleration to the existing Recovery environment. And then you’d add the required extensions. Then, you’ve opened a can of worms. I do not know what I was doing wrong, but I couldn’t get a Recovery environment to properly boot with the added extensions that I needed. To make the base image required, I used a modified version of AutoCasperNBI. The modifications were simple–AutoCasperNBI is an AppleScript-based project. If you do not know AppleScript, I’d recommend learning it, as it can make somethings like on boarding prompts, run-once applications, and droplets MUCH simpler than tackling a full Cocoa project.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Screen Shot 2018-08-12 at 12.08.25 PM.png&quot; alt=&quot;Screen Shot 2018-08-12 at 12.08.25 PM&quot; /&gt;
+The modifications essentially disabled the Casper part of the project while keeping everything else. I didn’t use Casper, nor did I need it. I just needed to make an NBI easily. I liked it the best (even with having to make modifications), since its easy to document for. I’d like to assume the person who will eventually replace me would appreciate a GUI-based application with screen shots to guide him/her through rebuilding an NBI.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Yahoo! Widgets in 2017</title><link href="/2017/09/08/yahoo-widgets-2017.html" rel="alternate" type="text/html" title="Yahoo! Widgets in 2017" /><published>2017-09-08T16:59:00+00:00</published><updated>2017-09-08T16:59:00+00:00</updated><id>/2017/09/08/yahoo-widgets-2017</id><content type="html" xml:base="/2017/09/08/yahoo-widgets-2017.html">&lt;p&gt;&lt;strong&gt;Stupid Alert&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Today I had a weird memory: a bouncy ball widget on my old Thinkpad back in 2006/7. I think I heard the funny sound the Yahoo! Widgets drawer made. Whatever. Anyway, it got me thinking. What happened to Yahoo! Widgets?&lt;/p&gt;
 
@@ -722,141 +733,4 @@ Are you one of those people who post on /r/jailbreak like its your personal Goog
 
 &lt;p&gt;&lt;img src=&quot;https://i.sli.mg/RV9EDW.jpg&quot; alt=&quot;:()&quot; /&gt;&lt;img src=&quot;https://i.sli.mg/bFM35I.jpg&quot; alt=&quot;:()&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;From now on, I’ll buy my screens from PowerBookMedic, which has a great selection of Kindle parts. You could basically build one out of their inventory. I ended up buying two new faceplates and backs for $8.00. I will be going to the post office to ship the faulty screens back and hopefully buying a quality set of screens. I will update as soon as I get them installed.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Kindle Keyboard 3, or Kindle 3, is absolutely one of my favorite Kindles.</summary></entry><entry><title type="html">QEMU with an El Capitan Guest</title><link href="/2016/08/25/qemu-with-an-el-capitan-guest.html" rel="alternate" type="text/html" title="QEMU with an El Capitan Guest" /><published>2016-08-25T21:26:08+00:00</published><updated>2016-08-25T21:26:08+00:00</updated><id>/2016/08/25/qemu-with-an-el-capitan-guest</id><content type="html" xml:base="/2016/08/25/qemu-with-an-el-capitan-guest.html">&lt;div class=&quot;notice--info&quot;&gt;
-  
-&lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
-&lt;p&gt;This guide is largely based off &lt;a href=&quot;https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2&quot;&gt;https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2&lt;/a&gt;, but adapted for a newer Clover, QEMU, etc.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&quot;setup&quot;&gt;Setup:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;An Ubuntu Server running 16.04 LTS
-    &lt;ul&gt;
-      &lt;li&gt;KVM Capabilities&lt;/li&gt;
-      &lt;li&gt;QEMU compiled/installed&lt;/li&gt;
-      &lt;li&gt;OVMF compiled (&lt;a href=&quot;https://gist.github.com/gordonturner/85dcc321d2099d610e67&quot;&gt;https://gist.github.com/gordonturner/85dcc321d2099d610e67&lt;/a&gt;) and &lt;code class=&quot;highlighter-rouge&quot;&gt;/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd&lt;/code&gt; put in the base folder of your VM (&lt;code class=&quot;highlighter-rouge&quot;&gt;bios.bin&lt;/code&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A supported Mac that can download 10.11.6 from the Mac App Store&lt;/li&gt;
-  &lt;li&gt;A 8GB USB Drive&lt;/li&gt;
-  &lt;li&gt;Clover EFI Bootloader&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;step-1-creating-the-install-drive&quot;&gt;Step 1, creating the install drive:&lt;/h2&gt;
-
-&lt;p&gt;With your OS X installer app in /Applications/, run:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;OS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;X&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;El&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Capitan.app/Contents/Resources/createinstallmedia &lt;span class=&quot;nt&quot;&gt;--volume&lt;/span&gt; /Volumes/Untitled &lt;span class=&quot;nt&quot;&gt;--applicationpath&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/Applications/Install OS X El Capitan.app&quot;&lt;/span&gt;
- &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Make sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/Untitled&lt;/code&gt; for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-2-installing-clover&quot;&gt;Step 2, installing Clover:&lt;/h2&gt;
-
-&lt;p&gt;After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for &lt;code class=&quot;highlighter-rouge&quot;&gt;OsxAptioFixDrv-64&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DataHubDxe-64&lt;/code&gt;, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download &lt;a href=&quot;https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi&quot;&gt;this&lt;/a&gt; file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
- &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;notice--info&quot;&gt;
-   
-&lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
-&lt;p&gt;If you want to have verbose boot (recommended), add &lt;code class=&quot;highlighter-rouge&quot;&gt;-v&lt;/code&gt; to the BootFlags line in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/ESP/EFI/CLOVER/config.plist&lt;/code&gt; file&lt;/p&gt;
-
- &lt;/div&gt;
-
-&lt;h2 id=&quot;step-3-getting-the-osk-value&quot;&gt;Step 3, getting the OSK value:&lt;/h2&gt;
-
-&lt;p&gt;Please see &lt;a href=&quot;https://gist.github.com/gordonturner/c33bcc935e32f9fa6695&quot;&gt;https://gist.github.com/gordonturner/c33bcc935e32f9fa6695&lt;/a&gt; to get the OSK value (must be run from an actual Apple computer). Save this string and keep it safe for later.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-4-writing-the-flash-drive-to-an-image&quot;&gt;Step 4, writing the flash drive to an image:&lt;/h2&gt;
-
-&lt;p&gt;Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type &lt;code class=&quot;highlighter-rouge&quot;&gt;diskutil list&lt;/code&gt;, find your install drive. (Should have two partitions: &lt;code class=&quot;highlighter-rouge&quot;&gt;EFI&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Install OS X El Capitan&lt;/code&gt;).  Record the disk number (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk8&lt;/code&gt;). &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into a comfortable folder &lt;code class=&quot;highlighter-rouge&quot;&gt;~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo dd &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/rdiskX &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clover-usb-disk.dd
- &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Making sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; for your disk number.&lt;/p&gt;
-
-&lt;p&gt;After a bit of waiting, you should have a large file on your desktop named &lt;code class=&quot;highlighter-rouge&quot;&gt;clover-usb-disk.dd&lt;/code&gt;, using your own methods, move this file into the root of your vm folder on your server.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-5-final-setup&quot;&gt;Step 5, final setup:&lt;/h2&gt;
-
-&lt;p&gt;Now, we absolutely have to be on the Linux machine. Either SSH in, or gain physical access.
-At the command line, use this command in your root VM folder:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;qemu-img create &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; qcow2 osx-disk0.qcow2 200G
- &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;200G&lt;/code&gt; for how many gigs you want, for 500Gb use &lt;code class=&quot;highlighter-rouge&quot;&gt;500G&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;su -
-&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting &lt;code class=&quot;highlighter-rouge&quot;&gt;echo 1 &amp;gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt; into your &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/rc.local&lt;/code&gt; file might not be a bad idea.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-6-first-boot&quot;&gt;Step 6, first boot:&lt;/h2&gt;
-
-&lt;p&gt;Ok, brace yourself, this is my command to start my VM:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;qemu-system-x86_64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; 8192 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-enable-kvm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-cpu&lt;/span&gt; core2duo,vendor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;GenuineIntel &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-rtc&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;localtime &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-smbios&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-machine&lt;/span&gt; q35,accel&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;kvm,usb&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off,vmport&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-bios&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;bios.bin &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-smp&lt;/span&gt; 4,sockets&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1,cores&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,threads&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; isa-applesmc,osk&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$OSK&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;$&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; i82801b11-bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pcie.0,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1e &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; pci-bridge,chassis_nr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ahci,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x5 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-drive&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;clover-usb-disk.dd,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;raw &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ide.2,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-2,bootindex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-drive&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;osx-disk0.qcow2,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,media&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;disk,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;qcow2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0.0,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-usb&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; usb-mouse &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; usb-kbd &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-full-screen&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-vnc&lt;/span&gt; :1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-netdev&lt;/span&gt; bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,br&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; virtio-net,netdev&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,vectors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,mac&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;00:00:00:00:00:00&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$OSK$&lt;/code&gt; with your OSK string you saved earlier. Second, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$VMROOT$&lt;/code&gt; occurrences to whatever your VM root is.&lt;/p&gt;
-
-&lt;div class=&quot;notice--info&quot;&gt;
-   
-&lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
-&lt;p&gt;networking is a bit of a beast, but I know you can get it working. I won’t be covering it, but the &lt;a href=&quot;https://github.com/pmj/virtio-net-osx&quot;&gt;virtio-net&lt;/a&gt; driver will help.&lt;/p&gt;
-
- &lt;/div&gt;
-
-&lt;p&gt;After those edits, put it into the command line, and cross your fingers.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-7-connecting-and-installing&quot;&gt;Step 7, connecting and installing:&lt;/h2&gt;
-
-&lt;p&gt;Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use &lt;em&gt;Chicken of the VNC&lt;/em&gt;, because the Screen Sharing app doesn’t work with the server. Connect to your IP, and port &lt;code class=&quot;highlighter-rouge&quot;&gt;5901&lt;/code&gt;. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.&lt;/p&gt;
-
-&lt;div class=&quot;notice--info&quot;&gt;
-   
-&lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
-&lt;p&gt;screen/mouse mapping is broken over the QEMU VNC, you can get through the installer using Tab, Space, and Enter. The same person who wrote the network driver is working on a fix &lt;a href=&quot;https://github.com/pmj/QemuUSBTablet-OSX&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-
- &lt;/div&gt;
-
-&lt;p&gt;Use Disk Utility in the installer to format the QEMU HDD, and then run through the installer as normal.&lt;/p&gt;
-
-&lt;p&gt;Done!&lt;/p&gt;
-
-&lt;h3 id=&quot;other&quot;&gt;Other:&lt;/h3&gt;
-
-&lt;p&gt;If you want to access the Clover drive to make some changes, follow &lt;a href=&quot;https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2#efi-disk-image-manipulation&quot;&gt;this&lt;/a&gt; guide to do that.&lt;/p&gt;
-
-&lt;p&gt;If you are having issues, feel free to comment below:&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;From now on, I’ll buy my screens from PowerBookMedic, which has a great selection of Kindle parts. You could basically build one out of their inventory. I ended up buying two new faceplates and backs for $8.00. I will be going to the post office to ship the faulty screens back and hopefully buying a quality set of screens. I will update as soon as I get them installed.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Kindle Keyboard 3, or Kindle 3, is absolutely one of my favorite Kindles.</summary></entry></feed>
