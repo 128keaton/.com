@@ -34,7 +34,8 @@ Arguably, the best way to install OR upgrade to macOS High Sierra is using Apple
 
 We wanted a simple way to launch applications and establish a 'workflow' of sorts. Sure, you could just use the Dock and Finder, but to an untrained user, it can easily be confusing. Our solution was a custom application, similar to the macOS Utilities you see on the Recovery partition. 
 
-!()[https://raw.githubusercontent.com/128keaton/macOS-Utilities/master/macOS%20Utilities/screenshot.png]
+!()[https://raw.githubusercontent.com/128keaton/macOS-Utilities/master/macOS Utilities/screenshot.png]
+
 
 At the bottom, there is a button to launch a 'macOS Install Kickoff' application. The utilities pane waits for the `/Volumes/Install macOS High Sierra` volume to become available. The [kickoff](https://github.com/128keaton/macOS-Installer-Kickoff) application checks for any existing APFS setup, removes it (since we are installing from Sierra), and erases the drive, readying it for install. 
 
