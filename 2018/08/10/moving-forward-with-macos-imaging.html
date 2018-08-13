@@ -5,9 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Moving forward with macOS Imaging / Keaton Burleson</title>
-  <meta name="description" content="">
+  <title>macOS Imaging and Testing / Keaton Burleson</title>
+  <meta name="description" content="Prologue">
   <meta property="og:title" content="Keaton's Page" />
+  
+    <meta property="og:image" content="http://images.128keaton.com/Screen%20Shot%202018-08-10%20at%203.49.39%20PM.png" />
   
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="/2018/08/10/moving-forward-with-macos-imaging.html">
@@ -35,14 +37,13 @@
 
 <body style="background-color: white!important; background: none;">
     
+    <img class="post-head-image" src="http://images.128keaton.com/Screen%20Shot%202018-08-10%20at%203.49.39%20PM.png"> 
     <div class="wrapper" id="white post">
 
         <main id="main" role="main" class="main">
             <article class="post post--full">
 
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Moving forward with macOS Imaging </h2> <p><img src="http://images.128keaton.com/Screen%20Shot%202018-08-10%20at%203.49.39%20PM.png" alt="Screen Shot 2018-08-10 at 3.49.39 PM" /></p>
-
-<h2 id="prologue">Prologue</h2>
+                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>macOS Imaging and Testing </h2> <h2 id="prologue">Prologue</h2>
 
 <p>Now that macOS Imaging is dead (and <a href="https://support.apple.com/en-us/HT202770#sections">is never coming back</a>), I had to figure out a solution to replace DeployStudio here at ER2. Currently, we use a basic combination of cocoaDialog and bash to also mark the condition of any machine booted before imaging. The system is logged in our internal testing system and a label is adhered containing the specs. Then the machine is passed on to be cleaned before sale to a customer. This is great and all, but what if the machine has underlying issues, or severely overheats under strain <em>not</em> expressed during an install? Having a customer shipped what is essentially a defective laptop is the worst case scenario, but that inherently generates a lot of <em>waste</em> (at work, we are actively encouraged to eliminate waste)</p>
 
@@ -90,8 +91,8 @@
 
 		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
-    <input type="hidden" name="options[slug]" value="2018-08-10-moving-forward-with-macos-imaging">
-    <input type="hidden" name="options[parent]" value="2018-08-10-moving-forward-with-macos-imaging">
+    <input type="hidden" name="options[slug]" value="2018-08-10-macos-imaging-and-testing">
+    <input type="hidden" name="options[parent]" value="2018-08-10-macos-imaging-and-testing">
     <input type="hidden" name="options[origin]" value="http://128keaton.com/2018/08/10/moving-forward-with-macos-imaging.html">
     <input name="options[redirect]" type="hidden" value="http://128keaton.com/2018/08/10/moving-forward-with-macos-imaging.html">
 
@@ -110,7 +111,31 @@
             </article>
         </main>
         <footer class="footer" id="post-footer">
-        &copy Keaton Burleson
+	<h1>Read more:</h1>
+	<table class="colophon">
+		<tr>
+		
+		<td class="footer-post">
+			<a href="/2018/08/10/moving-forward-with-macos-imaging.html">
+				<h1>macOS Imaging and Testing</h1>
+			</a>
+		</td>
+		
+		<td class="footer-post">
+			<a href="/2017/09/08/yahoo-widgets-2017.html">
+				<h1>Yahoo! Widgets in 2017</h1>
+			</a>
+		</td>
+		
+		<td class="footer-post">
+			<a href="/2017/07/16/state-of-the-union.html">
+				<h1>State of the Union</h1>
+			</a>
+		</td>
+		
+	</tr>
+	</table>
+	&copy Keaton Burleson
 </footer>
 
     </div>
