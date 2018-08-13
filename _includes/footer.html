@@ -1,3 +1,15 @@
 <footer class="footer" id="{{ page.layout }}-footer">
-        &copy Keaton Burleson
+	<h1>Read more:</h1>
+	<table class="colophon">
+		<tr>
+		{% for post in site.posts limit:3 %}
+		<td class="footer-post">
+			<a href="{{ post.url }}">
+				<h1>{{ post.title }}</h1>
+			</a>
+		</td>
+		{% endfor %}
+	</tr>
+	</table>
+	&copy Keaton Burleson
 </footer>

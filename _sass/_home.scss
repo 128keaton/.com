@@ -171,9 +171,6 @@
     td {
       display: block;
     }
-    th{
-      display: none;
-    }
  
 
     tr {
@@ -186,13 +183,10 @@
         }
       }
     }
-    tr:nth-child(3){
-      border: none!important;
-    }
-
     tr:last-child {
       border: none;
     }
+
     width: 100%;
     .header {
       td:nth-child(2) {
@@ -201,7 +195,7 @@
       padding: 0;
       margin: 0;
     }
-    tr:nth-child(2) {
+    #top{
       display: none;
     }
   }

@@ -1,8 +1,8 @@
 ---
-title: Moving forward with macOS Imaging
+title: macOS Imaging and Testing
 layout: post
+head-image: http://images.128keaton.com/Screen%20Shot%202018-08-10%20at%203.49.39%20PM.png
 ---
-![Screen Shot 2018-08-10 at 3.49.39 PM](http://images.128keaton.com/Screen%20Shot%202018-08-10%20at%203.49.39%20PM.png)
 
 ## Prologue
 

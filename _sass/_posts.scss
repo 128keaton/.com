@@ -23,8 +23,8 @@ footer#post-footer a.notice {
 .post ul {
   word-wrap: break-word;
   font-size: 20px;
-line-height: 1.5;
-letter-spacing: 0.01rem;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
   font-family: Lora;
 }
 
@@ -248,6 +248,17 @@ letter-spacing: 0.01rem;
     margin: 25px 0;
     color: #e504f9;
   }
+  #post-footer{
+    .colophon{
+      border-spacing: 10px!important;
+    }
+    .footer-post{
+      padding: 0!important;
+      h1{
+       font-size: 18px!important;
+     }
+   }
+ }
 }
 
 .break {
@@ -335,13 +346,13 @@ img[src$='#stylized'] {
   background: #eee;
   box-shadow:0 1px 1px rgba(0,0,0,0.15),
     /* The top layer shadow */
-  0 10px 0 -5px #eee,
+    0 10px 0 -5px #eee,
     /* The second layer */
-  0 10px 1px -4px rgba(0,0,0,0.15),
+    0 10px 1px -4px rgba(0,0,0,0.15),
     /* The second layer shadow */
-  0 20px 0 -10px #eee,
+    0 20px 0 -10px #eee,
     /* The third layer */
-  0 20px 1px -9px rgba(0,0,0,0.15);
+    0 20px 1px -9px rgba(0,0,0,0.15);
   /* The third layer shadow */
   border: 2px solid #eee;
 }
@@ -365,4 +376,19 @@ img[src$='#stylized-small'] {
   color: gray;
   text-decoration: none;
   font-size: 30px;
+}
+
+#post-footer{
+  .colophon{
+    border-spacing: 25px;
+    margin: 0 auto;
+  }
+  .footer-post{
+    padding: 15px;
+    border: 1px solid blanchedalmond;
+    border-radius: 8px;
+    h1{
+      color: #224abc;
+    }
+  }
 }
