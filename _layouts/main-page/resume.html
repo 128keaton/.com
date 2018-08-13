@@ -6,6 +6,27 @@
         </td>
     </tr>
     <tr>
+        <th colspan=2>
+            Education/Awards
+        </th>
+        <th>
+            Date
+        </th>
+    </tr>
+    {% assign educations = site.data.education %}
+    {% for education in educations %}
+    <tr id="education">
+        <td>
+            <h4>{{ education[1].title }}</h4>
+        </td>
+        <td>
+        </td>
+        <td>
+            {{ education[1].date }}
+        </td>
+    </tr>
+    {% endfor %}
+    <tr>
         <th>
             Job
         </th>

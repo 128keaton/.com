@@ -171,6 +171,11 @@
     td {
       display: block;
     }
+    th{
+      display: none;
+    }
+ 
+
     tr {
       display: block;
       border-bottom: 2px solid #000000;
@@ -181,6 +186,10 @@
         }
       }
     }
+    tr:nth-child(3){
+      border: none!important;
+    }
+
     tr:last-child {
       border: none;
     }
