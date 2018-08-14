@@ -1415,7 +1415,9 @@ footer#post-footer a.notice {
     .post--full p {
       margin: 0 auto; }
 
-  z
+  .post pre {
+    overflow: auto; }
+
   .post img {
     text-align: center; }
 
@@ -1515,7 +1517,8 @@ h2.comments__heading.heading-2 {
   padding: 12px 24px;
   color: white;
   font-size: 14px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  -webkit-appearance: none; }
 
 #post-new-comment {
   padding: 25px; }
