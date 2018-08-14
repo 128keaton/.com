@@ -2,13 +2,10 @@
 <html>
 	{% include head.html %}
 	{% include header.html %}
-
-
 	<body>
-		<div class="wrapper" id="white">
-
 		{{ content }}
-		{% include footer.html %}
-	</div>
+		{<footer class="footer" id="{{ page.layout }}-footer">
+			&copy Keaton Burleson
+		</footer>
 	</body>
 </html>
