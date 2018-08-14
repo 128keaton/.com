@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-08-14T14:30:06+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">macOS Imaging and Testing</title><link href="/2018/08/10/moving-forward-with-macos-imaging.html" rel="alternate" type="text/html" title="macOS Imaging and Testing" /><published>2018-08-10T00:00:00+00:00</published><updated>2018-08-10T00:00:00+00:00</updated><id>/2018/08/10/moving-forward-with-macos-imaging</id><content type="html" xml:base="/2018/08/10/moving-forward-with-macos-imaging.html">&lt;h2 id=&quot;prologue&quot;&gt;Prologue&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-08-14T16:55:50+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">macOS Imaging and Testing</title><link href="/2018/08/10/moving-forward-with-macos-imaging.html" rel="alternate" type="text/html" title="macOS Imaging and Testing" /><published>2018-08-10T00:00:00+00:00</published><updated>2018-08-10T00:00:00+00:00</updated><id>/2018/08/10/moving-forward-with-macos-imaging</id><content type="html" xml:base="/2018/08/10/moving-forward-with-macos-imaging.html">&lt;h2 id=&quot;prologue&quot;&gt;Prologue&lt;/h2&gt;
 
 &lt;p&gt;Now that macOS Imaging is dead (and &lt;a href=&quot;https://support.apple.com/en-us/HT202770#sections&quot;&gt;is never coming back&lt;/a&gt;), I had to figure out a solution to replace DeployStudio here at ER2. Currently, we use a basic combination of cocoaDialog and bash to also mark the condition of any machine booted before imaging. The system is logged in our internal testing system and a label is adhered containing the specs. Then the machine is passed on to be cleaned before sale to a customer. This is great and all, but what if the machine has underlying issues, or severely overheats under strain &lt;em&gt;not&lt;/em&gt; expressed during an install? Having a customer shipped what is essentially a defective laptop is the worst case scenario, but that inherently generates a lot of &lt;em&gt;waste&lt;/em&gt; (at work, we are actively encouraged to eliminate waste)&lt;/p&gt;
 
@@ -74,29 +74,7 @@
 
 &lt;p&gt;Now, I really want to get the Yahoo! Weather Widget working again, because after all, its just a &lt;a href=&quot;https://gist.github.com/128keaton/31c6887cb59ae0651b5e60e7c8cff38d&quot;&gt;webapp&lt;/a&gt;..&lt;/p&gt;
 
-&lt;p&gt;But thats for another time.&lt;/p&gt;</content><author><name></name></author><summary type="html">Stupid Alert</summary></entry><entry><title type="html">State of the Union</title><link href="/2017/07/16/state-of-the-union.html" rel="alternate" type="text/html" title="State of the Union" /><published>2017-07-16T16:59:00+00:00</published><updated>2017-07-16T16:59:00+00:00</updated><id>/2017/07/16/state-of-the-union</id><content type="html" xml:base="/2017/07/16/state-of-the-union.html">&lt;p&gt;Hello.&lt;/p&gt;
-
-&lt;p&gt;I &lt;em&gt;cannot&lt;/em&gt; believe that it has been three months since I last updated my blog. So much has changed since then. I graduated high school, moved out, and broke up with my girlfriend, all in that order.&lt;/p&gt;
-
-&lt;h2 id=&quot;high-school&quot;&gt;High School&lt;/h2&gt;
-
-&lt;p&gt;I was really thrilled to walk the stage. Honestly it makes me sad that I don’t have a way to keep myself concurrently connected to the friends I casually had. Sure I have social media, but I don’t have a common destination. Oh well. I wish I could replay it, sitting there in a stupid gown surrounded by people I knew. My friend had a great Saludictorian speech, and I throughougly commend him for it. Great job bud.&lt;/p&gt;
-
-&lt;h2 id=&quot;moving-out&quot;&gt;Moving Out&lt;/h2&gt;
-
-&lt;p&gt;I’ve wanted my own place for a while. Since I felt like I compromised by going to a local school (University of Memphis, ugh), I was pretty set on being broke still, so I found some roommates and we moved into a 2.1/3rd bedroom house real close to campus. So far, its great having a house. We’ll see what thats like in a few months.&lt;/p&gt;
-
-&lt;h2 id=&quot;breaking-up&quot;&gt;Breaking Up&lt;/h2&gt;
-
-&lt;p&gt;This had been coming for a while. The past few months had an ‘out-of-sync’ feeling that I can’t just describe. Katherine was a great girl, she was stunning and is smart as hell, and I’m happy to remain friends with her, but we were too similar for it to work out. It all can’t be like &lt;strong&gt;Scrubs&lt;/strong&gt;, thanks J.D.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-word&quot;&gt;Final word&lt;/h3&gt;
-
-&lt;p&gt;I’m really excited for the next chapter of my life, I feel adiquately prepared for it. I have some small projects up in the air, namely an update to Test Strip. Its very alpha and built in Swift 4, but already the usability changes have made my usage of the app skyrocket. Recently, I was unfortunately driven out of a group chat that I helped forge in the fires of iMessage with some fellow friends. Also, unfortunately, the chat has devolved into a place where I didn’t feel like home. My memory isn’t the best, so I’d mis-speak about something I said earlier or something I owned and I’d get harrased if it wasn’t corrected. There was also some ‘no-no’s when it came to stuff to talk about. If someone was buying something, or receiving something related to the interests of the chat, it wasn’t discussed. There was also alot of downright ridiculous demands, and on top of that, the chat was filled with obnoxiousness. There were three people perpetuating the situation. Too much drama and stupidity and I am &lt;em&gt;overjoyed&lt;/em&gt; to have those three ‘people’ out of my life. From complaining to over-bragging, it was frustrating being in the chat day-to-day. The feeling of friends hanging out was gone. The final straw was “hey Keatons in a bad mood watch out”. I wasn’t, I was just being poked for no reason. Long story short, I am very sorry if you encounter these people. They are terrible people. Leeches on society.&lt;/p&gt;
-
-&lt;p&gt;On a lighter note, I am working on my car more, and I think I can make it tons better! I am happy that I am back online and functioning again, and I hope that I can write more.
-Signing off for now,
-Keaton.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello.</summary></entry><entry><title type="html">How I got 3.1.2 on a 3G[s] from 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] from 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;But thats for another time.&lt;/p&gt;</content><author><name></name></author><summary type="html">Stupid Alert</summary></entry><entry><title type="html">How I got 3.1.2 on a 3G[s] from 2011</title><link href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html" rel="alternate" type="text/html" title="How I got 3.1.2 on a 3G[s] from 2011" /><published>2017-04-12T00:56:57+00:00</published><updated>2017-04-12T00:56:57+00:00</updated><id>/2017/04/12/how-i-got-312-on-a-3gs-from-2011</id><content type="html" xml:base="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a &lt;em&gt;new boot ROM&lt;/em&gt; 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?&lt;/p&gt;
 
@@ -514,60 +492,7 @@ and then:
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/mfenner/jekyll-travis&quot;&gt;Original repo that pointed me in the right direction&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db&quot;&gt;Medium post that helped conjure up the thought&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="travis," /><category term="jekyll," /><category term="blog," /><category term="github" /><summary type="html">Preface: When I first started blogging with Jekyll, my setup was a wreck. I didn’t quite understand Liquid Templating, so there wasn’t a lot a reuse, tons of unnecessary CSS, and plenty of plain ol’ HTML kludges. I still really liked Jekyll. It was fast, hosting for it was cheap, and free if you used GitHub Pages, which I didn’t at the time. The two things I didn’t like about Jekyll was the lack of portability, and of easy publishing.</summary></entry><entry><title type="html">New Mac Pros</title><link href="/2017/04/04/new-mac-pros.html" rel="alternate" type="text/html" title="New Mac Pros" /><published>2017-04-04T14:46:14+00:00</published><updated>2017-04-04T14:46:14+00:00</updated><id>/2017/04/04/new-mac-pros</id><content type="html" xml:base="/2017/04/04/new-mac-pros.html">&lt;p&gt;This was really interesting to wake up and see.&lt;/p&gt;
-
-&lt;p&gt;Seems like Apple has finally realized something. Their Pro market is a bit unhappy. It is very interesting that they “conceited defeat” by admitting that the industry went a different way than they were expecting.
-The biggest reason they took such a jump to a smaller, and enclosed enclosure was because of a hopeful future in parallel GPU technology. However, it never really happened that way. For a video editing professional, a single upgraded (and probably flashed) GPU is enough, provided they have a Mac Pro with upgradable internals.&lt;/p&gt;
-
-&lt;div class=&quot;break&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;When it comes to timeline, it isn’t quite clear &lt;em&gt;when&lt;/em&gt; Apple will release, other than its planned for next year, alongside a new display. I will say this, even if both are a flop, I am still extremely excited for the coming years at Apple. They have realized their mistake, but it wasn’t a mistake they made knowingly until recently. Apple has recognized their own issue and is &lt;strong&gt;currently fixing it&lt;/strong&gt;. Apple &lt;strong&gt;admitted fault&lt;/strong&gt; and &lt;strong&gt;conceited defeat&lt;/strong&gt; themselves. Impressive. Especially after seeing the very strange array of &lt;a href=&quot;http://appleinsider.com/articles/17/02/02/reports-of-lg-ultrafine-5k-display-problems-persist-may-relate-to-thunderbolt-cables&quot;&gt;issues&lt;/a&gt; with the recent LG 5K displays. Apple has learned, from that hilariously bad decision, if they want it done right, Apple should do it themselves. Now, after years of sliding, I am really excited for Apple again. I’m excited since I own the last upgradable Mac Pro, I own the 2nd to last upgradable MacBook Pro (2011), and I’m ready for something that isn’t on the market yet.&lt;/p&gt;
-
-&lt;div class=&quot;break&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;As an iOS and macOS developer, I use Apple’s tools, because you really can’t use anything else properly. I’d like to say Xcode is this smart, sleek piece of IDE that works incredibly well. That would be a lie. I’d like to say it uses a proportionate amount of RAM, doesn’t bug out sometimes causing lack-luster performance, and mysterious issues only solved with a relaunch. I’d really love to. But Xcode isn’t that piece of software. It is fat, bloated, and very frustrating sometimes. I’m using Apple software on an Apple machine running Apple’s operating system and I’m having a hard time. Without my machines being upgradable, I doubt I’d be able to run Xcode and develop for iOS/macOS.&lt;/p&gt;
-
-&lt;div class=&quot;break&quot;&gt;&lt;/div&gt;
-
-&lt;div class=&quot;notice--quote&quot;&gt;
-
-&lt;p&gt;We think it’s really important to create something great for our pro customers who want a Mac Pro modular system…&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;p&gt;Though we don’t know much about the form-factor, it is guaranteed to be modular in some way, shape, or form. If you’ve worked on an HP server recently, you’ll know that their CPU, GPU, and RAM modularity is fantastic. My personal favorite is the HP ProLiant DL580 G6. Front-facing removable RAM and CPU tray. No screws hold the heatsink, its all levers. The RAM slides out in modular boxes ready to be filled and slotted back. The PCIe lanes are basic, but it works very well. No screws either, just another big blue lever. Now, I don’t want a Mac Pro as &lt;em&gt;large&lt;/em&gt; as a DL580, but I don’t want it small either.&lt;/p&gt;
-
-&lt;p&gt;My logic is this, larger Mac Pro, more upgradability, better airflow.&lt;/p&gt;
-
-&lt;p&gt;And it needs to be beautiful.&lt;/p&gt;
-
-&lt;p&gt;I’m not worried about that last bit, as I know, Apple being Apple, some piece will have a more form over function approach to it, hopefully something trivial.&lt;/p&gt;
-
-&lt;div class=&quot;break&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;Another nice tid-bit is the speed bump the existing Mac Pros are getting, and now we have hope for a new Mac Mini, which brings me more hope. The Mac Mini was the cheap Mac. I’d recommend it to anyone who needed a small server for their macOS powered camp, or for people uncertain about the Apple eco-system and in dire need of replacing their Windows box. This makes me so excited and looking forward to whatever shoots out of Apple next. When I was last in the Apple store, I was waiting for a 2012 retina repair to be finished. While I did, a lady, who introduced herself as a teacher, walked in, grabbed the nearest blue-shirt and pointed to the new MacBook Pro (with Touch Bar), and said: “I want that one, in gray”. The blue-shirt turned around and walked to the back. The lady sat there excitedly rocking back and forth on her heels. I asked her,&lt;/p&gt;
-
-&lt;p&gt;“Is this your first MacBook?”&lt;/p&gt;
-
-&lt;p&gt;“Yes! Now that the new ones are out, I can finally buy one.”&lt;/p&gt;
-
-&lt;p&gt;The blue-shirt returned with a white box, and a bag.&lt;/p&gt;
-
-&lt;p&gt;“Is this all we can help you with today?”&lt;/p&gt;
-
-&lt;p&gt;I think Apple will see a very decent uptick of purchases from non-Pro users too, just people who want the most future proof, or the most powerful. More or less like the gentleman who buys the most powerful Tahoe–not because it has good “highway passing power”, but because its the &lt;em&gt;fastest&lt;/em&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;break&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;I’m super excited for the Mac line, no matter what comes next, I think it’ll be great.&lt;/p&gt;
-
-&lt;div class=&quot;notice--quote&quot;&gt;
-
-&lt;p&gt;My takeaway is that the Mac’s future is bright.&lt;/p&gt;
-
--- John Gruber
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Check the &lt;a href=&quot;http://www.apple.com/shop/buy-mac/mac-pro&quot;&gt;store&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This was really interesting to wake up and see.</summary></entry><entry><title type="html">iOS 6 in 2016</title><link href="/2017/01/20/ios-6-in-2016.html" rel="alternate" type="text/html" title="iOS 6 in 2016" /><published>2017-01-20T04:32:31+00:00</published><updated>2017-01-20T04:32:31+00:00</updated><id>/2017/01/20/ios-6-in-2016</id><content type="html" xml:base="/2017/01/20/ios-6-in-2016.html">&lt;p&gt;First let me preface this ‘review’ by stating that I actually didn’t use iOS 6 for the duration of this test because I &lt;em&gt;couldn’t&lt;/em&gt;. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&amp;amp;T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual texts and phone calls.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="travis," /><category term="jekyll," /><category term="blog," /><category term="github" /><summary type="html">Preface: When I first started blogging with Jekyll, my setup was a wreck. I didn’t quite understand Liquid Templating, so there wasn’t a lot a reuse, tons of unnecessary CSS, and plenty of plain ol’ HTML kludges. I still really liked Jekyll. It was fast, hosting for it was cheap, and free if you used GitHub Pages, which I didn’t at the time. The two things I didn’t like about Jekyll was the lack of portability, and of easy publishing.</summary></entry><entry><title type="html">iOS 6 in 2016</title><link href="/2017/01/20/ios-6-in-2016.html" rel="alternate" type="text/html" title="iOS 6 in 2016" /><published>2017-01-20T04:32:31+00:00</published><updated>2017-01-20T04:32:31+00:00</updated><id>/2017/01/20/ios-6-in-2016</id><content type="html" xml:base="/2017/01/20/ios-6-in-2016.html">&lt;p&gt;First let me preface this ‘review’ by stating that I actually didn’t use iOS 6 for the duration of this test because I &lt;em&gt;couldn’t&lt;/em&gt;. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&amp;amp;T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual texts and phone calls.&lt;/p&gt;
 
 &lt;p&gt;Now, lets delve into the review.&lt;/p&gt;
 
@@ -668,94 +593,282 @@ The “slate” anodization did show wear and tear as the year went by, but I li
 
 &lt;p&gt;I just think it was a waste of design, moving to iOS 7 so abruptly.&lt;/p&gt;
 
-&lt;p&gt;If you disagree, leave a comment below and we’ll talk.&lt;/p&gt;</content><author><name></name></author><summary type="html">First let me preface this ‘review’ by stating that I actually didn’t use iOS 6 for the duration of this test because I couldn’t. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&amp;amp;T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual texts and phone calls.</summary></entry><entry><title type="html">Mozilla’s New Look</title><link href="/2017/01/18/new-mozilla.html" rel="alternate" type="text/html" title="Mozilla's New Look" /><published>2017-01-18T18:46:01+00:00</published><updated>2017-01-18T18:46:01+00:00</updated><id>/2017/01/18/new-mozilla</id><content type="html" xml:base="/2017/01/18/new-mozilla.html">&lt;div class=&quot;notice--quote&quot;&gt;
-
-&lt;p&gt;I’m a bit disappointed. Mozilla makes a couple of great things (Firefox, Rust, MDN, …). But in contrast to their products, I have a quite bad impression of their Foundation and/or Corporation. I don’t know if it is warranted or not, but I have the impression that they mostly exist to burn through the millions they get from Google for setting them as default search engine.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;This is exactly why they are trying to rebrand themselves, to move away from preconceived notions, similar to yours. Not that I’m advocating for the Mozilla Foundation, but that is exactly right&lt;/p&gt;
-
-&lt;div class=&quot;notice--quote&quot;&gt;
-
-
-&lt;p&gt;This new branding doesn’t help at all with my perception of Mozilla. If anything, it emphasizes the perception that Mozilla is a bloated entity disconnected from the products I care about. That they put a nerdy “://” in there to appeal technical means to me that they are even aware of this.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;And that is where they steered themselves wrong. Most college-age students, people that they seem to be gunning for with the horror-show of meme images, use Chrome, and Chromebooks, or Safari. I personally use Firefox, but they just keep falling short of my expectations. Now, I love this next bit&lt;/p&gt;
-
-&lt;div class=&quot;notice--quote&quot;&gt;
-
-
-&lt;p&gt;What I would have done is to go back to the early 2000s unapologetically retro dinosaur. This was from a time when Mozilla was the underdog, when it was the Free alternative, when it was getting better and better, and when Firefox was invented.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;The only problem with that is no one they want to use their browser will understand this, plus Firefox hasn’t gotten better for a long time.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m a bit disappointed. Mozilla makes a couple of great things (Firefox, Rust, MDN, …). But in contrast to their products, I have a quite bad impression of their Foundation and/or Corporation. I don’t know if it is warranted or not, but I have the impression that they mostly exist to burn through the millions they get from Google for setting them as default search engine.</summary></entry><entry><title type="html">iCloud Locked Downgrading</title><link href="/2016/12/29/coolbooter-icloud-lock.html" rel="alternate" type="text/html" title="iCloud Locked Downgrading" /><published>2016-12-29T05:58:24+00:00</published><updated>2016-12-29T05:58:24+00:00</updated><id>/2016/12/29/coolbooter-icloud-lock</id><content type="html" xml:base="/2016/12/29/coolbooter-icloud-lock.html">&lt;p&gt;Thanks to &lt;a href=&quot;https://twitter.com/coolbooter&quot;&gt;Coolbooter&lt;/a&gt;, we can now downgrade to any capable versions that our 32-bit iDevices can run (iPad 2-4, iPhone 4-5c), but what if you have an iPhone that is iCloud locked?&lt;/p&gt;
-
-&lt;div class=&quot;notice--info&quot;&gt;
+&lt;p&gt;If you disagree, leave a comment below and we’ll talk.&lt;/p&gt;</content><author><name></name></author><summary type="html">First let me preface this ‘review’ by stating that I actually didn’t use iOS 6 for the duration of this test because I couldn’t. Not because it was unusable in the standard sense, when I purchased the phone, I failed to realize that it was a GSM/AT&amp;amp;T only phone, missing the bands for CDMA carriers, like mine, Verizon. Still I used it as much as I could, barring things that required cellular service, i.e. actual texts and phone calls.</summary></entry><entry><title type="html">QEMU with an El Capitan Guest</title><link href="/2016/08/25/qemu-with-an-el-capitan-guest.html" rel="alternate" type="text/html" title="QEMU with an El Capitan Guest" /><published>2016-08-25T21:26:08+00:00</published><updated>2016-08-25T21:26:08+00:00</updated><id>/2016/08/25/qemu-with-an-el-capitan-guest</id><content type="html" xml:base="/2016/08/25/qemu-with-an-el-capitan-guest.html">&lt;div class=&quot;notice--info&quot;&gt;
   
 &lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
-&lt;p&gt;Now, this isn’t a ‘work-around’ per-se, just a way to get to the homescreen. Activation and whatnot is NOT guaranteed with this method, and you need to have the phone already jailbroken and you need to have homescreen access, i.e. no passcode. Coolbooter is in beta. BETA! It might break your phone.&lt;/p&gt;
-
-&lt;p&gt;Also, this has only been tested on iOS 6. ymmv.&lt;/p&gt;
+&lt;p&gt;This guide is largely based off &lt;a href=&quot;https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2&quot;&gt;https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2&lt;/a&gt;, but adapted for a newer Clover, QEMU, etc.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;h2 id=&quot;step-1---installing-coolbooter&quot;&gt;Step 1 - Installing Coolbooter.&lt;/h2&gt;
+&lt;h2 id=&quot;setup&quot;&gt;Setup:&lt;/h2&gt;
 
-&lt;p&gt;If you haven’t already, add the Coolbooter repo to Cydia (https://coolbooter.com) and install the Coolbooter Beta package. It’s pretty straightforward.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;An Ubuntu Server running 16.04 LTS
+    &lt;ul&gt;
+      &lt;li&gt;KVM Capabilities&lt;/li&gt;
+      &lt;li&gt;QEMU compiled/installed&lt;/li&gt;
+      &lt;li&gt;OVMF compiled (&lt;a href=&quot;https://gist.github.com/gordonturner/85dcc321d2099d610e67&quot;&gt;https://gist.github.com/gordonturner/85dcc321d2099d610e67&lt;/a&gt;) and &lt;code class=&quot;highlighter-rouge&quot;&gt;/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd&lt;/code&gt; put in the base folder of your VM (&lt;code class=&quot;highlighter-rouge&quot;&gt;bios.bin&lt;/code&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A supported Mac that can download 10.11.6 from the Mac App Store&lt;/li&gt;
+  &lt;li&gt;A 8GB USB Drive&lt;/li&gt;
+  &lt;li&gt;Clover EFI Bootloader&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;step-2---d-d-d-downgrading&quot;&gt;Step 2 - D-d-d-downgrading.&lt;/h2&gt;
+&lt;h2 id=&quot;step-1-creating-the-install-drive&quot;&gt;Step 1, creating the install drive:&lt;/h2&gt;
 
-&lt;p&gt;Select the version you want to install (once again, only tested on iOS 6) and install. Coolbooter takes a decent amount of time to download, parition and move everything into place. Then tap ‘Boot’ and boot into iOS 6. Run through the setup to verify that you can’t log in to the locked account.&lt;/p&gt;
+&lt;p&gt;With your OS X installer app in /Applications/, run:&lt;/p&gt;
 
-&lt;h2 id=&quot;step-3---installing-openssh-because-if-you-didnt-you-are-doing-it-wrong&quot;&gt;Step 3 - Installing OpenSSH (because if you didn’t you are doing it wrong).&lt;/h2&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;OS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;X&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;El&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Capitan.app/Contents/Resources/createinstallmedia &lt;span class=&quot;nt&quot;&gt;--volume&lt;/span&gt; /Volumes/Untitled &lt;span class=&quot;nt&quot;&gt;--applicationpath&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/Applications/Install OS X El Capitan.app&quot;&lt;/span&gt;
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Boot back into your main OS (just shut down and turn back on) and install ‘OpenSSH’ in Cydia. If you don’t know how to SSH into your own device, then stop right here and contemplate your life choices and return at a later date.&lt;/p&gt;
+&lt;p&gt;Make sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/Untitled&lt;/code&gt; for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.&lt;/p&gt;
 
-&lt;h3 id=&quot;note-change-your-openssh-root-password-using-passwd&quot;&gt;Note: change your OpenSSH root password using &lt;code class=&quot;highlighter-rouge&quot;&gt;passwd&lt;/code&gt;&lt;/h3&gt;
+&lt;h2 id=&quot;step-2-installing-clover&quot;&gt;Step 2, installing Clover:&lt;/h2&gt;
 
-&lt;div id=&quot;stahp&quot;&gt;
+&lt;p&gt;After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for &lt;code class=&quot;highlighter-rouge&quot;&gt;OsxAptioFixDrv-64&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DataHubDxe-64&lt;/code&gt;, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download &lt;a href=&quot;https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi&quot;&gt;this&lt;/a&gt; file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:&lt;/p&gt;
 
-## Step 3a - Contemplating your life choices.
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-Are you one of those people who post on /r/jailbreak like its your personal Google? Stop it. You are bad. Do you reply to @qwertyuiop's tweets asking 'eta wen' or other begging crap? Stop it. You are bad.
+&lt;div class=&quot;notice--info&quot;&gt;
+   
+&lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
+&lt;p&gt;If you want to have verbose boot (recommended), add &lt;code class=&quot;highlighter-rouge&quot;&gt;-v&lt;/code&gt; to the BootFlags line in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/ESP/EFI/CLOVER/config.plist&lt;/code&gt; file&lt;/p&gt;
 
-&lt;/div&gt;
+ &lt;/div&gt;
 
-&lt;h2 id=&quot;step-4---mounting-the-secondary-partition&quot;&gt;Step 4 - Mounting the secondary partition.&lt;/h2&gt;
+&lt;h2 id=&quot;step-3-getting-the-osk-value&quot;&gt;Step 3, getting the OSK value:&lt;/h2&gt;
 
-&lt;p&gt;First, list your devices or partitions in your SSH session with &lt;code class=&quot;highlighter-rouge&quot;&gt;ls /dev/&lt;/code&gt;, I’d bet some serious money your iOS 6 partition is something like &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk0s1s3&lt;/code&gt;. If a mounting point (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/mnt&lt;/code&gt;) doesn’t exist, make one with &lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir /mnt&lt;/code&gt;. Finally, run:&lt;/p&gt;
+&lt;p&gt;Please see &lt;a href=&quot;https://gist.github.com/gordonturner/c33bcc935e32f9fa6695&quot;&gt;https://gist.github.com/gordonturner/c33bcc935e32f9fa6695&lt;/a&gt; to get the OSK value (must be run from an actual Apple computer). Save this string and keep it safe for later.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; mount &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; hfs /dev/disk0s1s3 /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;step-4-writing-the-flash-drive-to-an-image&quot;&gt;Step 4, writing the flash drive to an image:&lt;/h2&gt;
 
-&lt;p&gt;Substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk0s1s3&lt;/code&gt; for your device.&lt;/p&gt;
+&lt;p&gt;Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type &lt;code class=&quot;highlighter-rouge&quot;&gt;diskutil list&lt;/code&gt;, find your install drive. (Should have two partitions: &lt;code class=&quot;highlighter-rouge&quot;&gt;EFI&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Install OS X El Capitan&lt;/code&gt;).  Record the disk number (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk8&lt;/code&gt;). &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into a comfortable folder &lt;code class=&quot;highlighter-rouge&quot;&gt;~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
 
-&lt;h2 id=&quot;step-5---removing-the-setup-app&quot;&gt;Step 5 - Removing the setup app.&lt;/h2&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo dd &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/rdiskX &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clover-usb-disk.dd
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;We’re almost DUNNN. Just run:&lt;/p&gt;
+&lt;p&gt;Making sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; for your disk number.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /mnt/Applications &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; Setup.app&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;After a bit of waiting, you should have a large file on your desktop named &lt;code class=&quot;highlighter-rouge&quot;&gt;clover-usb-disk.dd&lt;/code&gt;, using your own methods, move this file into the root of your vm folder on your server.&lt;/p&gt;
 
-&lt;p&gt;Boot back into your secondary OS and you should see a lockscreen instead of a setup screen&lt;/p&gt;
+&lt;h2 id=&quot;step-5-final-setup&quot;&gt;Step 5, final setup:&lt;/h2&gt;
 
-&lt;p&gt;If you broke some stuff, sorry, your fault&lt;/p&gt;</content><author><name></name></author><summary type="html">Thanks to Coolbooter, we can now downgrade to any capable versions that our 32-bit iDevices can run (iPad 2-4, iPhone 4-5c), but what if you have an iPhone that is iCloud locked?</summary></entry><entry><title type="html">Refurbishing Kindles</title><link href="/2016/11/30/refurbishing-kindles.html" rel="alternate" type="text/html" title="Refurbishing Kindles" /><published>2016-11-30T05:58:24+00:00</published><updated>2016-11-30T05:58:24+00:00</updated><id>/2016/11/30/refurbishing-kindles</id><content type="html" xml:base="/2016/11/30/refurbishing-kindles.html">&lt;p&gt;The Kindle Keyboard 3, or Kindle 3, is absolutely one of my favorite Kindles.&lt;/p&gt;
+&lt;p&gt;Now, we absolutely have to be on the Linux machine. Either SSH in, or gain physical access.
+At the command line, use this command in your root VM folder:&lt;/p&gt;
 
-&lt;p&gt;It features a full keyboard (SYM key gives you punctation), sports a Linux kernel (you can actually run Debian on them), easily jailbreakable, weighted properly, and has physical page buttons.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;qemu-img create &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; qcow2 osx-disk0.qcow2 200G
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;They are one of the last easily serviceable e-readers from Amazon.&lt;/p&gt;
+&lt;p&gt;Substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;200G&lt;/code&gt; for how many gigs you want, for 500Gb use &lt;code class=&quot;highlighter-rouge&quot;&gt;500G&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;They are very cheap on eBay and are still able to sync with your Amazon account easily, some of the special models even have 3G. Having 3G is especially handy since you now have a remote terminal with Debian. SSH into any server on the fly! The one fatal flaw the device has is the screen. While it isn’t too expensive to replace ($25), you have to dissassemble the entire device. Thankfully, there are only two screws and one ribbon cable, plus prying off the snap-on plastic back. &lt;a href=&quot;https://www.ifixit.com/Guide/Kindle+3+Screen+Replacement/29843&quot;&gt;iFixit&lt;/a&gt; has you covered. My only tips are, just undo the orange ribbon cable (see photo).
-&lt;img src=&quot;https://d3nevzfk7ii3be.cloudfront.net/igi/YJW3xKyWIxFHOucJ.medium&quot; alt=&quot;:D&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:&lt;/p&gt;
 
-&lt;p&gt;And on step 7/8 take out the motherboard and plate as a whole.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;su -
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;I have two sitting waiting for new screens. I plan to give them as Christmas gifts since I believe they are much more utilitarian than the newer ones. In the future, I plan to make a reading light attachment, but thats all in the future.&lt;/p&gt;
+&lt;p&gt;I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting &lt;code class=&quot;highlighter-rouge&quot;&gt;echo 1 &amp;gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt; into your &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/rc.local&lt;/code&gt; file might not be a bad idea.&lt;/p&gt;
 
-&lt;p&gt;Now, I bought two new screens from an eBay seller (unnamed for privacy). After assembling, I noticed some very frustrating ghosting on the screen:&lt;/p&gt;
+&lt;h2 id=&quot;step-6-first-boot&quot;&gt;Step 6, first boot:&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.sli.mg/RV9EDW.jpg&quot; alt=&quot;:()&quot; /&gt;&lt;img src=&quot;https://i.sli.mg/bFM35I.jpg&quot; alt=&quot;:()&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Ok, brace yourself, this is my command to start my VM:&lt;/p&gt;
 
-&lt;p&gt;From now on, I’ll buy my screens from PowerBookMedic, which has a great selection of Kindle parts. You could basically build one out of their inventory. I ended up buying two new faceplates and backs for $8.00. I will be going to the post office to ship the faulty screens back and hopefully buying a quality set of screens. I will update as soon as I get them installed.&lt;/p&gt;</content><author><name></name></author><summary type="html">The Kindle Keyboard 3, or Kindle 3, is absolutely one of my favorite Kindles.</summary></entry></feed>
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;qemu-system-x86_64 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; 8192 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-enable-kvm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-cpu&lt;/span&gt; core2duo,vendor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;GenuineIntel &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-rtc&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;localtime &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-smbios&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-machine&lt;/span&gt; q35,accel&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;kvm,usb&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off,vmport&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;off &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-bios&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;bios.bin &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-smp&lt;/span&gt; 4,sockets&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1,cores&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,threads&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; isa-applesmc,osk&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$OSK&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;$&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; i82801b11-bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pcie.0,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1e &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; pci-bridge,chassis_nr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.1,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ahci,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;pci.2,addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0x5 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-drive&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;clover-usb-disk.dd,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;raw &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ide.2,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-2,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-2,bootindex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-drive&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$VMROOT$/&lt;/span&gt;osx-disk0.qcow2,if&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;none,media&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;disk,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;qcow2 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; ide-hd,bus&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0.0,drive&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;drive-sata0-0-0,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sata0-0-0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-usb&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; usb-mouse &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; usb-kbd &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-full-screen&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-vnc&lt;/span&gt; :1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-netdev&lt;/span&gt; bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,br&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; virtio-net,netdev&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,vectors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,mac&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;00:00:00:00:00:00&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$OSK$&lt;/code&gt; with your OSK string you saved earlier. Second, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$VMROOT$&lt;/code&gt; occurrences to whatever your VM root is.&lt;/p&gt;
+
+&lt;div class=&quot;notice--info&quot;&gt;
+   
+&lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
+&lt;p&gt;networking is a bit of a beast, but I know you can get it working. I won’t be covering it, but the &lt;a href=&quot;https://github.com/pmj/virtio-net-osx&quot;&gt;virtio-net&lt;/a&gt; driver will help.&lt;/p&gt;
+
+ &lt;/div&gt;
+
+&lt;p&gt;After those edits, put it into the command line, and cross your fingers.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-7-connecting-and-installing&quot;&gt;Step 7, connecting and installing:&lt;/h2&gt;
+
+&lt;p&gt;Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use &lt;em&gt;Chicken of the VNC&lt;/em&gt;, because the Screen Sharing app doesn’t work with the server. Connect to your IP, and port &lt;code class=&quot;highlighter-rouge&quot;&gt;5901&lt;/code&gt;. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.&lt;/p&gt;
+
+&lt;div class=&quot;notice--info&quot;&gt;
+   
+&lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
+&lt;p&gt;screen/mouse mapping is broken over the QEMU VNC, you can get through the installer using Tab, Space, and Enter. The same person who wrote the network driver is working on a fix &lt;a href=&quot;https://github.com/pmj/QemuUSBTablet-OSX&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+
+ &lt;/div&gt;
+
+&lt;p&gt;Use Disk Utility in the installer to format the QEMU HDD, and then run through the installer as normal.&lt;/p&gt;
+
+&lt;p&gt;Done!&lt;/p&gt;
+
+&lt;h3 id=&quot;other&quot;&gt;Other:&lt;/h3&gt;
+
+&lt;p&gt;If you want to access the Clover drive to make some changes, follow &lt;a href=&quot;https://gist.github.com/gordonturner/2a2e5ecde5e7860b52e2#efi-disk-image-manipulation&quot;&gt;this&lt;/a&gt; guide to do that.&lt;/p&gt;
+
+&lt;p&gt;If you are having issues, feel free to comment below:&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Power Macintosh 8500 Web Server</title><link href="/2016/06/07/power-macintosh-8500-web-server.html" rel="alternate" type="text/html" title="Power Macintosh 8500 Web Server" /><published>2016-06-07T22:22:55+00:00</published><updated>2016-06-07T22:22:55+00:00</updated><id>/2016/06/07/power-macintosh-8500-web-server</id><content type="html" xml:base="/2016/06/07/power-macintosh-8500-web-server.html">&lt;p&gt;Well, I went and did it. I made my Power Macintosh 8500 into a Debian web server.
+Installing Debian was a bit harder than expected, but thanks to the BootX software, it was eventually installed. The biggest issue was just getting all of the kernels in place.
+Here is how my setup works:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SCSI drive has a Mac OS 9.1 install, with the BootX app inside of the System Folder.&lt;/li&gt;
+  &lt;li&gt;ATA card, for my CD drive, and my ATA drive containing the Debian install.&lt;/li&gt;
+  &lt;li&gt;96MB of RAM in the machine, which is 6MB from the bare minimum for installing/booting Debian.
+*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I basically just booted the install CD, installed Debian to the ATA drive, shut down the machine, grabbed the kernels off the ATA drive, put them into the folder for BootX, and rebooted into the ATA drive. Also, Debian wouldn’t detect my ethernet port, so I just installed a PCI-X Gigabit card with dual NICs. BootX is great, it really makes this install easier. I couldn’t get the extension to work without the ‘unexpected trap’ error. I can just boot fully into OS 9, then into Debian. You can visit the web server’s homepage here: &lt;a href=&quot;http://play.128keaton.com:82/about/&quot;&gt;http://play.128keaton.com:82/about/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;q--a&quot;&gt;Q &amp;amp; A:&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Q: What about security?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A: This is literally running the latest version of Debian and Apache2.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q: Well, why?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A: Why not? It was a lot of fun, and quite a challenge.&lt;/p&gt;</content><author><name></name></author><summary type="html">Well, I went and did it. I made my Power Macintosh 8500 into a Debian web server. Installing Debian was a bit harder than expected, but thanks to the BootX software, it was eventually installed. The biggest issue was just getting all of the kernels in place. Here is how my setup works:</summary></entry><entry><title type="html">Baking a 2007 MacBook Pro’s Logic Board</title><link href="/2016/05/30/baking-a-2007-macbook-pro-s-logic-board.html" rel="alternate" type="text/html" title="Baking a 2007 MacBook Pro's Logic Board" /><published>2016-05-30T22:47:00+00:00</published><updated>2016-05-30T22:47:00+00:00</updated><id>/2016/05/30/baking-a-2007-macbook-pro-s-logic-board</id><content type="html" xml:base="/2016/05/30/baking-a-2007-macbook-pro-s-logic-board.html">&lt;p&gt;It is not everyday you see someone putting an expensive piece of technology inside of a conventional household oven. But then again, its is not everyday you have to reflow a component.
+&lt;em&gt;rock intro&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyway, I received a 2007 MacBook Pro 17” with a bad GPU. Sleep light comes on, no chime, etc. A somewhat common problem among the early MacBook Pro 3,1/4,1 and, the MacBook Pro 8,2, the GPU would desolder itself from the board. No, the GPU wouldn’t physically plop out. Enough solder joints (thanks lead-free) would weaken and disconnect to cause the issue.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.playbackups.com/photos/bga-side-diagram.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The photo above is a simple diagram explaining basic BGA soldering. Those balls are what we are remelting (inside of the oven) to allow a firm connection to be made.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I disassembled the MacBook Pro using iFixit’s Logic Board Replacement guide, and began the process of baking. I wouldn’t consider this too outlandish, just because it does work,
+but it isn’t permanent. An &lt;del&gt;idiotic&lt;/del&gt; butthurt friend did this and still plays video games on it (Battlefield, and other taxing games) and it happened again relatively quick.
+ If you keep it from becoming stupid hot, you’ll be fine. Mine idles at 28 degrees Celsius. Anyway, back to baking. I put my board on a tray, on four tin foil balls. 400 degrees Fahrenheit for 10 minutes.&lt;/p&gt;
+
+&lt;p&gt;What I should’ve done (from a friend):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Placed a sheet of foil underneath&lt;/li&gt;
+  &lt;li&gt;Cleaned the tray&lt;/li&gt;
+  &lt;li&gt;Removed the thermal paste from the board.&lt;/li&gt;
+  &lt;li&gt;Placed one more foil ball underneath a corner.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But I didn’t, and thankfully, it turned out ok.&lt;/p&gt;
+
+&lt;p&gt;Before baking:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Slack for iOS Upload-5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Now just waiting to cool.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, there is a bit of board flex. Whoops. Make sure you put a piece of foil under that corner.&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/screen_shot_2016-05-27_at_9.16.21_am.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope this helps someone!&lt;/p&gt;
+
+&lt;p&gt;Edit: friend’s response to this post:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/06/hahahjon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It is not everyday you see someone putting an expensive piece of technology inside of a conventional household oven. But then again, its is not everyday you have to reflow a component. rock intro</summary></entry><entry><title type="html">Happy as a Clam</title><link href="/2016/05/20/happy-as-a-clam.html" rel="alternate" type="text/html" title="Happy as a Clam" /><published>2016-05-20T00:39:48+00:00</published><updated>2016-05-20T00:39:48+00:00</updated><id>/2016/05/20/happy-as-a-clam</id><content type="html" xml:base="/2016/05/20/happy-as-a-clam.html">&lt;p&gt;A while back, about a month, I was presented with the opportunity to swap computers. A PowerBook Ti for a Clamshell. At the time, I had two Ti books, one 500MHz, original, fully loaded with AirPort card. A really nice machine, but at the same time, I really wanted an iBook G3 Clamshell. I had never seen one. I had never touched one. For those who do not know what an iBook ‘Clamshell’ is, here is a pic:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://appleclamshell.files.wordpress.com/2013/08/steve-jobs-apple-ibook-picture.jpg&quot; alt=&quot;Stevie loves clammy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is a rather massive laptop, and to PC users, it a giant toilet seat, but few can appreciate the gentle curves, resembling a seashell, or a clamshell.&lt;/p&gt;
+
+&lt;p&gt;Here it is, again, showcasing how MASSIVE it is:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://d2npbuaakacvlz.cloudfront.net/images/uploaded/large-present/welcome-to-the-family/DSC_0612.JPG&quot; alt=&quot;15&amp;quot; MBP vs Clamshell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Although it is a very large device, the OS is trapped inside a tiny screen. 800x600, ouch! Luckily, there is a modification that allows you to put a much larger screen inside the later model.
+Back to the story. I ended up shipping the TiBook, and two days later receiving an Indigo Clamshell, sans battery. After a ‘quick’ hard drive replacement (5GB 4200 RPM, V.S. 60GB 7200 RPM), I installed OS X 10.4.11 and OS 9.2.1. and simply enjoyed it. I was limited by the lack of battery, but it was still a hoot!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fast forward to yesterday&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I was at work, and a package came in for me. I figured it would be a PoE switch for resetting Cisco phones. Nope! A bright orange Clamshell met my eyes. A mutual friend, inside of the company, spotted this at his location, and shipped it to me. What a surprise! Said co-worker was throughly thanked!
+Within a month, I got two clamshells, one of the most desired vintage laptop, to date.&lt;/p&gt;</content><author><name></name></author><summary type="html">A while back, about a month, I was presented with the opportunity to swap computers. A PowerBook Ti for a Clamshell. At the time, I had two Ti books, one 500MHz, original, fully loaded with AirPort card. A really nice machine, but at the same time, I really wanted an iBook G3 Clamshell. I had never seen one. I had never touched one. For those who do not know what an iBook ‘Clamshell’ is, here is a pic:</summary></entry><entry><title type="html">A look at the OS X 10.7 Beta</title><link href="/2016/05/17/a-look-at-the-os-x-107-beta.html" rel="alternate" type="text/html" title="A look at the OS X 10.7 Beta" /><published>2016-05-17T04:08:35+00:00</published><updated>2016-05-17T04:08:35+00:00</updated><id>/2016/05/17/a-look-at-the-os-x-107-beta</id><content type="html" xml:base="/2016/05/17/a-look-at-the-os-x-107-beta.html">&lt;p&gt;Today, I received a copy of the later 10.7 Beta, build 11A390. The date on the install CD is 2011, and for those who do not know, Lion was officially released July of 2011.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Slack for iOS Upload.jpg&quot; alt=&quot;Lion 2011 Beta&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Quickly, I pulled out my trusty 2009 Black MacBook to do a test install. I did, however, try anyway on my MacBookPro1,1, just in case we had a 32-bit EFI bootloader. On initial glance at the DVD, which init of itself is quite amazing, since Lion was never sold on one. Only digital download or on a $20 USB stick (which I own too), there wasn’t any welcome documentation, nor was there the Lion install icon, but something more generic instead.&lt;/p&gt;
+
+&lt;p&gt;Just X&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 4.27.18 PM.png&quot; alt=&quot;Install Disc&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Anyway, onto installing. I booted into the installer, and was greeted by the modern ‘OS X Utilities’, but had stylings stuck between Snow Leopard and Lion.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1819.JPG&quot; alt=&quot;Mac OS X Utilities&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another weird thing inside of Disk Utility:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1821.JPG&quot; alt=&quot;UISegmentedControl&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The segment control was nothing like I’ve seen before.&lt;/p&gt;
+
+&lt;p&gt;Anyway, post installation time, time for setup. We did get the lovely welcome video from Leopard, which was refreshing, even after hearing it a billion times.&lt;/p&gt;
+
+&lt;p&gt;First, the background wasn’t the sterile gray, we had a nice picture of Mt. Fiji:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1825.JPG&quot; alt=&quot;Mt Feejee&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I personally think it looks far better, I never noticed how nice that pic looks.&lt;/p&gt;
+
+&lt;p&gt;Then, it gave me the option to add encrypt my disk, something not implemented until 10.10. I wonder why they didn’t do it when they had the option to.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1827.JPG&quot; alt=&quot;Yosemite? Anyone?&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I opted not to, just in case some odd bug arose, which prevented me from exploring the rest of the operating system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1828.JPG&quot; alt=&quot;Without the crap scrolling&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;desktop&quot;&gt;Desktop&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.01.10 PM.png&quot; alt=&quot;The desktop&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we are at the desktop of 10.7, beta! Take note of the Launchpad icon.
+Quite ugly, glad it was changed.&lt;/p&gt;
+
+&lt;p&gt;I went to About My Mac-&amp;gt;More Info, just to see the build number, and was greeted by this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.01.55 PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some weird mutant view. I do kinda like it though, not the icons.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.02.02 PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The battery view is very nice, I could definitely see this making a come back, maybe with an overall battery health meter, a la CoconutBattery?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.05.52 PM.png&quot; alt=&quot;TM&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Time Machine also had a few surprises, it had the option to store hourly snapshots locally, and daily backups on a Time Machine drive/server. Once again, if properly working, I’d love that to make a reappearance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.07.23 PM.png&quot; alt=&quot;Software updates&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oh, I should probably update that :)&lt;/p&gt;
+
+&lt;p&gt;That about wraps it up.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today, I received a copy of the later 10.7 Beta, build 11A390. The date on the install CD is 2011, and for those who do not know, Lion was officially released July of 2011.</summary></entry></feed>

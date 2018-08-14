@@ -405,7 +405,8 @@ body {
       vertical-align: baseline;
       margin-top: 10px; }
     .thoughts-wrapper .thought p {
-      float: right; }
+      float: right;
+      font-weight: normal; }
   .thoughts-wrapper .more {
     text-align: center;
     cursor: pointer; }
@@ -929,7 +930,8 @@ body {
       vertical-align: baseline;
       margin-top: 10px; }
     .thoughts-wrapper .thought p {
-      float: right; }
+      float: right;
+      font-weight: normal; }
   .thoughts-wrapper .more {
     text-align: center;
     cursor: pointer; }
@@ -1237,6 +1239,14 @@ a.help {
 footer#post-footer .social-buttons a,
 footer#post-footer a.notice {
   color: #000 !important; }
+
+#blog-standalone {
+  width: 60%;
+  background-color: white; }
+  #blog-standalone h1 {
+    margin: 0;
+    text-align: center;
+    padding: 12px; }
 
 .post img {
   width: auto;
