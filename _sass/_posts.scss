@@ -292,11 +292,18 @@ z
   }
   #post-footer{
     .colophon{
-      overflow-x: scroll;
       border-spacing: 10px!important;
+      tbody{
+        overflow:auto;
+        display: block;
+        width: 100vw;
+      }
+      tr{
+         display:block;
+      }
     }
     .footer-post{
-      min-width: 90vw
+      min-width: 80vw;
       h1{
        font-size: 18px!important;
      }
