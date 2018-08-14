@@ -1,22 +1,14 @@
 <article id="comment{{ include.index }}" class="js-comment comment">
-	<div class="comment__avatar-wrapper">
-		<div class="comment__avatar" style="background: url('https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=100')"></div>
-	</div>
+
 	<div class="comment__content-wrapper">
-		<h3 class="comment__author">
-			{% if (include.url) and (include.url != '@url') %}
-				<a rel="nofollow" href="{{ include.url }}">{{ include.name }} said:</a>
-			{% else %}
-				{{ include.name }} said:
+		<h3 class="comment-meta">
+			<span id="name">{{ include.name }}</span>
+			{% if include.date %}
+				{% if include.index %}<span id="date">{% endif %}
+				{% include helpers/format-date.html date=include.date time=true %}
+				{% if include.index %}</span>{% endif %}
 			{% endif %}
 		</h3>
-		<p class="comment__date">
-			{% if include.date %}
-				{% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
-				{% include helpers/format-date.html date=include.date time=true %}
-				{% if include.index %}</a>{% endif %}
-			{% endif %}
-		</p>
 		<div class="comment__body">
 			{{ include.message | markdownify }}
 		</div>

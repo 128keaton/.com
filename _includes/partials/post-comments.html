@@ -3,7 +3,6 @@
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			{% if site.data.comments[post_slug] %}
 				{% assign comments = site.data.comments[post_slug] | sort %}
 
@@ -19,8 +18,6 @@
 				{% endfor %}
 			{% endif %}
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		{% include partials/post-new-comment.html %}
 	</div>
 </section>

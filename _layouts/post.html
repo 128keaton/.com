@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %} {% include header.html %}
+{% include head.html %} 
+{% include header.html %}
 
 
-<body style="background-color: white!important; background: none;">
-    {% if page.head-image %}
-    <img class="post-head-image" src="{{ page.head-image }}"> {% endif %}
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>{{ page.title }} </h2> {{ content }} {% include partials/post-comments.html %}
+                <div class="post-head">
+                    <h2 class="post-title">{{ page.title }}</h2> 
+                    <h3 class="post-date">{{ page.date| date: "%B %-d %Y"  }}</h3>
+                </div>
+                {% if page.head-image %}
+                    <img class="post-head-image" src="{{ page.head-image }}"> 
+                {% endif %}
+                <div class="post-content">
+                    {{ content }} 
+                </div>
+                {% include partials/post-comments.html %}
             </article>
-        </main>
         {% include footer.html %}
     </div>
 </body>
