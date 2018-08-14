@@ -215,7 +215,9 @@ footer#post-footer a.notice {
       margin: 0 auto;
     }
   }
-z
+  .post pre{
+    overflow: auto;
+  }
   .post img {
     text-align: center;
   }
