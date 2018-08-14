@@ -18,7 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 </head>
- <table class="header-container">
+ 
+<table class="header-container">
     <tr>
         <td>
             <a href="/">Home</a>
@@ -33,14 +34,16 @@
 
 
 
-<body style="background-color: white!important; background: none;">
-    
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Baking a 2007 MacBook Pro's Logic Board </h2> <p>It is not everyday you see someone putting an expensive piece of technology inside of a conventional household oven. But then again, its is not everyday you have to reflow a component.
+                <div class="post-head">
+                    <h2 class="post-title">Baking a 2007 MacBook Pro's Logic Board</h2> 
+                    <h3 class="post-date">May 30 2016</h3>
+                </div>
+                
+                <div class="post-content">
+                    <p>It is not everyday you see someone putting an expensive piece of technology inside of a conventional household oven. But then again, its is not everyday you have to reflow a component.
 <em>rock intro</em></p>
 
 <p>Anyway, I received a 2007 MacBook Pro 17” with a bad GPU. Sleep light comes on, no chime, etc. A somewhat common problem among the early MacBook Pro 3,1/4,1 and, the MacBook Pro 8,2, the GPU would desolder itself from the board. No, the GPU wouldn’t physically plop out. Enough solder joints (thanks lead-free) would weaken and disconnect to cause the issue.</p>
@@ -83,15 +86,14 @@ but it isn’t permanent. An <del>idiotic</del> butthurt friend did this and sti
 
 <p><img src="http://images.128keaton.com/2016/06/hahahjon.png" alt="" /></p>
  
+                </div>
+                
 
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
     <input type="hidden" name="options[slug]" value="2016-05-30-baking-a-2007-macbook-pro-s-logic-board">
     <input type="hidden" name="options[parent]" value="2016-05-30-baking-a-2007-macbook-pro-s-logic-board">
@@ -104,14 +106,13 @@ but it isn’t permanent. An <del>idiotic</del> butthurt friend did this and sti
     <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
     <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
     <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
-    <input class="cta" type="submit" value="Send" />
+    <input class="cta" type="submit" value="Post comment" />
 </form>
 
 	</div>
 </section>
 
             </article>
-        </main>
         <footer class="footer" id="post-footer">
 	<h1>Read more:</h1>
 	<table class="colophon">

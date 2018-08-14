@@ -18,7 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 </head>
- <table class="header-container">
+ 
+<table class="header-container">
     <tr>
         <td>
             <a href="/">Home</a>
@@ -33,14 +34,16 @@
 
 
 
-<body style="background-color: white!important; background: none;">
-    
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Refurbishing Kindles </h2> <p>The Kindle Keyboard 3, or Kindle 3, is absolutely one of my favorite Kindles.</p>
+                <div class="post-head">
+                    <h2 class="post-title">Refurbishing Kindles</h2> 
+                    <h3 class="post-date">November 30 2016</h3>
+                </div>
+                
+                <div class="post-content">
+                    <p>The Kindle Keyboard 3, or Kindle 3, is absolutely one of my favorite Kindles.</p>
 
 <p>It features a full keyboard (SYM key gives you punctation), sports a Linux kernel (you can actually run Debian on them), easily jailbreakable, weighted properly, and has physical page buttons.</p>
 
@@ -59,15 +62,14 @@
 
 <p>From now on, I’ll buy my screens from PowerBookMedic, which has a great selection of Kindle parts. You could basically build one out of their inventory. I ended up buying two new faceplates and backs for $8.00. I will be going to the post office to ship the faulty screens back and hopefully buying a quality set of screens. I will update as soon as I get them installed.</p>
  
+                </div>
+                
 
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
     <input type="hidden" name="options[slug]" value="2016-11-30-refurbishing-kindles">
     <input type="hidden" name="options[parent]" value="2016-11-30-refurbishing-kindles">
@@ -80,14 +82,13 @@
     <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
     <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
     <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
-    <input class="cta" type="submit" value="Send" />
+    <input class="cta" type="submit" value="Post comment" />
 </form>
 
 	</div>
 </section>
 
             </article>
-        </main>
         <footer class="footer" id="post-footer">
 	<h1>Read more:</h1>
 	<table class="colophon">

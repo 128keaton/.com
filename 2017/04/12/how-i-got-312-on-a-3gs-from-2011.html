@@ -18,7 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 </head>
- <table class="header-container">
+ 
+<table class="header-container">
     <tr>
         <td>
             <a href="/">Home</a>
@@ -33,14 +34,16 @@
 
 
 
-<body style="background-color: white!important; background: none;">
-    
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>How I got 3.1.2 on a 3G[s] from 2011 </h2> <p><img src="http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized" alt="" /></p>
+                <div class="post-head">
+                    <h2 class="post-title">How I got 3.1.2 on a 3G[s] from 2011</h2> 
+                    <h3 class="post-date">April 12 2017</h3>
+                </div>
+                
+                <div class="post-content">
+                    <p><img src="http://images.128keaton.com/iphone3gs3.1.2.jpg#stylized" alt="" /></p>
 
 <p>See that? That is an iPhone 3G[s] running 3.1.2. What makes this special is that this is a <em>new boot ROM</em> 3G[s] thats been downgraded. And, for the cherry on top, its an iPhone that shipped with iOS 5 originally. How did I do it?</p>
 
@@ -303,11 +306,12 @@ brew <span class="nb">install </span>python <span class="nt">--with-brewed-opens
 
 <p><span id="1" class="small"><sup>1</sup> there is a bug that the author hasn’t made progress fixing in versions older than OS X 10.9</span></p>
  
+                </div>
+                
 
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			
 				
 
@@ -320,22 +324,16 @@ brew <span class="nb">install </span>python <span class="nt">--with-brewed-opens
 					
 
 					<article id="comment1" class="js-comment comment">
-	<div class="comment__avatar-wrapper">
-		<div class="comment__avatar" style="background: url('https://www.gravatar.com/avatar/3b7c6e52c63831270f8265dd86695229?d=mm&s=100')"></div>
-	</div>
+
 	<div class="comment__content-wrapper">
-		<h3 class="comment__author">
+		<h3 class="comment-meta">
+			<span id="name">Marc Hilberer</span>
 			
-				<a rel="nofollow" href="">Marc Hilberer said:</a>
+				<span id="date">
+				Wednesday, April 12th, 2017, 05.56pm
+				</span>
 			
 		</h3>
-		<p class="comment__date">
-			
-				<a href="#comment1">
-				Wednesday, April 12th, 2017, 05.56pm
-				</a>
-			
-		</p>
 		<div class="comment__body">
 			<p>What about Windows?</p>
 
@@ -352,22 +350,16 @@ brew <span class="nb">install </span>python <span class="nt">--with-brewed-opens
 					
 
 					<article id="comment2" class="js-comment comment">
-	<div class="comment__avatar-wrapper">
-		<div class="comment__avatar" style="background: url('https://www.gravatar.com/avatar/720edc7c230cb15e6f7aa2b970ad7918?d=mm&s=100')"></div>
-	</div>
+
 	<div class="comment__content-wrapper">
-		<h3 class="comment__author">
+		<h3 class="comment-meta">
+			<span id="name">Keaton Burleson</span>
 			
-				<a rel="nofollow" href="">Keaton Burleson said:</a>
+				<span id="date">
+				Wednesday, April 19th, 2017, 12.12am
+				</span>
 			
 		</h3>
-		<p class="comment__date">
-			
-				<a href="#comment2">
-				Wednesday, April 19th, 2017, 12.12am
-				</a>
-			
-		</p>
 		<div class="comment__body">
 			<p>Marc, Windows isn’t supported at this time.</p>
 
@@ -386,22 +378,16 @@ brew <span class="nb">install </span>python <span class="nt">--with-brewed-opens
 					
 
 					<article id="comment3" class="js-comment comment">
-	<div class="comment__avatar-wrapper">
-		<div class="comment__avatar" style="background: url('https://www.gravatar.com/avatar/91a31a9563370b1dcf59f98bdd81b0b3?d=mm&s=100')"></div>
-	</div>
+
 	<div class="comment__content-wrapper">
-		<h3 class="comment__author">
+		<h3 class="comment-meta">
+			<span id="name">John K.</span>
 			
-				<a rel="nofollow" href="">John K. said:</a>
+				<span id="date">
+				Sunday, August 20th, 2017, 03.59am
+				</span>
 			
 		</h3>
-		<p class="comment__date">
-			
-				<a href="#comment3">
-				Sunday, August 20th, 2017, 03.59am
-				</a>
-			
-		</p>
 		<div class="comment__body">
 			<p>I am stuck on patching the USB at Step 3:<br />
 sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch</p>
@@ -423,22 +409,16 @@ sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/C
 					
 
 					<article id="comment4" class="js-comment comment">
-	<div class="comment__avatar-wrapper">
-		<div class="comment__avatar" style="background: url('https://www.gravatar.com/avatar/720edc7c230cb15e6f7aa2b970ad7918?d=mm&s=100')"></div>
-	</div>
+
 	<div class="comment__content-wrapper">
-		<h3 class="comment__author">
+		<h3 class="comment-meta">
+			<span id="name">Keaton Burleson</span>
 			
-				<a rel="nofollow" href="">Keaton Burleson said:</a>
+				<span id="date">
+				Sunday, August 20th, 2017, 06.58pm
+				</span>
 			
 		</h3>
-		<p class="comment__date">
-			
-				<a href="#comment4">
-				Sunday, August 20th, 2017, 06.58pm
-				</a>
-			
-		</p>
 		<div class="comment__body">
 			<p>John, I need to update this guide, but it appears the patches aren’t necessary anymore. They were removed in this commit: https://github.com/axi0mX/ipwndfu/commit/220b8f307debe39099fded4e3ce979d3b1620e0d, I will test when I get a chance. Thanks.</p>
 
@@ -449,8 +429,6 @@ sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/C
 				
 			
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
     <input type="hidden" name="options[slug]" value="2017-04-12-how-i-got-3-1-2-on-a-3g-s-from-2011">
     <input type="hidden" name="options[parent]" value="2017-04-12-how-i-got-3-1-2-on-a-3g-s-from-2011">
@@ -463,14 +441,13 @@ sudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/C
     <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
     <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
     <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
-    <input class="cta" type="submit" value="Send" />
+    <input class="cta" type="submit" value="Post comment" />
 </form>
 
 	</div>
 </section>
 
             </article>
-        </main>
         <footer class="footer" id="post-footer">
 	<h1>Read more:</h1>
 	<table class="colophon">

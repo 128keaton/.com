@@ -18,7 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 </head>
- <table class="header-container">
+ 
+<table class="header-container">
     <tr>
         <td>
             <a href="/">Home</a>
@@ -33,14 +34,16 @@
 
 
 
-<body style="background-color: white!important; background: none;">
-    
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>PATA SSDs for PowerPC on the Cheap </h2> <p>When dealing with older equipment, one might have to do a hard drive replacement. It is becoming more and more common, as hard drives fail and cease to become writable, or worse-case scenario: readable. The entire PowerBook and iBook line uses a PATA connector to interface with physical storage devices, and then uses an ATA66 or ATA100 bus to manage data transfer.</p>
+                <div class="post-head">
+                    <h2 class="post-title">PATA SSDs for PowerPC on the Cheap</h2> 
+                    <h3 class="post-date">May 8 2016</h3>
+                </div>
+                
+                <div class="post-content">
+                    <p>When dealing with older equipment, one might have to do a hard drive replacement. It is becoming more and more common, as hard drives fail and cease to become writable, or worse-case scenario: readable. The entire PowerBook and iBook line uses a PATA connector to interface with physical storage devices, and then uses an ATA66 or ATA100 bus to manage data transfer.</p>
 
 <p>Unfortunately, PATA drives are becoming more and more scarce, and are usually much slower than modern drives. Enter the SSD. Now, SSDs aren’t exactly new technology. Flash storage. has been around for quite a while, but its gaining speed and popularity. Only one problem: most SSDs are SATA. Sure, you could get a PATA SSD, but you would be shelling out major bucks for a small amount of space, and it is nowhere near as fast as modern SSDs. For a while, the typical solution would be to buy an mSATA SSD (or mPCIE) and buy the appropriate adaptor. However, you run into one problem: most mSATA SSDs aren’t backed by quality names, they can be slower, and dodgy. Plus, they are usually a bit pricier than a regular SSD.</p>
 
@@ -54,15 +57,14 @@
 
 <p><img src="http://images.128keaton.com/2016/05/IMG_1764.jpg" alt="the SSD" /></p>
  
+                </div>
+                
 
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
     <input type="hidden" name="options[slug]" value="2016-05-08-pata-ssds-for-powerpc-on-the-cheap">
     <input type="hidden" name="options[parent]" value="2016-05-08-pata-ssds-for-powerpc-on-the-cheap">
@@ -75,14 +77,13 @@
     <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
     <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
     <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
-    <input class="cta" type="submit" value="Send" />
+    <input class="cta" type="submit" value="Post comment" />
 </form>
 
 	</div>
 </section>
 
             </article>
-        </main>
         <footer class="footer" id="post-footer">
 	<h1>Read more:</h1>
 	<table class="colophon">

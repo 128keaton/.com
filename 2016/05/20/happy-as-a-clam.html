@@ -18,7 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 </head>
- <table class="header-container">
+ 
+<table class="header-container">
     <tr>
         <td>
             <a href="/">Home</a>
@@ -33,14 +34,16 @@
 
 
 
-<body style="background-color: white!important; background: none;">
-    
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Happy as a Clam </h2> <p>A while back, about a month, I was presented with the opportunity to swap computers. A PowerBook Ti for a Clamshell. At the time, I had two Ti books, one 500MHz, original, fully loaded with AirPort card. A really nice machine, but at the same time, I really wanted an iBook G3 Clamshell. I had never seen one. I had never touched one. For those who do not know what an iBook ‘Clamshell’ is, here is a pic:</p>
+                <div class="post-head">
+                    <h2 class="post-title">Happy as a Clam</h2> 
+                    <h3 class="post-date">May 20 2016</h3>
+                </div>
+                
+                <div class="post-content">
+                    <p>A while back, about a month, I was presented with the opportunity to swap computers. A PowerBook Ti for a Clamshell. At the time, I had two Ti books, one 500MHz, original, fully loaded with AirPort card. A really nice machine, but at the same time, I really wanted an iBook G3 Clamshell. I had never seen one. I had never touched one. For those who do not know what an iBook ‘Clamshell’ is, here is a pic:</p>
 
 <p><img src="https://appleclamshell.files.wordpress.com/2013/08/steve-jobs-apple-ibook-picture.jpg" alt="Stevie loves clammy" /></p>
 
@@ -58,15 +61,14 @@ Back to the story. I ended up shipping the TiBook, and two days later receiving 
 <p>I was at work, and a package came in for me. I figured it would be a PoE switch for resetting Cisco phones. Nope! A bright orange Clamshell met my eyes. A mutual friend, inside of the company, spotted this at his location, and shipped it to me. What a surprise! Said co-worker was throughly thanked!
 Within a month, I got two clamshells, one of the most desired vintage laptop, to date.</p>
  
+                </div>
+                
 
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
     <input type="hidden" name="options[slug]" value="2016-05-20-happy-as-a-clam">
     <input type="hidden" name="options[parent]" value="2016-05-20-happy-as-a-clam">
@@ -79,14 +81,13 @@ Within a month, I got two clamshells, one of the most desired vintage laptop, to
     <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
     <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
     <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
-    <input class="cta" type="submit" value="Send" />
+    <input class="cta" type="submit" value="Post comment" />
 </form>
 
 	</div>
 </section>
 
             </article>
-        </main>
         <footer class="footer" id="post-footer">
 	<h1>Read more:</h1>
 	<table class="colophon">

@@ -18,7 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 </head>
- <table class="header-container">
+ 
+<table class="header-container">
     <tr>
         <td>
             <a href="/">Home</a>
@@ -33,14 +34,16 @@
 
 
 
-<body style="background-color: white!important; background: none;">
-    
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>New Mac Pros </h2> <p>This was really interesting to wake up and see.</p>
+                <div class="post-head">
+                    <h2 class="post-title">New Mac Pros</h2> 
+                    <h3 class="post-date">April 4 2017</h3>
+                </div>
+                
+                <div class="post-content">
+                    <p>This was really interesting to wake up and see.</p>
 
 <p>Seems like Apple has finally realized something. Their Pro market is a bit unhappy. It is very interesting that they “conceited defeat” by admitting that the industry went a different way than they were expecting.
 The biggest reason they took such a jump to a smaller, and enclosed enclosure was because of a hopeful future in parallel GPU technology. However, it never really happened that way. For a video editing professional, a single upgraded (and probably flashed) GPU is enough, provided they have a Mac Pro with upgradable internals.</p>
@@ -95,15 +98,14 @@ The biggest reason they took such a jump to a smaller, and enclosed enclosure wa
 
 <p><strong>Update:</strong> Check the <a href="http://www.apple.com/shop/buy-mac/mac-pro">store</a>.</p>
  
+                </div>
+                
 
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
     <input type="hidden" name="options[slug]" value="2017-04-04-new-mac-pros">
     <input type="hidden" name="options[parent]" value="2017-04-04-new-mac-pros">
@@ -116,14 +118,13 @@ The biggest reason they took such a jump to a smaller, and enclosed enclosure wa
     <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
     <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
     <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
-    <input class="cta" type="submit" value="Send" />
+    <input class="cta" type="submit" value="Post comment" />
 </form>
 
 	</div>
 </section>
 
             </article>
-        </main>
         <footer class="footer" id="post-footer">
 	<h1>Read more:</h1>
 	<table class="colophon">

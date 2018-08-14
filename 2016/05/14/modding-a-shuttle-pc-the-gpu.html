@@ -20,7 +20,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 </head>
- <table class="header-container">
+ 
+<table class="header-container">
     <tr>
         <td>
             <a href="/">Home</a>
@@ -35,15 +36,18 @@
 
 
 
-<body style="background-color: white!important; background: none;">
-    
-    <img class="post-head-image" src="/images/2016/05/IMG_1786.JPG"> 
+<body id="post">
     <div class="wrapper" id="white post">
-
-        <main id="main" role="main" class="main">
             <article class="post post--full">
-
-                <h2 class="post-title">    <a class="mobile-back" href="/blog/"><i class="fa fa-arrow-left" aria-hidden="false"></i></a>Modding a Shuttle PC: The GPU </h2> <p>Today I received a ShuttleX PC. It is a small form-factor machine, with a custom board. Smaller than an ITX board, the custom motherboard inside of the ShuttleX features a PCI and AGP slot, 2xDDR2 RAM slots, and a Pentium 4 CPU. Although, not too powerful, it is still a very cool machine. However, it has been a long-time dream of mine to have a PC that is easily carried around. This one fits in my backpack.</p>
+                <div class="post-head">
+                    <h2 class="post-title">Modding a Shuttle PC: The GPU</h2> 
+                    <h3 class="post-date">May 14 2016</h3>
+                </div>
+                
+                    <img class="post-head-image" src="/images/2016/05/IMG_1786.JPG"> 
+                
+                <div class="post-content">
+                    <p>Today I received a ShuttleX PC. It is a small form-factor machine, with a custom board. Smaller than an ITX board, the custom motherboard inside of the ShuttleX features a PCI and AGP slot, 2xDDR2 RAM slots, and a Pentium 4 CPU. Although, not too powerful, it is still a very cool machine. However, it has been a long-time dream of mine to have a PC that is easily carried around. This one fits in my backpack.</p>
 
 <p>Anyway, onto the modification. A penalty of doing an ITX mod is that you lose a PCI-E slot. Not on your board, but on the outside of the case. The custom motherboard is designed in such a way, that there are two slots, but it is one slot too close. Instead of brutally hacking at the case until something happens, I decided to make the GPU of choice a ‘low profile’ card.</p>
 
@@ -87,15 +91,14 @@
 
 <p>I do not know temperatures yet, or if I’ll need a fan. Time will tell.</p>
  
+                </div>
+                
 
 <section class="comments">
 	<div class="constrain--body">
 		<div class="comments__existing js-comments">
-			<h2 class="comments__heading heading-2">Comments</h2>
 			
 		</div>
-
-		<h2 class="comments__heading heading-2">Leave a comment</h2>
 		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
     <input type="hidden" name="options[slug]" value="2016-05-14-modding-a-shuttle-pc-the-gpu">
     <input type="hidden" name="options[parent]" value="2016-05-14-modding-a-shuttle-pc-the-gpu">
@@ -108,14 +111,13 @@
     <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
     <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
     <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
-    <input class="cta" type="submit" value="Send" />
+    <input class="cta" type="submit" value="Post comment" />
 </form>
 
 	</div>
 </section>
 
             </article>
-        </main>
         <footer class="footer" id="post-footer">
 	<h1>Read more:</h1>
 	<table class="colophon">
