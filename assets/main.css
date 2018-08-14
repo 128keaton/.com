@@ -1480,11 +1480,17 @@ footer#post-footer a.notice {
     color: #e504f9; }
 
   #post-footer .colophon {
-    overflow-x: scroll;
     border-spacing: 10px !important; }
+    #post-footer .colophon tbody {
+      overflow: auto;
+      display: block;
+      width: 100vw; }
+    #post-footer .colophon tr {
+      display: block; }
   #post-footer .footer-post {
-    min-width: 90vw h1;
-      min-width-font-size: 18px !important; }
+    min-width: 80vw; }
+    #post-footer .footer-post h1 {
+      font-size: 18px !important; }
   #post-footer th, #post-footer td {
     min-width: 85vw; } }
 .break {
