@@ -1480,13 +1480,10 @@ footer#post-footer a.notice {
     color: #e504f9; }
 
   #post-footer .colophon {
-    border-spacing: 10px !important; }
-    #post-footer .colophon tbody {
-      overflow: auto;
-      display: block;
-      width: 100vw; }
-    #post-footer .colophon tr {
-      display: block; }
+    border-spacing: 10px !important;
+    overflow: auto;
+    display: block;
+    width: 100vw; }
   #post-footer .footer-post {
     min-width: 80vw; }
     #post-footer .footer-post h1 {
