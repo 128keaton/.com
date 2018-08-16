@@ -1483,7 +1483,8 @@ footer#post-footer a.notice {
 
   #post-footer .colophon {
     border-spacing: 10px !important;
-    overflow: auto;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     display: block;
     width: 100vw; }
   #post-footer .footer-post {
