@@ -1396,18 +1396,18 @@ footer#post-footer a.notice {
   color: white; }
 
 @media screen and (max-width: 1200px) {
-  .post-list {
+  #blog-standalone {
     width: 80% !important;
     margin: 0 auto; } }
 @media screen and (max-width: 900px) {
-  .post-list {
+  #blog-standalone {
     width: 100% !important;
     margin: 0 auto; }
 
   .wrapper {
     margin-top: 25px; } }
 @media screen and (max-width: 600px) {
-  .post-list {
+  #blog-standalone {
     width: 100% !important;
     margin: 0 auto; }
 
