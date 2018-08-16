@@ -191,13 +191,13 @@ footer#post-footer a.notice {
   color: white;
 }
 @media screen and (max-width: 1200px) {
-  .post-list {
+  #blog-standalone {
     width: 80%!important;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 900px) {
-  .post-list {
+  #blog-standalone {
     width: 100%!important;
     margin: 0 auto;
   }
@@ -206,7 +206,7 @@ footer#post-footer a.notice {
   }
 }
 @media screen and (max-width: $on-palm) {
-  .post-list {
+  #blog-standalone {
     width: 100%!important;
     margin: 0 auto;
   }
