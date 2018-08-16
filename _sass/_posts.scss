@@ -72,6 +72,7 @@ footer#post-footer a.notice {
   border: none!important;
   padding: 0;
 }
+
 .post-content{
   padding: 25px;
 }
@@ -443,6 +444,21 @@ img[src$='#stylized-small'] {
   color: gray;
   text-decoration: none;
   font-size: 30px;
+}
+
+#post-footer::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+
+#post-footer::-webkit-scrollbar
+{
+    background-color: transparent;
+}
+
+#post-footer::-webkit-scrollbar-thumb
+{
+    background-color: transparent;
 }
 
 #post-footer{
