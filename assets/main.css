@@ -1248,11 +1248,6 @@ footer#post-footer a.notice {
     text-align: center;
     padding: 12px; }
 
-.post img {
-  width: auto;
-  max-width: 75%;
-  max-height: 600px; }
-
 .post--full {
   width: 60%;
   background-color: white;
@@ -1281,15 +1276,6 @@ footer#post-footer a.notice {
 .post a:hover {
   border-bottom: 2px solid; }
 
-.post img {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  border: 5px solid #edecec;
-  border-radius: 5px;
-  margin-bottom: 35px;
-  margin-top: 35px; }
-
 .post-head-image {
   object-fit: cover;
   width: 100% !important;
@@ -1298,6 +1284,18 @@ footer#post-footer a.notice {
   margin: 0 auto !important;
   border: none !important;
   padding: 0; }
+
+.post img {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #edecec;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  width: auto;
+  max-width: 75%;
+  max-height: 600px; }
 
 .post-content {
   padding: 25px; }
