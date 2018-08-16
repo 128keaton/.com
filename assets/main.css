@@ -1599,6 +1599,15 @@ img[src$='#stylized-small'] {
   text-decoration: none;
   font-size: 30px; }
 
+#post-footer::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+#post-footer::-webkit-scrollbar {
+  background-color: transparent; }
+
+#post-footer::-webkit-scrollbar-thumb {
+  background-color: transparent; }
+
 #post-footer {
   color: white; }
   #post-footer .colophon {
