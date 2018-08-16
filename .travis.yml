@@ -2,7 +2,7 @@ language: ruby
 cache: bundler
 install:
 - bundle install
-script: if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rake site:deploy --quiet; else echo "PR skip deploy"; fi
+script: if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rake site:deploy --quiet; else echo "PR skip deploy"; exit 0; fi
 rvm:
 - 2.1.2
 env:
