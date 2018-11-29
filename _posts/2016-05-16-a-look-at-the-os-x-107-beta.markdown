@@ -6,7 +6,7 @@ date: "2016-05-16 23:08:35 -0500"
 Today, I received a copy of the later 10.7 Beta, build 11A390. The date on the install CD is 2011, and for those who do not know, Lion was officially released July of 2011.
 
 
-![Lion 2011 Beta](http://images.128keaton.com/2016/05/Slack for iOS Upload.jpg)
+![Lion 2011 Beta](https://images.128keaton.com/2016/05/Slack for iOS Upload.jpg)
 
 Quickly, I pulled out my trusty 2009 Black MacBook to do a test install. I did, however, try anyway on my MacBookPro1,1, just in case we had a 32-bit EFI bootloader. On initial glance at the DVD, which init of itself is quite amazing, since Lion was never sold on one. Only digital download or on a $20 USB stick (which I own too), there wasn't any welcome documentation, nor was there the Lion install icon, but something more generic instead.
 
