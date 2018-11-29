@@ -25,7 +25,7 @@ Install glib (a QEMU requirement) and pixman (since the QEMU variant is borked):
 Fetch QEMU from their repository:
 
 
-`wget http://wiki.qemu-project.org/download/qemu-2.5.0.tar.bz2`
+`wget https://wiki.qemu-project.org/download/qemu-2.5.0.tar.bz2`
 
 and unzip:
 

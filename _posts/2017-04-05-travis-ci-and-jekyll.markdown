@@ -3,7 +3,7 @@ layout: post
 title: "Travis CI and Jekyll"
 date: "2017-04-05 00:03:41 -0500"
 description: My how to on running a Jekyll blog hosted on GitHub Pages, with Travis CI in the middle
-cover_image: http://images.128keaton.com/pipeline.JPG
+cover_image: https://images.128keaton.com/pipeline.JPG
 tags: travis, jekyll, blog, github
 published: true
 ---
@@ -128,7 +128,7 @@ In my Rakefile, I have two helper tasks:
         Dir.entries(__dir__ + '/_posts/').each do |file_name|
             next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
             text = File.read(__dir__ + '/_posts/' + file_name)
-            fixed = text.gsub('](http://images.128keaton.com/', '](http://images.128keaton.com/')
+            fixed = text.gsub('](https://images.128keaton.com/', '](https://images.128keaton.com/')
             fixed = fixed.gsub('', '')
             File.open(__dir__ + '/_posts/' + file_name, 'w') { |file| file.puts fixed }
         end
