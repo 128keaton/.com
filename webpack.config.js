@@ -1,5 +1,5 @@
 const path = require('path');
-
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     mode: 'production',
@@ -27,6 +27,9 @@ module.exports = {
     },
     resolve: {
         extensions: ['.json', '.js', '.jsx']
-    }
+    },
+    plugins: [
+        new Dotenv(),
+    ],
 };
 
