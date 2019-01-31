@@ -2,6 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 *.lock
-*.lock
 .DS_Store
-.sass-cache
+assets/bundle.js
+node_modules

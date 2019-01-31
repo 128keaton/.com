@@ -1,38 +1,6 @@
 <div class="projects-wrapper">
     <h1>Projects</h1>
-    <table id="projects" class="projects">
-        {% assign projects = site.data.portfolio.size | divided_by: 2.0 | ceil %}
-        {% for i in (1..projects) %}
-        {% assign offset = forloop.index0 | times: 2 %}
-        <tr>
-            {% for project in site.data.portfolio limit:2 offset:offset %}
-            <td class="project">
-                {% if project[1].icon %}
-                <img class="icon" id="icon-{{ project[1].platform | default 'no-platform' }}" src="{{project[1].icon}}">
-                {% else if project[1].platform %}
-                {% if project[1].platform == 'app-store-ios' %}
-                <img class="icon" id="icon-app-store-ios" src="https://stuff.128keaton.com/icons/ios-no-icon.png">
-                {% elsif project[1].platform == 'cydia-ios' %}
-                <img class="icon" id="icon-cydia-ios" src="https://stuff.128keaton.com/icons/tweak-no-icon.png">
-                {% elsif project[1].platform == 'app-store-osx' %}
-                <img class="icon" id="icon-app-store-osx" src="https://stuff.128keaton.com/icons/os-x-no-icon.png">
-                {% elsif project[1].platform == 'chrome' %}
-                <img class="icon" id="icon-chrome" src="https://stuff.128keaton.com/icons/chrome-extension-no-icon.png">
-                {% else %}
-                <img class="icon" id="icon-no-platform" src="https://stuff.128keaton.com/icons/default-no-icon.png">
-                {% endif %}
-                {% else %}}
-                <img class="icon" id="icon-no-platform" src="https://stuff.128keaton.com/icons/default-no-icon.png">
-                {% endif %}
-
-                <a href="{{ project[1].url }}">
-                    <h2 class="title">{{ project[1].title }}</h2>
-                </a>
-
-                <p class="description">{{ project[1].description }}</p>
-            </td>
-            {% endfor %}
-        <tr>
-            {% endfor %}
-    </table>
+    <ol class="pinned-repos-list">
+        <p class="no-data">Loading...</p>
+    </ol>
 </div>
