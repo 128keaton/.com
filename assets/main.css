@@ -116,6 +116,12 @@ pre {
   /* Opera 7 */
   word-wrap: break-word; }
 
+.me-head {
+  display: block;
+  margin: 50px auto -20px auto;
+  max-width: 300px;
+  min-height: 200px; }
+
 .business-card {
   padding: 20px;
   margin: 0 auto;
@@ -134,9 +140,10 @@ pre {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00eaea', endColorstr='#e504f9', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
-  color: #ffffff; }
+  -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);
+  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);
+  color: #ffffff;
+  border: none !important; }
   .business-card p.terminal {
     background-color: #092732;
     padding: 1rem;
@@ -151,7 +158,12 @@ pre {
       -webkit-animation: fadingAnimation 1s infinite;
       -moz-animation: fadingAnimation 1s infinite;
       -o-animation: fadingAnimation 1s infinite;
-      animation: fadingAnimation 1s infinite; }
+      animation: fadingAnimation 1s infinite;
+      vertical-align: bottom;
+      text-decoration: none;
+      font-style: initial;
+      display: inline-block;
+      margin-bottom: -2px; }
   .business-card p {
     font-size: 20px; }
   .business-card h1 {
@@ -314,76 +326,105 @@ pre {
   .projects-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
-  .projects-wrapper .projects {
-    border-radius: 68px;
-    box-shadow: 0 0 2px 2px #c8cacb, 0 0 0 7px #e2e3e4;
-    border: 25px solid black;
-    background-color: #fff;
-    padding: 10px;
-    border-spacing: 10px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 25px; }
-    .projects-wrapper .projects h2 {
-      font-size: 16px !important;
-      font-weight: normal; }
-    .projects-wrapper .projects .project {
+  .projects-wrapper .pinned-repos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #d1d5da !important;
+    padding: 28px 22px 12px 22px;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-item {
+      display: flex;
+      border: 1px solid #d1d5da !important;
+      padding: 16px !important;
+      margin-bottom: 16px !important;
       border-radius: 3px;
+      flex-basis: 45%;
+      flex-grow: 0;
+      -webkit-animation: fadeInFromNone 0.5s ease-out;
+      -moz-animation: fadeInFromNone 0.5s ease-out;
+      -o-animation: fadeInFromNone 0.5s ease-out;
+      animation: fadeInFromNone 0.5s ease-out; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-item-content {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      width: 100%; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-desc {
+      flex: 1 0 auto; }
+    .projects-wrapper .pinned-repos-list .repo-language-color {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      position: relative;
+      top: 1px;
+      width: 12px; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-meta + .pinned-repo-meta {
+      margin-left: 16px; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-meta {
+      display: inline-block; }
+    .projects-wrapper .pinned-repos-list .muted-link {
+      color: #586069 !important; }
+    .projects-wrapper .pinned-repos-list .octicon {
+      display: inline-block;
+      fill: currentColor;
+      vertical-align: text-bottom;
+      margin-right: 2px; }
+    .projects-wrapper .pinned-repos-list a {
+      color: #0366d6 !important;
+      text-decoration: none; }
+    .projects-wrapper .pinned-repos-list .repo-language-color {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      position: relative;
+      top: 1px;
+      width: 12px;
+      margin-right: 5px; }
+    .projects-wrapper .pinned-repos-list p.no-data {
       text-align: center;
-      padding: 15px;
-      width: 50%;
-      vertical-align: middle; }
-      .projects-wrapper .projects .project a {
-        text-decoration: none; }
-      .projects-wrapper .projects .project h2 {
-        color: #0366d6;
-        font-size: 14px; }
-      .projects-wrapper .projects .project p {
-        color: #586069;
-        font-size: 14px;
-        max-width: 50%;
-        margin: 0 auto;
-        font-family: Lora; }
-      .projects-wrapper .projects .project .icon {
-        max-width: 66px;
-        border-radius: 16.666px; }
-      .projects-wrapper .projects .project .language-color {
-        position: relative;
-        top: 1px;
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: blue; }
-      .projects-wrapper .projects .project .technologies .jekyll {
-        background-color: #e34c26; }
-      .projects-wrapper .projects .project .technologies .javascript {
-        background-color: #e34c26; }
-      .projects-wrapper .projects .project .technologies .swift {
-        background-color: #ffac45; }
-    .projects-wrapper .projects .project:nth-child(odd) {
-      margin-right: 12px; }
+      width: 100%;
+      margin-bottom: 18px;
+      font-size: 2rem;
+      margin-top: 0;
+      color: gray; }
+    .projects-wrapper .pinned-repos-list .objective-c {
+      background-color: #438eff; }
+    .projects-wrapper .pinned-repos-list .html {
+      background-color: #e34c26; }
+    .projects-wrapper .pinned-repos-list .java {
+      background-color: #b07219; }
+    .projects-wrapper .pinned-repos-list .c {
+      background-color: #555555; }
+    .projects-wrapper .pinned-repos-list .php {
+      background-color: #4F5D95; }
+    .projects-wrapper .pinned-repos-list .swift {
+      background-color: #ffac45; }
+    .projects-wrapper .pinned-repos-list .javascript {
+      background-color: #f1e05a; }
+    .projects-wrapper .pinned-repos-list .shell {
+      background-color: #89e051; }
+    .projects-wrapper .pinned-repos-list .lua {
+      background-color: #000080; }
+    .projects-wrapper .pinned-repos-list .css {
+      background-color: #563d7c; }
+  @media screen and (max-width: 1024px) {
+    .projects-wrapper .pinned-repo-item {
+      flex-basis: 100% !important; } }
   @media screen and (max-width: 600px) {
     .projects-wrapper {
-      width: 100%; }
-      .projects-wrapper .projects {
-        width: 100%;
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important; }
-        .projects-wrapper .projects tr:last-child .project {
-          border-bottom: none !important; }
-      .projects-wrapper .project {
+      width: 95%; }
+      .projects-wrapper .pinned-repos-list {
+        display: block !important; }
+      .projects-wrapper .pinned-repo-item {
         display: block;
-        width: 100% !important;
-        margin: 0 auto !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        border-bottom: 1px solid lightgrey;
-        padding-bottom: 10px !important; }
-      .projects-wrapper h1 {
-        font-size: 35px;
-        margin-left: 10px; } }
+        width: 90% !important; } }
 
 .thoughts-wrapper {
   width: 65%;
@@ -517,6 +558,46 @@ pre {
   50% {
     opacity: 0; }
   100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+@-moz-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+@-o-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
     opacity: 1; } }
 .marvel-device {
   display: block;
@@ -642,6 +723,12 @@ pre {
     max-width: 100px;
     padding: 15px; }
 
+.me-head {
+  display: block;
+  margin: 50px auto -20px auto;
+  max-width: 300px;
+  min-height: 200px; }
+
 .business-card {
   padding: 20px;
   margin: 0 auto;
@@ -660,9 +747,10 @@ pre {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00eaea', endColorstr='#e504f9', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94%);
-  color: #ffffff; }
+  -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);
+  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);
+  color: #ffffff;
+  border: none !important; }
   .business-card p.terminal {
     background-color: #092732;
     padding: 1rem;
@@ -677,7 +765,12 @@ pre {
       -webkit-animation: fadingAnimation 1s infinite;
       -moz-animation: fadingAnimation 1s infinite;
       -o-animation: fadingAnimation 1s infinite;
-      animation: fadingAnimation 1s infinite; }
+      animation: fadingAnimation 1s infinite;
+      vertical-align: bottom;
+      text-decoration: none;
+      font-style: initial;
+      display: inline-block;
+      margin-bottom: -2px; }
   .business-card p {
     font-size: 20px; }
   .business-card h1 {
@@ -840,76 +933,105 @@ pre {
   .projects-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
-  .projects-wrapper .projects {
-    border-radius: 68px;
-    box-shadow: 0 0 2px 2px #c8cacb, 0 0 0 7px #e2e3e4;
-    border: 25px solid black;
-    background-color: #fff;
-    padding: 10px;
-    border-spacing: 10px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 25px; }
-    .projects-wrapper .projects h2 {
-      font-size: 16px !important;
-      font-weight: normal; }
-    .projects-wrapper .projects .project {
+  .projects-wrapper .pinned-repos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #d1d5da !important;
+    padding: 28px 22px 12px 22px;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-item {
+      display: flex;
+      border: 1px solid #d1d5da !important;
+      padding: 16px !important;
+      margin-bottom: 16px !important;
       border-radius: 3px;
+      flex-basis: 45%;
+      flex-grow: 0;
+      -webkit-animation: fadeInFromNone 0.5s ease-out;
+      -moz-animation: fadeInFromNone 0.5s ease-out;
+      -o-animation: fadeInFromNone 0.5s ease-out;
+      animation: fadeInFromNone 0.5s ease-out; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-item-content {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      width: 100%; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-desc {
+      flex: 1 0 auto; }
+    .projects-wrapper .pinned-repos-list .repo-language-color {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      position: relative;
+      top: 1px;
+      width: 12px; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-meta + .pinned-repo-meta {
+      margin-left: 16px; }
+    .projects-wrapper .pinned-repos-list .pinned-repo-meta {
+      display: inline-block; }
+    .projects-wrapper .pinned-repos-list .muted-link {
+      color: #586069 !important; }
+    .projects-wrapper .pinned-repos-list .octicon {
+      display: inline-block;
+      fill: currentColor;
+      vertical-align: text-bottom;
+      margin-right: 2px; }
+    .projects-wrapper .pinned-repos-list a {
+      color: #0366d6 !important;
+      text-decoration: none; }
+    .projects-wrapper .pinned-repos-list .repo-language-color {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      position: relative;
+      top: 1px;
+      width: 12px;
+      margin-right: 5px; }
+    .projects-wrapper .pinned-repos-list p.no-data {
       text-align: center;
-      padding: 15px;
-      width: 50%;
-      vertical-align: middle; }
-      .projects-wrapper .projects .project a {
-        text-decoration: none; }
-      .projects-wrapper .projects .project h2 {
-        color: #0366d6;
-        font-size: 14px; }
-      .projects-wrapper .projects .project p {
-        color: #586069;
-        font-size: 14px;
-        max-width: 50%;
-        margin: 0 auto;
-        font-family: Lora; }
-      .projects-wrapper .projects .project .icon {
-        max-width: 66px;
-        border-radius: 16.666px; }
-      .projects-wrapper .projects .project .language-color {
-        position: relative;
-        top: 1px;
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: blue; }
-      .projects-wrapper .projects .project .technologies .jekyll {
-        background-color: #e34c26; }
-      .projects-wrapper .projects .project .technologies .javascript {
-        background-color: #e34c26; }
-      .projects-wrapper .projects .project .technologies .swift {
-        background-color: #ffac45; }
-    .projects-wrapper .projects .project:nth-child(odd) {
-      margin-right: 12px; }
+      width: 100%;
+      margin-bottom: 18px;
+      font-size: 2rem;
+      margin-top: 0;
+      color: gray; }
+    .projects-wrapper .pinned-repos-list .objective-c {
+      background-color: #438eff; }
+    .projects-wrapper .pinned-repos-list .html {
+      background-color: #e34c26; }
+    .projects-wrapper .pinned-repos-list .java {
+      background-color: #b07219; }
+    .projects-wrapper .pinned-repos-list .c {
+      background-color: #555555; }
+    .projects-wrapper .pinned-repos-list .php {
+      background-color: #4F5D95; }
+    .projects-wrapper .pinned-repos-list .swift {
+      background-color: #ffac45; }
+    .projects-wrapper .pinned-repos-list .javascript {
+      background-color: #f1e05a; }
+    .projects-wrapper .pinned-repos-list .shell {
+      background-color: #89e051; }
+    .projects-wrapper .pinned-repos-list .lua {
+      background-color: #000080; }
+    .projects-wrapper .pinned-repos-list .css {
+      background-color: #563d7c; }
+  @media screen and (max-width: 1024px) {
+    .projects-wrapper .pinned-repo-item {
+      flex-basis: 100% !important; } }
   @media screen and (max-width: 600px) {
     .projects-wrapper {
-      width: 100%; }
-      .projects-wrapper .projects {
-        width: 100%;
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important; }
-        .projects-wrapper .projects tr:last-child .project {
-          border-bottom: none !important; }
-      .projects-wrapper .project {
+      width: 95%; }
+      .projects-wrapper .pinned-repos-list {
+        display: block !important; }
+      .projects-wrapper .pinned-repo-item {
         display: block;
-        width: 100% !important;
-        margin: 0 auto !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        border-bottom: 1px solid lightgrey;
-        padding-bottom: 10px !important; }
-      .projects-wrapper h1 {
-        font-size: 35px;
-        margin-left: 10px; } }
+        width: 90% !important; } }
 
 .thoughts-wrapper {
   width: 65%;
@@ -1043,6 +1165,46 @@ pre {
   50% {
     opacity: 0; }
   100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+@-moz-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+@-o-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
     opacity: 1; } }
 /* Page-specific colors */
 #main {
