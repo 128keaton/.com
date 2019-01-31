@@ -3,6 +3,5 @@ _site
 .jekyll-metadata
 *.lock
 .DS_Store
-assets/bundle.js
 node_modules
 .env
