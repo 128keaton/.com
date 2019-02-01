@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 module.exports = {
     mode: 'production',
-    watch: true,
+    watch: false,
     entry: [
         'jquery',
         path.join(__dirname, 'webpack', 'main'),
