@@ -6,3 +6,5 @@ _site
 node_modules
 .env
 assets/js/main-bundle.js
+.idea/.rakeTasks
+images/
