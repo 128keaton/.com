@@ -30,7 +30,6 @@ $(document).ready(function () {
 
     const getToken = async () => {
         if (process.env.GH_TOKEN) {
-            console.log("development mode: " + process.env.GH_TOKEN);
             return fetchRepoWithToken(process.env.GH_TOKEN);
         } else {
             const tokenRequest = await requestToken();

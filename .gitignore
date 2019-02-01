@@ -5,6 +5,6 @@ _site
 .DS_Store
 node_modules
 .env
-assets/js/main-bundle.js
+assets/js/
 .idea/.rakeTasks
 images/
