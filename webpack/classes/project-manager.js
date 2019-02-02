@@ -4,10 +4,9 @@ import Project from "./project";
 
 class ProjectManager {
 
-    constructor(repoOwner, token, junkRepos = []) {
+    constructor(repoOwner, junkRepos = []) {
         this.repoOwner = repoOwner;
         this.repos = [];
-        this.token = token;
         this.junkRepos = junkRepos;
     }
 
@@ -15,15 +14,12 @@ class ProjectManager {
         let manager = this;
         return axios({
             method: 'get',
-            url: 'https://api.github.com/user/repos',
+            url: 'https://api.github.com/users/128keaton/repos',
             params: {
                 type: 'all',
                 direction: 'desc',
                 sort: 'updated',
             },
-            headers: {
-                Authorization: 'token ' + manager.token
-            }
         }).then(function (response) {
             // handle success
             manager.repos = [];
