@@ -14,8 +14,10 @@
   padding: 10px 25px 10px;
   @media screen and (max-width: $on-palm) {
     min-width: 500px;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
   }
 }
 .highlight{
