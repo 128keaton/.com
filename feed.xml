@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-02-04T16:25:50+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">macOS Imaging and Testing</title><link href="/2018/08/10/moving-forward-with-macos-imaging.html" rel="alternate" type="text/html" title="macOS Imaging and Testing" /><published>2018-08-10T00:00:00+00:00</published><updated>2018-08-10T00:00:00+00:00</updated><id>/2018/08/10/moving-forward-with-macos-imaging</id><content type="html" xml:base="/2018/08/10/moving-forward-with-macos-imaging.html">&lt;h2 id=&quot;prologue&quot;&gt;Prologue&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-02-21T05:43:05+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Using a MailChimp Popup Form on Wordpress On Click</title><link href="/2019/02/20/mailchimp-wordpress-popup.html" rel="alternate" type="text/html" title="Using a MailChimp Popup Form on Wordpress On Click" /><published>2019-02-20T00:00:00+00:00</published><updated>2019-02-20T00:00:00+00:00</updated><id>/2019/02/20/mailchimp-wordpress-popup</id><content type="html" xml:base="/2019/02/20/mailchimp-wordpress-popup.html">&lt;p&gt;I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. 
+First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_postchimp_js&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;script type=&quot;text/javascript&quot; src=&quot;https://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js&quot; data-dojo-config=&quot;usePlainJson: true, isDebug: false&quot;&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;add_action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'wp_head'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'add_postchimp_js'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, I created a Javascript file similar to the following:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;downloadButton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a span:contains('Download')&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#home-carousel'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;has&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;downloadButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+			&lt;span class=&quot;nx&quot;&gt;downloadButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+				&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+				&lt;span class=&quot;nx&quot;&gt;displayEmailAlert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+				&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+			&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;displayEmailAlert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cookie&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cookie&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mailchimp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dojoRequire&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mojo/signup-forms/Loader&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;baseUrl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mailchimp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;uuid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mailchimp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uuid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;lid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mailchimp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;uniqueMethods&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I simply passed the MailChimp settings through WordPress’s &lt;code class=&quot;highlighter-rouge&quot;&gt;wp_localize_script&lt;/code&gt; function, like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;add_action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'wp_enqueue_scripts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'load_popup_scripts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;load_popup_scripts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;wp_enqueue_script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'email-popup'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plugins_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/assets/js/download-alert.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;__FILE__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$mailchimpOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'base_url'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;get_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mailchimp_base_url'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'uuid'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;get_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mailchimp_form_uuid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;get_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mailchimp_list_id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;wp_localize_script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'email-popup'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'mailchimp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$mailchimpOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As a result, I have a perfectly working MailChimp popup with Wordpress. I did not have to add jQuery to the root of the site, nor did I have to add the scripts with Javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/mailchimp-form.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. First, I set up our plugin to load the Javascript from MailChimp:</summary></entry><entry><title type="html">macOS Imaging and Testing</title><link href="/2018/08/10/moving-forward-with-macos-imaging.html" rel="alternate" type="text/html" title="macOS Imaging and Testing" /><published>2018-08-10T00:00:00+00:00</published><updated>2018-08-10T00:00:00+00:00</updated><id>/2018/08/10/moving-forward-with-macos-imaging</id><content type="html" xml:base="/2018/08/10/moving-forward-with-macos-imaging.html">&lt;h2 id=&quot;prologue&quot;&gt;Prologue&lt;/h2&gt;
 
 &lt;p&gt;Now that macOS Imaging is dead (and &lt;a href=&quot;https://support.apple.com/en-us/HT202770#sections&quot;&gt;is never coming back&lt;/a&gt;), I had to figure out a solution to replace DeployStudio here at ER2. Currently, we use a basic combination of cocoaDialog and bash to also mark the condition of any machine booted before imaging. The system is logged in our internal testing system and a label is adhered containing the specs. Then the machine is passed on to be cleaned before sale to a customer. This is great and all, but what if the machine has underlying issues, or severely overheats under strain &lt;em&gt;not&lt;/em&gt; expressed during an install? Having a customer shipped what is essentially a defective laptop is the worst case scenario, but that inherently generates a lot of &lt;em&gt;waste&lt;/em&gt; (at work, we are actively encouraged to eliminate waste)&lt;/p&gt;
 
@@ -808,67 +857,4 @@ Back to the story. I ended up shipping the TiBook, and two days later receiving 
 &lt;p&gt;&lt;em&gt;Fast forward to yesterday&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;I was at work, and a package came in for me. I figured it would be a PoE switch for resetting Cisco phones. Nope! A bright orange Clamshell met my eyes. A mutual friend, inside of the company, spotted this at his location, and shipped it to me. What a surprise! Said co-worker was throughly thanked!
-Within a month, I got two clamshells, one of the most desired vintage laptop, to date.&lt;/p&gt;</content><author><name></name></author><summary type="html">A while back, about a month, I was presented with the opportunity to swap computers. A PowerBook Ti for a Clamshell. At the time, I had two Ti books, one 500MHz, original, fully loaded with AirPort card. A really nice machine, but at the same time, I really wanted an iBook G3 Clamshell. I had never seen one. I had never touched one. For those who do not know what an iBook ‘Clamshell’ is, here is a pic:</summary></entry><entry><title type="html">A look at the OS X 10.7 Beta</title><link href="/2016/05/17/a-look-at-the-os-x-107-beta.html" rel="alternate" type="text/html" title="A look at the OS X 10.7 Beta" /><published>2016-05-17T04:08:35+00:00</published><updated>2016-05-17T04:08:35+00:00</updated><id>/2016/05/17/a-look-at-the-os-x-107-beta</id><content type="html" xml:base="/2016/05/17/a-look-at-the-os-x-107-beta.html">&lt;p&gt;Today, I received a copy of the later 10.7 Beta, build 11A390. The date on the install CD is 2011, and for those who do not know, Lion was officially released July of 2011.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://images.128keaton.com/2016/05/Slack for iOS Upload.jpg&quot; alt=&quot;Lion 2011 Beta&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Quickly, I pulled out my trusty 2009 Black MacBook to do a test install. I did, however, try anyway on my MacBookPro1,1, just in case we had a 32-bit EFI bootloader. On initial glance at the DVD, which init of itself is quite amazing, since Lion was never sold on one. Only digital download or on a $20 USB stick (which I own too), there wasn’t any welcome documentation, nor was there the Lion install icon, but something more generic instead.&lt;/p&gt;
-
-&lt;p&gt;Just X&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 4.27.18 PM.png&quot; alt=&quot;Install Disc&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;Anyway, onto installing. I booted into the installer, and was greeted by the modern ‘OS X Utilities’, but had stylings stuck between Snow Leopard and Lion.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1819.JPG&quot; alt=&quot;Mac OS X Utilities&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Another weird thing inside of Disk Utility:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1821.JPG&quot; alt=&quot;UISegmentedControl&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The segment control was nothing like I’ve seen before.&lt;/p&gt;
-
-&lt;p&gt;Anyway, post installation time, time for setup. We did get the lovely welcome video from Leopard, which was refreshing, even after hearing it a billion times.&lt;/p&gt;
-
-&lt;p&gt;First, the background wasn’t the sterile gray, we had a nice picture of Mt. Fiji:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1825.JPG&quot; alt=&quot;Mt Feejee&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I personally think it looks far better, I never noticed how nice that pic looks.&lt;/p&gt;
-
-&lt;p&gt;Then, it gave me the option to add encrypt my disk, something not implemented until 10.10. I wonder why they didn’t do it when they had the option to.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1827.JPG&quot; alt=&quot;Yosemite? Anyone?&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I opted not to, just in case some odd bug arose, which prevented me from exploring the rest of the operating system.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/IMG_1828.JPG&quot; alt=&quot;Without the crap scrolling&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;desktop&quot;&gt;Desktop&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.01.10 PM.png&quot; alt=&quot;The desktop&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we are at the desktop of 10.7, beta! Take note of the Launchpad icon.
-Quite ugly, glad it was changed.&lt;/p&gt;
-
-&lt;p&gt;I went to About My Mac-&amp;gt;More Info, just to see the build number, and was greeted by this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.01.55 PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Some weird mutant view. I do kinda like it though, not the icons.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.02.02 PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The battery view is very nice, I could definitely see this making a come back, maybe with an overall battery health meter, a la CoconutBattery?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.05.52 PM.png&quot; alt=&quot;TM&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Time Machine also had a few surprises, it had the option to store hourly snapshots locally, and daily backups on a Time Machine drive/server. Once again, if properly working, I’d love that to make a reappearance.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/2016/05/Screen Shot 2016-05-16 at 10.07.23 PM.png&quot; alt=&quot;Software updates&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oh, I should probably update that :)&lt;/p&gt;
-
-&lt;p&gt;That about wraps it up.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today, I received a copy of the later 10.7 Beta, build 11A390. The date on the install CD is 2011, and for those who do not know, Lion was officially released July of 2011.</summary></entry></feed>
+Within a month, I got two clamshells, one of the most desired vintage laptop, to date.&lt;/p&gt;</content><author><name></name></author><summary type="html">A while back, about a month, I was presented with the opportunity to swap computers. A PowerBook Ti for a Clamshell. At the time, I had two Ti books, one 500MHz, original, fully loaded with AirPort card. A really nice machine, but at the same time, I really wanted an iBook G3 Clamshell. I had never seen one. I had never touched one. For those who do not know what an iBook ‘Clamshell’ is, here is a pic:</summary></entry></feed>

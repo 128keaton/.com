@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Using a MailChimp Popup Form on Wordpress On Click / Keaton Burleson</title>
+  <meta name="description" content="I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. First, I set up our plugin to load...">
+  <meta property="og:title" content="Keaton's Page" />
+  
+    <meta property="og:image" content="/images/mailchimp-logo.png" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2019/02/20/mailchimp-wordpress-popup.html">
+  <link rel="alternate" type="application/rss+xml" title="Keaton Burleson" href="/feed.xml">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple_icon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <script type="text/javascript" src="/assets/js/main-bundle.js" charset="utf-8"></script>
+
+</head>
+ 
+<table class="header-container">
+    <tr>
+        <td>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/#me">About</a>
+        </td>
+        <td>
+            <h1>Keaton Burleson</h1>
+        </td>
+    </tr>
+</table>
+
+
+
+<body id="post">
+    <div class="wrapper" id="white post">
+            <article class="post post--full">
+                <div class="post-head">
+                    <h2 class="post-title">Using a MailChimp Popup Form on Wordpress On Click</h2> 
+                    <h3 class="post-date">February 20 2019</h3>
+                </div>
+                
+                    <img class="post-head-image" src="/images/mailchimp-logo.png"> 
+                
+                <div class="post-content">
+                    <p>I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. 
+First, I set up our plugin to load the Javascript from MailChimp:</p>
+
+<p>For example:</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">add_postchimp_js</span><span class="p">(){</span>
+	<span class="k">echo</span> <span class="s1">'&lt;script type="text/javascript" src="https://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"&gt;'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">add_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'add_postchimp_js'</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>Next, I created a Javascript file similar to the following:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+		<span class="s1">'use strict'</span><span class="p">;</span>
+
+		<span class="kd">let</span> <span class="nx">downloadButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"a span:contains('Download')"</span><span class="p">).</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;}).</span><span class="nx">parent</span><span class="p">();</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#home-carousel'</span><span class="p">).</span><span class="nx">has</span><span class="p">(</span><span class="nx">downloadButton</span><span class="p">)){</span>
+			<span class="nx">downloadButton</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+				<span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> 
+				<span class="nx">displayEmailAlert</span><span class="p">();</span>
+				<span class="k">return</span> <span class="kc">false</span><span class="p">;</span> 
+			<span class="p">});</span>
+		<span class="p">}</span>
+
+	<span class="p">});</span> 
+<span class="p">}(</span><span class="nx">jQuery</span><span class="p">));</span>
+
+<span class="kd">function</span> <span class="nx">displayEmailAlert</span><span class="p">(){</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s1">'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;'</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s1">'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;'</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mailchimp</span><span class="p">);</span>
+	<span class="nb">window</span><span class="p">.</span><span class="nx">dojoRequire</span><span class="p">([</span><span class="s2">"mojo/signup-forms/Loader"</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">L</span><span class="p">)</span> <span class="p">{</span> <span class="nx">L</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span><span class="s2">"baseUrl"</span><span class="p">:</span><span class="nx">mailchimp</span><span class="p">.</span><span class="nx">base_url</span><span class="p">,</span><span class="s2">"uuid"</span><span class="p">:</span><span class="nx">mailchimp</span><span class="p">.</span><span class="nx">uuid</span><span class="p">,</span><span class="s2">"lid"</span><span class="p">:</span><span class="nx">mailchimp</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span><span class="s2">"uniqueMethods"</span><span class="p">:</span><span class="kc">true</span><span class="p">})</span> <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>I simply passed the MailChimp settings through WordPress’s <code class="highlighter-rouge">wp_localize_script</code> function, like so:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">add_action</span><span class="p">(</span><span class="s1">'wp_enqueue_scripts'</span><span class="p">,</span> <span class="s1">'load_popup_scripts'</span><span class="p">);</span>
+
+<span class="k">function</span> <span class="nf">load_popup_scripts</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">wp_enqueue_script</span><span class="p">(</span><span class="s1">'email-popup'</span><span class="p">,</span> <span class="nx">plugins_url</span><span class="p">(</span><span class="s1">'/assets/js/download-alert.js'</span><span class="p">,</span><span class="k">__FILE__</span><span class="p">));</span>
+	<span class="nv">$mailchimpOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'base_url'</span> <span class="o">=&gt;</span>  <span class="nx">get_option</span><span class="p">(</span><span class="s1">'mailchimp_base_url'</span><span class="p">),</span> <span class="s1">'uuid'</span> <span class="o">=&gt;</span>  <span class="nx">get_option</span><span class="p">(</span><span class="s1">'mailchimp_form_uuid'</span><span class="p">),</span> <span class="s1">'id'</span> <span class="o">=&gt;</span>  <span class="nx">get_option</span><span class="p">(</span><span class="s1">'mailchimp_list_id'</span><span class="p">)];</span>
+	<span class="nx">wp_localize_script</span><span class="p">(</span><span class="s1">'email-popup'</span><span class="p">,</span> <span class="s1">'mailchimp'</span><span class="p">,</span> <span class="nv">$mailchimpOptions</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>As a result, I have a perfectly working MailChimp popup with Wordpress. I did not have to add jQuery to the root of the site, nor did I have to add the scripts with Javascript.</p>
+
+<p><img src="/images/mailchimp-form.png" alt="" /></p>
+ 
+                </div>
+                
+
+<section class="comments">
+	<div class="constrain--body">
+		<div class="comments__existing js-comments">
+			
+		</div>
+		<form id="post-new-comment" class="form" action="https://api.staticman.net/v2/entry/128keaton/128keaton.com/pre-publish/comments" method="post">
+    <input type="hidden" name="options[slug]" value="2019-02-20-using-a-mailchimp-popup-form-on-wordpress-on-click">
+    <input type="hidden" name="options[parent]" value="2019-02-20-using-a-mailchimp-popup-form-on-wordpress-on-click">
+    <input type="hidden" name="options[origin]" value="http://128keaton.com/2019/02/20/mailchimp-wordpress-popup.html">
+    <input type="hidden" name="options[reCaptcha][siteKey]" value="6LeQyhIUAAAAAFkUhONibgvEQffDC_5zH8hHzNHM">
+    <input type="hidden" name="options[reCaptcha][secret]" value="zdwEOQN1Lr441+9m7RH9JrQ2n7D6cUfC2Uo905piyqzqrKnrBOZ4xVpoSe0LJWvy1NsVa/hJBZbysukewP378BWoLRDFHkiXXGodl/JVXRV5omTklnuYSrfUNJ/HP/mM55eSEB/FLNWrQV6sqyRLCVGLJpVKmdOCcd8b88CL5Pc=">
+
+    <input name="options[redirect]" type="hidden" value="http://128keaton.com/2019/02/20/mailchimp-wordpress-popup.html">
+
+    <input type="text" name="company" class="text-field" style="display: none">
+    <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required/>
+    <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (will not be public)" required/>
+    <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)" />
+    <input class="form__field text-field" type="address" name="fields[address]" placeholder="Address (do not fill!)" style="display: none" />
+    <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment. Markdown is accepted." required></textarea>
+
+    <div class="g-recaptcha" data-sitekey="6LeQyhIUAAAAAFkUhONibgvEQffDC_5zH8hHzNHM"></div>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <input class="cta" type="submit" value="Post comment" />
+</form>
+
+	</div>
+</section>
+
+            </article>
+        <footer class="footer" id="post-footer">
+    <h1>Read more:</h1>
+    <table class="colophon">
+        
+        
+        <tr>
+            <td class="footer-post">
+                <a href="/2018/08/10/moving-forward-with-macos-imaging.html">
+                    <h1>macOS Imaging and Testing</h1>
+                </a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="footer-post">
+                <a href="/2017/09/08/yahoo-widgets-2017.html">
+                    <h1>Yahoo! Widgets in 2017</h1>
+                </a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="footer-post">
+                <a href="/2017/04/12/how-i-got-312-on-a-3gs-from-2011.html">
+                    <h1>How I got 3.1.2 on a 3G[s] from 2011</h1>
+                </a>
+            </td>
+        </tr>
+        
+    </table>
+    &copy Keaton Burleson
+</footer>
+
+    </div>
+</body>
+
+</html>
