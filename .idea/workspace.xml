@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f4bc050-e131-4b36-9052-33e8a05b77e5" name="Default" comment="Adds footer image and Wordpress">
-      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,7 +139,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
@@ -148,12 +148,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="191">
-                <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
               </first_editor>
               <second_editor />
             </state>
@@ -245,7 +245,6 @@
         <option value="$PROJECT_DIR$/_includes/partials/post-new-comment.html" />
         <option value="$PROJECT_DIR$/webpack/classes/project-manager.js" />
         <option value="$PROJECT_DIR$/webpack/main.js" />
-        <option value="$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md" />
         <option value="$PROJECT_DIR$/_posts/2018-09-19-a-love-letter-to-series-0.markdown" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_sass/_posts.scss" />
@@ -254,6 +253,7 @@
         <option value="$PROJECT_DIR$/_sass/_home.scss" />
         <option value="$PROJECT_DIR$/_layouts/main-page/about.html" />
         <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md" />
       </list>
     </option>
   </component>
@@ -345,7 +345,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550727714110" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550727727462" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -804,7 +804,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49484000" />
+    <option name="totallyTimeSpent" value="49508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1343" extended-state="0" />
@@ -1164,20 +1164,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="191">
-            <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="44" column="72" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
