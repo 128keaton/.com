@@ -8,7 +8,7 @@ module.exports = {
     watch: false,
     entry: [
         'jquery',
-        path.join(__dirname, 'webpack', 'main'),
+        path.join(__dirname, 'webpack-scripts', 'main'),
     ],
     output: {
         filename: '[name]-bundle.js',

@@ -119,6 +119,13 @@ footer#post-footer a.notice {
   font-size: 4.06rem;
 }
 
+.g-recaptcha{
+  div:first-child{
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
 .internal-post-link {
   text-decoration: none;
   color: gray;
@@ -286,6 +293,7 @@ footer#post-footer a.notice {
   #post-new-comment{
     padding: 15px!important;
   }
+
 
   .mobile-back {
     width: 100%;

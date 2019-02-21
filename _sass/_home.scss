@@ -548,7 +548,13 @@
   margin: 0 auto;
   min-height: 420px;
   color: #ffffff;
+  position: relative;
 
+  .me3{
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+  }
   td:nth-child(even) {
     padding: 0 1.2em;
   }
@@ -585,6 +591,12 @@
     i {
       font-size: 18px;
       color: #00eaea;
+    }
+  }
+
+  @media screen and (max-width: 900px){
+    .me3{
+      display: none;
     }
   }
 

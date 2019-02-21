@@ -30,7 +30,7 @@
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
     "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.3"
   },
   "resolutions": {
     "babel-core": "^7.0.0-bridge"
