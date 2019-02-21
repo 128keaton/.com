@@ -15,7 +15,6 @@ body {
   padding: 0;
   margin: 0;
   background: #f3f1f1;
-  overflow-x: hidden !important;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
 
