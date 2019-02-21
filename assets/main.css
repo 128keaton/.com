@@ -1945,8 +1945,10 @@ img[src$='#stylized-small'] {
   @media screen and (max-width: 600px) {
     .highlighter-rouge {
       min-width: 500px;
-      overflow: scroll;
-      -webkit-overflow-scrolling: touch; } }
+      overflow-x: scroll;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap; } }
 
 .highlight {
   width: 100%;
