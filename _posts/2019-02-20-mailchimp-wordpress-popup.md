@@ -1,7 +1,7 @@
 ---
 title: Using a MailChimp Popup Form on Wordpress On Click
 layout: post
-head-image: https://images.128keaton.com/images/mailchimp-logo.png
+head-image: https://images.128keaton.com/mailchimp-logo.png
 ---
 
 I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. 
