@@ -42,10 +42,7 @@ namespace :site do
     Dir.entries(__dir__ + '/_posts/').each do |file_name|
       next unless File.extname(file_name) == '.md' || File.extname(file_name) == '.markdown'
       text = File.read(__dir__ + '/_posts/' + file_name)
-      fixed = text.gsub('](/images/', '](http://images.128keaton.com/')
-      fixed = text.gsub(']({{ site.baseurl }}/images/', '](http://images.128keaton.com/')
-      fixed = fixed.gsub('_images/', '')
-      fixed = fixed.gsub('../', '')
+      fixed = text.gsub('](/images/', '](https://images.128keaton.com/')
       File.open(__dir__ + '/_posts/' + file_name, 'w') {|file| file.puts fixed}
     end
     Rake::Task['site:upload'].execute

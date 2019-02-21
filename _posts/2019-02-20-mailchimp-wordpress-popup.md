@@ -57,4 +57,4 @@ function load_popup_scripts() {
 
 As a result, I have a perfectly working MailChimp popup with Wordpress. I did not have to add jQuery to the root of the site, nor did I have to add the scripts with Javascript.
 
-![](/images/mailchimp-form.png)
+![](https://images.128keaton.com/mailchimp-form.png)

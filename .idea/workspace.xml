@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f4bc050-e131-4b36-9052-33e8a05b77e5" name="Default" comment="Better key handling/fetching">
-      <change afterPath="$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/128keaton.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/128keaton.com.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/main-page/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/main-page/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/_posts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main-bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main-bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/classes/project-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-scripts/classes/project-manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/classes/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-scripts/classes/project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-scripts/main.js" afterDir="false" />
+    <list default="true" id="4f4bc050-e131-4b36-9052-33e8a05b77e5" name="Default" comment="Adds footer image and Wordpress">
+      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +21,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Rakefile" value="1" />
           <entry key="html" value="6" />
           <entry key="js" value="2" />
           <entry key="json" value="1" />
           <entry key="markdown" value="1" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="png" value="2" />
           <entry key="scss" value="2" />
         </counts>
@@ -48,17 +37,20 @@
           <entry key="Image" value="2" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="Markdown" value="3" />
+          <entry key="Markdown" value="4" />
+          <entry key="Ruby" value="1" />
           <entry key="SCSS" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Rakefile" value="2" />
           <entry key="html" value="48" />
           <entry key="js" value="8" />
           <entry key="markdown" value="198" />
           <entry key="md" value="922" />
           <entry key="scss" value="96" />
+          <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -66,6 +58,8 @@
           <entry key="HTML" value="48" />
           <entry key="JavaScript" value="9" />
           <entry key="Markdown" value="1119" />
+          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="Ruby" value="2" />
           <entry key="SCSS" value="96" />
         </counts>
       </usages-collector>
@@ -80,11 +74,6 @@
               <caret line="599" column="5" selection-start-line="599" selection-start-column="5" selection-end-line="599" selection-end-column="5" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -141,11 +130,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/main-page/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+            <state relative-caret-position="360">
+              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="44" column="72" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="191">
+                <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -228,7 +238,6 @@
         <option value="$PROJECT_DIR$/_layouts/frontpage.html" />
         <option value="$PROJECT_DIR$/webpack/classes/project.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
@@ -244,6 +253,7 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/_sass/_home.scss" />
         <option value="$PROJECT_DIR$/_layouts/main-page/about.html" />
+        <option value="$PROJECT_DIR$/Rakefile" />
       </list>
     </option>
   </component>
@@ -301,17 +311,17 @@
             <path>
               <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="128keaton.com" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="128keaton.com" type="462c0819:PsiDirectoryNode" />
               <item name="_sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="128keaton.com" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="128keaton.com" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
@@ -335,7 +345,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550727601655" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550727714110" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -794,13 +804,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49341000" />
+    <option name="totallyTimeSpent" value="49484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1343" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26767275" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26767275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -818,7 +828,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="bottom" id="Amazon EC2" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32560065" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32560065" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Code Review" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -1024,13 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1083,16 +1086,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="345">
             <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
           </first_editor>
           <second_editor />
         </state>
@@ -1166,8 +1159,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/main-page/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="360">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-02-20-mailchimp-wordpress-popup.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="191">
+            <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="44" column="72" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
         </state>
       </provider>
     </entry>
