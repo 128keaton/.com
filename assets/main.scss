@@ -46,14 +46,13 @@ body {
   padding: 0;
   margin: 0;
   background: $background-color;
-  overflow-x: hidden !important;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-body#post{
+body#post {
   background-color: $dark-background-color;
-  background:  $dark-background-color;
+  background: $dark-background-color;
 }
 
 .clear {
@@ -77,8 +76,6 @@ body#post{
   clear: both;
 }
 
-
-
 .header-container {
   text-align: center;
   table-layout: fixed;
@@ -89,12 +86,12 @@ body#post{
 
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  
-  -webkit-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
-  box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
 
-  td{
+  -webkit-box-shadow: 2px 4px 18px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 18px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 4px 18px -3px rgba(0, 0, 0, 0.75);
+
+  td {
     background-color: #16162d;
     padding: 0;
     margin: 0;
@@ -105,7 +102,7 @@ body#post{
     padding-left: 1em;
   }
 
-  td:last-child{
+  td:last-child {
     border-top-right-radius: 5px;
     text-align: right;
     padding-right: 1em;
@@ -125,7 +122,7 @@ body#post{
     margin: 0;
     text-align: left;
   }
-   a:nth-child(2) {
+  a:nth-child(2) {
     font-size: 25px;
     color: #feb024;
     text-decoration: none;
@@ -140,6 +137,16 @@ body#post{
     padding: 0 12px;
     margin: 0;
     text-align: left;
+  }
+
+  @media screen and (max-width: $on-palm) {
+    td{
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      padding: 10px 0 10px 0!important;
+    }
   }
 }
 
@@ -158,11 +165,11 @@ body {
   margin-top: 25px;
 }
 
-pre{
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word;
 }
 
@@ -174,3 +181,4 @@ pre{
 @import "posts";
 @import "odo";
 @import "obit";
+@import "highlighting";
