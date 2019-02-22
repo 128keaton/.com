@@ -20,8 +20,8 @@ class Project {
 
     }
 
-    getListItem() {
-        let base = '<li class="pinned-repo-item"><div class="pinned-repo-item-content"><span><a href="' + this.url + '" class="repo-link">';
+    getListItem(i) {
+        let base = '<li id="project-' + i + '" class="pinned-repo-item"><div class="pinned-repo-item-content"><span><a href="' + this.url + '" class="repo-link">';
         let name = '<span class="name">' + this.name + '</span></a></span>';
 
         let description = '<p class="pinned-repo-desc">' + this.description + '</p>';

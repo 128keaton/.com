@@ -328,7 +328,8 @@ pre {
 
 .projects-wrapper {
   width: 65%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: none; }
   .projects-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
@@ -358,7 +359,7 @@ pre {
       -o-animation: fadeInFromNone 0.5s ease-out;
       animation: fadeInFromNone 0.5s ease-out; }
     .projects-wrapper .pinned-repos-list .pinned-repo-item-content {
-      display: flex;
+      display: none;
       flex-direction: column;
       align-content: space-between;
       width: 100%; }
@@ -943,7 +944,8 @@ pre {
 
 .projects-wrapper {
   width: 65%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: none; }
   .projects-wrapper h1 {
     font-size: 80px;
     font-weight: bolder; }
@@ -973,7 +975,7 @@ pre {
       -o-animation: fadeInFromNone 0.5s ease-out;
       animation: fadeInFromNone 0.5s ease-out; }
     .projects-wrapper .pinned-repos-list .pinned-repo-item-content {
-      display: flex;
+      display: none;
       flex-direction: column;
       align-content: space-between;
       width: 100%; }
