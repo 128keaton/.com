@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f4bc050-e131-4b36-9052-33e8a05b77e5" name="Default" comment="Better key handling/fetching">
+    <list default="true" id="4f4bc050-e131-4b36-9052-33e8a05b77e5" name="Default" comment="Remove token requirement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/_home.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main-bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main-bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack/classes/project-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/classes/project-manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/classes/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/classes/project.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,19 +18,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/webpack/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="231">
+              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webpack/main.js">
+        <entry file="file://$PROJECT_DIR$/_sass/_home.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+            <state relative-caret-position="344">
+              <caret line="339" column="19" selection-start-line="339" selection-start-column="19" selection-end-line="339" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -87,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack/classes/project.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            <state relative-caret-position="263">
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -96,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack/classes/project-manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="60">
               <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -134,6 +138,7 @@
       <find>border</find>
       <find>babel</find>
       <find>blink</find>
+      <find>projects</find>
     </findStrings>
     <replaceStrings>
       <replace>https://</replace>
@@ -185,8 +190,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack/classes/lazy.js" />
         <option value="$PROJECT_DIR$/_layouts/frontpage.html" />
-        <option value="$PROJECT_DIR$/_sass/_home.scss" />
-        <option value="$PROJECT_DIR$/webpack/classes/project.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/.env" />
@@ -196,7 +199,9 @@
         <option value="$PROJECT_DIR$/staticman.yml" />
         <option value="$PROJECT_DIR$/_includes/partials/post-new-comment.html" />
         <option value="$PROJECT_DIR$/webpack/classes/project-manager.js" />
+        <option value="$PROJECT_DIR$/webpack/classes/project.js" />
         <option value="$PROJECT_DIR$/webpack/main.js" />
+        <option value="$PROJECT_DIR$/_sass/_home.scss" />
       </list>
     </option>
   </component>
@@ -213,7 +218,7 @@
     <option name="x" value="43" />
     <option name="y" value="23" />
     <option name="width" value="1877" />
-    <option name="height" value="1177" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -224,7 +229,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,13 +239,12 @@
             <path>
               <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="128keaton.com" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="_sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="128keaton.com" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="128keaton.com" type="b2602c69:ProjectViewProjectNode" />
@@ -258,6 +261,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -549,7 +553,9 @@
       <workItem from="1549031165187" duration="2903000" />
       <workItem from="1549039071148" duration="724000" />
       <workItem from="1549039838832" duration="910000" />
-      <workItem from="1549075244417" duration="813000" />
+      <workItem from="1549075244417" duration="885000" />
+      <workItem from="1549309138104" duration="24000" />
+      <workItem from="1550844445865" duration="802000" />
     </task>
     <task id="LOCAL-00001" summary="Updated design!">
       <created>1502119783372</created>
@@ -719,17 +725,24 @@
       <option name="project" value="LOCAL" />
       <updated>1549040708916</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Remove token requirement">
+      <created>1549076102435</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1549076102435</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46984000" />
+    <option name="totallyTimeSpent" value="47882000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="23" width="1877" height="1177" extended-state="6" />
+    <frame x="43" y="23" width="1877" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28065395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28610355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -747,7 +760,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="bottom" id="Amazon EC2" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32629558" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3253796" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Code Review" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -774,7 +787,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated design!" />
     <MESSAGE value="Fixed mobile" />
     <MESSAGE value="Minor CSS changes&#10;Removed spam comments" />
     <MESSAGE value="Adds maxwidth tag." />
@@ -799,7 +811,8 @@
     <MESSAGE value="Fixed a space (test commit)" />
     <MESSAGE value="Test commit" />
     <MESSAGE value="Disables Askimet. Fixes site key issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Disables Askimet. Fixes site key issue" />
+    <MESSAGE value="Remove token requirement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove token requirement" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_pages/obituary.html" />
@@ -994,13 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/_home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1029,8 +1035,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main-bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/partials/post-comment.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/partials/post-new-comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="238" selection-start-line="5" selection-start-column="238" selection-end-line="5" selection-end-column="238" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1060,26 +1083,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/partials/post-new-comment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="238" selection-start-line="5" selection-start-column="238" selection-end-line="5" selection-end-column="238" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main-bundle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack/classes/project-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="60">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -1089,15 +1095,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack/classes/project.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        <state relative-caret-position="263">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webpack/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        <state relative-caret-position="231">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="339" column="19" selection-start-line="339" selection-start-column="19" selection-end-line="339" selection-end-column="19" />
         </state>
       </provider>
     </entry>

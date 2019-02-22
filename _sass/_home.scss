@@ -301,6 +301,7 @@
 .projects-wrapper {
   width: 65%;
   margin: 0 auto;
+  display: none;
 
   h1 {
     font-size: 80px;
@@ -336,7 +337,7 @@
     }
 
     .pinned-repo-item-content {
-      display: flex;
+      display: none;
       flex-direction: column;
       align-content: space-between;
       width: 100%;
