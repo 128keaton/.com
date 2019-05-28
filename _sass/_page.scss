@@ -79,16 +79,18 @@
   clear: both;
   overflow: auto;
   display: block;
+  a{
+    text-align: center;
+    color: #000000;
+    text-decoration: none!important;
+    font-size: 26px;
+  }
+  &::after{
+    clear: both;
+  }
 }
 
-.fourohfour::after {
-  clear: both;
-}
-.fourohfour a{
-  text-align: center;
-  color: white;
-  font-size: 26px;
-}
+
 .svg{
   max-width: 30px;
   padding: 10px;
