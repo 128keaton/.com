@@ -9,7 +9,7 @@ It is not everyday you see someone putting an expensive piece of technology insi
 
 Anyway, I received a 2007 MacBook Pro 17" with a bad GPU. Sleep light comes on, no chime, etc. A somewhat common problem among the early MacBook Pro 3,1/4,1 and, the MacBook Pro 8,2, the GPU would desolder itself from the board. No, the GPU wouldn't physically plop out. Enough solder joints (thanks lead-free) would weaken and disconnect to cause the issue.
 
-![](http://www.playbackups.com/photos/bga-side-diagram.jpg)
+![Courtesy of yellowlightofdeath.com](https://images.128keaton.com/bga-side-diagram.jpg)
 
 The photo above is a simple diagram explaining basic BGA soldering. Those balls are what we are remelting (inside of the oven) to allow a firm connection to be made.
 
@@ -27,21 +27,21 @@ But I didn't, and thankfully, it turned out ok.
 
 Before baking:
 
-![](http://images.128keaton.com/2016/05/Slack for iOS Upload-5.jpg)
+![](https://images.128keaton.com/2016/05/Slack for iOS Upload-5.jpg)
 
 After:
 
-![](http://images.128keaton.com/2016/05/Now just waiting to cool.jpg)
+![](https://images.128keaton.com/2016/05/Now just waiting to cool.jpg)
 
 As you can see, there is a bit of board flex. Whoops. Make sure you put a piece of foil under that corner.
 
 Success:
 
 
-![](http://images.128keaton.com/2016/05/screen_shot_2016-05-27_at_9.16.21_am.png)
+![](https://images.128keaton.com/2016/05/screen_shot_2016-05-27_at_9.16.21_am.png)
 
 Hope this helps someone!
 
 Edit: friend's response to this post:
 
-![](http://images.128keaton.com/2016/06/hahahjon.png)
+![](https://images.128keaton.com/2016/06/hahahjon.png)
