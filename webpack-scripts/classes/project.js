@@ -24,7 +24,7 @@ class Project {
         let base = '<li id="project-' + i + '" class="pinned-repo-item"><div class="pinned-repo-item-content"><span><a href="' + this.url + '" class="repo-link">';
         let name = '<span class="name">' + this.name + '</span></a></span>';
 
-        let description = '<p class="pinned-repo-desc">' + this.description + '</p>';
+        let description = '<p class="pinned-repo-desc">' + this.description !== null ? this.description : 'No description' + '</p>';
         let metadata = '<p><span class="repo-language-color pinned-repo-meta ' + this.language.toLowerCase() + '"></span>' + this.language;
 
         let stargazers = '<a href="' + this.stargazersURL + '" class="pinned-repo-meta muted-link stargazers-link"><svg aria-label="stars" class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img">';
