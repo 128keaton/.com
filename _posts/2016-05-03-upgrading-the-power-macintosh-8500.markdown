@@ -9,7 +9,7 @@ Originally introduced in 1995, the Power Macintosh 8500 was a working class man'
 
 First things first, I opened it up again. No hard drives or caddies. Shame, since is an older SCSI format. No IDE on this old boy. I went to eBay, in search of a decent, and cheap card, and I couldn't really find a suitable one, until A friend directed me to a generic card, that was advertised as working. I ordered it from China and waited. And waited. However, a week before I got the card, I found something really cool at work.
 
-![](http://images.128keaton.com/2016/05/IMG_1625.JPG)
+![](https://images.128keaton.com/2016/05/IMG_1625.JPG)
 
 An Adaptec HotConnect 8945, not only for PCs, but it was Macintosh compatible as well.
 
@@ -17,7 +17,7 @@ Sweet!
 
 Lets open that box!
 
-![](http://images.128keaton.com/2016/05/IMG_1669.JPG)
+![](https://images.128keaton.com/2016/05/IMG_1669.JPG)
 
 Look at all of those goodies.
 
@@ -41,7 +41,7 @@ A very sweet package!
 
 Here is a close shot of the card:
 
-![](http://images.128keaton.com/2016/05/IMG_1672.JPG)
+![](https://images.128keaton.com/2016/05/IMG_1672.JPG)
 
 Doesn't really look used at all.
 
@@ -50,7 +50,7 @@ Anyway, onto the upgrading.
 First, after trial-and-error, both of my Apple SCSI CD-ROM drives didn't want to read anything. Wouldn't spin up worth a darn. From a recommendation, I tried using an IDE CD ROM, with my fancy ATA card, and it worked. I did not believe it. Next, since I was all out of IDE cables long enough, I decided to use the SCSI card too. Hey, its cool, right? I paired it up with a 10,000 RPM (!!!) Jaguar drive that came in a QuickSilver, long broken. I was able to reassemble the case, just fine, and booted the installer. After about five minutes, OS 9.1 was rocking on the 8500.
 
 
-![](http://images.128keaton.com/2016/05/IMG_1679.JPG)
+![](https://images.128keaton.com/2016/05/IMG_1679.JPG)
 
 
 Final specs:
@@ -66,4 +66,4 @@ Maybe sometime soon, I'll put Tiger on it, along side some more RAM.
 
 Oh, I was also able to solve the Kanga Conundrum. The ATA card I purchased featured an Onboard PATA connector, so I booted into 9.1 and blessed the new drive. Problem solved.
 
-![](http://images.128keaton.com/2016/05/IMG_1678.JPG)
+![](https://images.128keaton.com/2016/05/IMG_1678.JPG)

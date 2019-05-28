@@ -1,7 +1,7 @@
 ---
 title: macOS Imaging and Testing
 layout: post
-head-image: http://images.128keaton.com/Screen%20Shot%202018-08-10%20at%203.49.39%20PM.png
+head-image: https://images.128keaton.com/Screen%20Shot%202018-08-10%20at%203.49.39%20PM.png
 ---
 
 ## Prologue
@@ -17,7 +17,7 @@ Another caveat is that full acceleration GPU drivers are not loaded. Again, its 
 So, really, the next solution was a full bootable OS with tools built into the image. Sure, you could add GPU acceleration to the existing Recovery environment. And then you'd add the required extensions. Then, you've opened a can of worms. I do not know what I was doing wrong, but I couldn't get a Recovery environment to properly boot with the added extensions that I needed. To make the base image required, I used a modified version of AutoCasperNBI. The modifications were simple--AutoCasperNBI is an AppleScript-based project. If you do not know AppleScript, I'd recommend learning it, as it can make somethings like on boarding prompts, run-once applications, and droplets MUCH simpler than tackling a full Cocoa project.
 
 
-![Screen Shot 2018-08-12 at 12.08.25 PM](http://images.128keaton.com/Screen%20Shot%202018-08-12%20at%2012.08.25%20PM.png)
+![Screen Shot 2018-08-12 at 12.08.25 PM](https://images.128keaton.com/Screen%20Shot%202018-08-12%20at%2012.08.25%20PM.png)
 
 
 The modifications essentially disabled the Casper part of the project while keeping everything else. I didn't use Casper, nor did I need it. I just needed to make an NBI easily. I liked it the best (even with having to make modifications), since its easy to document for. I'd like to assume the person who will eventually replace me would appreciate a GUI-based application with screen shots to guide him/her through rebuilding an NBI.
@@ -34,7 +34,7 @@ Arguably, the best way to install OR upgrade to macOS High Sierra is using Apple
 
 We wanted a simple way to launch applications and establish a 'workflow' of sorts. Sure, you could just use the Dock and Finder, but to an untrained user, it can easily be confusing. Our solution was a custom application, similar to the macOS Utilities you see on the Recovery partition. 
 
-![](http://images.128keaton.com/screenshot.png)
+![](https://images.128keaton.com/screenshot.png)
 
 
 At the bottom, there is a button to launch a 'macOS Install Kickoff' application. The utilities pane waits for the `/Volumes/Install macOS High Sierra` volume to become available. The [kickoff](https://github.com/128keaton/macOS-Installer-Kickoff) application checks for any existing APFS setup, removes it (since we are installing from Sierra), and erases the drive, readying it for install. 
