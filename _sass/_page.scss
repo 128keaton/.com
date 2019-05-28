@@ -1,4 +1,3 @@
-
 @import "_home.scss";
 
 
@@ -24,13 +23,15 @@
   color: black;
 }
 
-#post .social-buttons a{
-  color: white!important;
+#post .social-buttons a {
+  color: white !important;
 }
+
 #home p.copyright {
   color: white;
   font-size: 20px;
 }
+
 /* Footer */
 .footer {
   margin: 0 auto;
@@ -55,7 +56,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-#default-footer a{
+#default-footer a {
   color: black;
 }
 
@@ -74,50 +75,55 @@
 }
 
 .fourohfour {
-  margin-top: 155px;
   text-align: center;
   clear: both;
   overflow: auto;
   display: block;
-  a{
+
+  a {
     text-align: center;
     color: #000000;
-    text-decoration: none!important;
+    text-decoration: none !important;
     font-size: 26px;
   }
-  &::after{
+
+  &::after {
     clear: both;
   }
 }
 
 
-.svg{
+.svg {
   max-width: 30px;
   padding: 10px;
 }
+
 @media screen and (max-width: $on-laptop) {
   #frontpage-footer,
   #home p.copyright {
-    font-size: 0.8em!important;
+    font-size: 0.8em !important;
     top: 27%;
     transform: translateY(-27%);
   }
 }
+
 @media screen and (max-width: $on-palm) {
   #frontpage-footer,
   #home p.copyright {
-    font-size: 1.5em!important;
-    top: 10%!important;
+    font-size: 1.5em !important;
+    top: 10% !important;
     transform: translateY(-10%) !important;
   }
-  .header-container{
+  .header-container {
     width: 100%;
     margin-top: 0;
     table-layout: unset;
-    td a{
+
+    td a {
       font-size: 18px;
     }
-    td h1{
+
+    td h1 {
       font-size: 40px;
     }
   }
