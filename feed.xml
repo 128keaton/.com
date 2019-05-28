@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-28T21:05:51+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Using a MailChimp Popup Form on Wordpress On Click</title><link href="/2019/02/20/mailchimp-wordpress-popup.html" rel="alternate" type="text/html" title="Using a MailChimp Popup Form on Wordpress On Click" /><published>2019-02-20T00:00:00+00:00</published><updated>2019-02-20T00:00:00+00:00</updated><id>/2019/02/20/mailchimp-wordpress-popup</id><content type="html" xml:base="/2019/02/20/mailchimp-wordpress-popup.html">&lt;p&gt;I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-28T21:10:41+00:00</updated><id>/</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Using a MailChimp Popup Form on Wordpress On Click</title><link href="/2019/02/20/mailchimp-wordpress-popup.html" rel="alternate" type="text/html" title="Using a MailChimp Popup Form on Wordpress On Click" /><published>2019-02-20T00:00:00+00:00</published><updated>2019-02-20T00:00:00+00:00</updated><id>/2019/02/20/mailchimp-wordpress-popup</id><content type="html" xml:base="/2019/02/20/mailchimp-wordpress-popup.html">&lt;p&gt;I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. 
 First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;p&gt;For example:&lt;/p&gt;
@@ -59,7 +59,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;p&gt;So, really, the next solution was a full bootable OS with tools built into the image. Sure, you could add GPU acceleration to the existing Recovery environment. And then you’d add the required extensions. Then, you’ve opened a can of worms. I do not know what I was doing wrong, but I couldn’t get a Recovery environment to properly boot with the added extensions that I needed. To make the base image required, I used a modified version of AutoCasperNBI. The modifications were simple–AutoCasperNBI is an AppleScript-based project. If you do not know AppleScript, I’d recommend learning it, as it can make somethings like on boarding prompts, run-once applications, and droplets MUCH simpler than tackling a full Cocoa project.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/Screen%20Shot%202018-08-12%20at%2012.08.25%20PM.png&quot; alt=&quot;Screen Shot 2018-08-12 at 12.08.25 PM&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.128keaton.com/Screen%20Shot%202018-08-12%20at%2012.08.25%20PM.png&quot; alt=&quot;Screen Shot 2018-08-12 at 12.08.25 PM&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The modifications essentially disabled the Casper part of the project while keeping everything else. I didn’t use Casper, nor did I need it. I just needed to make an NBI easily. I liked it the best (even with having to make modifications), since its easy to document for. I’d like to assume the person who will eventually replace me would appreciate a GUI-based application with screen shots to guide him/her through rebuilding an NBI.&lt;/p&gt;
 
@@ -75,7 +75,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;p&gt;We wanted a simple way to launch applications and establish a ‘workflow’ of sorts. Sure, you could just use the Dock and Finder, but to an untrained user, it can easily be confusing. Our solution was a custom application, similar to the macOS Utilities you see on the Recovery partition.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.128keaton.com/screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At the bottom, there is a button to launch a ‘macOS Install Kickoff’ application. The utilities pane waits for the &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/Install macOS High Sierra&lt;/code&gt; volume to become available. The &lt;a href=&quot;https://github.com/128keaton/macOS-Installer-Kickoff&quot;&gt;kickoff&lt;/a&gt; application checks for any existing APFS setup, removes it (since we are installing from Sierra), and erases the drive, readying it for install.&lt;/p&gt;
 
@@ -551,7 +551,7 @@ and then:
 
 &lt;p&gt;&lt;em&gt;back in black!! not that slate crap&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone_ios_6/IMG_1068.JPG#stylized&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.128keaton.com/iphone_ios_6/IMG_1068.JPG#stylized&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The iPhone 7 ‘matte black’ before it was cool! Ladies and gentleman, feast your eyes on what $98 netted me on the Ebay. Before I continue, I wanna say that this is my THIRD phone to have purchased. The first one, even though it was told that I’d receive the photos EXACTLY how the pictures depicted it, and was even assured that it would not be updated, it was, to fateful iOS 10. The second unit was pretty good, it was kinda junky, but it &lt;em&gt;worked&lt;/em&gt;, until it didn’t 😞. Long story short, both were refunded, and I finally said ‘enough’, and bought one on iOS 6.1.4. Some might not like the pateña look on their iPhone, but the slate just &lt;em&gt;damages&lt;/em&gt; so well.&lt;/p&gt;
 
@@ -561,9 +561,9 @@ and then:
 The “slate” anodization did show wear and tear as the year went by, but I liked the effect. Like a good pair of jeans or a leather watch strap.
 &lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone_ios_6/IMG_1069.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://images.128keaton.com/iphone_ios_6/IMG_1070.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://images.128keaton.com/iphone_ios_6/IMG_1071.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.128keaton.com/iphone_ios_6/IMG_1069.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://images.128keaton.com/iphone_ios_6/IMG_1070.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://images.128keaton.com/iphone_ios_6/IMG_1071.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;😍😍😍😍&lt;/p&gt;
 
@@ -571,9 +571,9 @@ The “slate” anodization did show wear and tear as the year went by, but I li
 
 &lt;h3 id=&quot;oh-these-just-images-from-my-5&quot;&gt;oh, these? just images from my 5:&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://images.128keaton.com/iphone_ios_6/IMG_0013.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://images.128keaton.com/iphone_ios_6/IMG_0014.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;http://images.128keaton.com/iphone_ios_6/IMG_0015.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.128keaton.com/iphone_ios_6/IMG_0013.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://images.128keaton.com/iphone_ios_6/IMG_0014.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://images.128keaton.com/iphone_ios_6/IMG_0015.JPG#stylized-small&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Not bad, eh?&lt;/p&gt;
 
