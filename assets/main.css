@@ -233,6 +233,9 @@ pre {
   margin-top: 25px;
   text-align: left;
   padding: 30px; }
+  .resume .download {
+    text-decoration: none;
+    color: #4320f2; }
   .resume tr {
     padding: 25px;
     vertical-align: baseline; }
@@ -849,6 +852,9 @@ pre {
   margin-top: 25px;
   text-align: left;
   padding: 30px; }
+  .resume .download {
+    text-decoration: none;
+    color: #4320f2; }
   .resume tr {
     padding: 25px;
     vertical-align: baseline; }
