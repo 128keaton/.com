@@ -1289,19 +1289,17 @@ pre {
   transform: rotate(1080deg); }
 
 .fourohfour {
-  margin-top: 155px;
   text-align: center;
   clear: both;
   overflow: auto;
   display: block; }
-
-.fourohfour::after {
-  clear: both; }
-
-.fourohfour a {
-  text-align: center;
-  color: white;
-  font-size: 26px; }
+  .fourohfour a {
+    text-align: center;
+    color: #000000;
+    text-decoration: none !important;
+    font-size: 26px; }
+  .fourohfour::after {
+    clear: both; }
 
 .svg {
   max-width: 30px;
