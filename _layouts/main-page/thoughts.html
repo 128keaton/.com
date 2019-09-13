@@ -1,6 +1,8 @@
 <div id="blog" class="thoughts-wrapper">
-    <h1>Blog</h1>
-    <div class="white-background">
+        <div class="block-header thoughts-header">
+            <h1 class="wrapper-title">Blog</h1>
+            <span class="colored-separator green-separator"></span>
+        </div>
         <table class="thoughts">
             {% for post in site.posts limit:5 %}
             <tr class="thought">
@@ -16,5 +18,4 @@
                 </td>
             </tr>
         </table>
-    </div>
 </div>
