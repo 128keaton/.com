@@ -85,7 +85,7 @@
             <a class="download" href="https://stuff.128keaton.com/resume/Resume-Keaton-Burleson.pdf">PDF</a>
         </td>
     </tr>
-    <tr id="top">
+    <tr class="top">
         <th colspan=2>
             Education/Awards
         </th>
@@ -95,40 +95,37 @@
     </tr>
     
     
-    <tr id="education">
-        <td>
-            <h4>Sue Parkerson Scholarship</h4>
+    <tr class="education-row last-row-false" id="education-1">
+        <td class="education-title" colspan="2">
+            <h4 class="title">Computer Science</h4>
+            <h4 class="sub-title">University of Memphis</h4>
         </td>
-        <td>
-        </td>
-        <td>
-            2016
-        </td>
-    </tr>
-    
-    <tr id="education">
-        <td>
-            <h4>University of Memphis - Comp Sci Honors</h4>
-        </td>
-        <td>
-        </td>
-        <td>
+        <td class="education-date">
             2021
         </td>
     </tr>
     
-    <tr id="education">
-        <td>
-            <h4>Eagle Scout Award</h4>
+    <tr class="education-row last-row-false" id="education-2">
+        <td class="education-title" colspan="2">
+            <h4 class="title">Eagle Scout</h4>
+            <h4 class="sub-title">Boy Scouts of America</h4>
         </td>
-        <td>
-        </td>
-        <td>
+        <td class="education-date">
             2017
         </td>
     </tr>
     
-    <tr id="top">
+    <tr class="education-row last-row-true" id="education-3">
+        <td class="education-title" colspan="2">
+            <h4 class="title">Sue Parkerson Scholarship</h4>
+            <h4 class="sub-title">Memphis Home Education Association</h4>
+        </td>
+        <td class="education-date">
+            2016
+        </td>
+    </tr>
+    
+    <tr class="top">
         <th>
             Job
         </th>
@@ -141,59 +138,80 @@
     </tr>
     
     
-    <tr>
-        <td>
-            <h4>ER2 - Technician</h4>
+    <tr class="job-row" id="job-1">
+        <td class="job-title">
+            <h4 class="title">Air Operations Service Co-op</h4>
+            <h4 class="location">FedEx</h4>
         </td>
-        <td>
+        <td class="job-experience">
+            <p>Angular, Java, Spring</p>
+        </td>
+        <td class="job-date">
+            2019 - Current
+        </td>
+    </tr>
+    
+    <tr class="job-row" id="job-2">
+        <td class="job-title">
+            <h4 class="title">Secondary Lead Developer</h4>
+            <h4 class="location">ER2</h4>
+        </td>
+        <td class="job-experience">
+            <p>Ruby on Rails, CSS, HTML, PHP, Symfony</p>
+        </td>
+        <td class="job-date">
+            2017 - August 2019
+        </td>
+    </tr>
+    
+    <tr class="job-row" id="job-3">
+        <td class="job-title">
+            <h4 class="title">Technician</h4>
+            <h4 class="location">ER2</h4>
+        </td>
+        <td class="job-experience">
             <p>Basic Cisco, Basic Networking, macOS with DeployStudio, General Linux and Docker.</p>
         </td>
-        <td>
+        <td class="job-date">
             2015 - 2017
         </td>
     </tr>
     
-    <tr>
-        <td>
-            <h4>New Hope - I.T. Assistant</h4>
+    <tr class="job-row" id="job-4">
+        <td class="job-title">
+            <h4 class="title">I.T. Assistant</h4>
+            <h4 class="location">Fellowship Memphis</h4>
         </td>
-        <td>
-            <p>Chromebooks and Windows Deployment</p>
-        </td>
-        <td>
-            Summer of 2016 <br> Summer of 2015
-        </td>
-    </tr>
-    
-    <tr>
-        <td>
-            <h4>Fellowship Memphis - I.T. Assistant</h4>
-        </td>
-        <td>
+        <td class="job-experience">
             <p>Mac OS X Server.</p>
         </td>
-        <td>
+        <td class="job-date">
             2015 - 2016
         </td>
     </tr>
     
-    <tr>
-        <td>
-            <h4>ER2 - Secondary Lead Developer</h4>
+    <tr class="job-row" id="job-5">
+        <td class="job-title">
+            <h4 class="title">I.T. Assistant</h4>
+            <h4 class="location">New Hope Christian Academy</h4>
         </td>
-        <td>
-            <p>Ruby on Rails, CSS, HTML, PHP, Symfony</p>
+        <td class="job-experience">
+            <p>Chromebooks and Windows Deployment</p>
         </td>
-        <td>
-            2017 - Present
+        <td class="job-date">
+            Summer of 2016 <br> Summer of 2015
         </td>
     </tr>
     
 </table>
 
+
 	<!-- Projects -->
 	<div id="projects" class="projects-wrapper">
-    <h1>Projects</h1>
+    <div class="block-header projects-header">
+        <h1 class="wrapper-title">Projects</h1>
+        <span class="colored-separator purple-separator"></span>
+    </div>
     <ol class="pinned-repos-list">
         <p class="no-data">Loading...</p>
     </ol>
@@ -202,8 +220,10 @@
 
 	<!-- Thoughts -->
 	<div id="blog" class="thoughts-wrapper">
-    <h1>Blog</h1>
-    <div class="white-background">
+        <div class="block-header thoughts-header">
+            <h1 class="wrapper-title">Blog</h1>
+            <span class="colored-separator green-separator"></span>
+        </div>
         <table class="thoughts">
             
             <tr class="thought">
@@ -247,8 +267,8 @@
                 </td>
             </tr>
         </table>
-    </div>
 </div>
+
 
 	<!-- About -->
 	<div id="me" class="about-wrapper">
