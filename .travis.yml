@@ -7,7 +7,7 @@ install:
 - npm install
 script: if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec rake site:deploy --quiet; else echo "PR skip deploy"; exit 0; fi
 rvm:
-- 2.1.2
+- 2.3.7
 env:
   global:
   - secure: CopZP4Ph/8gZlYH/vyWIMb+etUlxg+AaS2Y175c2gP0tdWnTC5UaGr+mxnt5uHeVeNsM3kNNHoBRhY6eZUidv7NN5UhXyD87wUDpV3S/gtUFfhWI5exw5TowupsbWxuQthDQ1mhcc6sGHH1zNw6dsVRLDjFEEyZ2IPGu3T8hZiABYUxj6YI4lLq752GJ2xzMS3Di0dI6OVACvZrbVuQ3RzdnWgdb9ye3fyTcrapPD0r3lEpMwCH3iL62U1S8BIc2udIiinwM/QACtyusfoKm91NWmVepX6neWeKkGMM7+YOkUODx7WIL98htjMwqZdK64HgsC66aMlEVyfKdKqtLC5ugDfFirwnBfjunziM5TjsXhS12zf4eMs6+eBqUQnPOIVOGJ2/YMpkFrXM+P7GrCKlbSMlqGSqNWe68T7Do81f8R7tQzGrL0/XXD8/EubN+y7xVp+xpADWMZwKf3ktMiYRbOI1OMjuLEoTmJHfFnTnYgxhjnfb9vCbjR76I4IIDToQ4UXrfZV6dLrbN+bjrOuBqn5sgEm1AMAOMBTsXdTDGfEYlZ2p81HteHH9SA9yrGGStWByWcL3NRuID+8UFAIDydobVQ6nkvskA5bBPS6VcKPcsRKgmJMOcwV50CB3lqKdP2hr3jSPmW+YoxjQAEyPz9/Xa3LHi6pcePJOYqQw=
