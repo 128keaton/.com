@@ -1,7 +1,7 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
-
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -15,7 +15,12 @@ module.exports = {
         path: path.resolve(__dirname, 'assets/js')
     },
     module: {
-        rules: [{
+        rules: [
+            {
+                test: /\.[s]?css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
             test: /.js$/,
             exclude: [
                 path.resolve(__dirname, 'node_modules'),
@@ -33,6 +38,10 @@ module.exports = {
     },
     plugins: [
         new Dotenv(),
+        new webpack.ContextReplacementPlugin(
+            /highlight\.js\/lib\/languages$/,
+            new RegExp(`^./(${['typescript', 'php', 'swift', 'ruby'].join('|')})$`),
+        ),
     ],
 };
 

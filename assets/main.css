@@ -48,11 +48,11 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla,
 
 .business-card { margin: 0 auto; height: 300px; width: 100%; padding: 20px 20px 55px; text-align: center; background: #00eaea; /* Old browsers */ background: -moz-linear-gradient(45deg, #00eaea 0%, #e504f9 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(45deg, #00eaea 0%, #e504f9 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(45deg, #00eaea 0%, #e504f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00eaea', endColorstr='#e504f9', GradientType=1); /* IE6-9 fallback on horizontal gradient */ -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%); clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%); color: #ffffff; }
 
-.business-card p.terminal { background-color: #092732; padding: 1rem; width: 35%; font-family: 'Overpass Mono', monospace; margin: 0 auto; font-size: 14px; }
+.business-card p.hljs { background-color: #092732; padding: 1rem; width: 35%; -webkit-clip-path: polygon(2% 0, 100% 0%, 98% 100%, 0% 100%); clip-path: polygon(2% 0, 100% 0%, 98% 100%, 0% 100%); margin: 1em auto; }
 
-@media screen and (max-width: 600px) { .business-card p.terminal { width: 85%; } }
+@media screen and (max-width: 600px) { .business-card p.hljs { width: 85%; } }
 
-.business-card p.terminal i.blink { -webkit-animation: fadingAnimation 1s infinite; -moz-animation: fadingAnimation 1s infinite; -o-animation: fadingAnimation 1s infinite; animation: fadingAnimation 1s infinite; vertical-align: bottom; text-decoration: none; font-style: initial; display: inline-block; margin-bottom: -2px; }
+.business-card p.hljs i.blink { -webkit-animation: fadingAnimation 1s infinite; -moz-animation: fadingAnimation 1s infinite; -o-animation: fadingAnimation 1s infinite; animation: fadingAnimation 1s infinite; vertical-align: bottom; text-decoration: none; font-style: initial; display: inline-block; margin-bottom: -4px; margin-left: 5px; font-family: 'Overpass Mono', monospace; }
 
 .business-card p { font-size: 20px; }
 
@@ -71,7 +71,17 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla,
 
 .links { border-collapse: collapse; border-spacing: 0; margin: 0 auto; text-align: center; }
 
-.links a { color: #4320f2; text-decoration: none; font-size: 25px; text-align: center; text-transform: lowercase; }
+.links a { position: relative; color: #9d22d8c4; text-decoration: none; font-size: 25px; text-align: center; text-transform: lowercase; }
+
+.links a::after { position: absolute; left: 1px; padding: 0 10px; color: #4320f2; z-index: 10; top: 9px; }
+
+.links a.experience-link::after { content: "Experience"; }
+
+.links a.projects-link::after { content: "Projects"; }
+
+.links a.blog-link::after { content: "Blog"; }
+
+.links a.me-link::after { content: "Me"; }
 
 .links a { padding: 10px; }
 
@@ -353,11 +363,11 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla,
 
 .business-card { margin: 0 auto; height: 300px; width: 100%; padding: 20px 20px 55px; text-align: center; background: #00eaea; /* Old browsers */ background: -moz-linear-gradient(45deg, #00eaea 0%, #e504f9 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(45deg, #00eaea 0%, #e504f9 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(45deg, #00eaea 0%, #e504f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00eaea', endColorstr='#e504f9', GradientType=1); /* IE6-9 fallback on horizontal gradient */ -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%); clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%); color: #ffffff; }
 
-.business-card p.terminal { background-color: #092732; padding: 1rem; width: 35%; font-family: 'Overpass Mono', monospace; margin: 0 auto; font-size: 14px; }
+.business-card p.hljs { background-color: #092732; padding: 1rem; width: 35%; -webkit-clip-path: polygon(2% 0, 100% 0%, 98% 100%, 0% 100%); clip-path: polygon(2% 0, 100% 0%, 98% 100%, 0% 100%); margin: 1em auto; }
 
-@media screen and (max-width: 600px) { .business-card p.terminal { width: 85%; } }
+@media screen and (max-width: 600px) { .business-card p.hljs { width: 85%; } }
 
-.business-card p.terminal i.blink { -webkit-animation: fadingAnimation 1s infinite; -moz-animation: fadingAnimation 1s infinite; -o-animation: fadingAnimation 1s infinite; animation: fadingAnimation 1s infinite; vertical-align: bottom; text-decoration: none; font-style: initial; display: inline-block; margin-bottom: -2px; }
+.business-card p.hljs i.blink { -webkit-animation: fadingAnimation 1s infinite; -moz-animation: fadingAnimation 1s infinite; -o-animation: fadingAnimation 1s infinite; animation: fadingAnimation 1s infinite; vertical-align: bottom; text-decoration: none; font-style: initial; display: inline-block; margin-bottom: -4px; margin-left: 5px; font-family: 'Overpass Mono', monospace; }
 
 .business-card p { font-size: 20px; }
 
@@ -376,7 +386,17 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap; /* Mozilla,
 
 .links { border-collapse: collapse; border-spacing: 0; margin: 0 auto; text-align: center; }
 
-.links a { color: #4320f2; text-decoration: none; font-size: 25px; text-align: center; text-transform: lowercase; }
+.links a { position: relative; color: #9d22d8c4; text-decoration: none; font-size: 25px; text-align: center; text-transform: lowercase; }
+
+.links a::after { position: absolute; left: 1px; padding: 0 10px; color: #4320f2; z-index: 10; top: 9px; }
+
+.links a.experience-link::after { content: "Experience"; }
+
+.links a.projects-link::after { content: "Projects"; }
+
+.links a.blog-link::after { content: "Blog"; }
+
+.links a.me-link::after { content: "Me"; }
 
 .links a { padding: 10px; }
 
