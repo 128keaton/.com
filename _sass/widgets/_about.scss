@@ -1,0 +1,78 @@
+@import "../variables";
+
+.about-wrapper {
+  background-color: $about-wrapper-background-color;
+  -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 100%);
+  width: 100%;
+  margin: 0 auto;
+  min-height: 420px;
+  color: #ffffff;
+  position: relative;
+
+  td:nth-child(even) {
+    padding: 0 1.2em;
+  }
+
+  .about {
+    width: 60%;
+    margin: 55px auto 0;
+    padding-bottom: 25px;
+  }
+
+  h1 {
+    color: #cc2222;
+    font-size: 80px;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 55px;
+    display: block;
+    font-weight: bolder;
+  }
+
+  .social {
+    margin: 4em 0;
+
+    a {
+      color: $about-wrapper-link-color;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    i {
+      font-size: 18px;
+      color: $about-wrapper-link-separator-color;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .me3 {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $on-palm) {
+    width: 100%;
+    .about {
+      width: 90%;
+      margin-top: 15px;
+
+    }
+    .social {
+      width: 100%;
+      text-align: center;
+
+      td:nth-child(1) {
+        width: 100%;
+      }
+
+      td {
+        display: inline-block;
+      }
+    }
+    h1 {
+      font-size: 30px;
+      margin-left: 20px;
+    }
+  }
+}

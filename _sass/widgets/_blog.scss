@@ -1,0 +1,87 @@
+@import "../variables";
+
+.thoughts-wrapper {
+  width: 65%;
+  margin: 0 auto 25px;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+
+  h1 {
+    font-size: 80px;
+    font-weight: bolder;
+    margin-left: 0.5em;
+    margin-top: 0;
+    padding-top: 0.5em;
+  }
+
+  .thoughts {
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 100;
+
+    td {
+      padding: 10px;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: $alternate-light-background-color;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $alternate-dark-background-color!important;
+    }
+  }
+
+  .thought {
+    padding: 22px 52px;
+
+    h2 {
+      padding: 0;
+      font-weight: 300;
+      float: left;
+      text-align: left !important;
+      vertical-align: baseline;
+      margin: 10px 10px 0;
+    }
+
+    p {
+      float: right;
+      color: $light-text-color;
+      font-weight: normal;
+    }
+  }
+
+  .more {
+    text-align: center;
+    cursor: pointer;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    @media (prefers-color-scheme: dark) {
+      color: white!important;
+    }
+  }
+
+  @media screen and (max-width: $on-palm) {
+    width: 100%;
+    h1 {
+      font-size: 35px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .thought:last-child {
+      height: 100px;
+    }
+    .thought {
+      width: 95%;
+      text-align: center;
+
+      p {
+        display: none;
+      }
+    }
+  }
+}

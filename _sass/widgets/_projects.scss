@@ -1,0 +1,173 @@
+@import "../variables";
+
+.projects-wrapper {
+  width: 65%;
+  margin: 1em auto;
+  display: none;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+
+  h1 {
+    font-size: 80px;
+    font-weight: bolder;
+  }
+
+  .pinned-repos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 28px 22px 12px 22px;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+
+    .pinned-repo-item {
+      display: flex;
+      position: relative;
+      min-height: 120px;
+      border: 1px solid #d1d5da !important;
+      padding: 16px !important;
+      margin-bottom: 16px !important;
+      border-radius: 3px;
+      flex-basis: 45%;
+      flex-grow: 0;
+      -webkit-animation: fadeInFromNone 0.5s ease-out;
+      -moz-animation: fadeInFromNone 0.5s ease-out;
+      -o-animation: fadeInFromNone 0.5s ease-out;
+      animation: fadeInFromNone 0.5s ease-out;
+    }
+
+    .pinned-repo-item-content {
+      display: none;
+      flex-direction: column;
+      align-content: space-between;
+      width: 100%;
+      p:last-child {
+        position: absolute;
+        bottom: -10px;
+      }
+    }
+
+    .pinned-repo-desc {
+      flex: 1 0 auto;
+    }
+
+    .repo-language-color {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      position: relative;
+      top: 1px;
+      width: 12px;
+    }
+
+    .pinned-repo-meta + .pinned-repo-meta {
+      margin-left: 16px;
+    }
+
+    .pinned-repo-meta {
+      display: inline-block;
+    }
+
+    .muted-link {
+      color: #586069 !important;
+    }
+
+    .octicon {
+      display: inline-block;
+      fill: currentColor;
+      vertical-align: text-bottom;
+      margin-right: 2px;
+    }
+
+    a {
+      color: #0366d6 !important;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .repo-language-color {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      position: relative;
+      top: 1px;
+      width: 12px;
+      margin-right: 5px;
+
+    }
+
+    p.no-data {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 18px;
+      font-size: 2rem;
+      margin-top: 0;
+      color: gray;
+    }
+
+    .objective-c {
+      background-color: #438eff;
+    }
+
+    .html {
+      background-color: #e34c26;
+    }
+
+    .java {
+      background-color: #b07219;
+    }
+
+    .c {
+      background-color: #555555;
+    }
+
+    .php {
+      background-color: #4F5D95;
+    }
+
+    .swift {
+      background-color: #ffac45;
+    }
+
+    .javascript {
+      background-color: #f1e05a;
+    }
+
+    .shell {
+      background-color: #89e051;
+    }
+
+    .lua {
+      background-color: #000080;
+    }
+
+    .typescript {
+      background-color: #2b7489;
+    }
+
+    .css {
+      background-color: #563d7c;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .pinned-repo-item {
+      flex-basis: 100% !important;
+    }
+  }
+  @media screen and (max-width: $on-palm) {
+    width: 95%;
+    .pinned-repos-list {
+      display: block !important;
+    }
+    .pinned-repo-item {
+      display: block;
+      width: 90% !important;
+    }
+  }
+}

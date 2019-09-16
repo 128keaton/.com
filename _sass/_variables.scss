@@ -6,8 +6,11 @@ $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 $spacing-unit: 30px;
 $text-color: #333;
+$dark-text-color: #fbfbfb;
 $light-text-color: #a5a5ad;
 $background-color: rgb(227, 227, 227);
+$alternate-light-background-color: #f5f9ff;
+$alternate-dark-background-color: #201f20;
 $dark-background-color: #737986;
 $brand-color: #ebdd3a;
 $grey-color: #828282;
@@ -18,3 +21,13 @@ $grey-color-dark: darken($grey-color, 25%);
 $content-width: 800px;
 $on-palm: 600px;
 $on-laptop: 800px;
+
+// Wrapper Colors
+$about-wrapper-background-color: #070826;
+$about-wrapper-link-color: #e504f9;
+$about-wrapper-link-separator-color: #00eaea;
+
+$wrapper-light-background-color: #fcfcfc;
+$wrapper-dark-background-color: #111111;
+
+

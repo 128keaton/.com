@@ -1,0 +1,35 @@
+@import "variables";
+.wrapper {
+  background-color: $wrapper-light-background-color;
+  color: $text-color;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $wrapper-dark-background-color!important;
+    color: $dark-text-color!important;
+    border-color: $grey-color-dark!important;
+    li {
+      border-color: $grey-color-dark!important;
+    }
+    .footer-post {
+      background-color: $grey-color-dark!important;
+      a h1 {
+        color: white!important;
+      }
+    }
+    .comments {
+      background-color: $alternate-dark-background-color!important;
+      input, textarea {
+        background-color: $grey-color-dark!important;
+        color: white!important;
+      }
+    }
+
+    .post-content {
+      background-color: $alternate-dark-background-color!important;
+      a {
+        color: #2b7489!important;
+        border-color: #2b7489!important;
+      }
+    }
+  }
+}

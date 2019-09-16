@@ -4,21 +4,23 @@
 {% include head.html %}
 
 <body>
-	<img class="lazy-load me-head" data-src="https://images.128keaton.com/me4.png">
-	<!-- Business Card -->
-	{% include_relative _layouts/main-page/business-card.html %}
+<div class="content-wrapper">
+    <img class="lazy-load me-head" data-src="https://images.128keaton.com/me4.png">
+    <!-- Business Card -->
+    {% include_relative _layouts/main-page/business-card.html %}
 
-	<!-- Resume -->
-	{% include_relative _layouts/main-page/resume.html %}
+    <!-- Resume -->
+    {% include_relative _layouts/main-page/resume.html %}
 
-	<!-- Projects -->
-	{% include_relative _layouts/main-page/projects.html %}
+    <!-- Projects -->
+    {% include_relative _layouts/main-page/projects.html %}
 
-	<!-- Thoughts -->
-	{% include_relative _layouts/main-page/thoughts.html %}
+    <!-- Thoughts -->
+    {% include_relative _layouts/main-page/thoughts.html %}
 
-	<!-- About -->
-	{% include_relative _layouts/main-page/about.html %}
+    <!-- About -->
+    {% include_relative _layouts/main-page/about.html %}
+</div>
 </body>
-
+<div class="footer-fix-thingy"></div>
 </html>

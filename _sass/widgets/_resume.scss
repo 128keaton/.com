@@ -1,0 +1,166 @@
+@import "../variables";
+
+.resume {
+  width: 65%;
+  border: 1px solid #bfbfbf;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 25px auto 0;
+  text-align: left;
+  padding: 30px 30px 105px;
+
+  .experience-header {
+    padding-left: 22px;
+  }
+
+  .job-row {
+    td {
+      padding-top: 20px;
+      border-bottom: 1px solid #dedede;
+    }
+
+    &:last-child {
+      td {
+        border-bottom: none !important;
+      }
+    }
+  }
+
+  .education-row {
+    td {
+      padding-top: 20px;
+      border-bottom: 1px solid #dedede;
+    }
+
+    &:last-child {
+      td {
+        border: none!important;
+        border-bottom: none !important;
+      }
+    }
+  }
+
+  .last-row-true {
+    td {
+      border: none!important;
+      border-bottom: none !important;
+    }
+  }
+
+  .job-title, .education-title {
+    h4.title {
+      font-size: 14px;
+      margin: 0 25px 5px 0;
+    }
+
+    h4.location, h4.sub-title {
+      margin: 0 0 25px 0;
+      color: gray;
+      font-size: 12px;
+    }
+  }
+
+  .job-experience, .job-date, .education-date {
+    font-size: 13px;
+  }
+
+  .job-experience p {
+    padding: 0 22px;
+  }
+
+  .job-date, .education-date {
+    min-width: 125px;
+  }
+
+  .download {
+    transition: 300ms color ease-in-out;
+    text-decoration: none;
+    color: #d5d4da;
+    &:hover {
+      color: #4F5D95;
+    }
+  }
+
+  tr {
+    padding: 25px;
+    vertical-align: baseline;
+  }
+
+  .header {
+    border-bottom: solid 4px #000000;
+
+    td {
+      h1 {
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 14px;
+        font-family: $base-font-family;
+        color: #a5a5ad;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  th {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid gray;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  td {
+    font-weight: 300;
+
+    h4, p {
+      font-weight: 300;
+    }
+  }
+
+  @media screen and (max-width: $on-palm) {
+    padding: 1em;
+    margin: 10px auto 0;
+    h1 {
+      font-size: 35px;
+    }
+    h4 {
+      margin-bottom: 0;
+    }
+    td {
+      display: block;
+    }
+
+
+    tr {
+      display: block;
+      border-bottom: 2px solid #000000;
+      padding: 10px;
+
+      td:nth-child(1) {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+    tr:last-child {
+      border: none;
+    }
+
+    width: 100%;
+    .header {
+      td:nth-child(2) {
+        display: none;
+      }
+
+      padding: 0;
+      margin: 0;
+    }
+    .top {
+      display: none;
+    }
+  }
+}

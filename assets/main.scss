@@ -4,10 +4,11 @@
 @import "variables";
 
 body {
+  color-scheme: light dark;
   font-family: $base-font-family!important;
   -webkit-font-smoothing: antialiased;
   color: #111;
-  background: $background-color;
+  background: #070826;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -20,8 +21,19 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.content-wrapper {
+  background: $background-color;
+  padding-top: 55px;
+  @media (prefers-color-scheme: dark) {
+    background-color: $alternate-dark-background-color!important;
+  }
+}
+
 body#post {
   background: $dark-background-color;
+  @media (prefers-color-scheme: dark) {
+    background: $wrapper-dark-background-color!important;
+  }
 }
 
 .clear {
@@ -155,3 +167,4 @@ pre {
 @import "odo";
 @import "obit";
 @import "highlighting";
+@import "wrappers";
