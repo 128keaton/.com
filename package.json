@@ -30,7 +30,7 @@
     "css-loader": "^3.2.0",
     "dotenv-webpack": "^1.7.0",
     "highlight.js": "^9.15.10",
-    "jquery": ">=3.4.0",
+    "jquery": ">=3.5.0",
     "process": "^0.11.10",
     "style-loader": "^1.0.0",
     "vanilla-lazyload": "^8.17.0"
