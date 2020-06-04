@@ -90,7 +90,7 @@
     <ul>
       <li>KVM Capabilities</li>
       <li>QEMU compiled/installed</li>
-      <li>OVMF compiled (<a href="https://gist.github.com/gordonturner/85dcc321d2099d610e67">https://gist.github.com/gordonturner/85dcc321d2099d610e67</a>) and <code class="highlighter-rouge">/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd</code> put in the base folder of your VM (<code class="highlighter-rouge">bios.bin</code>)</li>
+      <li>OVMF compiled (<a href="https://gist.github.com/gordonturner/85dcc321d2099d610e67">https://gist.github.com/gordonturner/85dcc321d2099d610e67</a>) and <code class="language-plaintext highlighter-rouge">/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd</code> put in the base folder of your VM (<code class="language-plaintext highlighter-rouge">bios.bin</code>)</li>
     </ul>
   </li>
   <li>A supported Mac that can download 10.11.6 from the Mac App Store</li>
@@ -105,11 +105,11 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">/Applications/Install<span class="se">\ </span>OS<span class="se">\ </span>X<span class="se">\ </span>El<span class="se">\ </span>Capitan.app/Contents/Resources/createinstallmedia <span class="nt">--volume</span> /Volumes/Untitled <span class="nt">--applicationpath</span> <span class="s2">"/Applications/Install OS X El Capitan.app"</span>
  </code></pre></figure>
 
-<p>Make sure you substitute <code class="highlighter-rouge">/Volumes/Untitled</code> for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.</p>
+<p>Make sure you substitute <code class="language-plaintext highlighter-rouge">/Volumes/Untitled</code> for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.</p>
 
 <h2 id="step-2-installing-clover">Step 2, installing Clover:</h2>
 
-<p>After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for <code class="highlighter-rouge">OsxAptioFixDrv-64</code> and <code class="highlighter-rouge">DataHubDxe-64</code>, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download <a href="https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi">this</a> file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:</p>
+<p>After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for <code class="language-plaintext highlighter-rouge">OsxAptioFixDrv-64</code> and <code class="language-plaintext highlighter-rouge">DataHubDxe-64</code>, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download <a href="https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi">this</a> file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">cp</span> ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
  </code></pre></figure>
@@ -117,7 +117,7 @@
 <div class="notice--info">
    
 <h4 id="note">Note:</h4>
-<p>If you want to have verbose boot (recommended), add <code class="highlighter-rouge">-v</code> to the BootFlags line in the <code class="highlighter-rouge">/Volumes/ESP/EFI/CLOVER/config.plist</code> file</p>
+<p>If you want to have verbose boot (recommended), add <code class="language-plaintext highlighter-rouge">-v</code> to the BootFlags line in the <code class="language-plaintext highlighter-rouge">/Volumes/ESP/EFI/CLOVER/config.plist</code> file</p>
 
  </div>
 
@@ -127,14 +127,14 @@
 
 <h2 id="step-4-writing-the-flash-drive-to-an-image">Step 4, writing the flash drive to an image:</h2>
 
-<p>Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type <code class="highlighter-rouge">diskutil list</code>, find your install drive. (Should have two partitions: <code class="highlighter-rouge">EFI</code> and <code class="highlighter-rouge">Install OS X El Capitan</code>).  Record the disk number (e.g. <code class="highlighter-rouge">/dev/disk8</code>). <code class="highlighter-rouge">cd</code> into a comfortable folder <code class="highlighter-rouge">~/Desktop</code>, and run:</p>
+<p>Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type <code class="language-plaintext highlighter-rouge">diskutil list</code>, find your install drive. (Should have two partitions: <code class="language-plaintext highlighter-rouge">EFI</code> and <code class="language-plaintext highlighter-rouge">Install OS X El Capitan</code>).  Record the disk number (e.g. <code class="language-plaintext highlighter-rouge">/dev/disk8</code>). <code class="language-plaintext highlighter-rouge">cd</code> into a comfortable folder <code class="language-plaintext highlighter-rouge">~/Desktop</code>, and run:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>/dev/rdiskX <span class="nv">of</span><span class="o">=</span>clover-usb-disk.dd
  </code></pre></figure>
 
-<p>Making sure you substitute <code class="highlighter-rouge">X</code> for your disk number.</p>
+<p>Making sure you substitute <code class="language-plaintext highlighter-rouge">X</code> for your disk number.</p>
 
-<p>After a bit of waiting, you should have a large file on your desktop named <code class="highlighter-rouge">clover-usb-disk.dd</code>, using your own methods, move this file into the root of your vm folder on your server.</p>
+<p>After a bit of waiting, you should have a large file on your desktop named <code class="language-plaintext highlighter-rouge">clover-usb-disk.dd</code>, using your own methods, move this file into the root of your vm folder on your server.</p>
 
 <h2 id="step-5-final-setup">Step 5, final setup:</h2>
 
@@ -144,14 +144,14 @@ At the command line, use this command in your root VM folder:</p>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nb">sudo </span>qemu-img create <span class="nt">-f</span> qcow2 osx-disk0.qcow2 200G
  </code></pre></figure>
 
-<p>Substitute <code class="highlighter-rouge">200G</code> for how many gigs you want, for 500Gb use <code class="highlighter-rouge">500G</code>.</p>
+<p>Substitute <code class="language-plaintext highlighter-rouge">200G</code> for how many gigs you want, for 500Gb use <code class="language-plaintext highlighter-rouge">500G</code>.</p>
 
 <p>Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>su -
 <span class="nb">echo </span>1 <span class="o">&gt;</span> /sys/module/kvm/parameters/ignore_msrs</code></pre></figure>
 
-<p>I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting <code class="highlighter-rouge">echo 1 &gt; /sys/module/kvm/parameters/ignore_msrs</code> into your <code class="highlighter-rouge">/etc/rc.local</code> file might not be a bad idea.</p>
+<p>I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting <code class="language-plaintext highlighter-rouge">echo 1 &gt; /sys/module/kvm/parameters/ignore_msrs</code> into your <code class="language-plaintext highlighter-rouge">/etc/rc.local</code> file might not be a bad idea.</p>
 
 <h2 id="step-6-first-boot">Step 6, first boot:</h2>
 
@@ -182,7 +182,7 @@ At the command line, use this command in your root VM folder:</p>
 <span class="nt">-netdev</span> bridge,id<span class="o">=</span>br0,br<span class="o">=</span>br0 <span class="se">\</span>
 <span class="nt">-device</span> virtio-net,netdev<span class="o">=</span>br0,vectors<span class="o">=</span>0,mac<span class="o">=</span>00:00:00:00:00:00</code></pre></figure>
 
-<p>Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the <code class="highlighter-rouge">$OSK$</code> with your OSK string you saved earlier. Second, change the <code class="highlighter-rouge">$VMROOT$</code> occurrences to whatever your VM root is.</p>
+<p>Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the <code class="language-plaintext highlighter-rouge">$OSK$</code> with your OSK string you saved earlier. Second, change the <code class="language-plaintext highlighter-rouge">$VMROOT$</code> occurrences to whatever your VM root is.</p>
 
 <div class="notice--info">
    
@@ -195,7 +195,7 @@ At the command line, use this command in your root VM folder:</p>
 
 <h2 id="step-7-connecting-and-installing">Step 7, connecting and installing:</h2>
 
-<p>Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use <em>Chicken of the VNC</em>, because the Screen Sharing app doesn’t work with the server. Connect to your IP, and port <code class="highlighter-rouge">5901</code>. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.</p>
+<p>Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use <em>Chicken of the VNC</em>, because the Screen Sharing app doesn’t work with the server. Connect to your IP, and port <code class="language-plaintext highlighter-rouge">5901</code>. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.</p>
 
 <div class="notice--info">
    

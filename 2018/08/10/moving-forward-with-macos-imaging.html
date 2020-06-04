@@ -85,7 +85,7 @@
 
 <h2 id="building-a-netboot-environment">Building a NetBoot environment</h2>
 
-<p>The first idea was running a NetBoot recovery environment (similar to how Imagr or DeployStudio operates). Honestly, this is the way to do it. It boots extremely fast, only the bare minimum frameworks are loaded. For us, we get system specs using the <code class="highlighter-rouge">system_profiler</code> command, but in High Sierra’s recovery environment, you do not have access to this command. The framework is <em>not</em> included for some bizarre reason, but its Apple 🤷🏻‍♂️.</p>
+<p>The first idea was running a NetBoot recovery environment (similar to how Imagr or DeployStudio operates). Honestly, this is the way to do it. It boots extremely fast, only the bare minimum frameworks are loaded. For us, we get system specs using the <code class="language-plaintext highlighter-rouge">system_profiler</code> command, but in High Sierra’s recovery environment, you do not have access to this command. The framework is <em>not</em> included for some bizarre reason, but its Apple 🤷🏻‍♂️.</p>
 
 <p>Another caveat is that full acceleration GPU drivers are not loaded. Again, its to make the environment lighter and, I’m assuming, to allow it to boot in worse case scenarios where the GPU might be crippled, or the discrete GPU is disabled. Pure speculation on my part, however. The lack of full acceleration GPU drivers was another big problem for us. We use UNIGINE’s <a href="https://benchmark.unigine.com/heaven">Heaven</a> GPU stress-testing software to spot potential GPU/overheating problems.</p>
 
@@ -101,7 +101,7 @@
 
 <h2 id="installing-macos">Installing macOS</h2>
 
-<p>Arguably, the best way to install OR upgrade to macOS High Sierra is using Apple’s <code class="highlighter-rouge">startosinstall</code> tool. It is a fantastic command line utility that will upgrade the machine’s firmware to allow booting from APFS drives. It also installs macOS in the way Apple likes–it behaves exactly how the installation application does. This is a great way to start a macOS install. However, I didn’t need this as we were starting from a full OS. But, we didn’t bundle the install application inside the NetBoot image. This would be irresponsible–it would double the image size AND require the image to update when a new version of macOS came out. The way we currently utilize is having a start up script (we actually use <a href="https://github.com/chilcote/outset">Outset</a> for this, fantastic utility) that mounts an NFS share containing the latest version of macOS. Then, a DMG containing the installer application is mounted, ready to install on the client machine.</p>
+<p>Arguably, the best way to install OR upgrade to macOS High Sierra is using Apple’s <code class="language-plaintext highlighter-rouge">startosinstall</code> tool. It is a fantastic command line utility that will upgrade the machine’s firmware to allow booting from APFS drives. It also installs macOS in the way Apple likes–it behaves exactly how the installation application does. This is a great way to start a macOS install. However, I didn’t need this as we were starting from a full OS. But, we didn’t bundle the install application inside the NetBoot image. This would be irresponsible–it would double the image size AND require the image to update when a new version of macOS came out. The way we currently utilize is having a start up script (we actually use <a href="https://github.com/chilcote/outset">Outset</a> for this, fantastic utility) that mounts an NFS share containing the latest version of macOS. Then, a DMG containing the installer application is mounted, ready to install on the client machine.</p>
 
 <h2 id="mocking-macos-utilities">Mocking ‘macOS Utilities’</h2>
 
@@ -109,7 +109,7 @@
 
 <p><img src="https://images.128keaton.com/screenshot.png" alt="" /></p>
 
-<p>At the bottom, there is a button to launch a ‘macOS Install Kickoff’ application. The utilities pane waits for the <code class="highlighter-rouge">/Volumes/Install macOS High Sierra</code> volume to become available. The <a href="https://github.com/128keaton/macOS-Installer-Kickoff">kickoff</a> application checks for any existing APFS setup, removes it (since we are installing from Sierra), and erases the drive, readying it for install.</p>
+<p>At the bottom, there is a button to launch a ‘macOS Install Kickoff’ application. The utilities pane waits for the <code class="language-plaintext highlighter-rouge">/Volumes/Install macOS High Sierra</code> volume to become available. The <a href="https://github.com/128keaton/macOS-Installer-Kickoff">kickoff</a> application checks for any existing APFS setup, removes it (since we are installing from Sierra), and erases the drive, readying it for install.</p>
 
 <h2 id="final-notes">Final Notes</h2>
 

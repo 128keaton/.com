@@ -88,27 +88,27 @@
 
 <p>Install glib (a QEMU requirement) and pixman (since the QEMU variant is borked):</p>
 
-<p><code class="highlighter-rouge">brew install glib pixman</code></p>
+<p><code class="language-plaintext highlighter-rouge">brew install glib pixman</code></p>
 
 <h3 id="step-2">Step 2:</h3>
 
 <p>Fetch QEMU from their repository:</p>
 
-<p><code class="highlighter-rouge">wget https://wiki.qemu-project.org/download/qemu-2.5.0.tar.bz2</code></p>
+<p><code class="language-plaintext highlighter-rouge">wget https://wiki.qemu-project.org/download/qemu-2.5.0.tar.bz2</code></p>
 
 <p>and unzip:</p>
 
-<p><code class="highlighter-rouge">tar xvjf qemu-2.5.0.tar.bz2 &amp;&amp; cd qemu-2.5.0</code></p>
+<p><code class="language-plaintext highlighter-rouge">tar xvjf qemu-2.5.0.tar.bz2 &amp;&amp; cd qemu-2.5.0</code></p>
 
 <p>then remove the broken pixman library:</p>
 
-<p><code class="highlighter-rouge">rm -r pixman</code></p>
+<p><code class="language-plaintext highlighter-rouge">rm -r pixman</code></p>
 
 <h3 id="step-3">Step 3:</h3>
 
 <p>Build!</p>
 
-<p><code class="highlighter-rouge">./configure &amp;&amp; make &amp;&amp; sudo make install</code></p>
+<p><code class="language-plaintext highlighter-rouge">./configure &amp;&amp; make &amp;&amp; sudo make install</code></p>
 
 <p>Done!</p>
 

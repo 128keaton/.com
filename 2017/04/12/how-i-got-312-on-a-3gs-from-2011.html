@@ -83,7 +83,7 @@
 
 <h2 id="tools">Tools:</h2>
 <ul>
-  <li>Xcode Command Line tools (<code class="highlighter-rouge">xcode-select --install</code>)</li>
+  <li>Xcode Command Line tools (<code class="language-plaintext highlighter-rouge">xcode-select --install</code>)</li>
   <li><a href="https://brew.sh/">Homebrew</a></li>
   <li><strong>(updated 4-20-2017)</strong> A Mac running Mavericks or newer<sup><a href="#1">1</a></sup></li>
 </ul>
@@ -109,7 +109,7 @@ Open Terminal, then install pip/Python from Homebrew like this:</p>
 
 <h2 id="step-2">Step 2:</h2>
 
-<p>Navigate to a nice and safe directory in Terminal, e.g. <code class="highlighter-rouge">cd ~/Desktop</code>. There, clone the ipwndfu repository:</p>
+<p>Navigate to a nice and safe directory in Terminal, e.g. <code class="language-plaintext highlighter-rouge">cd ~/Desktop</code>. There, clone the ipwndfu repository:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/axi0mX/ipwndfu <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ipwndfu
 </code></pre></div></div>
@@ -121,7 +121,7 @@ Verify that the version installed on your computer is the same one the patch is 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
 </code></pre></div></div>
 
-<p>If the little string of numbers and letters (the hash) matches <code class="highlighter-rouge">02da61201c8f67b723bca5fb44b35797d1021625</code> then you should be fine.</p>
+<p>If the little string of numbers and letters (the hash) matches <code class="language-plaintext highlighter-rouge">02da61201c8f67b723bca5fb44b35797d1021625</code> then you should be fine.</p>
 
 <p>Now, its time to patch. inside the ipwndfu directory, run</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
@@ -131,7 +131,7 @@ Verify that the version installed on your computer is the same one the patch is 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
 </code></pre></div></div>
 
-<p>The hash should be: <code class="highlighter-rouge">f356ee6052cd520b46ca50333b937ff2efe4477b</code></p>
+<p>The hash should be: <code class="language-plaintext highlighter-rouge">f356ee6052cd520b46ca50333b937ff2efe4477b</code></p>
 
 <p>All good?</p>
 
@@ -205,9 +205,9 @@ Verify that the version installed on your computer is the same one the patch is 
 
 <h2 id="step-5">Step 5:</h2>
 
-<p><strong>Note: if you installed all the pip dependancies with the Homebrew version, you must prepend <code class="highlighter-rouge">python</code> to the commands like I have done below</strong></p>
+<p><strong>Note: if you installed all the pip dependancies with the Homebrew version, you must prepend <code class="language-plaintext highlighter-rouge">python</code> to the commands like I have done below</strong></p>
 
-<p>Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use <code class="highlighter-rouge">idevicerestore</code> to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.</p>
+<p>Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use <code class="language-plaintext highlighter-rouge">idevicerestore</code> to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.</p>
 
 <p>I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened, raring to go.</p>
 
@@ -318,7 +318,7 @@ brew <span class="nb">install </span>python <span class="nt">--with-brewed-opens
 </code></pre></div></div>
 <p>Then, close Terminal and reopen.</p>
 
-<p>In Terminal, navigate somewhere safe, like <code class="highlighter-rouge">cd ~/Desktop</code>, and run:</p>
+<p>In Terminal, navigate somewhere safe, like <code class="language-plaintext highlighter-rouge">cd ~/Desktop</code>, and run:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-O</span> https://bootstrap.pypa.io/get-pip.py
 </code></pre></div></div>
 

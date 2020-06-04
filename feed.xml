@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-05-04T16:34:51+00:00</updated><id>/feed.xml</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Using a MailChimp Popup Form on Wordpress On Click</title><link href="/2019/02/20/mailchimp-wordpress-popup.html" rel="alternate" type="text/html" title="Using a MailChimp Popup Form on Wordpress On Click" /><published>2019-02-20T00:00:00+00:00</published><updated>2019-02-20T00:00:00+00:00</updated><id>/2019/02/20/mailchimp-wordpress-popup</id><content type="html" xml:base="/2019/02/20/mailchimp-wordpress-popup.html">&lt;p&gt;I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-06-04T16:35:33+00:00</updated><id>/feed.xml</id><title type="html">Keaton Burleson</title><subtitle>This is Keaton Burleson's website</subtitle><entry><title type="html">Using a MailChimp Popup Form on Wordpress On Click</title><link href="/2019/02/20/mailchimp-wordpress-popup.html" rel="alternate" type="text/html" title="Using a MailChimp Popup Form on Wordpress On Click" /><published>2019-02-20T00:00:00+00:00</published><updated>2019-02-20T00:00:00+00:00</updated><id>/2019/02/20/mailchimp-wordpress-popup</id><content type="html" xml:base="/2019/02/20/mailchimp-wordpress-popup.html">&lt;p&gt;I was recently tasked with adding a MailChimp form to our website. The trick was adding it to trigger with a button press. 
 First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;p&gt;For example:&lt;/p&gt;
@@ -34,7 +34,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I simply passed the MailChimp settings through WordPress’s &lt;code class=&quot;highlighter-rouge&quot;&gt;wp_localize_script&lt;/code&gt; function, like so:&lt;/p&gt;
+&lt;p&gt;I simply passed the MailChimp settings through WordPress’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wp_localize_script&lt;/code&gt; function, like so:&lt;/p&gt;
 
 &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;add_action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'wp_enqueue_scripts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'load_popup_scripts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
@@ -53,7 +53,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;h2 id=&quot;building-a-netboot-environment&quot;&gt;Building a NetBoot environment&lt;/h2&gt;
 
-&lt;p&gt;The first idea was running a NetBoot recovery environment (similar to how Imagr or DeployStudio operates). Honestly, this is the way to do it. It boots extremely fast, only the bare minimum frameworks are loaded. For us, we get system specs using the &lt;code class=&quot;highlighter-rouge&quot;&gt;system_profiler&lt;/code&gt; command, but in High Sierra’s recovery environment, you do not have access to this command. The framework is &lt;em&gt;not&lt;/em&gt; included for some bizarre reason, but its Apple 🤷🏻‍♂️.&lt;/p&gt;
+&lt;p&gt;The first idea was running a NetBoot recovery environment (similar to how Imagr or DeployStudio operates). Honestly, this is the way to do it. It boots extremely fast, only the bare minimum frameworks are loaded. For us, we get system specs using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system_profiler&lt;/code&gt; command, but in High Sierra’s recovery environment, you do not have access to this command. The framework is &lt;em&gt;not&lt;/em&gt; included for some bizarre reason, but its Apple 🤷🏻‍♂️.&lt;/p&gt;
 
 &lt;p&gt;Another caveat is that full acceleration GPU drivers are not loaded. Again, its to make the environment lighter and, I’m assuming, to allow it to boot in worse case scenarios where the GPU might be crippled, or the discrete GPU is disabled. Pure speculation on my part, however. The lack of full acceleration GPU drivers was another big problem for us. We use UNIGINE’s &lt;a href=&quot;https://benchmark.unigine.com/heaven&quot;&gt;Heaven&lt;/a&gt; GPU stress-testing software to spot potential GPU/overheating problems.&lt;/p&gt;
 
@@ -69,7 +69,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;h2 id=&quot;installing-macos&quot;&gt;Installing macOS&lt;/h2&gt;
 
-&lt;p&gt;Arguably, the best way to install OR upgrade to macOS High Sierra is using Apple’s &lt;code class=&quot;highlighter-rouge&quot;&gt;startosinstall&lt;/code&gt; tool. It is a fantastic command line utility that will upgrade the machine’s firmware to allow booting from APFS drives. It also installs macOS in the way Apple likes–it behaves exactly how the installation application does. This is a great way to start a macOS install. However, I didn’t need this as we were starting from a full OS. But, we didn’t bundle the install application inside the NetBoot image. This would be irresponsible–it would double the image size AND require the image to update when a new version of macOS came out. The way we currently utilize is having a start up script (we actually use &lt;a href=&quot;https://github.com/chilcote/outset&quot;&gt;Outset&lt;/a&gt; for this, fantastic utility) that mounts an NFS share containing the latest version of macOS. Then, a DMG containing the installer application is mounted, ready to install on the client machine.&lt;/p&gt;
+&lt;p&gt;Arguably, the best way to install OR upgrade to macOS High Sierra is using Apple’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startosinstall&lt;/code&gt; tool. It is a fantastic command line utility that will upgrade the machine’s firmware to allow booting from APFS drives. It also installs macOS in the way Apple likes–it behaves exactly how the installation application does. This is a great way to start a macOS install. However, I didn’t need this as we were starting from a full OS. But, we didn’t bundle the install application inside the NetBoot image. This would be irresponsible–it would double the image size AND require the image to update when a new version of macOS came out. The way we currently utilize is having a start up script (we actually use &lt;a href=&quot;https://github.com/chilcote/outset&quot;&gt;Outset&lt;/a&gt; for this, fantastic utility) that mounts an NFS share containing the latest version of macOS. Then, a DMG containing the installer application is mounted, ready to install on the client machine.&lt;/p&gt;
 
 &lt;h2 id=&quot;mocking-macos-utilities&quot;&gt;Mocking ‘macOS Utilities’&lt;/h2&gt;
 
@@ -77,7 +77,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://images.128keaton.com/screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;At the bottom, there is a button to launch a ‘macOS Install Kickoff’ application. The utilities pane waits for the &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/Install macOS High Sierra&lt;/code&gt; volume to become available. The &lt;a href=&quot;https://github.com/128keaton/macOS-Installer-Kickoff&quot;&gt;kickoff&lt;/a&gt; application checks for any existing APFS setup, removes it (since we are installing from Sierra), and erases the drive, readying it for install.&lt;/p&gt;
+&lt;p&gt;At the bottom, there is a button to launch a ‘macOS Install Kickoff’ application. The utilities pane waits for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Volumes/Install macOS High Sierra&lt;/code&gt; volume to become available. The &lt;a href=&quot;https://github.com/128keaton/macOS-Installer-Kickoff&quot;&gt;kickoff&lt;/a&gt; application checks for any existing APFS setup, removes it (since we are installing from Sierra), and erases the drive, readying it for install.&lt;/p&gt;
 
 &lt;h2 id=&quot;final-notes&quot;&gt;Final Notes&lt;/h2&gt;
 
@@ -119,7 +119,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;p&gt;Here is the command that I used to run the engine:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo /Applications/Yahoo\!\ Widgets.app/Contents/MacOS/Yahoo\!\ Widgets&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo /Applications/Yahoo\!\ Widgets.app/Contents/MacOS/Yahoo\!\ Widgets&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, I really want to get the Yahoo! Weather Widget working again, because after all, its just a &lt;a href=&quot;https://gist.github.com/128keaton/31c6887cb59ae0651b5e60e7c8cff38d&quot;&gt;webapp&lt;/a&gt;..&lt;/p&gt;
 
@@ -131,7 +131,7 @@ First, I set up our plugin to load the Javascript from MailChimp:&lt;/p&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools:&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Xcode Command Line tools (&lt;code class=&quot;highlighter-rouge&quot;&gt;xcode-select --install&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Xcode Command Line tools (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xcode-select --install&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;(updated 4-20-2017)&lt;/strong&gt; A Mac running Mavericks or newer&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -157,7 +157,7 @@ Open Terminal, then install pip/Python from Homebrew like this:&lt;/p&gt;
 
 &lt;h2 id=&quot;step-2&quot;&gt;Step 2:&lt;/h2&gt;
 
-&lt;p&gt;Navigate to a nice and safe directory in Terminal, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Desktop&lt;/code&gt;. There, clone the ipwndfu repository:&lt;/p&gt;
+&lt;p&gt;Navigate to a nice and safe directory in Terminal, e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ~/Desktop&lt;/code&gt;. There, clone the ipwndfu repository:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/axi0mX/ipwndfu &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;ipwndfu
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -169,7 +169,7 @@ Verify that the version installed on your computer is the same one the patch is 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;If the little string of numbers and letters (the hash) matches &lt;code class=&quot;highlighter-rouge&quot;&gt;02da61201c8f67b723bca5fb44b35797d1021625&lt;/code&gt; then you should be fine.&lt;/p&gt;
+&lt;p&gt;If the little string of numbers and letters (the hash) matches &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;02da61201c8f67b723bca5fb44b35797d1021625&lt;/code&gt; then you should be fine.&lt;/p&gt;
 
 &lt;p&gt;Now, its time to patch. inside the ipwndfu directory, run&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch
@@ -179,7 +179,7 @@ Verify that the version installed on your computer is the same one the patch is 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl sha1 /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The hash should be: &lt;code class=&quot;highlighter-rouge&quot;&gt;f356ee6052cd520b46ca50333b937ff2efe4477b&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The hash should be: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f356ee6052cd520b46ca50333b937ff2efe4477b&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;All good?&lt;/p&gt;
 
@@ -253,9 +253,9 @@ Verify that the version installed on your computer is the same one the patch is 
 
 &lt;h2 id=&quot;step-5&quot;&gt;Step 5:&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Note: if you installed all the pip dependancies with the Homebrew version, you must prepend &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt; to the commands like I have done below&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note: if you installed all the pip dependancies with the Homebrew version, you must prepend &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; to the commands like I have done below&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use &lt;code class=&quot;highlighter-rouge&quot;&gt;idevicerestore&lt;/code&gt; to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.&lt;/p&gt;
+&lt;p&gt;Okay, here is where it got dodgy for me. The developer recommends you either use a computer with iTunes 11.1 or older, or use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;idevicerestore&lt;/code&gt; to restore the custom firmware file to your 3G[s]. I tried getting idevicerestore to work, I compiled all what I needed, but it kept getting stuck. I gave up and just grabbed my trusty 17” PowerBook running 10.5.8 with iTunes 10. It took me twice to get it to work, but I’m writing this from the perspective of me restoring it with iTunes.&lt;/p&gt;
 
 &lt;p&gt;I went ahead and transferred the custom IPSW to the machine, ready for restore. I had iTunes opened, raring to go.&lt;/p&gt;
 
@@ -366,7 +366,7 @@ brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python &lt;span class
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Then, close Terminal and reopen.&lt;/p&gt;
 
-&lt;p&gt;In Terminal, navigate somewhere safe, like &lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
+&lt;p&gt;In Terminal, navigate somewhere safe, like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://bootstrap.pypa.io/get-pip.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -387,7 +387,7 @@ brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python &lt;span class
 &lt;p&gt;&lt;span id=&quot;1&quot; class=&quot;small&quot;&gt;&lt;sup&gt;1&lt;/sup&gt; there is a bug that the author hasn’t made progress fixing in versions older than OS X 10.9&lt;/span&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Travis CI and Jekyll</title><link href="/2017/04/05/travis-ci-and-jekyll.html" rel="alternate" type="text/html" title="Travis CI and Jekyll" /><published>2017-04-05T05:03:41+00:00</published><updated>2017-04-05T05:03:41+00:00</updated><id>/2017/04/05/travis-ci-and-jekyll</id><content type="html" xml:base="/2017/04/05/travis-ci-and-jekyll.html">&lt;h2 id=&quot;preface&quot;&gt;Preface:&lt;/h2&gt;
 &lt;p&gt;When I first started blogging with Jekyll, my setup was a &lt;em&gt;wreck&lt;/em&gt;. I didn’t quite understand Liquid Templating, so there wasn’t a lot a reuse, tons of unnecessary CSS, and plenty of plain ol’ HTML kludges. I still really liked Jekyll. It was fast, hosting for it was cheap, and free if you used GitHub Pages, which I didn’t at the time. The two things I didn’t like about Jekyll was the lack of portability, and of easy publishing.&lt;/p&gt;
 
-&lt;p&gt;Easy publishing is really two things. One, I didn’t like having to clone my repo, run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; and make sure everything carried over properly (side-note: as tempting as it may be, do not use submodules for any directory) and then building and publishing. Then, as I stated above, I wasn’t using GitHub Pages, so I basically compiled the site and uploaded the whole thing to my website. Terrible, right?&lt;/p&gt;
+&lt;p&gt;Easy publishing is really two things. One, I didn’t like having to clone my repo, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; and make sure everything carried over properly (side-note: as tempting as it may be, do not use submodules for any directory) and then building and publishing. Then, as I stated above, I wasn’t using GitHub Pages, so I basically compiled the site and uploaded the whole thing to my website. Terrible, right?&lt;/p&gt;
 
 &lt;p&gt;And then, there is the problem of images. I like having some images in my posts, in fact, a decent amount of my posts revolve around images. If you roll your own hosting with Jekyll, its easy to take care of, but with GitHub pages, its a nightmare for portability, even with submodules. If you don’t have all your images when you build–why would Jekyll carry the images over into your site!&lt;/p&gt;
 
@@ -431,10 +431,10 @@ brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python &lt;span class
     &lt;span class=&quot;na&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/* remove this line */&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;For that &lt;code class=&quot;highlighter-rouge&quot;&gt;secure&lt;/code&gt; bit, remove that whole line, and run this command:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;gem install travis&lt;/code&gt;
+&lt;p&gt;For that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secure&lt;/code&gt; bit, remove that whole line, and run this command:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem install travis&lt;/code&gt;
 and then:
- &lt;code class=&quot;highlighter-rouge&quot;&gt;travis encrypt 'GIT_NAME=&quot;YOUR_USERNAME&quot; GIT_EMAIL=&quot;YOUR_EMAIL&quot; GH_TOKEN=YOUR_TOKEN'&lt;/code&gt;&lt;/p&gt;
+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;travis encrypt 'GIT_NAME=&quot;YOUR_USERNAME&quot; GIT_EMAIL=&quot;YOUR_EMAIL&quot; GH_TOKEN=YOUR_TOKEN'&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Make sure you replace the appropriate variables.&lt;/p&gt;
 
@@ -480,7 +480,7 @@ and then:
 
 &lt;p&gt;That there is a big-honkin mess.&lt;/p&gt;
 
-&lt;p&gt;Basically, when Travis runs &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake site:deploy&lt;/code&gt;, it checks if its a PR, sets up git, makes sure the destination folder exists, pulls the site, checks out the source branch, builds the site, then commits and finally pushes the site. Phew!&lt;/p&gt;
+&lt;p&gt;Basically, when Travis runs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec rake site:deploy&lt;/code&gt;, it checks if its a PR, sets up git, makes sure the destination folder exists, pulls the site, checks out the source branch, builds the site, then commits and finally pushes the site. Phew!&lt;/p&gt;
 
 &lt;p&gt;Here are the appropriate config.yml lines you’ll need to add:&lt;/p&gt;
 
@@ -522,7 +522,7 @@ and then:
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;/h2&gt;
 
-&lt;p&gt;Although I don’t have a fully portable Jekyll setup as I’d like, I still think this is a really robust way to keep your site built how you want it (with logs!) and keep your images where you want them. A fun thing I can do is SSH into my home machine (or mount the site folder with SSHFS) on the go, write a post, and run another helper method &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake site:upload&lt;/code&gt;, which is like this:&lt;/p&gt;
+&lt;p&gt;Although I don’t have a fully portable Jekyll setup as I’d like, I still think this is a really robust way to keep your site built how you want it (with logs!) and keep your images where you want them. A fun thing I can do is SSH into my home machine (or mount the site folder with SSHFS) on the go, write a post, and run another helper method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec rake site:upload&lt;/code&gt;, which is like this:&lt;/p&gt;
 
 &lt;div class=&quot;language-rb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:upload&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
       &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Uploading site'&lt;/span&gt;
@@ -628,7 +628,7 @@ The “slate” anodization did show wear and tear as the year went by, but I li
 
 &lt;p&gt;The animations in iOS 10 surely slow it down, but the content just feels snappier, plus having a UI designed to mimic &lt;a href=&quot;https://dribbble.com/shots/995953-Bus-Schedule-App&quot;&gt;real-world&lt;/a&gt; objects is just &lt;strong&gt;tasty&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Boot-up time is slower than my 7+, and Cydia doesn’t have multitasking support in iOS 6, but typing never lags, the multitasking switcher is instant, plus I’ve yet to see a frame drop. It is also interesting to think that this has 1GB of RAM, while the flagship Apple iDevice (the non &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; variant, at least) has 2GB. Hmm. Real-world ‘speed’ is also pretty decent, clocking in at 721 on the ‘Single Core’ Geekbench, as you can see &lt;a href=&quot;http://browser.primatelabs.com/geekbench3/8221245&quot;&gt;here&lt;/a&gt;, coming very close to a late 2008 MacBook Pro 15” and a Google Indexing Server (well, just look, bleh), and beating an IBM Thinkpad X51, which is quite cool, considering the power in your pocket beats the power on your lap and in your office from seven years ago.&lt;/p&gt;
+&lt;p&gt;Boot-up time is slower than my 7+, and Cydia doesn’t have multitasking support in iOS 6, but typing never lags, the multitasking switcher is instant, plus I’ve yet to see a frame drop. It is also interesting to think that this has 1GB of RAM, while the flagship Apple iDevice (the non &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; variant, at least) has 2GB. Hmm. Real-world ‘speed’ is also pretty decent, clocking in at 721 on the ‘Single Core’ Geekbench, as you can see &lt;a href=&quot;http://browser.primatelabs.com/geekbench3/8221245&quot;&gt;here&lt;/a&gt;, coming very close to a late 2008 MacBook Pro 15” and a Google Indexing Server (well, just look, bleh), and beating an IBM Thinkpad X51, which is quite cool, considering the power in your pocket beats the power on your lap and in your office from seven years ago.&lt;/p&gt;
 
 &lt;p&gt;Part of me thinks that mobile OS and web designers have gotten lazy, the amount of RAM and processing power has increased so that we can easily &lt;em&gt;be&lt;/em&gt; lazy, but thats just personal opinion.&lt;/p&gt;
 
@@ -656,7 +656,7 @@ The “slate” anodization did show wear and tear as the year went by, but I li
     &lt;ul&gt;
       &lt;li&gt;KVM Capabilities&lt;/li&gt;
       &lt;li&gt;QEMU compiled/installed&lt;/li&gt;
-      &lt;li&gt;OVMF compiled (&lt;a href=&quot;https://gist.github.com/gordonturner/85dcc321d2099d610e67&quot;&gt;https://gist.github.com/gordonturner/85dcc321d2099d610e67&lt;/a&gt;) and &lt;code class=&quot;highlighter-rouge&quot;&gt;/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd&lt;/code&gt; put in the base folder of your VM (&lt;code class=&quot;highlighter-rouge&quot;&gt;bios.bin&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;OVMF compiled (&lt;a href=&quot;https://gist.github.com/gordonturner/85dcc321d2099d610e67&quot;&gt;https://gist.github.com/gordonturner/85dcc321d2099d610e67&lt;/a&gt;) and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Build/OvmfX64/DEBUG_GCC49/FV/OVMF.fd&lt;/code&gt; put in the base folder of your VM (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bios.bin&lt;/code&gt;)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;A supported Mac that can download 10.11.6 from the Mac App Store&lt;/li&gt;
@@ -671,11 +671,11 @@ The “slate” anodization did show wear and tear as the year went by, but I li
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/Applications/Install&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;OS&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;X&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;El&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Capitan.app/Contents/Resources/createinstallmedia &lt;span class=&quot;nt&quot;&gt;--volume&lt;/span&gt; /Volumes/Untitled &lt;span class=&quot;nt&quot;&gt;--applicationpath&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/Applications/Install OS X El Capitan.app&quot;&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Make sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/Untitled&lt;/code&gt; for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.&lt;/p&gt;
+&lt;p&gt;Make sure you substitute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Volumes/Untitled&lt;/code&gt; for your thumb drive (must be formatted as HFS+, GPT). Wait for it to complete, it will take a decent amount of time.&lt;/p&gt;
 
 &lt;h2 id=&quot;step-2-installing-clover&quot;&gt;Step 2, installing Clover:&lt;/h2&gt;
 
-&lt;p&gt;After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for &lt;code class=&quot;highlighter-rouge&quot;&gt;OsxAptioFixDrv-64&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DataHubDxe-64&lt;/code&gt;, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download &lt;a href=&quot;https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi&quot;&gt;this&lt;/a&gt; file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:&lt;/p&gt;
+&lt;p&gt;After downloading the Clover package, open it, and slowly click through until you see the ‘Customize/Change Install Location’ screen. Change the install location to the flash drive we just created, then click ‘Continue’, and then ‘Customize’. You should have a list presented. Check the box beside ‘Install for UEFI Booting Only’, and open the triangle next to ‘Driver64UEFI’. Check the boxes for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OsxAptioFixDrv-64&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DataHubDxe-64&lt;/code&gt;, then continue with the installation as normal. Now, the EFI partition should still be mounted (EFI in your sidebar). Download &lt;a href=&quot;https://github.com/JrCs/CloverGrowerPro/blob/9fc3991c7a82be1a0d096c3a2179098f35b69264/Files/HFSPlus/X64/HFSPlus.efi&quot;&gt;this&lt;/a&gt; file (HFSPlus.efi) and place it in /Volumes/EFI/EFI/CLOVER/drivers64UEFI/:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; ~/Downloads/HFSPlus.efi /Volumes/ESP/EFI/CLOVER/drivers64UEFI/
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -683,7 +683,7 @@ The “slate” anodization did show wear and tear as the year went by, but I li
 &lt;div class=&quot;notice--info&quot;&gt;
    
 &lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
-&lt;p&gt;If you want to have verbose boot (recommended), add &lt;code class=&quot;highlighter-rouge&quot;&gt;-v&lt;/code&gt; to the BootFlags line in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/Volumes/ESP/EFI/CLOVER/config.plist&lt;/code&gt; file&lt;/p&gt;
+&lt;p&gt;If you want to have verbose boot (recommended), add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v&lt;/code&gt; to the BootFlags line in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Volumes/ESP/EFI/CLOVER/config.plist&lt;/code&gt; file&lt;/p&gt;
 
  &lt;/div&gt;
 
@@ -693,14 +693,14 @@ The “slate” anodization did show wear and tear as the year went by, but I li
 
 &lt;h2 id=&quot;step-4-writing-the-flash-drive-to-an-image&quot;&gt;Step 4, writing the flash drive to an image:&lt;/h2&gt;
 
-&lt;p&gt;Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type &lt;code class=&quot;highlighter-rouge&quot;&gt;diskutil list&lt;/code&gt;, find your install drive. (Should have two partitions: &lt;code class=&quot;highlighter-rouge&quot;&gt;EFI&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Install OS X El Capitan&lt;/code&gt;).  Record the disk number (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/disk8&lt;/code&gt;). &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into a comfortable folder &lt;code class=&quot;highlighter-rouge&quot;&gt;~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
+&lt;p&gt;Unmount and eject the flash drive from your machine, and plug it back in. Then, unmount the install El Capitan partition. Now, fire up terminal, and type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;diskutil list&lt;/code&gt;, find your install drive. (Should have two partitions: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EFI&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Install OS X El Capitan&lt;/code&gt;).  Record the disk number (e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/disk8&lt;/code&gt;). &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into a comfortable folder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Desktop&lt;/code&gt;, and run:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo dd &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/rdiskX &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;clover-usb-disk.dd
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Making sure you substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt; for your disk number.&lt;/p&gt;
+&lt;p&gt;Making sure you substitute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt; for your disk number.&lt;/p&gt;
 
-&lt;p&gt;After a bit of waiting, you should have a large file on your desktop named &lt;code class=&quot;highlighter-rouge&quot;&gt;clover-usb-disk.dd&lt;/code&gt;, using your own methods, move this file into the root of your vm folder on your server.&lt;/p&gt;
+&lt;p&gt;After a bit of waiting, you should have a large file on your desktop named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clover-usb-disk.dd&lt;/code&gt;, using your own methods, move this file into the root of your vm folder on your server.&lt;/p&gt;
 
 &lt;h2 id=&quot;step-5-final-setup&quot;&gt;Step 5, final setup:&lt;/h2&gt;
 
@@ -710,14 +710,14 @@ At the command line, use this command in your root VM folder:&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;qemu-img create &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; qcow2 osx-disk0.qcow2 200G
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;200G&lt;/code&gt; for how many gigs you want, for 500Gb use &lt;code class=&quot;highlighter-rouge&quot;&gt;500G&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Substitute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;200G&lt;/code&gt; for how many gigs you want, for 500Gb use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;500G&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now, something a bit different, in order for OS X to boot beyond the kernel, we have to disable something:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;su -
 &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting &lt;code class=&quot;highlighter-rouge&quot;&gt;echo 1 &amp;gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt; into your &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/rc.local&lt;/code&gt; file might not be a bad idea.&lt;/p&gt;
+&lt;p&gt;I didn’t do much research into why, but it is important to run that. It is reset every reboot, so putting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo 1 &amp;gt; /sys/module/kvm/parameters/ignore_msrs&lt;/code&gt; into your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/rc.local&lt;/code&gt; file might not be a bad idea.&lt;/p&gt;
 
 &lt;h2 id=&quot;step-6-first-boot&quot;&gt;Step 6, first boot:&lt;/h2&gt;
 
@@ -748,7 +748,7 @@ At the command line, use this command in your root VM folder:&lt;/p&gt;
 &lt;span class=&quot;nt&quot;&gt;-netdev&lt;/span&gt; bridge,id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,br&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;-device&lt;/span&gt; virtio-net,netdev&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;br0,vectors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0,mac&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;00:00:00:00:00:00&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$OSK$&lt;/code&gt; with your OSK string you saved earlier. Second, change the &lt;code class=&quot;highlighter-rouge&quot;&gt;$VMROOT$&lt;/code&gt; occurrences to whatever your VM root is.&lt;/p&gt;
+&lt;p&gt;Overwhelmed? Probably. Ok, you need to change a couple of things. First, change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$OSK$&lt;/code&gt; with your OSK string you saved earlier. Second, change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$VMROOT$&lt;/code&gt; occurrences to whatever your VM root is.&lt;/p&gt;
 
 &lt;div class=&quot;notice--info&quot;&gt;
    
@@ -761,7 +761,7 @@ At the command line, use this command in your root VM folder:&lt;/p&gt;
 
 &lt;h2 id=&quot;step-7-connecting-and-installing&quot;&gt;Step 7, connecting and installing:&lt;/h2&gt;
 
-&lt;p&gt;Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use &lt;em&gt;Chicken of the VNC&lt;/em&gt;, because the Screen Sharing app doesn’t work with the server. Connect to your IP, and port &lt;code class=&quot;highlighter-rouge&quot;&gt;5901&lt;/code&gt;. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.&lt;/p&gt;
+&lt;p&gt;Now you need to connect to the VNC server that QEMU is hosting for your VM. For OS X, I use &lt;em&gt;Chicken of the VNC&lt;/em&gt;, because the Screen Sharing app doesn’t work with the server. Connect to your IP, and port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5901&lt;/code&gt;. You should see either the Apple boot screen, the Setup companion, or Clover, depending on how fast you setup your VNC client.&lt;/p&gt;
 
 &lt;div class=&quot;notice--info&quot;&gt;
    

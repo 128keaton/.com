@@ -115,7 +115,7 @@ First, I set up our plugin to load the Javascript from MailChimp:</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>I simply passed the MailChimp settings through WordPress’s <code class="highlighter-rouge">wp_localize_script</code> function, like so:</p>
+<p>I simply passed the MailChimp settings through WordPress’s <code class="language-plaintext highlighter-rouge">wp_localize_script</code> function, like so:</p>
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">add_action</span><span class="p">(</span><span class="s1">'wp_enqueue_scripts'</span><span class="p">,</span> <span class="s1">'load_popup_scripts'</span><span class="p">);</span>
 

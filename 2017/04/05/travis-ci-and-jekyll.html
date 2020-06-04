@@ -86,7 +86,7 @@
                     <h2 id="preface">Preface:</h2>
 <p>When I first started blogging with Jekyll, my setup was a <em>wreck</em>. I didn’t quite understand Liquid Templating, so there wasn’t a lot a reuse, tons of unnecessary CSS, and plenty of plain ol’ HTML kludges. I still really liked Jekyll. It was fast, hosting for it was cheap, and free if you used GitHub Pages, which I didn’t at the time. The two things I didn’t like about Jekyll was the lack of portability, and of easy publishing.</p>
 
-<p>Easy publishing is really two things. One, I didn’t like having to clone my repo, run <code class="highlighter-rouge">bundle install</code> and make sure everything carried over properly (side-note: as tempting as it may be, do not use submodules for any directory) and then building and publishing. Then, as I stated above, I wasn’t using GitHub Pages, so I basically compiled the site and uploaded the whole thing to my website. Terrible, right?</p>
+<p>Easy publishing is really two things. One, I didn’t like having to clone my repo, run <code class="language-plaintext highlighter-rouge">bundle install</code> and make sure everything carried over properly (side-note: as tempting as it may be, do not use submodules for any directory) and then building and publishing. Then, as I stated above, I wasn’t using GitHub Pages, so I basically compiled the site and uploaded the whole thing to my website. Terrible, right?</p>
 
 <p>And then, there is the problem of images. I like having some images in my posts, in fact, a decent amount of my posts revolve around images. If you roll your own hosting with Jekyll, its easy to take care of, but with GitHub pages, its a nightmare for portability, even with submodules. If you don’t have all your images when you build–why would Jekyll carry the images over into your site!</p>
 
@@ -130,10 +130,10 @@
     <span class="na">secure</span><span class="pi">:</span> <span class="s">/* remove this line */</span>
 </code></pre></div></div>
 
-<p>For that <code class="highlighter-rouge">secure</code> bit, remove that whole line, and run this command:
-<code class="highlighter-rouge">gem install travis</code>
+<p>For that <code class="language-plaintext highlighter-rouge">secure</code> bit, remove that whole line, and run this command:
+<code class="language-plaintext highlighter-rouge">gem install travis</code>
 and then:
- <code class="highlighter-rouge">travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'</code></p>
+ <code class="language-plaintext highlighter-rouge">travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'</code></p>
 
 <p>Make sure you replace the appropriate variables.</p>
 
@@ -179,7 +179,7 @@ and then:
 
 <p>That there is a big-honkin mess.</p>
 
-<p>Basically, when Travis runs <code class="highlighter-rouge">bundle exec rake site:deploy</code>, it checks if its a PR, sets up git, makes sure the destination folder exists, pulls the site, checks out the source branch, builds the site, then commits and finally pushes the site. Phew!</p>
+<p>Basically, when Travis runs <code class="language-plaintext highlighter-rouge">bundle exec rake site:deploy</code>, it checks if its a PR, sets up git, makes sure the destination folder exists, pulls the site, checks out the source branch, builds the site, then commits and finally pushes the site. Phew!</p>
 
 <p>Here are the appropriate config.yml lines you’ll need to add:</p>
 
@@ -221,7 +221,7 @@ and then:
 
 <h2 id="final-thoughts">Final thoughts</h2>
 
-<p>Although I don’t have a fully portable Jekyll setup as I’d like, I still think this is a really robust way to keep your site built how you want it (with logs!) and keep your images where you want them. A fun thing I can do is SSH into my home machine (or mount the site folder with SSHFS) on the go, write a post, and run another helper method <code class="highlighter-rouge">bundle exec rake site:upload</code>, which is like this:</p>
+<p>Although I don’t have a fully portable Jekyll setup as I’d like, I still think this is a really robust way to keep your site built how you want it (with logs!) and keep your images where you want them. A fun thing I can do is SSH into my home machine (or mount the site folder with SSHFS) on the go, write a post, and run another helper method <code class="language-plaintext highlighter-rouge">bundle exec rake site:upload</code>, which is like this:</p>
 
 <div class="language-rb highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">task</span> <span class="ss">:upload</span> <span class="k">do</span>
       <span class="nb">puts</span> <span class="s1">'Uploading site'</span>
