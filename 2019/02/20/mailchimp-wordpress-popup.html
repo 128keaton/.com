@@ -83,11 +83,11 @@
 First, I set up our plugin to load the Javascript from MailChimp:</p>
 
 <p>For example:</p>
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">add_postchimp_js</span><span class="p">(){</span>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">add_postchimp_js</span><span class="p">(){</span>
 	<span class="k">echo</span> <span class="s1">'&lt;script type="text/javascript" src="https://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"&gt;'</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nx">add_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'add_postchimp_js'</span> <span class="p">);</span>
+<span class="nf">add_action</span><span class="p">(</span> <span class="s1">'wp_head'</span><span class="p">,</span> <span class="s1">'add_postchimp_js'</span> <span class="p">);</span>
 </code></pre></div></div>
 
 <p>Next, I created a Javascript file similar to the following:</p>
@@ -117,12 +117,12 @@ First, I set up our plugin to load the Javascript from MailChimp:</p>
 
 <p>I simply passed the MailChimp settings through WordPress’s <code class="language-plaintext highlighter-rouge">wp_localize_script</code> function, like so:</p>
 
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">add_action</span><span class="p">(</span><span class="s1">'wp_enqueue_scripts'</span><span class="p">,</span> <span class="s1">'load_popup_scripts'</span><span class="p">);</span>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">add_action</span><span class="p">(</span><span class="s1">'wp_enqueue_scripts'</span><span class="p">,</span> <span class="s1">'load_popup_scripts'</span><span class="p">);</span>
 
-<span class="k">function</span> <span class="nf">load_popup_scripts</span><span class="p">()</span> <span class="p">{</span>
-	<span class="nx">wp_enqueue_script</span><span class="p">(</span><span class="s1">'email-popup'</span><span class="p">,</span> <span class="nx">plugins_url</span><span class="p">(</span><span class="s1">'/assets/js/download-alert.js'</span><span class="p">,</span><span class="k">__FILE__</span><span class="p">));</span>
-	<span class="nv">$mailchimpOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'base_url'</span> <span class="o">=&gt;</span>  <span class="nx">get_option</span><span class="p">(</span><span class="s1">'mailchimp_base_url'</span><span class="p">),</span> <span class="s1">'uuid'</span> <span class="o">=&gt;</span>  <span class="nx">get_option</span><span class="p">(</span><span class="s1">'mailchimp_form_uuid'</span><span class="p">),</span> <span class="s1">'id'</span> <span class="o">=&gt;</span>  <span class="nx">get_option</span><span class="p">(</span><span class="s1">'mailchimp_list_id'</span><span class="p">)];</span>
-	<span class="nx">wp_localize_script</span><span class="p">(</span><span class="s1">'email-popup'</span><span class="p">,</span> <span class="s1">'mailchimp'</span><span class="p">,</span> <span class="nv">$mailchimpOptions</span><span class="p">);</span>
+<span class="k">function</span> <span class="n">load_popup_scripts</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nf">wp_enqueue_script</span><span class="p">(</span><span class="s1">'email-popup'</span><span class="p">,</span> <span class="nf">plugins_url</span><span class="p">(</span><span class="s1">'/assets/js/download-alert.js'</span><span class="p">,</span><span class="k">__FILE__</span><span class="p">));</span>
+	<span class="nv">$mailchimpOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'base_url'</span> <span class="o">=&gt;</span>  <span class="nf">get_option</span><span class="p">(</span><span class="s1">'mailchimp_base_url'</span><span class="p">),</span> <span class="s1">'uuid'</span> <span class="o">=&gt;</span>  <span class="nf">get_option</span><span class="p">(</span><span class="s1">'mailchimp_form_uuid'</span><span class="p">),</span> <span class="s1">'id'</span> <span class="o">=&gt;</span>  <span class="nf">get_option</span><span class="p">(</span><span class="s1">'mailchimp_list_id'</span><span class="p">)];</span>
+	<span class="nf">wp_localize_script</span><span class="p">(</span><span class="s1">'email-popup'</span><span class="p">,</span> <span class="s1">'mailchimp'</span><span class="p">,</span> <span class="nv">$mailchimpOptions</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
