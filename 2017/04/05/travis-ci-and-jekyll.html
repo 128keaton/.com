@@ -164,8 +164,8 @@ and then:
         <span class="n">sh</span> <span class="s1">'bundle exec jekyll build'</span>
 
         <span class="c1"># Commit and push to github</span>
-        <span class="n">sha</span> <span class="o">=</span> <span class="sb">`git log`</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="sr">/[a-z0-9]{40}/</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="no">Dir</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="no">CONFIG</span><span class="p">[</span><span class="s1">'destination'</span><span class="p">])</span> <span class="k">do</span>
+        <span class="n">sha</span> <span class="o">=</span> <span class="sb">`git log`</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="sr">/[a-z0-9]{40}/</span><span class="err">)[0]
+        D</span><span class="sr">i</span><span class="n">r</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="no">CONFIG</span><span class="p">[</span><span class="s1">'destination'</span><span class="p">])</span> <span class="k">do</span>
             <span class="n">sh</span> <span class="s1">'git add --all .'</span>
             <span class="n">sh</span> <span class="s2">"git commit -m 'Updating to </span><span class="si">#{</span><span class="no">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="no">REPO</span><span class="si">}</span><span class="s2">@</span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="s2">.'"</span>
             <span class="n">sh</span> <span class="s2">"git push --quiet origin </span><span class="si">#{</span><span class="no">DESTINATION_BRANCH</span><span class="si">}</span><span class="s2">"</span>
@@ -225,8 +225,8 @@ and then:
 
 <div class="language-rb highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">task</span> <span class="ss">:upload</span> <span class="k">do</span>
       <span class="nb">puts</span> <span class="s1">'Uploading site'</span>
-      <span class="n">sha</span> <span class="o">=</span> <span class="sb">`git log`</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="sr">/[a-z0-9]{40}/</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-      <span class="n">sh</span> <span class="s1">'git add --all .'</span>
+      <span class="n">sha</span> <span class="o">=</span> <span class="sb">`git log`</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="sr">/[a-z0-9]{40}/</span><span class="err">)[0]
+      </span><span class="sr">s</span><span class="n">h</span> <span class="s1">'git add --all .'</span>
       <span class="n">sh</span> <span class="s2">"git commit -m 'Updating to </span><span class="si">#{</span><span class="no">USERNAME</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="no">REPO</span><span class="si">}</span><span class="s2">@</span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="s2">.'"</span>
       <span class="n">sh</span> <span class="s2">"git push --quiet origin </span><span class="si">#{</span><span class="no">SOURCE_BRANCH</span><span class="si">}</span><span class="s2">"</span>
       <span class="nb">puts</span> <span class="s2">"Pushed updated branch </span><span class="si">#{</span><span class="no">SOURCE_BRANCH</span><span class="si">}</span><span class="s2"> to GitHub Pages"</span>
