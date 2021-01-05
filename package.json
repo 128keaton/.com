@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/128keaton/128keaton.com#readme",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "css-loader": "^3.2.0",
     "dotenv-webpack": "^1.7.0",
