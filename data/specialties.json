@@ -23,5 +23,10 @@
     "icon": "databricks.png",
     "experience": "2 years",
     "title": "Databricks"
+  },
+  "linux": {
+    "icon": "prompt.png",
+    "experience": "10 years",
+    "title": "Sysadmin"
   }
 }
