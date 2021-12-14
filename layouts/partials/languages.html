@@ -1,6 +1,6 @@
 <div class="languages">
-    {{ range $.Site.Data.languages.all }}
-    <span class="language">{{  . }}</span>
+    {{ range $language := shuffle ($.Site.Data.languages.all)  }}
+    <span class="language">{{  $language }}</span>
     {{ end }}
 </div>
 <script defer language="javascript" type="text/javascript"  src="{{ "js/languages.js" | urlize | relURL }}"></script>

@@ -137,6 +137,10 @@
   justify-content: right;
   width: 1200px;
 
+  @media (max-width: 800px) {
+    display: none;
+  }
+
   span {
     color: #27fb0f;
     text-align: center;
@@ -147,6 +151,10 @@
     opacity: 0.05;
     transition: opacity 250ms ease-in-out;
     text-shadow: none;
+
+    @media (max-width: 1500px) {
+      font-size: 55px;
+    }
 
     &.show {
       opacity: 1;
