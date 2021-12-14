@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="{{ .Site.Language.Lang }}">
+    <meta name="color-scheme" content="light dark">
+
+    {{ $style := resources.Get "scss/site.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
+    <meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+
+
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ hugo.Generator }}
+</head>
+
+<body>
+<main class="wrapper">
+    {{ partial "header.html" . }}
+
+    <div class="content">
+        {{ block "content" . }}{{ end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+</main>
+</body>
+
+</html>

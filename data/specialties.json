@@ -1,0 +1,32 @@
+{
+  "js": {
+    "icon": "javascript.png",
+    "experience": "6 years",
+    "title": "JavaScript"
+  },
+  "nodejs": {
+    "icon": "nodejs.png",
+    "experience": "5 years",
+    "title": "NodeJS"
+  },
+  "swift": {
+    "icon": "swift.png",
+    "experience": "5 years",
+    "title": "Swift"
+  },
+  "ts": {
+    "icon": "typescript.png",
+    "experience": "3 years",
+    "title": "TypeScript"
+  },
+  "azure": {
+    "icon": "azure.png",
+    "experience": "2 years",
+    "title": "Azure"
+  },
+  "az-databricks": {
+    "icon": "databricks.png",
+    "experience": "2 years",
+    "title": "Databricks"
+  }
+}

@@ -1,0 +1,16 @@
+<div class="specialty">
+    {{ $targetPath := "specialties/" }}
+    {{ $targetPath := (printf "%s%s" $targetPath .icon) }}
+
+    {{ with resources.GetMatch $targetPath }}
+    {{ with .Err }}
+            <p> {{$targetPath}}</p>
+    {{ else }}
+        {{ $scaled := .Fill "100x100 center"}}
+        <img src="{{ $scaled.Permalink }}" width="{{ $scaled.Width }}" height="{{ $scaled.Height }}" alt="">
+    {{ end }}
+    {{ end }}
+
+    <p class="title">{{.title}}</p>
+    <p class="experience">{{.experience}}</p>
+</div>

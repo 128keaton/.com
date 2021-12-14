@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  font-weight: 400;
+  line-height: 1.8em;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.6em;
+    line-height: 1.6em;
+  }
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease-in;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body, .wrapper, .content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@import "home";
+@import "icons";

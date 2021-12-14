@@ -1,0 +1,133 @@
+#home {
+  max-width: 1000px;
+  flex: 1;
+  z-index: 100;
+
+  h1, h2, h3 {
+    font-weight: normal;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  span.uline {
+    border-bottom: 2px solid;
+  }
+
+
+  background: rgb(18,18,18);
+  background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 92%, rgba(18,18,18,0) 100%);
+
+  @media (prefers-color-scheme: light) {
+    background-image: url("/icons/gh-light.png");
+  }
+}
+
+.greeting {
+  padding: 1.2em 1.2em 0;
+
+  img {
+    width: 200px;
+    transform: rotate(90deg);
+    margin-left: -2em;
+  }
+}
+
+.education {
+  padding: 0 1.2em;
+}
+
+.links {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+
+
+  .link{
+    padding-left: 1em;
+    margin-left: 1.2em;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+
+    &:first-child {
+      padding-top: 0.5em;
+    }
+
+    &:last-child {
+      padding-bottom: 0.5em;
+    }
+
+    &.github {
+      border-left: 2px solid #006ee6;
+    }
+
+    &.linked-in {
+      border-left: 2px solid #a645bd;
+    }
+
+    &.download {
+      border-left: 2px solid #45ecba;
+    }
+  }
+}
+
+.specialties {
+  display: flex;
+  padding: 0 1.2em 1.2em;
+
+  .specialty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 3em;
+
+    p {
+      margin: 0;
+      padding: 0;
+      line-height: 24px;
+    }
+
+    .experience {
+      color: grey;
+    }
+  }
+}
+
+.languages {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: right;
+  width: 1200px;
+
+  span {
+    color: #27fb0f;
+    text-align: center;
+    font-size: 65px;
+    margin: 1em;
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+    opacity: 0.05;
+    transition: opacity 250ms ease-in-out;
+    text-shadow: none;
+
+    &.show {
+      opacity: 1;
+      text-shadow:
+              0 0 21px rgba(39, 251, 15, 0.57),
+              0 0 82px rgba(39, 251, 15, 0.83);
+    }
+  }
+}
