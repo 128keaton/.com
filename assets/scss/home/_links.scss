@@ -1,0 +1,91 @@
+
+.links {
+  padding-left: 1.2em;
+  padding-top: 1.2em;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 520px;
+
+  .link {
+    color: white;
+    padding: 0.5em 1.2rem;
+    margin-bottom: 1em;
+    display: flex;
+    border-radius: 6px;
+    text-decoration: none!important;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1em;
+    min-width: 200px;
+
+    @media only screen and (max-width: 850px) {
+      flex: 1;
+      max-width: calc(100% - 3.5em);
+    }
+
+    .text-wrapper {
+      line-height: 21px;
+      display: block;
+    }
+
+    .icon-wrapper {
+      width: 18px;
+      height: 18px;
+      display: block;
+      margin-right: 2px;
+      margin-left: 10px;
+      background-size: contain;
+    }
+
+
+    &.github-link {
+      background-color: #006ee6;
+    }
+
+    &.linked-in-link {
+      background-color:  #a645bd;
+    }
+
+    &.download-link {
+      background-color:  #2ab367;
+    }
+  }
+}
+
+a.github-link {
+  .icon-wrapper {
+    @media (prefers-color-scheme: dark) {
+      background-image: url("/icons/gh-dark.png");
+    }
+
+    @media (prefers-color-scheme: light) {
+      background-image: url("/icons/gh-light.png");
+    }
+  }
+}
+
+a.linked-in-link {
+  .icon-wrapper {
+    @media (prefers-color-scheme: dark) {
+      background-image: url("/icons/li-dark.png");
+    }
+
+    @media (prefers-color-scheme: light) {
+      background-image: url("/icons/li-light.png");
+    }
+  }
+}
+
+a.download-link {
+  .icon-wrapper {
+    @media (prefers-color-scheme: dark) {
+      background-image: url("/icons/dl-dark.png");
+    }
+
+    @media (prefers-color-scheme: light) {
+      background-image: url("/icons/dl-light.png");
+    }
+  }
+}
+

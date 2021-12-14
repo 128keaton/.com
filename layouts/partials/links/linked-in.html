@@ -1,4 +1,4 @@
-<a class="linked-in-link" href="{{ .Scratch.Get "link-href" }}" target="_blank">
-<span class="text-wrapper">{{ .Scratch.Get "link-title" }}</span>
-<span class="icon-wrapper"></span>
-</a>
+{{ .Scratch.Set "link-href" "http://github.com/128keaton" }}
+{{ .Scratch.Set "link-title" "Visit my LinkedIn" }}
+{{ .Scratch.Set "link-type" "linked-in" }}
+{{ partial "button.html" . }}

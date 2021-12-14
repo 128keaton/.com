@@ -3,7 +3,7 @@
   flex: 1;
   z-index: 100;
   user-select: none;
-  clip-path: polygon(24% 0, 37% 34%, 100% 40%, 100% 69%, 46% 77%, 35% 100%, 0 100%, 0 0);
+  clip-path: polygon(24% 0, 37% 34%, 100% 40%, 100% 69%, 68% 85%, 54% 100%, 0 100%, 0 0);
 
   h1, h2, h3 {
     font-weight: normal;
@@ -69,41 +69,6 @@
   padding-left: 1.2em;
 }
 
-.links {
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
-  width: fit-content;
-
-  .link {
-    padding-left: 1em;
-    margin-left: 1.2em;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-
-    &:first-child {
-      padding-top: 0.5em;
-    }
-
-    &:last-child {
-      padding-bottom: 0.5em;
-    }
-
-    &.github {
-      border-left: 2px solid #006ee6;
-    }
-
-    &.linked-in {
-      border-left: 2px solid #a645bd;
-    }
-
-    &.download {
-      border-left: 2px solid #45ecba;
-    }
-  }
-}
-
 .specialties {
   display: flex;
   padding: 1.2em;
@@ -140,41 +105,5 @@
   }
 }
 
-.languages {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-  align-items: center;
-  justify-content: right;
-  width: 1200px;
-
-  @media (max-width: 800px) {
-    display: none;
-  }
-
-  span {
-    color: #27fb0f;
-    text-align: center;
-    font-size: 65px;
-    margin: 1em;
-    display: block;
-    font-family: 'Source Code Pro', monospace;
-    opacity: 0.05;
-    transition: opacity 250ms ease-in-out;
-    text-shadow: none;
-
-    @media (max-width: 1500px) {
-      font-size: 55px;
-    }
-
-    &.show {
-      opacity: 1;
-      text-shadow: 0 0 21px rgba(39, 251, 15, 0.57),
-      0 0 82px rgba(39, 251, 15, 0.83);
-    }
-  }
-}
+@import "home/languages";
+@import "home/links";

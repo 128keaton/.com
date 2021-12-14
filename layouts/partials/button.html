@@ -1,0 +1,17 @@
+{{ $type := .Scratch.Get "link-type" }}
+{{if eq $type "github"}}
+<a class="link github-link" href="{{ .Scratch.Get "link-href" }}" target="_blank">
+<span class="text-wrapper">{{ .Scratch.Get "link-title" }}</span>
+<span class="icon-wrapper"></span>
+</a>
+{{else if eq $type "linked-in"}}
+<a class="link linked-in-link" href="{{ .Scratch.Get "link-href" }}" target="_blank">
+<span class="text-wrapper">{{ .Scratch.Get "link-title" }}</span>
+<span class="icon-wrapper"></span>
+</a>
+{{else}}
+<a class="link download-link" href="{{ .Scratch.Get "link-href" }}" target="_blank">
+<span class="text-wrapper">{{ .Scratch.Get "link-title" }}</span>
+<span class="icon-wrapper"></span>
+</a>
+{{end}}

@@ -1,0 +1,41 @@
+.languages {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: right;
+  width: 1200px;
+  filter: blur(2px);
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+
+  span {
+    color: #27fb0f;
+    text-align: center;
+    font-size: 45px;
+    margin-left: 1em;
+    margin-right: 1em;
+    line-height: 15px;
+    display: block;
+    font-family: source code pro,monospace;
+    opacity: .05;
+    transition: opacity 250ms ease-in-out;
+    text-shadow: none;
+
+    @media (max-width: 1500px) {
+      font-size: 40px;
+    }
+
+    &.show {
+      opacity: 1;
+      text-shadow: 0 0 21px rgba(39, 251, 15, 0.57),
+      0 0 82px rgba(39, 251, 15, 0.83);
+    }
+  }
+}
