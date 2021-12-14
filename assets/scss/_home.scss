@@ -1,22 +1,9 @@
-@mixin protect-background {
-  @media (prefers-color-scheme: dark) {
-    background: rgb(18, 18, 18);
-    background: linear-gradient(90deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 92%, rgba(18, 18, 18, 0) 100%);
-    box-shadow: 0 0 58px -2px rgb(18, 18, 18), inset 0px 0px 200px 100px rgb(18, 18, 18);
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 92%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0 0 58px -2px #fff;
-  }
-}
-
 #home {
-  max-width: 1100px;
+  max-width: 950px;
   flex: 1;
   z-index: 100;
   user-select: none;
+  clip-path: polygon(24% 0, 37% 34%, 100% 40%, 100% 69%, 46% 77%, 35% 100%, 0 100%, 0 0);
 
   h1, h2, h3 {
     font-weight: normal;
@@ -45,14 +32,23 @@
     user-select: text;
   }
 
+  @media (prefers-color-scheme: dark) {
+    background: rgb(18, 18, 18);
+    box-shadow: 0 0 50px 50px rgb(18, 18, 18);
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 50px 50px #fff;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    clip-path: unset !important;
+  }
 }
 
 .greeting {
   padding: 1.2em 1.2em 0;
-
-  * {
-    @include protect-background;
-  }
 
   img {
     width: 200px;
@@ -68,6 +64,7 @@
 }
 
 .links {
+  padding-top: 1.2em;
   padding-bottom: 1.2em;
   width: fit-content;
 
@@ -78,7 +75,6 @@
     margin-top: 0;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
-    @include protect-background;
 
     &:first-child {
       padding-top: 0.5em;
@@ -111,7 +107,6 @@
     flex-direction: column;
     margin-right: 3em;
     max-width: 100px;
-    @include protect-background;
 
     p {
       margin: 0;
