@@ -132,6 +132,7 @@
 
   @media (max-width: 900px) {
     flex-wrap: wrap-reverse;
+    justify-content: space-between;
 
     .specialty {
       margin-bottom: 1em;
