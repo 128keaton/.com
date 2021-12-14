@@ -1,10 +1,12 @@
-let start, previousLanguageElement;
+let previousLanguageElement;
 
 const isInViewport = (element) => {
     const rect = element.getBoundingClientRect();
+    const homeRect = document.getElementById('home').getBoundingClientRect();
+
     return (
         rect.top >= 0 &&
-        rect.left >= 0 &&
+        rect.left >= (homeRect.width - 50) &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -12,17 +14,23 @@ const isInViewport = (element) => {
 
 const randomLanguageElement = () => {
     const elements = document.getElementsByClassName('language');
-    const element = elements[Math.floor(Math.random() * (elements.length + 1))];
 
-    if (element === undefined || !isInViewport(element) || element === previousLanguageElement) {
-        return randomLanguageElement();
+    if (elements.length > 0) {
+        return elements[Math.floor(Math.random() * (elements.length + 1))];
     }
-
-    return element;
 }
 
 const flashRandomElement = () => {
-    const languageElement = randomLanguageElement();
+    let languageElement = randomLanguageElement();
+
+    if (screen.width <= 805 || !!!languageElement) {
+        return;
+    }
+
+    if (!isInViewport(languageElement)) {
+        languageElement = randomLanguageElement();
+    }
+
 
     if (!!previousLanguageElement) {
         previousLanguageElement.classList.remove('show');
@@ -33,19 +41,8 @@ const flashRandomElement = () => {
     previousLanguageElement = languageElement;
 }
 
-const step = (timestamp) => {
-    if (start === undefined)
-        start = timestamp;
 
-    const elapsed = timestamp - start;
+window.setInterval(() => {
+    flashRandomElement();
+}, 3000);
 
-    if (elapsed >= 2000) {
-        start = undefined;
-        flashRandomElement();
-    }
-
-    window.requestAnimationFrame(step);
-}
-
-window.requestAnimationFrame(step);
-flashRandomElement();
