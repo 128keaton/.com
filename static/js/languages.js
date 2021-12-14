@@ -23,7 +23,7 @@ const randomLanguageElement = () => {
 const flashRandomElement = () => {
     let languageElement = randomLanguageElement();
 
-    if (screen.width <= 805 || languageElement === undefined) {
+    if (screen.width <= 805 || !!!languageElement) {
         return;
     }
 
