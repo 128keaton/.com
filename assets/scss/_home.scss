@@ -7,6 +7,10 @@
     font-weight: normal;
   }
 
+  h2 {
+    line-height: 37px;
+  }
+
   h1 {
     font-size: 3em;
   }
@@ -20,11 +24,14 @@
   }
 
 
-  background: rgb(18,18,18);
-  background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(18,18,18,1) 92%, rgba(18,18,18,0) 100%);
+  @media (prefers-color-scheme: dark) {
+    background: rgb(18, 18, 18);
+    background: linear-gradient(90deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 1) 92%, rgba(18, 18, 18, 0) 100%);
+  }
 
   @media (prefers-color-scheme: light) {
-    background-image: url("/icons/gh-light.png");
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 92%, rgba(255, 255, 255, 0) 100%);
   }
 }
 
@@ -47,7 +54,7 @@
   padding-bottom: 1.2em;
 
 
-  .link{
+  .link {
     padding-left: 1em;
     margin-left: 1.2em;
     margin-bottom: 0;
@@ -98,6 +105,24 @@
       color: grey;
     }
   }
+
+  @media (max-width: 900px) {
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    .specialty {
+      min-width: 200px;
+      flex: 1;
+      margin-bottom: 1em;
+    }
+  }
+
+  @media (max-width: 630px) {
+    .specialty {
+      min-width: unset !important;
+      max-width: 200px;
+    }
+  }
 }
 
 .languages {
@@ -125,9 +150,8 @@
 
     &.show {
       opacity: 1;
-      text-shadow:
-              0 0 21px rgba(39, 251, 15, 0.57),
-              0 0 82px rgba(39, 251, 15, 0.83);
+      text-shadow: 0 0 21px rgba(39, 251, 15, 0.57),
+      0 0 82px rgba(39, 251, 15, 0.83);
     }
   }
 }
