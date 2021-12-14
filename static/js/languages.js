@@ -36,9 +36,10 @@ const flashRandomElement = () => {
         previousLanguageElement.classList.remove('show');
     }
 
-    languageElement.classList.add('show');
-
-    previousLanguageElement = languageElement;
+    if (!!languageElement) {
+        languageElement.classList.add('show');
+        previousLanguageElement = languageElement;
+    }
 }
 
 
