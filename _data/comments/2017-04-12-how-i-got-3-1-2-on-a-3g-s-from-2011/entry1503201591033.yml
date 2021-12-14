@@ -1,9 +1,0 @@
-_id: 03d89320-855c-11e7-b830-d9e4565c6722
-_parent: 2017-04-12-how-i-got-3-1-2-on-a-3g-s-from-2011
-name: John K.
-email: 91a31a9563370b1dcf59f98bdd81b0b3
-url: ''
-address: ''
-message: "I am stuck on patching the USB at Step 3:  \r\nsudo bspatch /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib /usr/local/Cellar/libusb/1.0.21/lib/libusb-1.0.0.dylib libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch\r\n\r\nIt returned:bspatch: fopen(libusb-patches/libusb-1.0.21-02da61201c8f67b723bca5fb44b35797d1021625.patch): No such file or directory\r\n\r\nPlease advise."
-date: 1503201591
-content: ''

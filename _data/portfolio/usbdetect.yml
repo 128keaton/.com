@@ -1,5 +1,0 @@
-title: USBDetect
-description: Simple Swift application that sends a notification when a USB device is plugged in.
-url: https://github.com/128keaton/USBDetect
-platform: "app-store-osx"
-icon: https://raw.githubusercontent.com/128keaton/USBDetect/master/USBDetect/usb.png

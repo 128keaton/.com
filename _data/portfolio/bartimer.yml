@@ -1,5 +1,0 @@
-title: BarTimer
-description: A simple macOS app that adds a timer to your menu bar.
-url: https://github.com/128keaton/BarTimer
-platform: "app-store-osx"
-icon: https://raw.githubusercontent.com/128keaton/BarTimer/master/BarTimer/Assets.xcassets/AppIcon.appiconset/128.png

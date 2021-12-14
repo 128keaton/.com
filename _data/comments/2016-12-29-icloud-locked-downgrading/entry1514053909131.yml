@@ -1,8 +1,0 @@
-_id: 898a38a0-e80f-11e7-abae-cf7fa9bc7951
-_parent: 2016-12-29-icloud-locked-downgrading
-name: gaby
-email: 882fd81b3ccf33dbfe93e96bd0bbf41d
-url: ''
-address: ''
-message: "hello . i have a problem.... after i run the command ”mount -t hfs /dev/disk0s1s3 /mnt ” i get an error  : ” mount hfs: Could not create property for re-key enviroment check: No such file or directory” any ideea what i shuld do?\r\n\r\ni have a ipad mini 1st gen with ios 9.3.5 jb with (pheonix) cool booter runs ios 7.1.2.\r\n Thnks!"
-date: 1514053909
