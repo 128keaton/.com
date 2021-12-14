@@ -44,6 +44,12 @@
 
   @media only screen and (max-width: 1000px) {
     clip-path: unset !important;
+    padding-left: 2em;
+
+    .greeting img {
+      transform: rotate(180deg);
+      margin-top: -2em;
+    }
   }
 }
 
@@ -100,7 +106,7 @@
 
 .specialties {
   display: flex;
-  padding: 0 1.2em 1.2em;
+  padding: 1.2em;
 
   .specialty {
     display: flex;
