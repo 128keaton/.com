@@ -34,7 +34,18 @@
     user-select: text;
   }
 
+  @media (prefers-color-scheme: dark) {
+    background: rgb(18, 18, 18);
+    box-shadow: 0 0 50px 50px rgb(18, 18, 18);
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 50px 50px #fff;
+  }
+
   @media only screen and (max-width: 1000px) {
+    clip-path: unset !important;
     padding-left: 2em;
   }
 }
@@ -43,22 +54,10 @@
   padding: 1.2em 1.2em 0;
 
   img {
-    max-width: 240px;
-    border-width: 2px;
-    border-style: solid;
-    transition: border 150ms ease-in-out;
-
-    &:hover {
-      border-width: 24px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      border-color: #474747;
-    }
-
-    @media (prefers-color-scheme: light) {
-      border-color: white;
-    }
+    width: 200px;
+    display: block;
+    border-bottom: 8px solid white;
+    margin-bottom: 2em;
   }
 }
 
